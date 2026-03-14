@@ -1,4 +1,4 @@
-"""Check StubHub for WWE tickets in Italy, scrape prices via Playwright stealth."""
+"""Check StubHub (.com) for WWE tickets in Italy, scrape prices via Playwright stealth."""
 
 import json
 import os
@@ -7,10 +7,14 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-GROUPING_URL = "https://www.stubhub.it/biglietti-wwe/grouping/131/"
+SEARCH_URL = "https://www.stubhub.com/search?q=WWE+Italy"
 STATUS_PATH = Path(os.environ.get("STUBHUB_STATUS_PATH", Path(__file__).resolve().parent.parent / "data" / "stubhub.json"))
 THRESHOLD_EUR = 400
 MAX_HISTORY = 1000
+
+# Keywords to identify Italian WWE events in search results
+ITALY_EVENT_KEYWORDS = ["italy", "torino", "turin", "roma", "rome", "bologna",
+                        "casalecchio", "firenze", "florence", "milano", "milan"]
 
 
 def load_status() -> dict:
@@ -28,26 +32,15 @@ def load_status() -> dict:
 
 
 def _parse_price(raw: str) -> float | None:
-    """Parse a price string handling both Italian (1.234,56) and English (1,234.56) formats."""
-    raw = raw.strip()
+    """Parse a price string like '1,234' or '416' or '2,427'."""
+    raw = raw.strip().replace(",", "")
     if not raw:
         return None
-    # Italian format: 1.234,56 or 10.142,50 (dot=thousands, comma=decimal)
-    if re.match(r'^\d{1,3}(?:\.\d{3})+,\d{2}$', raw):
-        return float(raw.replace(".", "").replace(",", "."))
-    # Italian without thousands separator: 6017,50 or 234,56
-    if re.match(r'^\d+,\d{2}$', raw):
-        return float(raw.replace(",", "."))
-    # English format: 1,234.56 (comma=thousands, dot=decimal)
-    if re.match(r'^\d{1,3}(?:,\d{3})+\.\d{2}$', raw):
-        return float(raw.replace(",", ""))
-    # Simple with dot decimal: 234.56
-    if re.match(r'^\d+\.\d{2}$', raw):
-        return float(raw)
-    # Integer: 234
-    if re.match(r'^\d+$', raw):
-        return float(raw)
-    return None
+    try:
+        val = float(raw)
+        return val if 10 <= val <= 50000 else None
+    except ValueError:
+        return None
 
 
 def _dismiss_cookies(page) -> None:
@@ -55,9 +48,8 @@ def _dismiss_cookies(page) -> None:
     for sel in [
         '#onetrust-accept-btn-handler',
         'button[id*="accept"]',
-        'button:has-text("Accetta")',
         'button:has-text("Accept")',
-        'button:has-text("Accetta tutti")',
+        'button:has-text("Accetta")',
     ]:
         try:
             btn = page.query_selector(sel)
@@ -69,131 +61,164 @@ def _dismiss_cookies(page) -> None:
             pass
 
 
-def _extract_event_links(page) -> list[dict]:
-    """Extract individual event links from StubHub grouping page.
+def _discover_italy_events(page, errors: list[str]) -> list[dict]:
+    """Search StubHub for WWE events in Italy.
 
-    Returns list of dicts with keys: name, date, url, venue.
+    Returns list of dicts with keys: name, url.
     """
     events = []
-    # StubHub grouping pages list events as links with event info
-    # Look for links that point to individual event pages
-    links = page.query_selector_all('a[href*="/biglietti-"]')
     seen_urls = set()
 
+    print(f"Searching StubHub: {SEARCH_URL}")
+    page.goto(SEARCH_URL, wait_until="domcontentloaded", timeout=60000)
+    page.wait_for_timeout(10000)
+    _dismiss_cookies(page)
+    page.wait_for_timeout(2000)
+
+    links = page.query_selector_all("a")
     for link in links:
         try:
             href = link.get_attribute("href") or ""
-            # Skip the grouping page itself and non-event links
-            if "/grouping/" in href or not href:
+            if "/event/" not in href:
                 continue
-            # Make absolute URL if needed
             if href.startswith("/"):
-                href = "https://www.stubhub.it" + href
-            if href in seen_urls:
+                href = "https://www.stubhub.com" + href
+            # Strip query params for dedup
+            clean_url = href.split("?")[0]
+            if clean_url in seen_urls:
                 continue
-            seen_urls.add(href)
 
             text = link.inner_text().strip()
-            if not text or "wwe" not in text.lower():
+            combined = (href + " " + text).lower()
+            # Must be a WWE event in Italy
+            if "wwe" not in combined:
+                continue
+            if not any(kw in combined for kw in ITALY_EVENT_KEYWORDS):
                 continue
 
-            events.append({
-                "name": text,
-                "url": href,
-            })
+            seen_urls.add(clean_url)
+            # Clean up multi-line text
+            name = " ".join(text.split("\n")[0:3]).strip()
+            events.append({"name": name, "url": clean_url})
         except Exception:
             pass
+
+    if not events:
+        errors.append("No Italian WWE events found on StubHub search")
 
     return events
 
 
-def _extract_listings(page_text: str) -> list[dict]:
+def _extract_listings_from_page(page) -> list[dict]:
     """Extract ticket listings from a StubHub event page.
 
-    StubHub shows listings as rows with section/seat info and prices.
-    All listed tickets are available (StubHub doesn't show sold-out listings).
+    StubHub format (line by line after 'X listings'):
+        Section XXX  (or "I Anello Est", "Floor", etc.)
+        Row X        (optional)
+        2 tickets together
+        ...features...
+        €PRICE
+
+    All listed tickets are available.
     """
+    # Click "Show more" until all listings are visible
+    for _ in range(15):
+        try:
+            btn = page.query_selector('button:has-text("Show more")')
+            if btn and btn.is_visible():
+                btn.click()
+                page.wait_for_timeout(3000)
+            else:
+                break
+        except Exception:
+            break
+
+    text = page.inner_text("body")
+    lines = text.split("\n")
     packages = []
-    lines = page_text.split("\n")
 
-    # StubHub price patterns: "123,45 €" or "€ 123,45" or "123.45 €"
-    price_pattern = r'(\d[\d.,]*\d)\s*€'
+    # Price pattern: €416 or €1,234 or €2,427
+    price_re = re.compile(r'^€([\d,]+)\s*$')
+    section_re = re.compile(r'^(Section\s+.+|I+\s+Anello\s+.+|Floor|Ring|MIX)$', re.IGNORECASE)
 
-    for i, line in enumerate(lines):
-        m = re.search(price_pattern, line)
-        if not m:
+    current_section = ""
+    for line in lines:
+        line = line.strip()
+        if not line:
             continue
 
-        price = _parse_price(m.group(1))
-        if price is None or price < 10 or price > 50000:
+        # Track current section
+        sm = section_re.match(line)
+        if sm:
+            current_section = sm.group(1)
             continue
 
-        # Try to find section/category name from nearby lines
-        pkg_name = ""
-        # Check the line itself (price might be on same line as section)
-        line_clean = re.sub(price_pattern, '', line).strip()
-        line_clean = re.sub(r'[€\s]+$', '', line_clean).strip()
-        if line_clean and len(line_clean) > 2 and not re.match(r'^[\d.,\s€]+$', line_clean):
-            pkg_name = line_clean
-        else:
-            # Walk back to find section name
-            for j in range(i - 1, max(i - 5, -1), -1):
-                candidate = lines[j].strip()
-                if candidate and len(candidate) > 2 and not re.search(r'€|ciascuno|tassa|commissioni', candidate, re.IGNORECASE) and not re.match(r'^[\d.,\s]+$', candidate):
-                    pkg_name = candidate
-                    break
+        # Also capture "Section X" from lines like "Section J"
+        sm2 = re.match(r'^Section\s+(\S+)', line)
+        if sm2:
+            current_section = line
+            continue
 
-        # Avoid duplicate entries for same name+price
-        packages.append({
-            "name": pkg_name,
-            "price": price,
-            "available": True,  # StubHub only shows available tickets
-        })
+        # Check for price
+        pm = price_re.match(line)
+        if pm:
+            price = _parse_price(pm.group(1))
+            if price is not None:
+                packages.append({
+                    "name": current_section or "Sconosciuto",
+                    "price": price,
+                    "available": True,
+                })
 
     return packages
 
 
-def _deduplicate_packages(packages: list[dict]) -> list[dict]:
-    """Remove exact duplicates (same name + price)."""
-    seen = set()
-    result = []
-    for pkg in packages:
-        key = (pkg["name"], pkg["price"])
-        if key not in seen:
-            seen.add(key)
-            result.append(pkg)
-    return result
+def _extract_event_meta(page_text: str) -> dict:
+    """Extract event name, date, venue from StubHub event page header.
 
-
-def _extract_event_info_from_page(page_text: str) -> dict:
-    """Try to extract event name, date, and venue from StubHub event page text."""
+    Expected format in page text:
+        WWE Clash in Italy
+        Sun May 31 2026 at 7:30 PM
+        Pala Alpitour (Inalpi Arena), Turin, Italy
+    """
     info = {"name": "", "date": "", "venue": ""}
 
-    # Date patterns: "31 maggio 2026", "31 mag 2026", "sab 31 mag 2026"
+    # English date: "Sun May 31 2026" or "May 31 2026"
     month_map = {
-        "gen": "01", "feb": "02", "mar": "03", "apr": "04", "mag": "05", "giu": "06",
-        "lug": "07", "ago": "08", "set": "09", "ott": "10", "nov": "11", "dic": "12",
-        "gennaio": "01", "febbraio": "02", "marzo": "03", "aprile": "04",
-        "maggio": "05", "giugno": "06", "luglio": "07", "agosto": "08",
-        "settembre": "09", "ottobre": "10", "novembre": "11", "dicembre": "12",
+        "jan": "01", "feb": "02", "mar": "03", "apr": "04", "may": "05", "jun": "06",
+        "jul": "07", "aug": "08", "sep": "09", "oct": "10", "nov": "11", "dec": "12",
     }
-
-    date_pattern = r'(\d{1,2})\s+(' + '|'.join(month_map.keys()) + r')\s+(\d{4})'
-    m = re.search(date_pattern, page_text.lower())
+    m = re.search(r'(?:Sun|Mon|Tue|Wed|Thu|Fri|Sat)\s+(\w{3})\s+(\d{1,2})\s+(\d{4})', page_text)
     if m:
-        day = m.group(1).zfill(2)
-        month = month_map[m.group(2)]
-        year = m.group(3)
-        info["date"] = f"{year}-{month}-{day}"
+        month = month_map.get(m.group(1).lower()[:3], "")
+        if month:
+            day = m.group(2).zfill(2)
+            info["date"] = f"{m.group(3)}-{month}-{day}"
+
+    # Venue: line containing arena/city info near the top
+    lines = page_text.split("\n")
+    for i, line in enumerate(lines):
+        if re.search(r'\d{4}\s+at\s+\d', line):
+            # Look at next few lines for venue (skip empty, "Favorite", etc.)
+            for j in range(i + 1, min(i + 4, len(lines))):
+                candidate = lines[j].strip()
+                if candidate and "Favorite" not in candidate and "EUR" not in candidate and len(candidate) > 5:
+                    info["venue"] = candidate
+                    break
+            break
+
+    # Name: first meaningful line (usually the event title)
+    for line in lines[:10]:
+        clean = line.strip()
+        if clean and "WWE" in clean and len(clean) > 5:
+            info["name"] = clean
+            break
 
     return info
 
 
 def scrape_stubhub(errors: list[str]) -> list[dict]:
-    """Scrape StubHub for WWE Italy events.
-
-    Returns list of event dicts matching the status.json structure.
-    """
+    """Scrape StubHub for WWE Italy events."""
     events = []
 
     try:
@@ -222,59 +247,45 @@ def scrape_stubhub(errors: list[str]) -> list[dict]:
             stealth.apply_stealth_sync(context)
             page = context.new_page()
 
-            # Step 1: Visit grouping page to discover event URLs
-            print(f"Visiting StubHub grouping page: {GROUPING_URL}")
-            page.goto(GROUPING_URL, wait_until="domcontentloaded", timeout=60000)
-            page.wait_for_timeout(8000)
+            # Step 1: Discover Italian WWE events via search
+            event_links = _discover_italy_events(page, errors)
+            print(f"Found {len(event_links)} Italian WWE event(s)")
 
-            _dismiss_cookies(page)
-            page.wait_for_timeout(2000)
-
-            # Extract event links from grouping page
-            event_links = _extract_event_links(page)
-            print(f"Found {len(event_links)} event links on grouping page")
-
-            if not event_links:
-                # Fallback: grab all links from page text
-                page_text = page.inner_text("body")
-                print(f"Grouping page text length: {len(page_text)}")
-                errors.append("No event links found on StubHub grouping page")
-
-            # Step 2: Visit each event page
+            # Step 2: Visit each event page and extract listings
             for idx, ev_link in enumerate(event_links):
                 url = ev_link["url"]
                 try:
                     print(f"  [{idx+1}/{len(event_links)}] Visiting {url}")
                     page.goto(url, wait_until="domcontentloaded", timeout=60000)
-                    page.wait_for_timeout(8000)  # Longer wait for StubHub anti-bot
+                    page.wait_for_timeout(10000)
 
                     page_text = page.inner_text("body")
-                    info = _extract_event_info_from_page(page_text)
-                    listings = _extract_listings(page_text)
-                    listings = _deduplicate_packages(listings)
+                    meta = _extract_event_meta(page_text)
+                    listings = _extract_listings_from_page(page)
 
-                    # Use link text as name if we couldn't extract from page
-                    event_name = info.get("name") or ev_link.get("name", "")
-                    event_date = info.get("date", "")
+                    event_name = meta.get("name") or ev_link.get("name", "")
+                    event_date = meta.get("date", "")
+                    venue = meta.get("venue", "")
 
-                    # Generate a stable ID from URL
-                    event_id = re.sub(r'[^a-z0-9]', '', url.split("/")[-2] if url.rstrip("/").count("/") > 2 else url)[-20:]
+                    # Generate stable ID from URL
+                    url_parts = url.rstrip("/").split("/")
+                    event_id = url_parts[-1] if url_parts else "unknown"
 
                     if listings:
                         all_prices = [pkg["price"] for pkg in listings]
+                        print(f"    {len(listings)} listings, {min(all_prices):.0f}€ - {max(all_prices):.0f}€")
                         price_min = min(all_prices)
                         price_max = max(all_prices)
-                        print(f"    {len(listings)} listings, {price_min:.2f}€ - {price_max:.2f}€")
                     else:
+                        print("    No listings found")
                         price_min = None
                         price_max = None
-                        print(f"    No listings found")
 
                     events.append({
                         "id": f"stubhub-{event_id}",
                         "name": event_name,
                         "date": event_date,
-                        "venue": info.get("venue", ""),
+                        "venue": venue,
                         "is_single_day": True,
                         "price_min": price_min,
                         "price_max": price_max,
@@ -283,7 +294,6 @@ def scrape_stubhub(errors: list[str]) -> list[dict]:
                         "packages": listings,
                     })
 
-                    # Wait between pages to avoid anti-bot
                     if idx < len(event_links) - 1:
                         page.wait_for_timeout(10000)
 
@@ -318,10 +328,9 @@ def main():
                 "price_min": ev["price_min"],
             })
 
-    # Trim history
     status["price_history"] = status["price_history"][-MAX_HISTORY:]
 
-    # Check alert condition — only for Clash in Italy 31/05
+    # Alert: Clash in Italy 31/05 under threshold
     clash = next(
         (e for e in events if "Clash in Italy" in e.get("name", "") and e.get("date") == "2026-05-31"),
         None,

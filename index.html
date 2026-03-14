@@ -180,8 +180,11 @@
     <div class="loading">Caricamento dati&hellip;</div>
   </div>
 
+  <div id="scraping-status" style="display:none"></div>
+
   <div class="footer">
     Auto-refresh ogni 5 minuti &bull; Dati aggiornati ogni 15 min via Docker
+    <br><button onclick="toggleScrapingStatus()" style="background:none;border:none;color:var(--muted);cursor:pointer;font-size:.75rem;margin-top:.3rem;text-decoration:underline">Stato scraping</button>
   </div>
 </div>
 
@@ -387,6 +390,66 @@ async function load() {
     document.getElementById('app').innerHTML =
       `<div class="banner waiting">${msg}</div>`;
   }
+}
+
+let scrapingStatusVisible = false;
+
+function toggleScrapingStatus() {
+  scrapingStatusVisible = !scrapingStatusVisible;
+  const el = document.getElementById('scraping-status');
+  if (scrapingStatusVisible) {
+    el.style.display = 'block';
+    loadScrapingStatus();
+  } else {
+    el.style.display = 'none';
+  }
+}
+
+async function loadScrapingStatus() {
+  const sources = [
+    { name: 'Ticketmaster', url: 'data/status.json' },
+    { name: 'StubHub', url: 'data/stubhub.json' },
+  ];
+  let rows = '';
+  for (const src of sources) {
+    try {
+      const resp = await fetch(src.url + '?t=' + Date.now());
+      if (!resp.ok) throw new Error(resp.status);
+      const d = await resp.json();
+      const events = d.events || [];
+      const totalPkgs = events.reduce((sum, e) => sum + (e.packages ? e.packages.length : 0), 0);
+      const availPkgs = events.reduce((sum, e) => sum + (e.packages ? e.packages.filter(p => p.available).length : 0), 0);
+      const status = d.errors && d.errors.length
+        ? `<span style="color:var(--red)">${d.errors.length} errori</span>`
+        : '<span style="color:var(--green)">OK</span>';
+      rows += `<tr>
+        <td>${src.name}</td>
+        <td>${d.last_check ? timeAgo(d.last_check) : 'Mai'}</td>
+        <td>${events.length}</td>
+        <td>${totalPkgs} (${availPkgs} disp.)</td>
+        <td>${d.checks_count || 0}</td>
+        <td>${status}</td>
+      </tr>`;
+    } catch {
+      rows += `<tr>
+        <td>${src.name}</td>
+        <td colspan="5" style="color:var(--muted)">Dati non disponibili</td>
+      </tr>`;
+    }
+  }
+
+  document.getElementById('scraping-status').innerHTML = `
+    <div class="card" style="margin-top:0">
+      <h2 style="font-size:.85rem">Stato Scraping</h2>
+      <div style="overflow-x:auto">
+        <table style="font-size:.78rem">
+          <thead><tr>
+            <th>Sorgente</th><th>Ultimo check</th><th>Eventi</th><th>Pacchetti</th><th>Controlli</th><th>Stato</th>
+          </tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+    </div>`;
 }
 
 load();
