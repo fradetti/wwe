@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WWE Ticket Monitor - 31 Maggio 2025</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<style>
+  :root {
+    --bg: #0f0f0f;
+    --surface: #1a1a2e;
+    --border: #2a2a4a;
+    --text: #e0e0e0;
+    --muted: #888;
+    --green: #00c853;
+    --red: #ff1744;
+    --gold: #ffd600;
+    --blue: #448aff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 1rem;
+  }
+  .container { max-width: 900px; margin: 0 auto; }
+
+  header {
+    text-align: center;
+    padding: 2rem 0 1rem;
+  }
+  header h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+  header p { color: var(--muted); margin-top: .3rem; }
+
+  .banner {
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  .banner.alert { background: linear-gradient(135deg, #00c853, #009624); color: #fff; }
+  .banner.waiting { background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+  .banner.error { background: #330011; border: 1px solid var(--red); color: var(--red); }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1rem 0;
+    font-size: .85rem;
+    color: var(--muted);
+  }
+  .meta span { background: var(--surface); padding: .4rem .8rem; border-radius: 8px; }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.2rem;
+    margin: 1.5rem 0;
+  }
+  .card h2 { font-size: 1rem; margin-bottom: .8rem; color: var(--gold); }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .85rem;
+  }
+  th { text-align: left; color: var(--muted); font-weight: 500; padding: .5rem .4rem; border-bottom: 1px solid var(--border); }
+  td { padding: .6rem .4rem; border-bottom: 1px solid var(--border); }
+  tr:last-child td { border-bottom: none; }
+  .tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: .75rem;
+    font-weight: 600;
+  }
+  .tag.single { background: #1b5e20; color: var(--green); }
+  .tag.combo { background: #4a1480; color: #ce93d8; }
+  a { color: var(--blue); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .chart-box { position: relative; height: 250px; }
+
+  .loading { text-align: center; padding: 3rem; color: var(--muted); }
+  .footer { text-align: center; padding: 2rem 0; font-size: .75rem; color: var(--muted); }
+
+  @media (max-width: 600px) {
+    header h1 { font-size: 1.2rem; }
+    .banner { font-size: 1rem; padding: 1rem; }
+    table { font-size: .78rem; }
+    .hide-mobile { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>WWE Ticket Monitor - 31 Maggio 2025 &#127470;&#127481;</h1>
+    <p>Monitoraggio biglietti singoli sotto 400&euro;</p>
+  </header>
+
+  <div id="app">
+    <div class="loading">Caricamento dati&hellip;</div>
+  </div>
+
+  <div class="footer">
+    Auto-refresh ogni 5 minuti &bull; Dati aggiornati ogni 15 min via GitHub Actions
+  </div>
+</div>
+
+<script>
+const DATA_URL = 'data/status.json';
+
+function timeAgo(iso) {
+  if (!iso) return '—';
+  const diff = (Date.now() - new Date(iso).getTime()) / 1000;
+  if (diff < 60) return `${Math.round(diff)}s fa`;
+  if (diff < 3600) return `${Math.round(diff / 60)}min fa`;
+  if (diff < 86400) return `${Math.round(diff / 3600)}h fa`;
+  return `${Math.round(diff / 86400)}g fa`;
+}
+
+function fmtDate(d) {
+  if (!d) return '—';
+  const [y, m, day] = d.split('-');
+  return `${day}/${m}/${y}`;
+}
+
+function fmtPrice(p, currency) {
+  if (p == null) return '—';
+  return `${p.toFixed(2)} ${currency || '€'}`;
+}
+
+function render(data) {
+  const app = document.getElementById('app');
+
+  // Banner
+  let bannerClass, bannerText;
+  if (data.errors && data.errors.length && !data.events.length) {
+    bannerClass = 'error';
+    bannerText = 'Errore nel controllo — riprovo tra 15 min';
+  } else if (data.alert_active) {
+    bannerClass = 'alert';
+    bannerText = 'BIGLIETTI SINGOLI TROVATI SOTTO 400€!';
+  } else {
+    bannerClass = 'waiting';
+    bannerText = 'Non ancora disponibili biglietti singoli sotto 400€';
+  }
+
+  // Events table
+  let rows = '';
+  for (const e of (data.events || [])) {
+    const tag = e.is_single_day
+      ? '<span class="tag single">Singolo</span>'
+      : '<span class="tag combo">Combo</span>';
+    const link = e.url ? `<a href="${e.url}" target="_blank" rel="noopener">Acquista</a>` : '—';
+    rows += `<tr>
+      <td>${e.name || '—'}</td>
+      <td>${fmtDate(e.date)}</td>
+      <td>${tag}</td>
+      <td>${fmtPrice(e.price_min, e.currency)}</td>
+      <td class="hide-mobile">${fmtPrice(e.price_max, e.currency)}</td>
+      <td>${link}</td>
+    </tr>`;
+  }
+  if (!rows) rows = '<tr><td colspan="6" style="text-align:center;color:var(--muted)">Nessun evento trovato</td></tr>';
+
+  // Errors
+  let errHtml = '';
+  if (data.errors && data.errors.length) {
+    errHtml = `<div class="card" style="border-color:var(--red)"><h2 style="color:var(--red)">Errori</h2><ul style="padding-left:1.2rem;font-size:.82rem">${data.errors.map(e => `<li>${e}</li>`).join('')}</ul></div>`;
+  }
+
+  app.innerHTML = `
+    <div class="banner ${bannerClass}">${bannerText}</div>
+
+    <div class="meta">
+      <span>Ultimo check: ${timeAgo(data.last_check)}</span>
+      <span>Controlli: ${data.checks_count || 0}</span>
+      <span>Soglia: ${data.threshold_eur || 400}€</span>
+    </div>
+
+    <div class="card">
+      <h2>Eventi</h2>
+      <div style="overflow-x:auto">
+        <table>
+          <thead><tr>
+            <th>Evento</th><th>Data</th><th>Tipo</th><th>Min</th><th class="hide-mobile">Max</th><th>Link</th>
+          </tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Storico Prezzi</h2>
+      <div class="chart-box"><canvas id="priceChart"></canvas></div>
+    </div>
+
+    ${errHtml}
+  `;
+
+  renderChart(data.price_history || []);
+}
+
+function renderChart(history) {
+  const canvas = document.getElementById('priceChart');
+  if (!canvas || !history.length) {
+    if (canvas) {
+      const ctx = canvas.getContext('2d');
+      ctx.fillStyle = '#888';
+      ctx.font = '14px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('Nessun dato storico ancora disponibile', canvas.width / 2, canvas.height / 2);
+    }
+    return;
+  }
+
+  // Group by event_id
+  const byEvent = {};
+  for (const p of history) {
+    if (!byEvent[p.event_id]) byEvent[p.event_id] = [];
+    byEvent[p.event_id].push({ x: new Date(p.timestamp), y: p.price_min });
+  }
+
+  const colors = ['#ffd600', '#448aff', '#00c853', '#ff1744', '#ce93d8'];
+  const datasets = Object.entries(byEvent).map(([id, points], i) => ({
+    label: id.substring(0, 12),
+    data: points,
+    borderColor: colors[i % colors.length],
+    backgroundColor: 'transparent',
+    tension: 0.3,
+    pointRadius: 2,
+  }));
+
+  new Chart(canvas, {
+    type: 'line',
+    data: { datasets },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        x: { type: 'time', time: { tooltipFormat: 'dd/MM HH:mm' },
+             ticks: { color: '#888' }, grid: { color: '#2a2a4a' } },
+        y: { ticks: { color: '#888', callback: v => v + '€' }, grid: { color: '#2a2a4a' } }
+      },
+      plugins: {
+        legend: { labels: { color: '#ccc', boxWidth: 12 } }
+      }
+    }
+  });
+}
+
+async function load() {
+  try {
+    const resp = await fetch(DATA_URL + '?t=' + Date.now());
+    if (!resp.ok) throw new Error(resp.status);
+    render(await resp.json());
+  } catch (e) {
+    document.getElementById('app').innerHTML =
+      `<div class="banner waiting">Nessun dato disponibile — il primo check non è ancora stato eseguito</div>`;
+  }
+}
+
+load();
+setInterval(load, 5 * 60 * 1000);
+</script>
+</body>
+</html>
