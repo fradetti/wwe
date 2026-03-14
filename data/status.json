@@ -1,7 +1,7 @@
 {
-  "last_check": "2026-03-14T20:13:43.663308+00:00",
+  "last_check": "2026-03-14T20:33:22.094801+00:00",
   "threshold_eur": 400,
-  "alert_active": true,
+  "alert_active": false,
   "events": [
     {
       "id": "ZG9rmIYnyZeeFd",
@@ -42,7 +42,7 @@
         {
           "name": "7° Settore Num.",
           "price": 345.0,
-          "available": true
+          "available": false
         },
         {
           "name": "8° Settore Num.",
@@ -85,7 +85,7 @@
         {
           "name": "Champion Package",
           "price": 3410.0,
-          "available": false
+          "available": true
         },
         {
           "name": "Gold Package",
@@ -941,8 +941,33 @@
       "timestamp": "2026-03-14T20:13:43.663308+00:00",
       "event_id": "ZG9rmIYnyZeeA1",
       "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-03-14T20:33:22.094801+00:00",
+      "event_id": "ZG9rmIYnyZeeFd",
+      "price_min": 218.5
+    },
+    {
+      "timestamp": "2026-03-14T20:33:22.094801+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 1371.25
+    },
+    {
+      "timestamp": "2026-03-14T20:33:22.094801+00:00",
+      "event_id": "ZG9rmIYnyZee66",
+      "price_min": 707.0
+    },
+    {
+      "timestamp": "2026-03-14T20:33:22.094801+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 103.5
+    },
+    {
+      "timestamp": "2026-03-14T20:33:22.094801+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
+      "price_min": 69.0
     }
   ],
-  "checks_count": 35,
+  "checks_count": 36,
   "errors": []
 }
