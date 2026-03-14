@@ -15,9 +15,6 @@ THRESHOLD_EUR = 400
 COMBO_KEYWORDS = ["combo", "2-day", "weekend", "2 giorni", "2-giorni", "two day"]
 MAX_HISTORY = 1000
 
-# Ticketmaster.it event page URLs (from Discovery API) are behind queue-it,
-# but the artist listing page is accessible and contains event schedule IDs.
-# We use those IDs to load individual event pages via Playwright.
 ARTIST_PAGE = "https://www.ticketmaster.it/artist/wwe-biglietti/2453"
 
 
@@ -74,17 +71,13 @@ def extract_venue(event: dict) -> str:
     return ""
 
 
-def scrape_prices(event_urls: dict[str, str], errors: list[str]) -> dict[str, dict]:
-    """Use Playwright to scrape prices from ticketmaster.it event pages.
-
-    Args:
-        event_urls: mapping of event_id -> ticketmaster.it URL
-        errors: list to append error messages to
+def scrape_prices_from_artist_page(errors: list[str]) -> dict[str, dict]:
+    """Use Playwright to load the artist page and extract prices for each event.
 
     Returns:
-        mapping of event_id -> {"price_min": float|None, "price_max": float|None}
+        mapping of ticketmaster.it schedule_id -> {"price_min": float|None, "price_max": float|None}
     """
-    results = {eid: {"price_min": None, "price_max": None} for eid in event_urls}
+    results = {}
 
     try:
         from playwright.sync_api import sync_playwright
@@ -99,63 +92,76 @@ def scrape_prices(event_urls: dict[str, str], errors: list[str]) -> dict[str, di
                 user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
                 locale="it-IT",
             )
+            page = context.new_page()
 
-            for event_id, url in event_urls.items():
-                try:
-                    page = context.new_page()
-                    page.goto(url, wait_until="domcontentloaded", timeout=60000)
+            print(f"Loading artist page: {ARTIST_PAGE}")
+            page.goto(ARTIST_PAGE, wait_until="networkidle", timeout=60000)
+            page.wait_for_timeout(3000)
 
-                    # Wait for possible queue-it redirect to resolve
-                    # If we land on queue-it, wait and retry
-                    if "queue-it" in page.url:
-                        page.wait_for_url("**/ticketmaster.it/**", timeout=90000)
+            content = page.content()
+            print(f"Artist page loaded, {len(content)} chars")
 
-                    # Wait for price elements to load
-                    page.wait_for_timeout(5000)
+            # Look for price elements near event links
+            # Ticketmaster.it shows "a partire da €XX" or similar on event cards
+            event_cards = page.query_selector_all('[data-testid="event-list-item"], [class*="event"], [class*="Event"]')
+            print(f"Found {len(event_cards)} event card elements")
 
-                    # Try multiple strategies to find prices
-                    prices = set()
+            for card in event_cards:
+                card_html = card.inner_html()
+                card_text = card.inner_text()
 
-                    # Strategy 1: look for price patterns in page text
-                    content = page.content()
-                    # Match patterns like "€ 45,00" or "45,00 €" or "EUR 45.00"
-                    for m in re.finditer(r'€\s*(\d+[.,]\d{2})|(\d+[.,]\d{2})\s*€', content):
-                        val = m.group(1) or m.group(2)
-                        val = val.replace(",", ".")
-                        prices.add(float(val))
+                # Find schedule ID in card links
+                id_match = re.search(r'/event/([a-z0-9]+)', card_html)
+                if not id_match:
+                    continue
+                schedule_id = id_match.group(1)
 
-                    # Strategy 2: look for data attributes or JSON with prices
-                    for m in re.finditer(r'"price"\s*:\s*(\d+\.?\d*)', content):
-                        prices.add(float(m.group(1)))
-                    for m in re.finditer(r'"amount"\s*:\s*(\d+\.?\d*)', content):
-                        prices.add(float(m.group(1)))
-                    for m in re.finditer(r'"formattedMinPrice"\s*:\s*"(\d+[.,]\d{2})"', content):
-                        prices.add(float(m.group(1).replace(",", ".")))
+                # Find prices in card text
+                prices = set()
+                for m in re.finditer(r'€\s*(\d+(?:[.,]\d{2})?)', card_text):
+                    val = m.group(1).replace(",", ".")
+                    prices.add(float(val))
+                for m in re.finditer(r'(\d+(?:[.,]\d{2})?)\s*€', card_text):
+                    val = m.group(1).replace(",", ".")
+                    prices.add(float(val))
+                # Also check for "da X" pattern (starting from X)
+                for m in re.finditer(r'(?:da|from)\s*€?\s*(\d+(?:[.,]\d{2})?)', card_text, re.IGNORECASE):
+                    val = m.group(1).replace(",", ".")
+                    prices.add(float(val))
 
-                    # Filter out obviously wrong prices (fees, coordinates, etc.)
-                    valid_prices = [p for p in prices if 10 <= p <= 5000]
+                valid_prices = [p for p in prices if 10 <= p <= 5000]
+                if valid_prices:
+                    results[schedule_id] = {
+                        "price_min": min(valid_prices),
+                        "price_max": max(valid_prices),
+                    }
+                    print(f"  {schedule_id}: {min(valid_prices)}-{max(valid_prices)} EUR")
+                else:
+                    print(f"  {schedule_id}: no prices in card text: {card_text[:100]!r}")
 
-                    if valid_prices:
-                        results[event_id] = {
-                            "price_min": min(valid_prices),
-                            "price_max": max(valid_prices),
-                        }
-                        print(f"  {event_id}: prices {min(valid_prices)}-{max(valid_prices)} EUR")
-                    else:
-                        print(f"  {event_id}: no prices found on page")
-
-                    page.close()
-
-                except Exception as exc:
-                    errors.append(f"Scrape failed for {event_id}: {exc}")
-                    print(f"  {event_id}: scrape error: {exc}", file=sys.stderr)
+            # Fallback: if no cards found, try scanning full page for price+event patterns
+            if not results:
+                print("No prices from cards, trying full page scan...")
+                full_text = page.inner_text("body")
+                print(f"Full page text length: {len(full_text)}")
+                # Log a sample to debug
+                for line in full_text.split("\n"):
+                    if "€" in line or "partire" in line.lower():
+                        print(f"  Price line: {line.strip()[:120]}")
 
             browser.close()
 
     except Exception as exc:
         errors.append(f"Playwright error: {exc}")
+        print(f"Playwright error: {exc}", file=sys.stderr)
 
     return results
+
+
+def match_schedule_id(event_url: str) -> str | None:
+    """Extract schedule ID from ticketmaster.it URL."""
+    m = re.search(r'/event/([a-z0-9]+)', event_url)
+    return m.group(1) if m else None
 
 
 def main():
@@ -168,7 +174,6 @@ def main():
     now = datetime.now(timezone.utc).isoformat()
     errors: list[str] = []
     events = []
-    event_urls: dict[str, str] = {}
 
     # Step 1: Get event list from Discovery API
     try:
@@ -196,35 +201,33 @@ def main():
                     "url": url,
                 })
 
-                if url:
-                    event_urls[event_id] = url
-
     except httpx.HTTPStatusError as exc:
         errors.append(f"Search API error: {exc.response.status_code}")
     except httpx.RequestError as exc:
         errors.append(f"Request error: {exc}")
 
-    # Step 2: Scrape prices from ticketmaster.it via Playwright
-    if event_urls:
-        print(f"Scraping prices for {len(event_urls)} events...")
-        scraped = scrape_prices(event_urls, errors)
+    # Step 2: Scrape prices from ticketmaster.it artist page via Playwright
+    print("Scraping prices from artist page...")
+    scraped = scrape_prices_from_artist_page(errors)
+    print(f"Scraped prices for {len(scraped)} events")
 
-        for ev in events:
-            if ev["id"] in scraped:
-                ev["price_min"] = scraped[ev["id"]]["price_min"]
-                ev["price_max"] = scraped[ev["id"]]["price_max"]
+    # Match scraped prices to events by schedule ID in URL
+    for ev in events:
+        schedule_id = match_schedule_id(ev["url"])
+        if schedule_id and schedule_id in scraped:
+            ev["price_min"] = scraped[schedule_id]["price_min"]
+            ev["price_max"] = scraped[schedule_id]["price_max"]
 
-                if ev["price_min"] is not None:
-                    status["price_history"].append({
-                        "timestamp": now,
-                        "event_id": ev["id"],
-                        "price_min": ev["price_min"],
-                    })
+            status["price_history"].append({
+                "timestamp": now,
+                "event_id": ev["id"],
+                "price_min": ev["price_min"],
+            })
 
     # Trim history
     status["price_history"] = status["price_history"][-MAX_HISTORY:]
 
-    # Check alert condition: any single-day event under threshold with a known price
+    # Check alert condition
     alert = any(
         e["is_single_day"] and e["price_min"] is not None and e["price_min"] < THRESHOLD_EUR
         for e in events
