@@ -1,7 +1,7 @@
 {
-  "last_check": "2026-03-14T18:35:07.926646+00:00",
+  "last_check": "2026-03-14T18:40:01.672176+00:00",
   "threshold_eur": 400,
-  "alert_active": true,
+  "alert_active": false,
   "events": [
     {
       "id": "ZG9rmIYnyZeeFd",
@@ -12,54 +12,7 @@
       "price_min": 218.5,
       "price_max": 1564.0,
       "currency": "EUR",
-      "url": "https://www.ticketmaster.it/biglietti/wwe-combo-ticket-wwe-clash-in-italy-wwe-monday-night-raw/event/c8pvxncrsodb",
-      "packages": [
-        {
-          "name": "2° Settore Num.",
-          "price": 1207.5,
-          "available": true
-        },
-        {
-          "name": "3° Settore Num.",
-          "price": 1564.0,
-          "available": true
-        },
-        {
-          "name": "4° Settore Num.",
-          "price": 1121.25,
-          "available": true
-        },
-        {
-          "name": "5° Settore Num.",
-          "price": 977.5,
-          "available": true
-        },
-        {
-          "name": "6° Settore Num.",
-          "price": 402.5,
-          "available": true
-        },
-        {
-          "name": "7° Settore Num.",
-          "price": 345.0,
-          "available": true
-        },
-        {
-          "name": "8° Settore Num.",
-          "price": 299.0,
-          "available": false
-        },
-        {
-          "name": "9° Settore Num.",
-          "price": 258.75,
-          "available": false
-        },
-        {
-          "name": "10° Settore Num.",
-          "price": 218.5,
-          "available": false
-        }
-      ]
+      "url": "https://www.ticketmaster.it/biglietti/wwe-combo-ticket-wwe-clash-in-italy-wwe-monday-night-raw/event/c8pvxncrsodb"
     },
     {
       "id": "ZG9rmIYnyZeeA6",
@@ -70,8 +23,7 @@
       "price_min": null,
       "price_max": null,
       "currency": "EUR",
-      "url": "https://www.ticketmaster.it/biglietti/wwe-clash-in-italy-torino-31-05-2026/event/ur737yvj5cba",
-      "packages": []
+      "url": "https://www.ticketmaster.it/biglietti/wwe-clash-in-italy-torino-31-05-2026/event/ur737yvj5cba"
     },
     {
       "id": "ZG9rmIYnyZee66",
@@ -82,8 +34,7 @@
       "price_min": null,
       "price_max": null,
       "currency": "EUR",
-      "url": "https://www.ticketmaster.it/biglietti/wwe-monday-night-raw-torino-01-06-2026/event/w8facmymqkti",
-      "packages": []
+      "url": "https://www.ticketmaster.it/biglietti/wwe-monday-night-raw-torino-01-06-2026/event/w8facmymqkti"
     },
     {
       "id": "ZG9rmIYnyZeeAa",
@@ -94,8 +45,7 @@
       "price_min": null,
       "price_max": null,
       "currency": "EUR",
-      "url": "https://www.ticketmaster.it/biglietti/wwe-friday-night-smackdown-casalecchio-di-reno-05-06-2026/event/gaw6l9am8v3m",
-      "packages": []
+      "url": "https://www.ticketmaster.it/biglietti/wwe-friday-night-smackdown-casalecchio-di-reno-05-06-2026/event/gaw6l9am8v3m"
     },
     {
       "id": "ZG9rmIYnyZeeA1",
@@ -106,8 +56,7 @@
       "price_min": null,
       "price_max": null,
       "currency": "EUR",
-      "url": "https://www.ticketmaster.it/biglietti/wwe-european-summer-tour-roma-06-06-2026/event/bi1t6rrbxn4q",
-      "packages": []
+      "url": "https://www.ticketmaster.it/biglietti/wwe-european-summer-tour-roma-06-06-2026/event/bi1t6rrbxn4q"
     },
     {
       "id": "ZG9rmIYnyZeekv",
@@ -118,8 +67,7 @@
       "price_min": null,
       "price_max": null,
       "currency": "EUR",
-      "url": "https://www.ticketmaster.it/biglietti/wwe-european-summer-tour-firenze-07-06-2026/event/xxlb2e7953yg",
-      "packages": []
+      "url": "https://www.ticketmaster.it/biglietti/wwe-european-summer-tour-firenze-07-06-2026/event/xxlb2e7953yg"
     }
   ],
   "price_history": [
@@ -579,6 +527,6 @@
       "price_min": 218.5
     }
   ],
-  "checks_count": 29,
+  "checks_count": 30,
   "errors": []
 }
