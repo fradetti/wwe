@@ -28,14 +28,17 @@ while true; do
     # Pull latest before running
     git pull --ff-only origin main || true
 
-    # Run the ticket checker — output goes to data/status.json in the repo
-    STATUS_PATH="$REPO_DIR/data/status.json" python /app/scripts/check_tickets.py || echo "Check failed, will retry next cycle"
+    # Run the Ticketmaster checker
+    STATUS_PATH="$REPO_DIR/data/status.json" python /app/scripts/check_tickets.py || echo "Ticketmaster check failed, will retry next cycle"
+
+    # Run the StubHub checker
+    STUBHUB_STATUS_PATH="$REPO_DIR/data/stubhub.json" python /app/scripts/check_stubhub.py || echo "StubHub check failed, will retry next cycle"
 
     # Commit and push if there are changes
-    if git diff --quiet data/status.json 2>/dev/null; then
+    if git diff --quiet data/status.json data/stubhub.json 2>/dev/null; then
         echo "No changes to push"
     else
-        git add data/status.json
+        git add data/status.json data/stubhub.json
         git commit -m "Update ticket status [skip ci]"
         git push origin main
         echo "Pushed updated status"

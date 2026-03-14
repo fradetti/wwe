@@ -100,6 +100,25 @@
   a { color: var(--blue); text-decoration: none; }
   a:hover { text-decoration: underline; }
 
+  .source-toggle {
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    margin: 1rem 0;
+  }
+  .source-btn {
+    background: var(--surface);
+    color: var(--muted);
+    border: 1px solid var(--border);
+    padding: .5rem 1.2rem;
+    border-radius: 8px;
+    font-size: .85rem;
+    cursor: pointer;
+    transition: all .2s;
+  }
+  .source-btn:hover { border-color: var(--blue); color: var(--text); }
+  .source-btn.active { background: var(--blue); color: #fff; border-color: var(--blue); }
+
   .loading { text-align: center; padding: 3rem; color: var(--muted); }
   .footer { text-align: center; padding: 2rem 0; font-size: .75rem; color: var(--muted); }
 
@@ -152,6 +171,11 @@
     <p>Monitoraggio biglietti singoli sotto 400&euro;</p>
   </header>
 
+  <div class="source-toggle">
+    <button class="source-btn active" id="btn-ticketmaster" onclick="switchSource('ticketmaster')">Ticketmaster</button>
+    <button class="source-btn" id="btn-stubhub" onclick="switchSource('stubhub')">StubHub</button>
+  </div>
+
   <div id="app">
     <div class="loading">Caricamento dati&hellip;</div>
   </div>
@@ -162,7 +186,8 @@
 </div>
 
 <script>
-const DATA_URL = 'data/status.json';
+let DATA_URL = 'data/status.json';
+let currentSource = 'ticketmaster';
 let showOnlyAvailable = true;
 let allExpanded = false;
 
@@ -340,6 +365,15 @@ function toggleFilter() {
   if (currentData) render(currentData);
 }
 
+function switchSource(source) {
+  currentSource = source;
+  DATA_URL = source === 'stubhub' ? 'data/stubhub.json' : 'data/status.json';
+  document.getElementById('btn-ticketmaster').classList.toggle('active', source === 'ticketmaster');
+  document.getElementById('btn-stubhub').classList.toggle('active', source === 'stubhub');
+  allExpanded = false;
+  load();
+}
+
 async function load() {
   try {
     const resp = await fetch(DATA_URL + '?t=' + Date.now());
@@ -347,8 +381,11 @@ async function load() {
     render(await resp.json());
   } catch (e) {
     console.error('Load error:', e);
+    const msg = currentSource === 'stubhub'
+      ? 'Dati StubHub non ancora disponibili'
+      : 'Nessun dato disponibile \u2014 il primo check non \u00E8 ancora stato eseguito';
     document.getElementById('app').innerHTML =
-      `<div class="banner waiting">Nessun dato disponibile \u2014 il primo check non \u00E8 ancora stato eseguito</div>`;
+      `<div class="banner waiting">${msg}</div>`;
   }
 }
 

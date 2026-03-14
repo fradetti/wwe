@@ -1,0 +1,9 @@
+{
+  "last_check": null,
+  "threshold_eur": 400,
+  "alert_active": false,
+  "events": [],
+  "price_history": [],
+  "checks_count": 0,
+  "errors": []
+}
