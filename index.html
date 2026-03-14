@@ -192,17 +192,25 @@ function render(data) {
   currentData = data;
   const app = document.getElementById('app');
 
-  // Banner
+  // Banner — alert only for Clash in Italy 31/05
   let bannerClass, bannerText;
+  const clash = (data.events || []).find(e => e.name && e.name.includes('Clash in Italy') && e.date === '2026-05-31');
+  const clashAvailPkgs = clash && clash.packages ? clash.packages.filter(p => p.available) : [];
+  const clashMinPrice = clashAvailPkgs.length ? Math.min(...clashAvailPkgs.map(p => p.price)) : null;
+  const clashAlert = clashMinPrice !== null && clashMinPrice < (data.threshold_eur || 400);
+
   if (data.errors && data.errors.length && !data.events.length) {
     bannerClass = 'error';
     bannerText = 'Errore nel controllo \u2014 riprovo tra 15 min';
-  } else if (data.alert_active) {
+  } else if (clashAlert) {
     bannerClass = 'alert';
-    bannerText = 'BIGLIETTI SINGOLI TROVATI SOTTO 400\u20AC!';
+    bannerText = `CLASH IN ITALY: biglietto disponibile a ${fmtPrice(clashMinPrice, '\u20AC')}!`;
+  } else if (clashMinPrice !== null) {
+    bannerClass = 'waiting';
+    bannerText = `Clash in Italy: prezzo minimo disponibile ${fmtPrice(clashMinPrice, '\u20AC')} (soglia: ${data.threshold_eur || 400}\u20AC)`;
   } else {
     bannerClass = 'waiting';
-    bannerText = 'Non ancora disponibili biglietti singoli sotto 400\u20AC';
+    bannerText = 'Clash in Italy: nessun biglietto disponibile al momento';
   }
 
   // Events + packages

@@ -334,11 +334,15 @@ def main():
     # Trim history
     status["price_history"] = status["price_history"][-MAX_HISTORY:]
 
-    # Check alert condition
-    alert = any(
-        e["is_single_day"] and e["price_min"] is not None and e["price_min"] < THRESHOLD_EUR
-        for e in events
+    # Check alert condition — only for Clash in Italy 31/05
+    clash = next(
+        (e for e in events if "Clash in Italy" in e.get("name", "") and e.get("date") == "2026-05-31"),
+        None,
     )
+    clash_avail_prices = [
+        pkg["price"] for pkg in (clash.get("packages", []) if clash else []) if pkg.get("available")
+    ]
+    alert = bool(clash_avail_prices) and min(clash_avail_prices) < THRESHOLD_EUR
 
     status.update({
         "last_check": now,
