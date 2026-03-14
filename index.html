@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>WWE Ticket Monitor - 31 Maggio 2026</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3"></script>
 <style>
   :root {
     --bg: #0f0f0f;
@@ -366,6 +367,7 @@ async function load() {
     if (!resp.ok) throw new Error(resp.status);
     render(await resp.json());
   } catch (e) {
+    console.error('Load error:', e);
     document.getElementById('app').innerHTML =
       `<div class="banner waiting">Nessun dato disponibile \u2014 il primo check non \u00E8 ancora stato eseguito</div>`;
   }
