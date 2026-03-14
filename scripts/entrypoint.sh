@@ -13,7 +13,7 @@ git config --global user.email "wwe-monitor@bot"
 if [ -d "$REPO_DIR/.git" ]; then
     echo "Repo exists, pulling latest..."
     cd "$REPO_DIR"
-    git pull --ff-only origin main || true
+    git pull --rebase origin main || git reset --hard origin/main
 else
     echo "Cloning repo..."
     git clone "https://x-access-token:${GITHUB_PAT}@github.com/${GIT_REPO}.git" "$REPO_DIR"
@@ -25,8 +25,8 @@ echo "Starting monitor loop (interval: ${CHECK_INTERVAL}s)..."
 while true; do
     echo "=== Check starting at $(date -u '+%Y-%m-%dT%H:%M:%SZ') ==="
 
-    # Pull latest before running
-    git pull --ff-only origin main || true
+    # Pull latest before running (rebase to handle diverging status commits)
+    git pull --rebase origin main || git reset --hard origin/main
 
     # Run the Ticketmaster checker
     STATUS_PATH="$REPO_DIR/data/status.json" python /app/scripts/check_tickets.py || echo "Ticketmaster check failed, will retry next cycle"
