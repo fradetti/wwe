@@ -218,12 +218,28 @@ function render(data) {
     const hasPkgs = e.packages && e.packages.length > 0;
     const toggleClass = hasPkgs ? 'event-toggle' : '';
 
+    // Compute min/max based on filter
+    let pMin = e.price_min, pMax = e.price_max;
+    if (hasPkgs) {
+      const filtered = showOnlyAvailable ? e.packages.filter(p => p.available) : e.packages;
+      if (filtered.length) {
+        const prices = filtered.map(p => p.price);
+        pMin = Math.min(...prices);
+        pMax = Math.max(...prices);
+      } else {
+        pMin = null;
+        pMax = null;
+      }
+    }
+
+    const venue = e.venue ? `<br><span style="font-size:.75rem;color:var(--muted)">${e.venue}</span>` : '';
+
     rows += `<tr class="${toggleClass}" ${hasPkgs ? `onclick="togglePackages(${ei})" data-event="${ei}"` : ''}>
-      <td>${e.name || '\u2014'}</td>
+      <td>${e.name || '\u2014'}${venue}</td>
       <td>${fmtDate(e.date)}</td>
       <td>${tag}</td>
-      <td>${fmtPrice(e.price_min, e.currency)}</td>
-      <td class="hide-mobile">${fmtPrice(e.price_max, e.currency)}</td>
+      <td>${fmtPrice(pMin, e.currency)}</td>
+      <td class="hide-mobile">${fmtPrice(pMax, e.currency)}</td>
       <td>${link}</td>
     </tr>`;
 
