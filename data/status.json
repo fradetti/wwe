@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-03-14T13:18:45.895087+00:00",
+  "last_check": "2026-03-14T13:23:07.302309+00:00",
   "threshold_eur": 400,
   "alert_active": true,
   "events": [
@@ -9,8 +9,8 @@
       "date": "2026-05-31",
       "venue": "Inalpi Arena, Torino",
       "is_single_day": false,
-      "price_min": 218.5,
-      "price_max": 1564.0,
+      "price_min": 121.25,
+      "price_max": 977.5,
       "currency": "EUR",
       "url": "https://www.ticketmaster.it/biglietti/wwe-combo-ticket-wwe-clash-in-italy-wwe-monday-night-raw/event/c8pvxncrsodb"
     },
@@ -20,8 +20,8 @@
       "date": "2026-05-31",
       "venue": "Inalpi Arena, Torino",
       "is_single_day": true,
-      "price_min": 142.5,
-      "price_max": 3410.0,
+      "price_min": 17.5,
+      "price_max": 10142.5,
       "currency": "EUR",
       "url": "https://www.ticketmaster.it/biglietti/wwe-clash-in-italy-torino-31-05-2026/event/ur737yvj5cba"
     },
@@ -31,8 +31,8 @@
       "date": "2026-06-01",
       "venue": "Inalpi Arena, Torino",
       "is_single_day": true,
-      "price_min": 707.0,
-      "price_max": 1454.0,
+      "price_min": 240.0,
+      "price_max": 992.0,
       "currency": "EUR",
       "url": "https://www.ticketmaster.it/biglietti/wwe-monday-night-raw-torino-01-06-2026/event/w8facmymqkti"
     },
@@ -43,7 +43,7 @@
       "venue": "Unipol Arena, Casalecchio di Reno",
       "is_single_day": true,
       "price_min": 103.5,
-      "price_max": 1396.5,
+      "price_max": 934.5,
       "currency": "EUR",
       "url": "https://www.ticketmaster.it/biglietti/wwe-friday-night-smackdown-casalecchio-di-reno-05-06-2026/event/gaw6l9am8v3m"
     },
@@ -54,7 +54,7 @@
       "venue": "Palazzo dello Sport - Roma, Roma",
       "is_single_day": true,
       "price_min": 69.0,
-      "price_max": 1109.0,
+      "price_max": 829.0,
       "currency": "EUR",
       "url": "https://www.ticketmaster.it/biglietti/wwe-european-summer-tour-roma-06-06-2026/event/bi1t6rrbxn4q"
     },
@@ -95,8 +95,33 @@
       "timestamp": "2026-03-14T13:18:45.895087+00:00",
       "event_id": "ZG9rmIYnyZeeA1",
       "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-03-14T13:23:07.302309+00:00",
+      "event_id": "ZG9rmIYnyZeeFd",
+      "price_min": 121.25
+    },
+    {
+      "timestamp": "2026-03-14T13:23:07.302309+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 17.5
+    },
+    {
+      "timestamp": "2026-03-14T13:23:07.302309+00:00",
+      "event_id": "ZG9rmIYnyZee66",
+      "price_min": 240.0
+    },
+    {
+      "timestamp": "2026-03-14T13:23:07.302309+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 103.5
+    },
+    {
+      "timestamp": "2026-03-14T13:23:07.302309+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
+      "price_min": 69.0
     }
   ],
-  "checks_count": 13,
+  "checks_count": 14,
   "errors": []
 }
