@@ -1,4 +1,4 @@
-"""Check Ticketmaster for WWE tickets in Italy, scrape prices via Playwright."""
+"""Check Ticketmaster for WWE tickets in Italy, scrape prices via Playwright stealth."""
 
 import json
 import os
@@ -72,7 +72,7 @@ def extract_venue(event: dict) -> str:
 
 
 def scrape_prices_from_artist_page(errors: list[str]) -> dict[str, dict]:
-    """Use Playwright to load the artist page and extract prices for each event.
+    """Use Playwright with stealth to load the artist page and extract prices.
 
     Returns:
         mapping of ticketmaster.it schedule_id -> {"price_min": float|None, "price_max": float|None}
@@ -81,103 +81,106 @@ def scrape_prices_from_artist_page(errors: list[str]) -> dict[str, dict]:
 
     try:
         from playwright.sync_api import sync_playwright
-    except ImportError:
-        errors.append("Playwright not installed, skipping price scrape")
+        from playwright_stealth import stealth_sync
+    except ImportError as exc:
+        errors.append(f"Import error: {exc}")
         return results
 
     try:
         with sync_playwright() as p:
-            browser = p.chromium.launch(headless=True)
+            browser = p.chromium.launch(
+                headless=True,
+                args=[
+                    "--disable-blink-features=AutomationControlled",
+                    "--no-sandbox",
+                ],
+            )
             context = browser.new_context(
                 user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
                 locale="it-IT",
+                timezone_id="Europe/Rome",
+                viewport={"width": 1920, "height": 1080},
             )
             page = context.new_page()
 
+            # Apply stealth patches to avoid bot detection
+            stealth_sync(page)
+
             print(f"Loading artist page: {ARTIST_PAGE}")
-            page.goto(ARTIST_PAGE, wait_until="networkidle", timeout=60000)
+            page.goto(ARTIST_PAGE, wait_until="domcontentloaded", timeout=60000)
 
             # Wait for React to render event listings
             try:
-                page.wait_for_selector('a[href*="/event/"]', timeout=15000)
+                page.wait_for_selector('a[href*="/event/"]', timeout=30000)
                 print("Event links appeared in DOM")
             except Exception:
                 print("Timed out waiting for event links")
 
-            page.wait_for_timeout(5000)
+            page.wait_for_timeout(3000)
 
-            # Check for cookie consent and accept it
+            # Accept cookie consent if present
             for consent_sel in [
+                '#onetrust-accept-btn-handler',
                 'button[id*="accept"]',
-                'button[id*="consent"]',
-                'button[class*="accept"]',
                 'button:has-text("Accetta")',
                 'button:has-text("Accept")',
-                'button:has-text("OK")',
-                '#onetrust-accept-btn-handler',
             ]:
                 try:
                     btn = page.query_selector(consent_sel)
                     if btn and btn.is_visible():
                         btn.click()
-                        print(f"Clicked consent button: {consent_sel}")
-                        page.wait_for_timeout(3000)
+                        print(f"Clicked consent: {consent_sel}")
+                        page.wait_for_timeout(2000)
                         break
                 except Exception:
                     pass
 
-            # Log current URL (check for redirects)
             print(f"Current URL: {page.url}")
-
-            # Log page title
             print(f"Page title: {page.title()}")
 
             # Save screenshot for debugging
             screenshot_path = STATUS_PATH.parent / "debug_screenshot.png"
             page.screenshot(path=str(screenshot_path), full_page=True)
-            print(f"Screenshot saved to {screenshot_path}")
-
-            # Log first 2000 chars of visible text for debugging
-            body_text = page.inner_text("body")
-            print(f"Page visible text ({len(body_text)} chars): {body_text[:2000]!r}")
 
             content = page.content()
-            print(f"Artist page loaded, {len(content)} chars")
+            body_text = page.inner_text("body")
+            print(f"Page: {len(content)} chars HTML, {len(body_text)} chars text")
 
-            # Save page HTML for debugging
-            debug_html_path = STATUS_PATH.parent / "debug_page.html"
-            debug_html_path.write_text(content[:50000], encoding="utf-8")
+            # Log lines with prices or event names for debugging
+            for line in body_text.split("\n"):
+                line = line.strip()
+                if line and ("€" in line or "partire" in line.lower() or "WWE" in line):
+                    print(f"  >> {line[:150]}")
 
-            # Try multiple selector strategies
-            selectors = [
-                'a[href*="/event/"]',
-                '[data-testid="event-list-item"]',
-                '[data-testid*="event"]',
-                'li:has(a[href*="/event/"])',
-                'div:has(> a[href*="/event/"])',
-            ]
-            event_cards = []
-            used_selector = ""
-            for sel in selectors:
-                cards = page.query_selector_all(sel)
-                if cards:
-                    event_cards = cards
-                    used_selector = sel
-                    break
+            # Find event cards with multiple strategies
+            event_links = page.query_selector_all('a[href*="/event/"]')
+            print(f"Found {len(event_links)} event links")
 
-            print(f"Found {len(event_cards)} event card elements (selector: {used_selector!r})")
-
-            for card in event_cards:
-                card_html = card.inner_html()
-                card_text = card.inner_text()
-
-                # Find schedule ID in card links
-                id_match = re.search(r'/event/([a-z0-9]+)', card_html)
+            for link in event_links:
+                href = link.get_attribute("href") or ""
+                id_match = re.search(r'/event/([a-z0-9]+)', href)
                 if not id_match:
                     continue
                 schedule_id = id_match.group(1)
 
-                # Find prices in card text
+                # Walk up to find the containing card/row
+                card = link
+                for _ in range(5):
+                    parent = card.evaluate_handle("el => el.parentElement")
+                    if parent:
+                        card = parent.as_element()
+                        if not card:
+                            break
+                    else:
+                        break
+
+                card_text = ""
+                try:
+                    card_text = card.inner_text() if card else ""
+                except Exception:
+                    pass
+
+                # Extract prices
                 prices = set()
                 for m in re.finditer(r'€\s*(\d+(?:[.,]\d{2})?)', card_text):
                     val = m.group(1).replace(",", ".")
@@ -185,7 +188,6 @@ def scrape_prices_from_artist_page(errors: list[str]) -> dict[str, dict]:
                 for m in re.finditer(r'(\d+(?:[.,]\d{2})?)\s*€', card_text):
                     val = m.group(1).replace(",", ".")
                     prices.add(float(val))
-                # Also check for "da X" pattern (starting from X)
                 for m in re.finditer(r'(?:da|from)\s*€?\s*(\d+(?:[.,]\d{2})?)', card_text, re.IGNORECASE):
                     val = m.group(1).replace(",", ".")
                     prices.add(float(val))
@@ -198,17 +200,21 @@ def scrape_prices_from_artist_page(errors: list[str]) -> dict[str, dict]:
                     }
                     print(f"  {schedule_id}: {min(valid_prices)}-{max(valid_prices)} EUR")
                 else:
-                    print(f"  {schedule_id}: no prices in card text: {card_text[:100]!r}")
+                    print(f"  {schedule_id}: no price found. Text: {card_text[:100]!r}")
 
-            # Fallback: if no cards found, try scanning full page for price+event patterns
+            # Also try extracting prices from the full HTML via regex
+            # TM sometimes embeds price data in JSON within script tags
             if not results:
-                print("No prices from cards, trying full page scan...")
-                full_text = page.inner_text("body")
-                print(f"Full page text length: {len(full_text)}")
-                # Log a sample to debug
-                for line in full_text.split("\n"):
-                    if "€" in line or "partire" in line.lower():
-                        print(f"  Price line: {line.strip()[:120]}")
+                print("Trying HTML regex fallback...")
+                for m in re.finditer(
+                    r'/event/([a-z0-9]+).*?(\d+[.,]\d{2})\s*€',
+                    content, re.DOTALL
+                ):
+                    sid = m.group(1)
+                    price = float(m.group(2).replace(",", "."))
+                    if 10 <= price <= 5000 and sid not in results:
+                        results[sid] = {"price_min": price, "price_max": price}
+                        print(f"  regex: {sid} = {price} EUR")
 
             browser.close()
 
