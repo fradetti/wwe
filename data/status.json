@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-03-14T11:28:57.601988+00:00",
+  "last_check": "2026-03-14T11:33:52.214521+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -71,6 +71,6 @@
     }
   ],
   "price_history": [],
-  "checks_count": 6,
+  "checks_count": 7,
   "errors": []
 }
