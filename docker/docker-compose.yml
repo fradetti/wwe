@@ -1,3 +1,5 @@
+name: wwe-check
+
 services:
   wwe-monitor:
     build:
