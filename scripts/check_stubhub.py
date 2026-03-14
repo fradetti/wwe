@@ -7,10 +7,21 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-SEARCH_URL = "https://www.stubhub.com/search?q=WWE+Italy"
+SEARCH_QUERIES = [
+    "WWE+Clash+in+Italy",
+    "WWE+Raw+Turin",
+    "WWE+Smackdown+Bologna",
+    "WWE+Smackdown+Casalecchio",
+    "WWE+Turin",
+    "WWE+Roma",
+    "WWE+Firenze",
+    "WWE+Milano",
+]
 STATUS_PATH = Path(os.environ.get("STUBHUB_STATUS_PATH", Path(__file__).resolve().parent.parent / "data" / "stubhub.json"))
 THRESHOLD_EUR = 400
 MAX_HISTORY = 1000
+DATE_START = "2026-05-31"
+DATE_END = "2026-06-07"
 
 # Keywords to identify Italian WWE events in search results
 ITALY_EVENT_KEYWORDS = ["italy", "torino", "turin", "roma", "rome", "bologna",
@@ -62,46 +73,63 @@ def _dismiss_cookies(page) -> None:
 
 
 def _discover_italy_events(page, errors: list[str]) -> list[dict]:
-    """Search StubHub for WWE events in Italy.
+    """Search StubHub for WWE events in Italy using multiple queries.
 
     Returns list of dicts with keys: name, url.
     """
     events = []
     seen_urls = set()
+    cookies_dismissed = False
 
-    print(f"Searching StubHub: {SEARCH_URL}")
-    page.goto(SEARCH_URL, wait_until="domcontentloaded", timeout=60000)
-    page.wait_for_timeout(10000)
-    _dismiss_cookies(page)
-    page.wait_for_timeout(2000)
+    for query in SEARCH_QUERIES:
+        search_url = f"https://www.stubhub.com/search?q={query}"
+        print(f"Searching StubHub: {search_url}")
+        page.goto(search_url, wait_until="domcontentloaded", timeout=60000)
+        page.wait_for_timeout(8000)
 
-    links = page.query_selector_all("a")
-    for link in links:
-        try:
-            href = link.get_attribute("href") or ""
-            if "/event/" not in href:
-                continue
-            if href.startswith("/"):
-                href = "https://www.stubhub.com" + href
-            # Strip query params for dedup
-            clean_url = href.split("?")[0]
-            if clean_url in seen_urls:
-                continue
+        if not cookies_dismissed:
+            _dismiss_cookies(page)
+            cookies_dismissed = True
+            page.wait_for_timeout(2000)
 
-            text = link.inner_text().strip()
-            combined = (href + " " + text).lower()
-            # Must be a WWE event in Italy
-            if "wwe" not in combined:
-                continue
-            if not any(kw in combined for kw in ITALY_EVENT_KEYWORDS):
-                continue
+        links = page.query_selector_all("a")
+        for link in links:
+            try:
+                href = link.get_attribute("href") or ""
+                if "/event/" not in href:
+                    continue
+                if href.startswith("/"):
+                    href = "https://www.stubhub.com" + href
+                # Strip query params for dedup
+                clean_url = href.split("?")[0]
+                if clean_url in seen_urls:
+                    continue
 
-            seen_urls.add(clean_url)
-            # Clean up multi-line text
-            name = " ".join(text.split("\n")[0:3]).strip()
-            events.append({"name": name, "url": clean_url})
-        except Exception:
-            pass
+                text = link.inner_text().strip()
+                combined = (href + " " + text).lower()
+                # Must be a WWE event
+                if "wwe" not in combined:
+                    continue
+                # URL must contain an Italian city/country keyword
+                url_lower = clean_url.lower()
+                if not any(kw in url_lower for kw in ITALY_EVENT_KEYWORDS):
+                    continue
+                # Filter by date range from URL (format: X-XX-2026)
+                date_m = re.search(r'(\d{1,2})-(\d{1,2})-(\d{4})', url_lower)
+                if date_m:
+                    url_date = f"{date_m.group(3)}-{date_m.group(1).zfill(2)}-{date_m.group(2).zfill(2)}"
+                    if url_date < DATE_START or url_date > DATE_END:
+                        continue
+
+                seen_urls.add(clean_url)
+                # Clean up multi-line text
+                name = " ".join(text.split("\n")[0:3]).strip()
+                events.append({"name": name, "url": clean_url})
+            except Exception:
+                pass
+
+        # Short wait between searches
+        page.wait_for_timeout(3000)
 
     if not events:
         errors.append("No Italian WWE events found on StubHub search")
@@ -266,6 +294,11 @@ def scrape_stubhub(errors: list[str]) -> list[dict]:
                     event_name = meta.get("name") or ev_link.get("name", "")
                     event_date = meta.get("date", "")
                     venue = meta.get("venue", "")
+
+                    # Skip events outside date range
+                    if event_date and (event_date < DATE_START or event_date > DATE_END):
+                        print(f"    Skipping: date {event_date} outside range")
+                        continue
 
                     # Generate stable ID from URL
                     url_parts = url.rstrip("/").split("/")
