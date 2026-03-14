@@ -96,15 +96,46 @@ def scrape_prices_from_artist_page(errors: list[str]) -> dict[str, dict]:
 
             print(f"Loading artist page: {ARTIST_PAGE}")
             page.goto(ARTIST_PAGE, wait_until="networkidle", timeout=60000)
-            page.wait_for_timeout(3000)
+
+            # Wait for React to render event listings
+            try:
+                page.wait_for_selector('a[href*="/event/"]', timeout=15000)
+                print("Event links appeared in DOM")
+            except Exception:
+                print("Timed out waiting for event links")
+
+            page.wait_for_timeout(5000)
+
+            # Save screenshot for debugging
+            screenshot_path = STATUS_PATH.parent / "debug_screenshot.png"
+            page.screenshot(path=str(screenshot_path), full_page=True)
+            print(f"Screenshot saved to {screenshot_path}")
 
             content = page.content()
             print(f"Artist page loaded, {len(content)} chars")
 
-            # Look for price elements near event links
-            # Ticketmaster.it shows "a partire da €XX" or similar on event cards
-            event_cards = page.query_selector_all('[data-testid="event-list-item"], [class*="event"], [class*="Event"]')
-            print(f"Found {len(event_cards)} event card elements")
+            # Save page HTML for debugging
+            debug_html_path = STATUS_PATH.parent / "debug_page.html"
+            debug_html_path.write_text(content[:50000], encoding="utf-8")
+
+            # Try multiple selector strategies
+            selectors = [
+                'a[href*="/event/"]',
+                '[data-testid="event-list-item"]',
+                '[data-testid*="event"]',
+                'li:has(a[href*="/event/"])',
+                'div:has(> a[href*="/event/"])',
+            ]
+            event_cards = []
+            used_selector = ""
+            for sel in selectors:
+                cards = page.query_selector_all(sel)
+                if cards:
+                    event_cards = cards
+                    used_selector = sel
+                    break
+
+            print(f"Found {len(event_cards)} event card elements (selector: {used_selector!r})")
 
             for card in event_cards:
                 card_html = card.inner_html()

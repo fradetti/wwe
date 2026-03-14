@@ -30,6 +30,16 @@ jobs:
           TICKETMASTER_API_KEY: ${{ secrets.TICKETMASTER_API_KEY }}
         run: python scripts/check_tickets.py
 
+      - name: Upload debug artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: debug
+          path: |
+            data/debug_screenshot.png
+            data/debug_page.html
+          retention-days: 1
+
       - name: Commit and push results
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
