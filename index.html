@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WWE Ticket Monitor - 31 Maggio 2026</title>
+<title>WWE Ticket Monitor</title>
 <style>
   :root {
     --bg: #0f0f0f;
@@ -15,6 +15,19 @@
     --red: #ff1744;
     --gold: #ffd600;
     --blue: #448aff;
+    --hover-row: rgba(255,255,255,.03);
+  }
+  html.light {
+    --bg: #f5f5f5;
+    --surface: #fff;
+    --border: #ddd;
+    --text: #1a1a1a;
+    --muted: #666;
+    --green: #2e7d32;
+    --red: #c62828;
+    --gold: #f57f17;
+    --blue: #1565c0;
+    --hover-row: rgba(0,0,0,.03);
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
@@ -23,50 +36,79 @@
     color: var(--text);
     min-height: 100vh;
     padding: 1rem;
+    transition: background .3s, color .3s;
   }
   .container { max-width: 900px; margin: 0 auto; }
 
   header {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 2rem 0 1rem;
+    position: relative;
   }
   header h1 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 700;
+    letter-spacing: -.02em;
   }
-  header p { color: var(--muted); margin-top: .3rem; }
+  .theme-toggle {
+    position: absolute;
+    right: 0;
+    top: 2rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s;
+    line-height: 1;
+  }
+  .theme-toggle:hover { border-color: var(--blue); color: var(--text); }
 
   .banner {
     text-align: center;
-    padding: 1.5rem;
+    padding: 1.2rem;
     border-radius: 12px;
-    margin: 1.5rem 0;
-    font-size: 1.3rem;
+    margin: 1.2rem 0;
+    font-size: 1.1rem;
     font-weight: 700;
   }
   .banner.alert { background: linear-gradient(135deg, #00c853, #009624); color: #fff; }
   .banner.waiting { background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
   .banner.error { background: #330011; border: 1px solid var(--red); color: var(--red); }
+  html.light .banner.error { background: #ffebee; }
 
   .meta {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: .6rem;
     justify-content: center;
     margin: 1rem 0;
-    font-size: .85rem;
+    font-size: .82rem;
     color: var(--muted);
   }
-  .meta span { background: var(--surface); padding: .4rem .8rem; border-radius: 8px; }
+  .meta span {
+    background: var(--surface);
+    padding: .35rem .7rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
 
   .card {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 1.2rem;
-    margin: 1.5rem 0;
+    margin: 1.2rem 0;
   }
-  .card h2 { font-size: 1rem; margin-bottom: .8rem; color: var(--gold); }
+  .card h2 { font-size: .95rem; margin-bottom: .8rem; color: var(--gold); }
   .card-header {
     display: flex;
     justify-content: space-between;
@@ -93,10 +135,14 @@
     font-size: .75rem;
     font-weight: 600;
   }
-  .tag.single { background: #1b5e20; color: var(--green); }
+  .tag.single { background: #1b5e20; color: #00c853; }
   .tag.combo { background: #4a1480; color: #ce93d8; }
-  .tag.available { background: #1b5e20; color: var(--green); }
-  .tag.unavailable { background: #4a0000; color: var(--red); }
+  .tag.available { background: #1b5e20; color: #00c853; }
+  .tag.unavailable { background: #4a0000; color: #ff1744; }
+  html.light .tag.single { background: #e8f5e9; color: #2e7d32; }
+  html.light .tag.combo { background: #f3e5f5; color: #7b1fa2; }
+  html.light .tag.available { background: #e8f5e9; color: #2e7d32; }
+  html.light .tag.unavailable { background: #ffebee; color: #c62828; }
   a { color: var(--blue); text-decoration: none; }
   a:hover { text-decoration: underline; }
 
@@ -110,9 +156,9 @@
     background: var(--surface);
     color: var(--muted);
     border: 1px solid var(--border);
-    padding: .5rem 1.2rem;
+    padding: .45rem 1.1rem;
     border-radius: 8px;
-    font-size: .85rem;
+    font-size: .82rem;
     cursor: pointer;
     transition: all .2s;
   }
@@ -133,13 +179,15 @@
     transition: all .2s;
   }
   .toggle-btn:hover { border-color: var(--blue); }
-  .toggle-btn.active { background: #1b5e20; border-color: var(--green); color: var(--green); }
+  .toggle-btn.active { background: #1b5e20; border-color: #00c853; color: #00c853; }
+  html.light .toggle-btn { background: #e0e0e0; border-color: #ccc; color: #333; }
+  html.light .toggle-btn.active { background: #e8f5e9; border-color: #2e7d32; color: #2e7d32; }
 
   .event-toggle {
     cursor: pointer;
     user-select: none;
   }
-  .event-toggle:hover { background: rgba(255,255,255,.03); }
+  .event-toggle:hover { background: var(--hover-row); }
   .event-toggle td:first-child::before {
     content: '\25B6';
     display: inline-block;
@@ -153,22 +201,23 @@
   }
   .pkg-row { display: none; }
   .pkg-row.visible { display: table-row; }
-  .pkg-row td { padding-left: 1.5rem; font-size: .8rem; color: var(--muted); border-bottom: 1px solid rgba(42,42,74,.5); }
-  .pkg-row.unavailable-row { opacity: .5; }
+  .pkg-row td { padding-left: 1.5rem; font-size: .8rem; color: var(--muted); border-bottom: 1px solid var(--border); opacity: .8; }
+  .pkg-row.unavailable-row { opacity: .4; }
 
   @media (max-width: 600px) {
-    header h1 { font-size: 1.2rem; }
-    .banner { font-size: 1rem; padding: 1rem; }
+    header h1 { font-size: 1.15rem; }
+    .banner { font-size: .95rem; padding: 1rem; }
     table { font-size: .78rem; }
     .hide-mobile { display: none; }
+    .theme-toggle { top: 1.8rem; }
   }
 </style>
 </head>
 <body>
 <div class="container">
   <header>
-    <h1>WWE Ticket Monitor - 31 Maggio 2026 &#127470;&#127481;</h1>
-    <p>Monitoraggio biglietti singoli sotto 400&euro;</p>
+    <h1>WWE Ticket Monitor</h1>
+    <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn" title="Cambia tema">&#9790;</button>
   </header>
 
   <div class="source-toggle">
@@ -193,6 +242,20 @@ let DATA_URL = 'data/status.json';
 let currentSource = 'ticketmaster';
 let showOnlyAvailable = true;
 let allExpanded = false;
+
+// Theme
+function toggleTheme() {
+  const isLight = document.documentElement.classList.toggle('light');
+  localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  document.getElementById('theme-btn').innerHTML = isLight ? '&#9728;' : '&#9790;';
+}
+(function initTheme() {
+  const saved = localStorage.getItem('theme');
+  if (saved === 'light') {
+    document.documentElement.classList.add('light');
+    document.getElementById('theme-btn').innerHTML = '&#9728;';
+  }
+})();
 
 function timeAgo(iso) {
   if (!iso) return '\u2014';
@@ -222,7 +285,7 @@ function render(data) {
 
   // Banner — alert only for Clash in Italy 31/05
   let bannerClass, bannerText;
-  const clash = (data.events || []).find(e => e.name && e.name.includes('Clash in Italy') && e.date === '2026-05-31');
+  const clash = (data.events || []).find(e => e.name && e.name.includes('Clash in Italy'));
   const clashAvailPkgs = clash && clash.packages ? clash.packages.filter(p => p.available) : [];
   const clashMinPrice = clashAvailPkgs.length ? Math.min(...clashAvailPkgs.map(p => p.price)) : null;
   const clashAlert = clashMinPrice !== null && clashMinPrice < (data.threshold_eur || 400);
@@ -235,7 +298,7 @@ function render(data) {
     bannerText = `CLASH IN ITALY: biglietto disponibile a ${fmtPrice(clashMinPrice, '\u20AC')}!`;
   } else if (clashMinPrice !== null) {
     bannerClass = 'waiting';
-    bannerText = `Clash in Italy: prezzo minimo disponibile ${fmtPrice(clashMinPrice, '\u20AC')} (soglia: ${data.threshold_eur || 400}\u20AC)`;
+    bannerText = `Clash in Italy: min. disponibile ${fmtPrice(clashMinPrice, '\u20AC')} (soglia: ${data.threshold_eur || 400}\u20AC)`;
   } else {
     bannerClass = 'waiting';
     bannerText = 'Clash in Italy: nessun biglietto disponibile al momento';

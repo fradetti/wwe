@@ -295,6 +295,12 @@ def scrape_stubhub(errors: list[str]) -> list[dict]:
                     event_date = meta.get("date", "")
                     venue = meta.get("venue", "")
 
+                    # Fallback: extract date from URL (format: M-D-YYYY)
+                    if not event_date:
+                        dm = re.search(r'(\d{1,2})-(\d{1,2})-(\d{4})', url)
+                        if dm:
+                            event_date = f"{dm.group(3)}-{dm.group(1).zfill(2)}-{dm.group(2).zfill(2)}"
+
                     # Skip events outside date range
                     if event_date and (event_date < DATE_START or event_date > DATE_END):
                         print(f"    Skipping: date {event_date} outside range")
