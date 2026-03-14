@@ -1,16 +1,16 @@
 {
-  "last_check": "2026-03-14T14:54:03.064170+00:00",
+  "last_check": "2026-03-14T14:57:46.787585+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
     {
       "id": "stubhub-160574096",
       "name": "WWE Clash in Italy",
-      "date": "2026-05-31",
-      "venue": "Pala Alpitour (Inalpi Arena), Turin, Italy",
+      "date": "",
+      "venue": "",
       "is_single_day": true,
       "price_min": 416.0,
-      "price_max": 1110.0,
+      "price_max": 2418.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-clash-in-italy-turin-tickets-5-31-2026/event/160574096/",
       "packages": [
@@ -22,6 +22,11 @@
         {
           "name": "Section 302",
           "price": 416.0,
+          "available": true
+        },
+        {
+          "name": "Section J",
+          "price": 2418.0,
           "available": true
         },
         {
@@ -58,6 +63,410 @@
           "name": "Section 221",
           "price": 659.0,
           "available": true
+        },
+        {
+          "name": "Section 107",
+          "price": 817.0,
+          "available": true
+        },
+        {
+          "name": "Section 116",
+          "price": 828.0,
+          "available": true
+        },
+        {
+          "name": "Section 104",
+          "price": 1040.0,
+          "available": true
+        },
+        {
+          "name": "Section 117",
+          "price": 1091.0,
+          "available": true
+        },
+        {
+          "name": "Floor",
+          "price": 1131.0,
+          "available": true
+        },
+        {
+          "name": "Section K",
+          "price": 1132.0,
+          "available": true
+        },
+        {
+          "name": "Section H",
+          "price": 1900.0,
+          "available": true
+        },
+        {
+          "name": "Section H",
+          "price": 1146.0,
+          "available": true
+        },
+        {
+          "name": "Section H",
+          "price": 1900.0,
+          "available": true
+        },
+        {
+          "name": "Section H",
+          "price": 1146.0,
+          "available": true
+        },
+        {
+          "name": "Section H",
+          "price": 1150.0,
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "stubhub-160556794",
+      "name": "WWE Monday Night RAW",
+      "date": "",
+      "venue": "",
+      "is_single_day": true,
+      "price_min": 289.0,
+      "price_max": 9148.0,
+      "currency": "EUR",
+      "url": "https://www.stubhub.com/wwe-raw-turin-tickets-6-1-2026/event/160556794/",
+      "packages": [
+        {
+          "name": "MIX",
+          "price": 289.0,
+          "available": true
+        },
+        {
+          "name": "Section 202",
+          "price": 289.0,
+          "available": true
+        },
+        {
+          "name": "Section B",
+          "price": 9148.0,
+          "available": true
+        },
+        {
+          "name": "Section 203",
+          "price": 296.0,
+          "available": true
+        },
+        {
+          "name": "Section 302",
+          "price": 722.0,
+          "available": true
+        },
+        {
+          "name": "Section 302",
+          "price": 416.0,
+          "available": true
+        },
+        {
+          "name": "Section 302",
+          "price": 733.0,
+          "available": true
+        },
+        {
+          "name": "Section 302",
+          "price": 425.0,
+          "available": true
+        },
+        {
+          "name": "Section 112",
+          "price": 800.0,
+          "available": true
+        },
+        {
+          "name": "Section 112",
+          "price": 456.0,
+          "available": true
+        },
+        {
+          "name": "Section 111",
+          "price": 458.0,
+          "available": true
+        },
+        {
+          "name": "Section 111",
+          "price": 467.0,
+          "available": true
+        },
+        {
+          "name": "Floor",
+          "price": 797.0,
+          "available": true
+        },
+        {
+          "name": "Floor",
+          "price": 599.0,
+          "available": true
+        },
+        {
+          "name": "I Anello Est",
+          "price": 921.0,
+          "available": true
+        },
+        {
+          "name": "I Anello Est",
+          "price": 619.0,
+          "available": true
+        },
+        {
+          "name": "Section 101",
+          "price": 2495.0,
+          "available": true
+        },
+        {
+          "name": "Section 118",
+          "price": 2495.0,
+          "available": true
+        },
+        {
+          "name": "Section 102",
+          "price": 2495.0,
+          "available": true
+        },
+        {
+          "name": "Section 122",
+          "price": 2495.0,
+          "available": true
+        },
+        {
+          "name": "Section 121",
+          "price": 2495.0,
+          "available": true
+        },
+        {
+          "name": "Section 119",
+          "price": 2495.0,
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "stubhub-160585809",
+      "name": "WWE Monday Night RAW",
+      "date": "",
+      "venue": "",
+      "is_single_day": true,
+      "price_min": 74.0,
+      "price_max": 1029.0,
+      "currency": "EUR",
+      "url": "https://www.stubhub.com/wwe-raw-omaha-tickets-5-4-2026/event/160585809/",
+      "packages": [
+        {
+          "name": "RING",
+          "price": 74.0,
+          "available": true
+        },
+        {
+          "name": "Section 218",
+          "price": 74.0,
+          "available": true
+        },
+        {
+          "name": "Section 108",
+          "price": 146.0,
+          "available": true
+        },
+        {
+          "name": "Section 3",
+          "price": 1029.0,
+          "available": true
+        },
+        {
+          "name": "Section 218",
+          "price": 80.0,
+          "available": true
+        },
+        {
+          "name": "Section 116",
+          "price": 102.0,
+          "available": true
+        },
+        {
+          "name": "Section 110",
+          "price": 107.0,
+          "available": true
+        },
+        {
+          "name": "Section 109",
+          "price": 113.0,
+          "available": true
+        },
+        {
+          "name": "Section 110",
+          "price": 113.0,
+          "available": true
+        },
+        {
+          "name": "Section 109",
+          "price": 118.0,
+          "available": true
+        },
+        {
+          "name": "Section 114",
+          "price": 118.0,
+          "available": true
+        },
+        {
+          "name": "Section 118",
+          "price": 118.0,
+          "available": true
+        },
+        {
+          "name": "Section 110",
+          "price": 118.0,
+          "available": true
+        },
+        {
+          "name": "Section 112",
+          "price": 122.0,
+          "available": true
+        },
+        {
+          "name": "Section 112",
+          "price": 122.0,
+          "available": true
+        },
+        {
+          "name": "Section 116",
+          "price": 122.0,
+          "available": true
+        },
+        {
+          "name": "Section 108",
+          "price": 122.0,
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "stubhub-160574134",
+      "name": "WWE Friday Night SmackDown",
+      "date": "",
+      "venue": "",
+      "is_single_day": true,
+      "price_min": 340.0,
+      "price_max": 7484.0,
+      "currency": "EUR",
+      "url": "https://www.stubhub.com/wwe-smackdown-casalecchio-di-reno-bologna-tickets-6-5-2026/event/160574134/",
+      "packages": [
+        {
+          "name": "RING",
+          "price": 340.0,
+          "available": true
+        },
+        {
+          "name": "RING",
+          "price": 340.0,
+          "available": true
+        },
+        {
+          "name": "Section Secondo Settore H2",
+          "price": 999.0,
+          "available": true
+        },
+        {
+          "name": "Section Secondo Settore H2",
+          "price": 595.0,
+          "available": true
+        },
+        {
+          "name": "Section E",
+          "price": 7484.0,
+          "available": true
+        },
+        {
+          "name": "Section 2 Ovest D",
+          "price": 600.0,
+          "available": true
+        },
+        {
+          "name": "Section 2 Ovest D",
+          "price": 349.0,
+          "available": true
+        },
+        {
+          "name": "Section 2 Est C",
+          "price": 544.0,
+          "available": true
+        },
+        {
+          "name": "Section 2 Est C",
+          "price": 369.0,
+          "available": true
+        },
+        {
+          "name": "Section 2 Ovest C",
+          "price": 375.0,
+          "available": true
+        },
+        {
+          "name": "Section 1 Ovest B",
+          "price": 550.0,
+          "available": true
+        },
+        {
+          "name": "Section 1 Ovest B",
+          "price": 406.0,
+          "available": true
+        },
+        {
+          "name": "Section 1 Ovest C",
+          "price": 468.0,
+          "available": true
+        },
+        {
+          "name": "Section 1 Est E",
+          "price": 470.0,
+          "available": true
+        },
+        {
+          "name": "Section 1 Est E",
+          "price": 472.0,
+          "available": true
+        },
+        {
+          "name": "Section 1 Est E",
+          "price": 472.0,
+          "available": true
+        },
+        {
+          "name": "Section Primo Settore H1",
+          "price": 999.0,
+          "available": true
+        },
+        {
+          "name": "Section Primo Settore H1",
+          "price": 548.0,
+          "available": true
+        },
+        {
+          "name": "Section Primo Settore H1",
+          "price": 567.0,
+          "available": true
+        },
+        {
+          "name": "Section Primo Settore H1",
+          "price": 567.0,
+          "available": true
+        },
+        {
+          "name": "Section I",
+          "price": 572.0,
+          "available": true
+        },
+        {
+          "name": "Section 2 Ovest E",
+          "price": 2500.0,
+          "available": true
+        },
+        {
+          "name": "Section 2 Ovest E",
+          "price": 1890.0,
+          "available": true
         }
       ]
     }
@@ -72,8 +481,28 @@
       "timestamp": "2026-03-14T14:54:03.064170+00:00",
       "event_id": "stubhub-160574096",
       "price_min": 416.0
+    },
+    {
+      "timestamp": "2026-03-14T14:57:46.787585+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 416.0
+    },
+    {
+      "timestamp": "2026-03-14T14:57:46.787585+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 289.0
+    },
+    {
+      "timestamp": "2026-03-14T14:57:46.787585+00:00",
+      "event_id": "stubhub-160585809",
+      "price_min": 74.0
+    },
+    {
+      "timestamp": "2026-03-14T14:57:46.787585+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 340.0
     }
   ],
-  "checks_count": 3,
+  "checks_count": 4,
   "errors": []
 }
