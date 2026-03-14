@@ -106,10 +106,40 @@ def scrape_prices_from_artist_page(errors: list[str]) -> dict[str, dict]:
 
             page.wait_for_timeout(5000)
 
+            # Check for cookie consent and accept it
+            for consent_sel in [
+                'button[id*="accept"]',
+                'button[id*="consent"]',
+                'button[class*="accept"]',
+                'button:has-text("Accetta")',
+                'button:has-text("Accept")',
+                'button:has-text("OK")',
+                '#onetrust-accept-btn-handler',
+            ]:
+                try:
+                    btn = page.query_selector(consent_sel)
+                    if btn and btn.is_visible():
+                        btn.click()
+                        print(f"Clicked consent button: {consent_sel}")
+                        page.wait_for_timeout(3000)
+                        break
+                except Exception:
+                    pass
+
+            # Log current URL (check for redirects)
+            print(f"Current URL: {page.url}")
+
+            # Log page title
+            print(f"Page title: {page.title()}")
+
             # Save screenshot for debugging
             screenshot_path = STATUS_PATH.parent / "debug_screenshot.png"
             page.screenshot(path=str(screenshot_path), full_page=True)
             print(f"Screenshot saved to {screenshot_path}")
+
+            # Log first 2000 chars of visible text for debugging
+            body_text = page.inner_text("body")
+            print(f"Page visible text ({len(body_text)} chars): {body_text[:2000]!r}")
 
             content = page.content()
             print(f"Artist page loaded, {len(content)} chars")
