@@ -1,4 +1,4 @@
-"""Check Ticketmaster for WWE single-day tickets in Italy (31 May 2025)."""
+"""Check Ticketmaster for WWE single-day tickets in Italy (31 May 2026)."""
 
 import json
 import os
@@ -38,8 +38,8 @@ def search_events(client: httpx.Client, api_key: str) -> list[dict]:
     params = {
         "keyword": "WWE",
         "countryCode": "IT",
-        "startDateTime": "2025-05-30T00:00:00Z",
-        "endDateTime": "2025-06-01T23:59:59Z",
+        "startDateTime": "2026-05-30T00:00:00Z",
+        "endDateTime": "2026-06-08T23:59:59Z",
         "apikey": api_key,
         "size": 50,
     }
