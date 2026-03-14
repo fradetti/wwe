@@ -1,7 +1,7 @@
 {
-  "last_check": "2026-03-14T14:28:15.978058+00:00",
+  "last_check": "2026-03-14T14:39:33.263334+00:00",
   "threshold_eur": 400,
-  "alert_active": true,
+  "alert_active": false,
   "events": [
     {
       "id": "ZG9rmIYnyZeeFd",
@@ -42,7 +42,7 @@
         {
           "name": "7° Settore Num.",
           "price": 345.0,
-          "available": true
+          "available": false
         },
         {
           "name": "8° Settore Num.",
@@ -466,8 +466,33 @@
       "timestamp": "2026-03-14T14:28:15.978058+00:00",
       "event_id": "ZG9rmIYnyZeeA1",
       "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-03-14T14:39:33.263334+00:00",
+      "event_id": "ZG9rmIYnyZeeFd",
+      "price_min": 218.5
+    },
+    {
+      "timestamp": "2026-03-14T14:39:33.263334+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 1371.25
+    },
+    {
+      "timestamp": "2026-03-14T14:39:33.263334+00:00",
+      "event_id": "ZG9rmIYnyZee66",
+      "price_min": 707.0
+    },
+    {
+      "timestamp": "2026-03-14T14:39:33.263334+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 103.5
+    },
+    {
+      "timestamp": "2026-03-14T14:39:33.263334+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
+      "price_min": 69.0
     }
   ],
-  "checks_count": 13,
+  "checks_count": 14,
   "errors": []
 }
