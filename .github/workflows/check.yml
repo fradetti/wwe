@@ -1,8 +1,8 @@
-name: Check WWE Tickets
+name: Check WWE Tickets (API only)
 
 on:
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '0 */6 * * *'
   workflow_dispatch:
 
 permissions:
@@ -21,24 +21,12 @@ jobs:
           python-version: '3.12'
 
       - name: Install dependencies
-        run: |
-          pip install -r scripts/requirements.txt
-          playwright install chromium --with-deps
+        run: pip install httpx
 
-      - name: Check tickets
+      - name: Check tickets (API only, no scraping)
         env:
           TICKETMASTER_API_KEY: ${{ secrets.TICKETMASTER_API_KEY }}
-        run: python scripts/check_tickets.py
-
-      - name: Upload debug artifacts
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: debug
-          path: |
-            data/debug_screenshot.png
-            data/debug_page.html
-          retention-days: 1
+        run: python scripts/check_tickets_api.py
 
       - name: Commit and push results
         uses: stefanzweifel/git-auto-commit-action@v5

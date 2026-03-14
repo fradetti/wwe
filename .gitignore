@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 .env
+.venv/
+data/debug_screenshot.png
+data/debug_page.html

@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(source ~/.bash_profile && git --version)",
+      "Bash(git:*)",
+      "WebFetch(domain:developer.ticketmaster.com)",
+      "WebSearch",
+      "WebFetch(domain:scrapfly.io)",
+      "WebFetch(domain:www.ticketmaster.it)",
+      "WebFetch(domain:app.ticketmaster.com)",
+      "Bash(python:*)",
+      "Bash(echo:*)",
+      "Bash(curl:*)",
+      "WebFetch(domain:www.ticketone.it)",
+      "WebFetch(domain:www.viagogo.it)",
+      "WebFetch(domain:www.stubhub.it)",
+      "WebFetch(domain:api.seatgeek.com)",
+      "Bash(pip install:*)"
+    ]
+  }
+}

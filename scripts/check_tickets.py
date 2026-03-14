@@ -10,12 +10,10 @@ from pathlib import Path
 import httpx
 
 BASE_URL = "https://app.ticketmaster.com/discovery/v2"
-STATUS_PATH = Path(__file__).resolve().parent.parent / "data" / "status.json"
+STATUS_PATH = Path(os.environ.get("STATUS_PATH", Path(__file__).resolve().parent.parent / "data" / "status.json"))
 THRESHOLD_EUR = 400
 COMBO_KEYWORDS = ["combo", "2-day", "weekend", "2 giorni", "2-giorni", "two day"]
 MAX_HISTORY = 1000
-
-ARTIST_PAGE = "https://www.ticketmaster.it/artist/wwe-biglietti/2453"
 
 
 def load_status() -> dict:
@@ -71,11 +69,107 @@ def extract_venue(event: dict) -> str:
     return ""
 
 
-def scrape_prices_from_artist_page(errors: list[str]) -> dict[str, dict]:
-    """Use Playwright with stealth to load the artist page and extract prices.
+def _parse_price(raw: str) -> float | None:
+    """Parse a price string handling both Italian (1.234,56) and English (1,234.56) formats."""
+    raw = raw.strip()
+    if not raw:
+        return None
+    # Italian format: 1.234,56 or 10.142,50 (dot=thousands, comma=decimal)
+    if re.match(r'^\d{1,3}(?:\.\d{3})+,\d{2}$', raw):
+        return float(raw.replace(".", "").replace(",", "."))
+    # Italian without thousands separator: 6017,50 or 234,56
+    if re.match(r'^\d+,\d{2}$', raw):
+        return float(raw.replace(",", "."))
+    # English format: 1,234.56 (comma=thousands, dot=decimal)
+    if re.match(r'^\d{1,3}(?:,\d{3})+\.\d{2}$', raw):
+        return float(raw.replace(",", ""))
+    # Simple with dot decimal: 234.56
+    if re.match(r'^\d+\.\d{2}$', raw):
+        return float(raw)
+    # Integer: 234
+    if re.match(r'^\d+$', raw):
+        return float(raw)
+    return None
+
+
+def _extract_packages(text: str) -> list[dict]:
+    """Extract ticket packages from page text with name, price, and availability.
+
+    Ticketmaster.it format (line by line):
+        Package Name
+        1.234,56€ cad.
+        + commissioni
+        NON DISPONIBILE  (optional — if absent, the package is available)
+    """
+    packages = []
+    lines = text.split("\n")
+    price_pattern = r'(\d[\d.,]*\d)\s*€\s*cad\.'
+
+    for i, line in enumerate(lines):
+        m = re.search(price_pattern, line)
+        if not m:
+            continue
+        price = _parse_price(m.group(1))
+        if price is None or price < 10 or price > 50000:
+            continue
+
+        # Package name: walk back to find non-empty line that isn't a price/fee/filter
+        pkg_name = ""
+        for j in range(i - 1, max(i - 5, -1), -1):
+            candidate = lines[j].strip()
+            if candidate and not re.search(r'€|cad\.|commissioni|prezzi|posti migliori', candidate, re.IGNORECASE):
+                pkg_name = candidate
+                break
+
+        # Availability: check the next few lines for "NON DISPONIBILE"
+        available = True
+        for j in range(i + 1, min(i + 4, len(lines))):
+            next_line = lines[j].strip().upper()
+            if "NON DISPONIBILE" in next_line or "SOLD OUT" in next_line or "ESAURIT" in next_line:
+                available = False
+                break
+            # Stop looking if we hit the next package name or price
+            if re.search(price_pattern, lines[j]):
+                break
+            if next_line and not re.search(r'COMMISSION|\+|€', next_line, re.IGNORECASE):
+                break
+
+        packages.append({
+            "name": pkg_name,
+            "price": price,
+            "available": available,
+        })
+
+    return packages
+
+
+def _dismiss_cookies(page) -> None:
+    """Accept cookie consent if present."""
+    for sel in [
+        '#onetrust-accept-btn-handler',
+        'button[id*="accept"]',
+        'button:has-text("Accetta")',
+        'button:has-text("Accept")',
+    ]:
+        try:
+            btn = page.query_selector(sel)
+            if btn and btn.is_visible():
+                btn.click()
+                page.wait_for_timeout(2000)
+                return
+        except Exception:
+            pass
+
+
+def scrape_event_pages(event_urls: list[str], errors: list[str]) -> dict[str, dict]:
+    """Visit each event page individually via Playwright and extract packages.
 
     Returns:
-        mapping of ticketmaster.it schedule_id -> {"price_min": float|None, "price_max": float|None}
+        mapping of schedule_id -> {
+            "packages": [{"name": str, "price": float, "available": bool}, ...],
+            "price_min": float|None,
+            "price_max": float|None,
+        }
     """
     results = {}
 
@@ -104,116 +198,59 @@ def scrape_prices_from_artist_page(errors: list[str]) -> dict[str, dict]:
             stealth = Stealth()
             stealth.apply_stealth_sync(context)
             page = context.new_page()
+            cookies_dismissed = False
 
-            print(f"Loading artist page: {ARTIST_PAGE}")
-            page.goto(ARTIST_PAGE, wait_until="domcontentloaded", timeout=60000)
-
-            # Wait for React to render event listings
-            try:
-                page.wait_for_selector('a[href*="/event/"]', timeout=30000)
-                print("Event links appeared in DOM")
-            except Exception:
-                print("Timed out waiting for event links")
-
-            page.wait_for_timeout(3000)
-
-            # Accept cookie consent if present
-            for consent_sel in [
-                '#onetrust-accept-btn-handler',
-                'button[id*="accept"]',
-                'button:has-text("Accetta")',
-                'button:has-text("Accept")',
-            ]:
-                try:
-                    btn = page.query_selector(consent_sel)
-                    if btn and btn.is_visible():
-                        btn.click()
-                        print(f"Clicked consent: {consent_sel}")
-                        page.wait_for_timeout(2000)
-                        break
-                except Exception:
-                    pass
-
-            print(f"Current URL: {page.url}")
-            print(f"Page title: {page.title()}")
-
-            # Save screenshot for debugging
-            screenshot_path = STATUS_PATH.parent / "debug_screenshot.png"
-            page.screenshot(path=str(screenshot_path), full_page=True)
-
-            content = page.content()
-            body_text = page.inner_text("body")
-            print(f"Page: {len(content)} chars HTML, {len(body_text)} chars text")
-
-            # Log lines with prices or event names for debugging
-            for line in body_text.split("\n"):
-                line = line.strip()
-                if line and ("€" in line or "partire" in line.lower() or "WWE" in line):
-                    print(f"  >> {line[:150]}")
-
-            # Find event cards with multiple strategies
-            event_links = page.query_selector_all('a[href*="/event/"]')
-            print(f"Found {len(event_links)} event links")
-
-            for link in event_links:
-                href = link.get_attribute("href") or ""
-                id_match = re.search(r'/event/([a-z0-9]+)', href)
-                if not id_match:
+            for url in event_urls:
+                schedule_id = match_schedule_id(url)
+                if not schedule_id:
                     continue
-                schedule_id = id_match.group(1)
 
-                # Walk up to find the containing card/row
-                card = link
-                for _ in range(5):
-                    parent = card.evaluate_handle("el => el.parentElement")
-                    if parent:
-                        card = parent.as_element()
-                        if not card:
-                            break
-                    else:
-                        break
-
-                card_text = ""
                 try:
-                    card_text = card.inner_text() if card else ""
-                except Exception:
-                    pass
+                    print(f"  Visiting {url}")
+                    page.goto(url, wait_until="domcontentloaded", timeout=60000)
+                    page.wait_for_timeout(5000)
 
-                # Extract prices
-                prices = set()
-                for m in re.finditer(r'€\s*(\d+(?:[.,]\d{2})?)', card_text):
-                    val = m.group(1).replace(",", ".")
-                    prices.add(float(val))
-                for m in re.finditer(r'(\d+(?:[.,]\d{2})?)\s*€', card_text):
-                    val = m.group(1).replace(",", ".")
-                    prices.add(float(val))
-                for m in re.finditer(r'(?:da|from)\s*€?\s*(\d+(?:[.,]\d{2})?)', card_text, re.IGNORECASE):
-                    val = m.group(1).replace(",", ".")
-                    prices.add(float(val))
+                    if not cookies_dismissed:
+                        _dismiss_cookies(page)
+                        cookies_dismissed = True
 
-                valid_prices = [p for p in prices if 10 <= p <= 5000]
-                if valid_prices:
-                    results[schedule_id] = {
-                        "price_min": min(valid_prices),
-                        "price_max": max(valid_prices),
-                    }
-                    print(f"  {schedule_id}: {min(valid_prices)}-{max(valid_prices)} EUR")
-                else:
-                    print(f"  {schedule_id}: no price found. Text: {card_text[:100]!r}")
+                    # Try to find and click a "Biglietti" / "Tickets" button to reveal prices
+                    for btn_sel in [
+                        'button:has-text("Biglietti")',
+                        'button:has-text("Tickets")',
+                        'button:has-text("Vedi biglietti")',
+                        'button:has-text("See Tickets")',
+                        'a:has-text("Biglietti")',
+                        'a:has-text("Tickets")',
+                    ]:
+                        try:
+                            btn = page.query_selector(btn_sel)
+                            if btn and btn.is_visible():
+                                btn.click()
+                                page.wait_for_timeout(3000)
+                                break
+                        except Exception:
+                            pass
 
-            # Also try extracting prices from the full HTML via regex
-            # TM sometimes embeds price data in JSON within script tags
-            if not results:
-                print("Trying HTML regex fallback...")
-                for m in re.finditer(
-                    r'/event/([a-z0-9]+).*?(\d+[.,]\d{2})\s*€',
-                    content, re.DOTALL
-                ):
-                    sid = m.group(1)
-                    price = float(m.group(2).replace(",", "."))
-                    if 10 <= price <= 5000 and sid not in results:
-                        results[sid] = {"price_min": price, "price_max": price}
-                        print(f"  regex: {sid} = {price} EUR")
+                    page_text = page.inner_text("body")
+                    packages = _extract_packages(page_text)
+
+                    if packages:
+                        all_prices = [pkg["price"] for pkg in packages]
+                        avail_count = sum(1 for pkg in packages if pkg["available"])
+                        results[schedule_id] = {
+                            "packages": packages,
+                            "price_min": min(all_prices),
+                            "price_max": max(all_prices),
+                        }
+                        print(f"    {len(packages)} packages ({avail_count} available), "
+                              f"{min(all_prices):.2f}€ - {max(all_prices):.2f}€")
+                    else:
+                        print(f"    No packages found")
+
+                except Exception as exc:
+                    print(f"    Error on {url}: {exc}", file=sys.stderr)
+                    errors.append(f"Scrape error ({schedule_id}): {exc}")
 
             browser.close()
 
@@ -265,6 +302,7 @@ def main():
                     "price_max": None,
                     "currency": "EUR",
                     "url": url,
+                    "packages": [],
                 })
 
     except httpx.HTTPStatusError as exc:
@@ -272,17 +310,20 @@ def main():
     except httpx.RequestError as exc:
         errors.append(f"Request error: {exc}")
 
-    # Step 2: Scrape prices from ticketmaster.it artist page via Playwright
-    print("Scraping prices from artist page...")
-    scraped = scrape_prices_from_artist_page(errors)
-    print(f"Scraped prices for {len(scraped)} events")
+    # Step 2: Scrape packages from individual event pages via Playwright
+    event_urls = [ev["url"] for ev in events if ev["url"]]
+    print(f"Scraping packages from {len(event_urls)} event pages...")
+    scraped = scrape_event_pages(event_urls, errors)
+    print(f"Scraped packages for {len(scraped)} events")
 
-    # Match scraped prices to events by schedule ID in URL
+    # Match scraped data to events by schedule ID in URL
     for ev in events:
         schedule_id = match_schedule_id(ev["url"])
         if schedule_id and schedule_id in scraped:
-            ev["price_min"] = scraped[schedule_id]["price_min"]
-            ev["price_max"] = scraped[schedule_id]["price_max"]
+            data = scraped[schedule_id]
+            ev["packages"] = data["packages"]
+            ev["price_min"] = data["price_min"]
+            ev["price_max"] = data["price_max"]
 
             status["price_history"].append({
                 "timestamp": now,

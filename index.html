@@ -68,6 +68,15 @@
     margin: 1.5rem 0;
   }
   .card h2 { font-size: 1rem; margin-bottom: .8rem; color: var(--gold); }
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .8rem;
+    flex-wrap: wrap;
+    gap: .5rem;
+  }
+  .card-header h2 { margin-bottom: 0; }
 
   table {
     width: 100%;
@@ -86,6 +95,8 @@
   }
   .tag.single { background: #1b5e20; color: var(--green); }
   .tag.combo { background: #4a1480; color: #ce93d8; }
+  .tag.available { background: #1b5e20; color: var(--green); }
+  .tag.unavailable { background: #4a0000; color: var(--red); }
   a { color: var(--blue); text-decoration: none; }
   a:hover { text-decoration: underline; }
 
@@ -93,6 +104,40 @@
 
   .loading { text-align: center; padding: 3rem; color: var(--muted); }
   .footer { text-align: center; padding: 2rem 0; font-size: .75rem; color: var(--muted); }
+
+  .toggle-btn {
+    background: var(--border);
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: .35rem .8rem;
+    border-radius: 6px;
+    font-size: .78rem;
+    cursor: pointer;
+    transition: all .2s;
+  }
+  .toggle-btn:hover { border-color: var(--blue); }
+  .toggle-btn.active { background: #1b5e20; border-color: var(--green); color: var(--green); }
+
+  .event-toggle {
+    cursor: pointer;
+    user-select: none;
+  }
+  .event-toggle:hover { background: rgba(255,255,255,.03); }
+  .event-toggle td:first-child::before {
+    content: '\25B6';
+    display: inline-block;
+    margin-right: .4rem;
+    font-size: .7rem;
+    transition: transform .2s;
+    color: var(--muted);
+  }
+  .event-toggle.open td:first-child::before {
+    transform: rotate(90deg);
+  }
+  .pkg-row { display: none; }
+  .pkg-row.visible { display: table-row; }
+  .pkg-row td { padding-left: 1.5rem; font-size: .8rem; color: var(--muted); border-bottom: 1px solid rgba(42,42,74,.5); }
+  .pkg-row.unavailable-row { opacity: .5; }
 
   @media (max-width: 600px) {
     header h1 { font-size: 1.2rem; }
@@ -114,15 +159,16 @@
   </div>
 
   <div class="footer">
-    Auto-refresh ogni 5 minuti &bull; Dati aggiornati ogni 15 min via GitHub Actions
+    Auto-refresh ogni 5 minuti &bull; Dati aggiornati ogni 15 min via Docker
   </div>
 </div>
 
 <script>
 const DATA_URL = 'data/status.json';
+let showOnlyAvailable = true;
 
 function timeAgo(iso) {
-  if (!iso) return '—';
+  if (!iso) return '\u2014';
   const diff = (Date.now() - new Date(iso).getTime()) / 1000;
   if (diff < 60) return `${Math.round(diff)}s fa`;
   if (diff < 3600) return `${Math.round(diff / 60)}min fa`;
@@ -131,49 +177,74 @@ function timeAgo(iso) {
 }
 
 function fmtDate(d) {
-  if (!d) return '—';
+  if (!d) return '\u2014';
   const [y, m, day] = d.split('-');
   return `${day}/${m}/${y}`;
 }
 
 function fmtPrice(p, currency) {
-  if (p == null) return '—';
-  return `${p.toFixed(2)} ${currency || '€'}`;
+  if (p == null) return '\u2014';
+  return `${p.toLocaleString('it-IT', {minimumFractionDigits: 2, maximumFractionDigits: 2})} ${currency || '\u20AC'}`;
 }
 
+let currentData = null;
+
 function render(data) {
+  currentData = data;
   const app = document.getElementById('app');
 
   // Banner
   let bannerClass, bannerText;
   if (data.errors && data.errors.length && !data.events.length) {
     bannerClass = 'error';
-    bannerText = 'Errore nel controllo — riprovo tra 15 min';
+    bannerText = 'Errore nel controllo \u2014 riprovo tra 15 min';
   } else if (data.alert_active) {
     bannerClass = 'alert';
-    bannerText = 'BIGLIETTI SINGOLI TROVATI SOTTO 400€!';
+    bannerText = 'BIGLIETTI SINGOLI TROVATI SOTTO 400\u20AC!';
   } else {
     bannerClass = 'waiting';
-    bannerText = 'Non ancora disponibili biglietti singoli sotto 400€';
+    bannerText = 'Non ancora disponibili biglietti singoli sotto 400\u20AC';
   }
 
-  // Events table
+  // Events + packages
   let rows = '';
-  for (const e of (data.events || [])) {
+  for (let ei = 0; ei < (data.events || []).length; ei++) {
+    const e = data.events[ei];
     const tag = e.is_single_day
       ? '<span class="tag single">Singolo</span>'
       : '<span class="tag combo">Combo</span>';
-    const link = e.url ? `<a href="${e.url}" target="_blank" rel="noopener">Acquista</a>` : '—';
-    rows += `<tr>
-      <td>${e.name || '—'}</td>
+    const link = e.url ? `<a href="${e.url}" target="_blank" rel="noopener">Acquista</a>` : '\u2014';
+    const hasPkgs = e.packages && e.packages.length > 0;
+    const toggleClass = hasPkgs ? 'event-toggle' : '';
+
+    rows += `<tr class="${toggleClass}" ${hasPkgs ? `onclick="togglePackages(${ei})" data-event="${ei}"` : ''}>
+      <td>${e.name || '\u2014'}</td>
       <td>${fmtDate(e.date)}</td>
       <td>${tag}</td>
       <td>${fmtPrice(e.price_min, e.currency)}</td>
       <td class="hide-mobile">${fmtPrice(e.price_max, e.currency)}</td>
       <td>${link}</td>
     </tr>`;
+
+    if (hasPkgs) {
+      for (const pkg of e.packages) {
+        const statusTag = pkg.available
+          ? '<span class="tag available">Disponibile</span>'
+          : '<span class="tag unavailable">Non disponibile</span>';
+        const hideClass = (!pkg.available && showOnlyAvailable) ? '' : 'visible';
+        const unavailClass = pkg.available ? '' : 'unavailable-row';
+        rows += `<tr class="pkg-row pkg-event-${ei} ${hideClass} ${unavailClass}" data-available="${pkg.available}">
+          <td>${pkg.name}</td>
+          <td colspan="2">${statusTag}</td>
+          <td>${fmtPrice(pkg.price, e.currency)}</td>
+          <td class="hide-mobile" colspan="2"></td>
+        </tr>`;
+      }
+    }
   }
-  if (!rows) rows = '<tr><td colspan="6" style="text-align:center;color:var(--muted)">Nessun evento trovato</td></tr>';
+  if (!data.events || !data.events.length) {
+    rows = '<tr><td colspan="6" style="text-align:center;color:var(--muted)">Nessun evento trovato</td></tr>';
+  }
 
   // Errors
   let errHtml = '';
@@ -181,17 +252,24 @@ function render(data) {
     errHtml = `<div class="card" style="border-color:var(--red)"><h2 style="color:var(--red)">Errori</h2><ul style="padding-left:1.2rem;font-size:.82rem">${data.errors.map(e => `<li>${e}</li>`).join('')}</ul></div>`;
   }
 
+  const filterBtnClass = showOnlyAvailable ? 'toggle-btn active' : 'toggle-btn';
+  const filterLabel = showOnlyAvailable ? 'Solo disponibili' : 'Tutti i pacchetti';
+
   app.innerHTML = `
     <div class="banner ${bannerClass}">${bannerText}</div>
 
     <div class="meta">
       <span>Ultimo check: ${timeAgo(data.last_check)}</span>
       <span>Controlli: ${data.checks_count || 0}</span>
-      <span>Soglia: ${data.threshold_eur || 400}€</span>
+      <span>Soglia: ${data.threshold_eur || 400}\u20AC</span>
     </div>
 
     <div class="card">
-      <h2>Eventi</h2>
+      <div class="card-header">
+        <h2>Eventi e Pacchetti</h2>
+        <button class="${filterBtnClass}" onclick="toggleFilter()">${filterLabel}</button>
+      </div>
+      <p style="font-size:.78rem;color:var(--muted);margin-bottom:.8rem">Clicca su un evento per vedere i pacchetti</p>
       <div style="overflow-x:auto">
         <table>
           <thead><tr>
@@ -213,6 +291,28 @@ function render(data) {
   renderChart(data.price_history || []);
 }
 
+function togglePackages(eventIndex) {
+  const row = document.querySelector(`tr[data-event="${eventIndex}"]`);
+  const pkgRows = document.querySelectorAll(`.pkg-event-${eventIndex}`);
+  const isOpen = row.classList.contains('open');
+
+  if (isOpen) {
+    row.classList.remove('open');
+    pkgRows.forEach(r => r.classList.remove('visible'));
+  } else {
+    row.classList.add('open');
+    pkgRows.forEach(r => {
+      if (showOnlyAvailable && r.dataset.available === 'false') return;
+      r.classList.add('visible');
+    });
+  }
+}
+
+function toggleFilter() {
+  showOnlyAvailable = !showOnlyAvailable;
+  if (currentData) render(currentData);
+}
+
 function renderChart(history) {
   const canvas = document.getElementById('priceChart');
   if (!canvas || !history.length) {
@@ -226,7 +326,6 @@ function renderChart(history) {
     return;
   }
 
-  // Group by event_id
   const byEvent = {};
   for (const p of history) {
     if (!byEvent[p.event_id]) byEvent[p.event_id] = [];
@@ -252,7 +351,7 @@ function renderChart(history) {
       scales: {
         x: { type: 'time', time: { tooltipFormat: 'dd/MM HH:mm' },
              ticks: { color: '#888' }, grid: { color: '#2a2a4a' } },
-        y: { ticks: { color: '#888', callback: v => v + '€' }, grid: { color: '#2a2a4a' } }
+        y: { ticks: { color: '#888', callback: v => v + '\u20AC' }, grid: { color: '#2a2a4a' } }
       },
       plugins: {
         legend: { labels: { color: '#ccc', boxWidth: 12 } }
@@ -268,7 +367,7 @@ async function load() {
     render(await resp.json());
   } catch (e) {
     document.getElementById('app').innerHTML =
-      `<div class="banner waiting">Nessun dato disponibile — il primo check non è ancora stato eseguito</div>`;
+      `<div class="banner waiting">Nessun dato disponibile \u2014 il primo check non \u00E8 ancora stato eseguito</div>`;
   }
 }
 

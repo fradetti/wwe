@@ -1,0 +1,17 @@
+services:
+  wwe-monitor:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: wwe-monitor
+    environment:
+      - TICKETMASTER_API_KEY=${TICKETMASTER_API_KEY}
+      - GITHUB_PAT=${GITHUB_PAT}
+      - GIT_REPO=${GIT_REPO:-fradetti/wwe}
+      - CHECK_INTERVAL=${CHECK_INTERVAL:-900}
+    volumes:
+      - repo-data:/repo
+    restart: unless-stopped
+
+volumes:
+  repo-data:
