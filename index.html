@@ -4,8 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>WWE Ticket Monitor - 31 Maggio 2026</title>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3"></script>
 <style>
   :root {
     --bg: #0f0f0f;
@@ -78,6 +76,7 @@
     gap: .5rem;
   }
   .card-header h2 { margin-bottom: 0; }
+  .btn-group { display: flex; gap: .4rem; flex-wrap: wrap; }
 
   table {
     width: 100%;
@@ -100,8 +99,6 @@
   .tag.unavailable { background: #4a0000; color: var(--red); }
   a { color: var(--blue); text-decoration: none; }
   a:hover { text-decoration: underline; }
-
-  .chart-box { position: relative; height: 250px; }
 
   .loading { text-align: center; padding: 3rem; color: var(--muted); }
   .footer { text-align: center; padding: 2rem 0; font-size: .75rem; color: var(--muted); }
@@ -167,6 +164,7 @@
 <script>
 const DATA_URL = 'data/status.json';
 let showOnlyAvailable = true;
+let allExpanded = false;
 
 function timeAgo(iso) {
   if (!iso) return '\u2014';
@@ -233,8 +231,9 @@ function render(data) {
     }
 
     const venue = e.venue ? `<br><span style="font-size:.75rem;color:var(--muted)">${e.venue}</span>` : '';
+    const openClass = allExpanded && hasPkgs ? ' open' : '';
 
-    rows += `<tr class="${toggleClass}" ${hasPkgs ? `onclick="togglePackages(${ei})" data-event="${ei}"` : ''}>
+    rows += `<tr class="${toggleClass}${openClass}" ${hasPkgs ? `onclick="togglePackages(${ei})" data-event="${ei}"` : ''}>
       <td>${e.name || '\u2014'}${venue}</td>
       <td>${fmtDate(e.date)}</td>
       <td>${tag}</td>
@@ -248,7 +247,8 @@ function render(data) {
         const statusTag = pkg.available
           ? '<span class="tag available">Disponibile</span>'
           : '<span class="tag unavailable">Non disponibile</span>';
-        const hideClass = (!pkg.available && showOnlyAvailable) ? '' : 'visible';
+        const shouldShow = allExpanded && (pkg.available || !showOnlyAvailable);
+        const hideClass = shouldShow ? 'visible' : '';
         const unavailClass = pkg.available ? '' : 'unavailable-row';
         rows += `<tr class="pkg-row pkg-event-${ei} ${hideClass} ${unavailClass}" data-available="${pkg.available}">
           <td>${pkg.name}</td>
@@ -271,6 +271,7 @@ function render(data) {
 
   const filterBtnClass = showOnlyAvailable ? 'toggle-btn active' : 'toggle-btn';
   const filterLabel = showOnlyAvailable ? 'Solo disponibili' : 'Tutti i pacchetti';
+  const expandLabel = allExpanded ? 'Comprimi tutto' : 'Espandi tutto';
 
   app.innerHTML = `
     <div class="banner ${bannerClass}">${bannerText}</div>
@@ -284,7 +285,10 @@ function render(data) {
     <div class="card">
       <div class="card-header">
         <h2>Eventi e Pacchetti</h2>
-        <button class="${filterBtnClass}" onclick="toggleFilter()">${filterLabel}</button>
+        <div class="btn-group">
+          <button class="toggle-btn" onclick="toggleExpandAll()">${expandLabel}</button>
+          <button class="${filterBtnClass}" onclick="toggleFilter()">${filterLabel}</button>
+        </div>
       </div>
       <p style="font-size:.78rem;color:var(--muted);margin-bottom:.8rem">Clicca su un evento per vedere i pacchetti</p>
       <div style="overflow-x:auto">
@@ -297,15 +301,8 @@ function render(data) {
       </div>
     </div>
 
-    <div class="card">
-      <h2>Storico Prezzi</h2>
-      <div class="chart-box"><canvas id="priceChart"></canvas></div>
-    </div>
-
     ${errHtml}
   `;
-
-  renderChart(data.price_history || []);
 }
 
 function togglePackages(eventIndex) {
@@ -325,56 +322,14 @@ function togglePackages(eventIndex) {
   }
 }
 
-function toggleFilter() {
-  showOnlyAvailable = !showOnlyAvailable;
+function toggleExpandAll() {
+  allExpanded = !allExpanded;
   if (currentData) render(currentData);
 }
 
-function renderChart(history) {
-  const canvas = document.getElementById('priceChart');
-  if (!canvas || !history.length) {
-    if (canvas) {
-      const ctx = canvas.getContext('2d');
-      ctx.fillStyle = '#888';
-      ctx.font = '14px sans-serif';
-      ctx.textAlign = 'center';
-      ctx.fillText('Nessun dato storico ancora disponibile', canvas.width / 2, canvas.height / 2);
-    }
-    return;
-  }
-
-  const byEvent = {};
-  for (const p of history) {
-    if (!byEvent[p.event_id]) byEvent[p.event_id] = [];
-    byEvent[p.event_id].push({ x: new Date(p.timestamp), y: p.price_min });
-  }
-
-  const colors = ['#ffd600', '#448aff', '#00c853', '#ff1744', '#ce93d8'];
-  const datasets = Object.entries(byEvent).map(([id, points], i) => ({
-    label: id.substring(0, 12),
-    data: points,
-    borderColor: colors[i % colors.length],
-    backgroundColor: 'transparent',
-    tension: 0.3,
-    pointRadius: 2,
-  }));
-
-  new Chart(canvas, {
-    type: 'line',
-    data: { datasets },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      scales: {
-        x: { type: 'time', time: { tooltipFormat: 'dd/MM HH:mm' },
-             ticks: { color: '#888' }, grid: { color: '#2a2a4a' } },
-        y: { ticks: { color: '#888', callback: v => v + '\u20AC' }, grid: { color: '#2a2a4a' } }
-      },
-      plugins: {
-        legend: { labels: { color: '#ccc', boxWidth: 12 } }
-      }
-    }
-  });
+function toggleFilter() {
+  showOnlyAvailable = !showOnlyAvailable;
+  if (currentData) render(currentData);
 }
 
 async function load() {
