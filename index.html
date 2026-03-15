@@ -496,8 +496,7 @@
   <div id="scraping-status" style="display:none"></div>
 
   <div class="footer">
-    Auto-refresh ogni 5 minuti &bull; Dati aggiornati ogni 15 min via Docker
-    <br><button onclick="toggleScrapingStatus()">Stato scraping</button>
+    <button onclick="toggleScrapingStatus()">Stato scraping</button>
   </div>
 </div>
 
@@ -713,7 +712,9 @@ async function load() {
     if (!resp.ok) throw new Error(resp.status);
     const data = await resp.json();
     if (currentSource === 'emirates') {
-      renderFlights(data);
+      const flights = Array.isArray(data) ? data : (data.flights || []);
+      const lastCheck = Array.isArray(data) ? null : data.last_check;
+      renderFlights(flights, lastCheck);
     } else {
       render(data);
     }
@@ -731,6 +732,7 @@ async function load() {
 
 /* Emirates flights */
 let flightsData = [];
+let flightsLastCheck = null;
 
 const FLIGHT_ROUTES = [
   { code: 'EK78',  label: 'EK78 NCE\u2192DXB' },
@@ -743,21 +745,22 @@ let flightFilter = new Set(FLIGHT_ROUTES.map(f => f.code));
 function toggleFlightFilter(code) {
   if (flightFilter.has(code)) flightFilter.delete(code);
   else flightFilter.add(code);
-  renderFlights(flightsData);
+  renderFlights(flightsData, flightsLastCheck);
 }
 
 function setAllFlights() {
   flightFilter = new Set(FLIGHT_ROUTES.map(f => f.code));
-  renderFlights(flightsData);
+  renderFlights(flightsData, flightsLastCheck);
 }
 
 function setNoFlights() {
   flightFilter.clear();
-  renderFlights(flightsData);
+  renderFlights(flightsData, flightsLastCheck);
 }
 
-function renderFlights(data) {
+function renderFlights(data, lastCheck) {
   flightsData = data;
+  flightsLastCheck = lastCheck;
   const app = document.getElementById('app');
 
   // Filter data by selected flights
@@ -833,8 +836,8 @@ function renderFlights(data) {
       </div>
     </div>
 
-    <div style="text-align:center;font-size:.72rem;color:var(--muted);margin-top:.75rem">
-      ${data.length ? 'Ultimo dato: ' + data[0].date + ' \u2014 ' + data[0].flight : ''}
+    <div class="meta" style="margin-top:.75rem">
+      ${lastCheck ? '<span>Ultimo check: ' + timeAgo(lastCheck) + '</span>' : ''}
     </div>
   `;
 }
@@ -872,11 +875,12 @@ async function loadScrapingStatus() {
       if (!resp.ok) throw new Error(resp.status);
       const d = await resp.json();
       if (src.isFlights) {
-        const arr = Array.isArray(d) ? d : [];
+        const arr = Array.isArray(d) ? d : (d.flights || []);
+        const lastCheck = Array.isArray(d) ? null : d.last_check;
         const landed = arr.filter(r => r.status && r.status.toLowerCase() === 'landed').length;
         rows += `<tr>
           <td>${src.name}</td>
-          <td>${arr.length ? 'Ultimo: ' + arr[0].date : 'Mai'}</td>
+          <td>${lastCheck ? timeAgo(lastCheck) : (arr.length ? 'Ultimo: ' + arr[0].date : 'Mai')}</td>
           <td>${arr.length} voli</td>
           <td>${landed} landed</td>
           <td>\u2014</td>
