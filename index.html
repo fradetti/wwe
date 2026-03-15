@@ -766,12 +766,19 @@ function renderFlights(data, lastCheck) {
   // Filter data by selected flights
   const filtered = data.filter(r => flightFilter.has(r.flight));
 
-  // Stats based on filtered data
-  const withDelay = filtered.filter(r => getFlightDelay(r) !== null);
-  const onTime = withDelay.filter(r => getFlightDelay(r) < 15).length;
-  const avgDelay = withDelay.length ? Math.round(withDelay.reduce((s, r) => s + getFlightDelay(r), 0) / withDelay.length) : null;
-  const onTimePct = withDelay.length ? Math.round((onTime / withDelay.length) * 100) : null;
-  const landed = filtered.filter(r => r.status && r.status.toLowerCase() === 'landed').length;
+  // Per-flight stats (in route order)
+  const flightStats = FLIGHT_ROUTES.map(f => {
+    const entries = data.filter(r => r.flight === f.code);
+    const count = entries.length;
+    const landedCount = entries.filter(r => r.status && r.status.toLowerCase() === 'landed').length;
+    const withDelay = entries.filter(r => getFlightDelay(r) !== null);
+    const avg = withDelay.length ? Math.round(withDelay.reduce((s, r) => s + getFlightDelay(r), 0) / withDelay.length) : null;
+    // Latest status: pick most recent entry by date
+    const sorted = [...entries].sort((a, b) => b.date.localeCompare(a.date));
+    const latest = sorted[0];
+    const latestStatus = latest ? latest.status || 'Unknown' : '\u2014';
+    return { ...f, count, landedCount, avg, latestStatus };
+  });
 
   // Flight filter buttons
   const filterBtns = FLIGHT_ROUTES.map(f =>
@@ -812,10 +819,17 @@ function renderFlights(data, lastCheck) {
 
   app.innerHTML = `
     <div class="flight-stats">
-      <div class="flight-stat"><div class="fs-label">Tracciati</div><div class="fs-value">${filtered.length}</div></div>
-      <div class="flight-stat"><div class="fs-label">Landed</div><div class="fs-value" style="color:var(--green)">${landed}</div></div>
-      <div class="flight-stat"><div class="fs-label">Ritardo medio</div><div class="fs-value">${avgDelay !== null ? avgDelay + 'm' : '\u2014'}</div></div>
-      <div class="flight-stat"><div class="fs-label">On-time</div><div class="fs-value" style="color:var(--green)">${onTimePct !== null ? onTimePct + '%' : '\u2014'}</div></div>
+      ${flightStats.map(f => {
+        const delayColor = f.avg === null ? '' : f.avg < 15 ? 'color:var(--green)' : f.avg <= 45 ? 'color:var(--gold)' : 'color:var(--red)';
+        const delayStr = f.avg !== null ? (f.avg >= 0 ? '+' : '') + f.avg + 'm' : '\u2014';
+        return `<div class="flight-stat">
+          <div class="fs-label">${f.code}</div>
+          <div style="font-size:.68rem;color:var(--muted);margin-top:.1rem">${f.label.split(' ')[1]}</div>
+          <div style="font-size:.72rem;margin-top:.35rem">${f.count} tracciati &middot; ${f.landedCount} landed</div>
+          <div style="font-size:.72rem;${delayColor};font-weight:600;margin-top:.15rem">Delay medio: ${delayStr}</div>
+          <div style="font-size:.72rem;margin-top:.15rem">Ultimo: ${f.latestStatus}</div>
+        </div>`;
+      }).join('')}
     </div>
 
     <div class="flight-filters">
