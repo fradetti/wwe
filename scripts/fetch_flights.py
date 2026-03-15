@@ -151,7 +151,13 @@ def scrape_flightstats(carrier, flight_num, date_str, desired_route=None):
             )
             flight_id = None
             for day_group in other_days:
-                items = day_group if isinstance(day_group, list) else [day_group]
+                # day_group can be {date1, flights: [...]} or a flat list/dict
+                if isinstance(day_group, dict) and "flights" in day_group:
+                    items = day_group["flights"]
+                elif isinstance(day_group, list):
+                    items = day_group
+                else:
+                    items = [day_group]
                 for item in items:
                     dep_iata = item.get("departureAirport", {}).get("iata", "")
                     arr_iata = item.get("arrivalAirport", {}).get("iata", "")
