@@ -4,15 +4,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-WWE ticket price monitoring system for Italian venues. Scrapes WWE ticket availability and pricing from Ticketmaster.it (API + Playwright) and StubHub.com, tracks prices over time, sends alerts when tickets drop below €400, and publishes a real-time dashboard via GitHub Pages.
+Personal monitoring dashboard that tracks WWE ticket prices for Italian venues and Emirates flight status. Scrapes data from Ticketmaster.it, StubHub.com, and FlightStats, and publishes a unified dashboard via GitHub Pages.
 
 ## Architecture
 
 - **Ticketmaster scraper** (`scripts/check_tickets.py`): Uses Ticketmaster Discovery API v2 to find events, then Playwright with stealth mode to scrape package details from event pages. Writes to `data/status.json`.
 - **StubHub scraper** (`scripts/check_stubhub.py`): Scrapes StubHub listings for WWE events in Italian cities. Writes to `data/stubhub.json`.
+- **Emirates flight scraper** (`scripts/fetch_flights.py`): Scrapes FlightStats for EK78, EK705, EK708, EK77 flight data (departure/arrival times, delays, status). Writes to `data/flights.json`.
 - **API-only fallback** (`scripts/check_tickets_api.py`): Lightweight version using only the Ticketmaster API (no browser), used by GitHub Actions CI.
-- **Dashboard** (`index.html`): Single-file vanilla JS/HTML dashboard with Chart.js price charts, dark/light theme, event filtering. Reads JSON data files.
-- **Docker container** (`docker/`): Runs full scraper on configurable intervals (default 15 min), auto-commits and pushes status updates.
+- **Dashboard** (`index.html`): Single-file vanilla JS/HTML dashboard with dark/light theme, three tabs (Ticketmaster, StubHub, Emirates). Reads JSON data files.
+- **Docker container** (`docker/`): Runs all three scrapers on configurable intervals (default 15 min), auto-commits and pushes status updates.
 
 ## Commands
 
@@ -25,6 +26,9 @@ python scripts/check_tickets.py
 
 # Run StubHub check
 python scripts/check_stubhub.py
+
+# Run Emirates flight check
+DATA_FILE=data/flights.json python scripts/fetch_flights.py
 
 # Run API-only check (no browser needed)
 python scripts/check_tickets_api.py
@@ -51,4 +55,5 @@ docker-compose -f docker/docker-compose.yml up --build
 - **Date range filter**: Events are filtered to May 30 – June 8, 2026 window.
 - **StubHub city filter**: Events filtered by URL-based Italian city keywords (torino, roma, bologna, etc.).
 - **Price history**: JSON files store up to 1000 historical price entries per event.
+- **Flight tracking**: Tracks 4 Emirates flights (EK78, EK705, EK708, EK77) over a 6-day rolling window (3 past + 3 future). Skips already-landed flights. Data sourced from FlightStats `__NEXT_DATA__` JSON. Output format: `{"last_check": ISO, "flights": [...]}` with backward-compatible loading. Multi-leg flights (EK708) use `otherDays[].flights[]` to find the correct leg via `flightId`.
 - **CI/CD**: `check.yml` runs API-only check every 6 hours. `pages.yml` deploys to GitHub Pages on push. Auto-commits use `[skip ci]` tag and `git pull --rebase`.
