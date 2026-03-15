@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-03-15T12:29:46.098761+00:00",
+  "last_check": "2026-03-15T12:49:52.185004+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -7,7 +7,7 @@
       "id": "stubhub-160574096",
       "name": "WWE Clash in Italy",
       "date": "2026-05-31",
-      "venue": "",
+      "venue": "Pala Alpitour (Inalpi Arena), Turin, Italy",
       "is_single_day": true,
       "price_min": 420.0,
       "price_max": 2350.0,
@@ -58,66 +58,6 @@
           "name": "II Anello Est",
           "price": 666.0,
           "available": true
-        },
-        {
-          "name": "Section 221",
-          "price": 666.0,
-          "available": true
-        },
-        {
-          "name": "Section 107",
-          "price": 826.0,
-          "available": true
-        },
-        {
-          "name": "Section 116",
-          "price": 837.0,
-          "available": true
-        },
-        {
-          "name": "Section 104",
-          "price": 1050.0,
-          "available": true
-        },
-        {
-          "name": "Section 117",
-          "price": 1103.0,
-          "available": true
-        },
-        {
-          "name": "Floor",
-          "price": 1143.0,
-          "available": true
-        },
-        {
-          "name": "Section H",
-          "price": 1900.0,
-          "available": true
-        },
-        {
-          "name": "Section H",
-          "price": 1144.0,
-          "available": true
-        },
-        {
-          "name": "Section H",
-          "price": 1900.0,
-          "available": true
-        },
-        {
-          "name": "Section H",
-          "price": 1144.0,
-          "available": true
-        },
-        {
-          "name": "Section K",
-          "price": 1144.0,
-          "available": true
-        },
-        {
-          "name": "Section H",
-          "price": 1148.0,
-          "available": true
         }
       ]
     },
@@ -125,7 +65,7 @@
       "id": "stubhub-160556794",
       "name": "WWE Monday Night RAW",
       "date": "2026-06-01",
-      "venue": "",
+      "venue": "Pala Alpitour (Inalpi Arena), Turin, Italy",
       "is_single_day": true,
       "price_min": 286.0,
       "price_max": 9002.0,
@@ -181,66 +121,6 @@
           "name": "Section 112",
           "price": 449.0,
           "available": true
-        },
-        {
-          "name": "Section 111",
-          "price": 451.0,
-          "available": true
-        },
-        {
-          "name": "Section 111",
-          "price": 459.0,
-          "available": true
-        },
-        {
-          "name": "Floor",
-          "price": 797.0,
-          "available": true
-        },
-        {
-          "name": "Floor",
-          "price": 558.0,
-          "available": true
-        },
-        {
-          "name": "I Anello Est",
-          "price": 921.0,
-          "available": true
-        },
-        {
-          "name": "I Anello Est",
-          "price": 609.0,
-          "available": true
-        },
-        {
-          "name": "Section 101",
-          "price": 2455.0,
-          "available": true
-        },
-        {
-          "name": "Section 118",
-          "price": 2455.0,
-          "available": true
-        },
-        {
-          "name": "Section 102",
-          "price": 2455.0,
-          "available": true
-        },
-        {
-          "name": "Section 122",
-          "price": 2455.0,
-          "available": true
-        },
-        {
-          "name": "Section 121",
-          "price": 2455.0,
-          "available": true
-        },
-        {
-          "name": "Section 119",
-          "price": 2455.0,
-          "available": true
         }
       ]
     },
@@ -248,7 +128,7 @@
       "id": "stubhub-160574134",
       "name": "WWE Friday Night SmackDown",
       "date": "2026-06-05",
-      "venue": "",
+      "venue": "Futurshow Station - Unipol Arena, Casalecchio di Reno - Bologna, Italy",
       "is_single_day": true,
       "price_min": 335.0,
       "price_max": 7366.0,
@@ -303,71 +183,6 @@
         {
           "name": "Section 2 Ovest C",
           "price": 369.0,
-          "available": true
-        },
-        {
-          "name": "Section 1 Ovest B",
-          "price": 550.0,
-          "available": true
-        },
-        {
-          "name": "Section 1 Ovest B",
-          "price": 400.0,
-          "available": true
-        },
-        {
-          "name": "Section 1 Ovest C",
-          "price": 460.0,
-          "available": true
-        },
-        {
-          "name": "Section 1 Est E",
-          "price": 462.0,
-          "available": true
-        },
-        {
-          "name": "Section 1 Est E",
-          "price": 464.0,
-          "available": true
-        },
-        {
-          "name": "Section 1 Est E",
-          "price": 465.0,
-          "available": true
-        },
-        {
-          "name": "Section Primo Settore H1",
-          "price": 999.0,
-          "available": true
-        },
-        {
-          "name": "Section Primo Settore H1",
-          "price": 539.0,
-          "available": true
-        },
-        {
-          "name": "Section Primo Settore H1",
-          "price": 558.0,
-          "available": true
-        },
-        {
-          "name": "Section Primo Settore H1",
-          "price": 558.0,
-          "available": true
-        },
-        {
-          "name": "Section I",
-          "price": 563.0,
-          "available": true
-        },
-        {
-          "name": "Section 2 Ovest E",
-          "price": 2500.0,
-          "available": true
-        },
-        {
-          "name": "Section 2 Ovest E",
-          "price": 1860.0,
           "available": true
         }
       ]
@@ -1123,8 +938,23 @@
       "timestamp": "2026-03-15T12:29:46.098761+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 335.0
+    },
+    {
+      "timestamp": "2026-03-15T12:49:52.185004+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 420.0
+    },
+    {
+      "timestamp": "2026-03-15T12:49:52.185004+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 286.0
+    },
+    {
+      "timestamp": "2026-03-15T12:49:52.185004+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 335.0
     }
   ],
-  "checks_count": 52,
+  "checks_count": 53,
   "errors": []
 }
