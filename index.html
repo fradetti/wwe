@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WWE Ticket Monitor</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='32' y='48' font-size='48' text-anchor='middle'%3E💵%3C/text%3E%3C/svg%3E">
+<title>Dashboard</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='32' y='48' font-size='48' text-anchor='middle'%3E📊%3C/text%3E%3C/svg%3E">
 <style>
   :root {
     --bg: #0f0f0f;
@@ -205,6 +205,62 @@
   .pkg-row td { padding-left: 1.5rem; font-size: .8rem; color: var(--muted); border-bottom: 1px solid var(--border); opacity: .8; }
   .pkg-row.unavailable-row { opacity: .4; }
 
+  /* Flight badges */
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: .75rem;
+    font-weight: 600;
+  }
+  .badge-green  { background: #1b5e20; color: #00c853; }
+  .badge-yellow { background: #4a3800; color: #ffd600; }
+  .badge-red    { background: #4a0000; color: #ff1744; }
+  .badge-grey   { background: #333; color: #aaa; }
+  .badge-blue   { background: #0d47a1; color: #448aff; }
+  html.light .badge-green  { background: #e8f5e9; color: #2e7d32; }
+  html.light .badge-yellow { background: #fff8e1; color: #f57f17; }
+  html.light .badge-red    { background: #ffebee; color: #c62828; }
+  html.light .badge-grey   { background: #eee; color: #666; }
+  html.light .badge-blue   { background: #e3f2fd; color: #1565c0; }
+
+  .delay-green  { color: var(--green); font-weight: 700; }
+  .delay-yellow { color: var(--gold); font-weight: 700; }
+  .delay-red    { color: var(--red); font-weight: 700; }
+  .delay-none   { color: var(--muted); }
+
+  .flight-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: .5rem;
+    margin-bottom: 1rem;
+  }
+  .flight-stat {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: .75rem;
+    text-align: center;
+  }
+  .flight-stat .fs-label { font-size: .7rem; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; }
+  .flight-stat .fs-value { font-size: 1.4rem; font-weight: 800; margin-top: .2rem; }
+
+  .flight-filters {
+    display: flex;
+    gap: .75rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+  .flight-filters select,
+  .flight-filters input {
+    padding: .45rem .7rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: .82rem;
+    background: var(--surface);
+    color: var(--text);
+  }
+
   @media (max-width: 600px) {
     header h1 { font-size: 1.15rem; }
     .banner { font-size: .95rem; padding: 1rem; }
@@ -217,13 +273,14 @@
 <body>
 <div class="container">
   <header>
-    <h1>WWE Ticket Monitor</h1>
+    <h1>Dashboard</h1>
     <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn" title="Cambia tema">&#9790;</button>
   </header>
 
   <div class="source-toggle">
     <button class="source-btn active" id="btn-ticketmaster" onclick="switchSource('ticketmaster')">Ticketmaster</button>
     <button class="source-btn" id="btn-stubhub" onclick="switchSource('stubhub')">StubHub</button>
+    <button class="source-btn" id="btn-emirates" onclick="switchSource('emirates')">Emirates</button>
   </div>
 
   <div id="app">
@@ -434,9 +491,12 @@ function toggleFilter() {
 
 function switchSource(source) {
   currentSource = source;
-  DATA_URL = source === 'stubhub' ? 'data/stubhub.json' : 'data/status.json';
+  if (source === 'emirates') DATA_URL = 'data/flights.json';
+  else if (source === 'stubhub') DATA_URL = 'data/stubhub.json';
+  else DATA_URL = 'data/status.json';
   document.getElementById('btn-ticketmaster').classList.toggle('active', source === 'ticketmaster');
   document.getElementById('btn-stubhub').classList.toggle('active', source === 'stubhub');
+  document.getElementById('btn-emirates').classList.toggle('active', source === 'emirates');
   allExpanded = false;
   load();
 }
@@ -445,15 +505,112 @@ async function load() {
   try {
     const resp = await fetch(DATA_URL + '?t=' + Date.now());
     if (!resp.ok) throw new Error(resp.status);
-    render(await resp.json());
+    const data = await resp.json();
+    if (currentSource === 'emirates') {
+      renderFlights(data);
+    } else {
+      render(data);
+    }
   } catch (e) {
     console.error('Load error:', e);
-    const msg = currentSource === 'stubhub'
-      ? 'Dati StubHub non ancora disponibili'
-      : 'Nessun dato disponibile \u2014 il primo check non \u00E8 ancora stato eseguito';
+    const msgs = {
+      stubhub: 'Dati StubHub non ancora disponibili',
+      emirates: 'Dati Emirates non ancora disponibili',
+    };
+    const msg = msgs[currentSource] || 'Nessun dato disponibile \u2014 il primo check non \u00E8 ancora stato eseguito';
     document.getElementById('app').innerHTML =
       `<div class="banner waiting">${msg}</div>`;
   }
+}
+
+let flightsData = [];
+let flightFilter = '';
+
+function renderFlights(data) {
+  flightsData = data;
+  const app = document.getElementById('app');
+
+  const withDelay = data.filter(r => getFlightDelay(r) !== null);
+  const onTime = withDelay.filter(r => getFlightDelay(r) < 15).length;
+  const avgDelay = withDelay.length ? Math.round(withDelay.reduce((s, r) => s + getFlightDelay(r), 0) / withDelay.length) : null;
+  const onTimePct = withDelay.length ? Math.round((onTime / withDelay.length) * 100) : null;
+  const landed = data.filter(r => r.status && r.status.toLowerCase() === 'landed').length;
+
+  // Filters
+  const flights = [...new Set(data.map(r => r.flight))].sort();
+  const flightOpts = flights.map(f => `<option value="${f}" ${flightFilter === f ? 'selected' : ''}>${f}</option>`).join('');
+
+  // Filtered data
+  const filtered = flightFilter ? data.filter(r => r.flight === flightFilter) : data;
+
+  // Table rows
+  let rows = '';
+  for (const r of filtered) {
+    const delay = getFlightDelay(r);
+    const dc = delay === null ? 'none' : delay < 15 ? 'green' : delay <= 45 ? 'yellow' : 'red';
+
+    let statusBadge;
+    const st = (r.status || '').toLowerCase();
+    if (st.includes('cancel')) statusBadge = '<span class="badge badge-red">Cancelled</span>';
+    else if (st === 'landed') statusBadge = '<span class="badge badge-green">Landed</span>';
+    else if (st.includes('depart') || st === 'en route') statusBadge = `<span class="badge badge-blue">${r.status}</span>`;
+    else if (st === 'scheduled') statusBadge = '<span class="badge badge-grey">Scheduled</span>';
+    else statusBadge = `<span class="badge badge-grey">${r.status || 'Unknown'}</span>`;
+
+    const delayStr = delay !== null ? `${delay >= 0 ? '+' : ''}${delay}m` : '\u2014';
+
+    rows += `<tr>
+      <td>${fmtDate(r.date)}</td>
+      <td><strong>${r.flight}</strong></td>
+      <td>${r.origin || ''} \u2192 ${r.destination || ''}</td>
+      <td>${r.scheduled_departure || '\u2014'}</td>
+      <td style="font-weight:600">${r.actual_departure || '\u2014'}</td>
+      <td>${r.scheduled_arrival || '\u2014'}</td>
+      <td style="font-weight:600">${r.actual_arrival || '\u2014'}</td>
+      <td class="delay-${dc}">${delayStr}</td>
+      <td>${statusBadge}</td>
+    </tr>`;
+  }
+  if (!filtered.length) {
+    rows = '<tr><td colspan="9" style="text-align:center;color:var(--muted)">Nessun dato voli</td></tr>';
+  }
+
+  app.innerHTML = `
+    <div class="flight-stats">
+      <div class="flight-stat"><div class="fs-label">Tracciati</div><div class="fs-value">${data.length}</div></div>
+      <div class="flight-stat"><div class="fs-label">Landed</div><div class="fs-value" style="color:var(--green)">${landed}</div></div>
+      <div class="flight-stat"><div class="fs-label">Ritardo medio</div><div class="fs-value">${avgDelay !== null ? avgDelay + 'm' : '\u2014'}</div></div>
+      <div class="flight-stat"><div class="fs-label">On-time</div><div class="fs-value" style="color:var(--green)">${onTimePct !== null ? onTimePct + '%' : '\u2014'}</div></div>
+    </div>
+
+    <div class="flight-filters">
+      <select onchange="flightFilter=this.value;renderFlights(flightsData)">
+        <option value="">Tutti i voli</option>
+        ${flightOpts}
+      </select>
+    </div>
+
+    <div class="card" style="padding:0;overflow:hidden">
+      <div style="overflow-x:auto">
+        <table>
+          <thead><tr>
+            <th>Data</th><th>Volo</th><th>Rotta</th><th>Dep sched</th><th>Dep actual</th><th>Arr sched</th><th>Arr actual</th><th>Delay</th><th>Status</th>
+          </tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+    </div>
+
+    <div style="text-align:center;font-size:.75rem;color:var(--muted);margin-top:1rem">
+      ${data.length ? 'Ultimo dato: ' + data[0].date + ' \u2014 ' + data[0].flight : ''}
+    </div>
+  `;
+}
+
+function getFlightDelay(r) {
+  if (r.arrival_delay_min !== null && r.arrival_delay_min !== undefined) return r.arrival_delay_min;
+  if (r.departure_delay_min !== null && r.departure_delay_min !== undefined) return r.departure_delay_min;
+  return null;
 }
 
 let scrapingStatusVisible = false;
@@ -473,6 +630,7 @@ async function loadScrapingStatus() {
   const sources = [
     { name: 'Ticketmaster', url: 'data/status.json' },
     { name: 'StubHub', url: 'data/stubhub.json' },
+    { name: 'Emirates', url: 'data/flights.json', isFlights: true },
   ];
   let rows = '';
   for (const src of sources) {
@@ -480,20 +638,33 @@ async function loadScrapingStatus() {
       const resp = await fetch(src.url + '?t=' + Date.now());
       if (!resp.ok) throw new Error(resp.status);
       const d = await resp.json();
-      const events = d.events || [];
-      const totalPkgs = events.reduce((sum, e) => sum + (e.packages ? e.packages.length : 0), 0);
-      const availPkgs = events.reduce((sum, e) => sum + (e.packages ? e.packages.filter(p => p.available).length : 0), 0);
-      const status = d.errors && d.errors.length
-        ? `<span style="color:var(--red)">${d.errors.length} errori</span>`
-        : '<span style="color:var(--green)">OK</span>';
-      rows += `<tr>
-        <td>${src.name}</td>
-        <td>${d.last_check ? timeAgo(d.last_check) : 'Mai'}</td>
-        <td>${events.length}</td>
-        <td>${totalPkgs} (${availPkgs} disp.)</td>
-        <td>${d.checks_count || 0}</td>
-        <td>${status}</td>
-      </tr>`;
+      if (src.isFlights) {
+        const arr = Array.isArray(d) ? d : [];
+        const landed = arr.filter(r => r.status && r.status.toLowerCase() === 'landed').length;
+        rows += `<tr>
+          <td>${src.name}</td>
+          <td>${arr.length ? 'Ultimo: ' + arr[0].date : 'Mai'}</td>
+          <td>${arr.length} voli</td>
+          <td>${landed} landed</td>
+          <td>\u2014</td>
+          <td><span style="color:var(--green)">OK</span></td>
+        </tr>`;
+      } else {
+        const events = d.events || [];
+        const totalPkgs = events.reduce((sum, e) => sum + (e.packages ? e.packages.length : 0), 0);
+        const availPkgs = events.reduce((sum, e) => sum + (e.packages ? e.packages.filter(p => p.available).length : 0), 0);
+        const status = d.errors && d.errors.length
+          ? `<span style="color:var(--red)">${d.errors.length} errori</span>`
+          : '<span style="color:var(--green)">OK</span>';
+        rows += `<tr>
+          <td>${src.name}</td>
+          <td>${d.last_check ? timeAgo(d.last_check) : 'Mai'}</td>
+          <td>${events.length}</td>
+          <td>${totalPkgs} (${availPkgs} disp.)</td>
+          <td>${d.checks_count || 0}</td>
+          <td>${status}</td>
+        </tr>`;
+      }
     } catch {
       rows += `<tr>
         <td>${src.name}</td>
