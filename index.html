@@ -4,283 +4,489 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dashboard</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='32' y='48' font-size='48' text-anchor='middle'%3E📊%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='32' y='48' font-size='48' text-anchor='middle'%3E%E2%9C%88%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0f0f0f;
-    --surface: #1a1a2e;
-    --border: #2a2a4a;
-    --text: #e0e0e0;
-    --muted: #888;
-    --green: #00c853;
-    --red: #ff1744;
-    --gold: #ffd600;
-    --blue: #448aff;
-    --hover-row: rgba(255,255,255,.03);
+    --bg: #0c0c0f;
+    --bg-raised: #14141a;
+    --surface: #1c1c25;
+    --surface-hover: #22222e;
+    --border: #2a2a38;
+    --border-subtle: #1f1f2a;
+    --text: #e8e6f0;
+    --text-secondary: #9896a8;
+    --muted: #6b6980;
+    --accent: #c9a227;
+    --accent-dim: rgba(201,162,39,.12);
+    --accent-glow: rgba(201,162,39,.25);
+    --green: #34d399;
+    --green-dim: rgba(52,211,153,.1);
+    --red: #f87171;
+    --red-dim: rgba(248,113,113,.1);
+    --gold: #f0c040;
+    --gold-dim: rgba(240,192,64,.1);
+    --blue: #60a5fa;
+    --blue-dim: rgba(96,165,250,.1);
+    --radius: 10px;
+    --radius-lg: 16px;
+    --shadow: 0 2px 12px rgba(0,0,0,.4);
+    --shadow-lg: 0 8px 32px rgba(0,0,0,.5);
+    --font-display: 'Outfit', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --transition: .2s cubic-bezier(.4,0,.2,1);
   }
+
   html.light {
-    --bg: #f5f5f5;
-    --surface: #fff;
-    --border: #ddd;
-    --text: #1a1a1a;
-    --muted: #666;
-    --green: #2e7d32;
-    --red: #c62828;
-    --gold: #f57f17;
-    --blue: #1565c0;
-    --hover-row: rgba(0,0,0,.03);
+    --bg: #f0ede6;
+    --bg-raised: #f7f5ef;
+    --surface: #ffffff;
+    --surface-hover: #faf9f5;
+    --border: #e0ddd3;
+    --border-subtle: #eae7df;
+    --text: #1a1820;
+    --text-secondary: #5c5a68;
+    --muted: #8a8898;
+    --accent: #9a7b1a;
+    --accent-dim: rgba(154,123,26,.08);
+    --accent-glow: rgba(154,123,26,.15);
+    --green: #16a34a;
+    --green-dim: rgba(22,163,74,.08);
+    --red: #dc2626;
+    --red-dim: rgba(220,38,38,.08);
+    --gold: #b8860b;
+    --gold-dim: rgba(184,134,11,.08);
+    --blue: #2563eb;
+    --blue-dim: rgba(37,99,235,.08);
+    --shadow: 0 2px 12px rgba(0,0,0,.06);
+    --shadow-lg: 0 8px 32px rgba(0,0,0,.08);
   }
+
   * { margin: 0; padding: 0; box-sizing: border-box; }
+
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: var(--font-body);
     background: var(--bg);
     color: var(--text);
     min-height: 100vh;
-    padding: 1rem;
-    transition: background .3s, color .3s;
+    transition: background var(--transition), color var(--transition);
+    -webkit-font-smoothing: antialiased;
   }
-  .container { max-width: 900px; margin: 0 auto; }
 
-  header {
+  /* Layout */
+  .shell {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1.25rem 3rem;
+  }
+
+  /* Header */
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 0 1.25rem;
+    border-bottom: 1px solid var(--border-subtle);
+    margin-bottom: 1.5rem;
+  }
+  .topbar-brand {
+    display: flex;
+    align-items: center;
+    gap: .65rem;
+  }
+  .topbar-brand h1 {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -.03em;
+    background: linear-gradient(135deg, var(--accent), var(--gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .topbar-mark {
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    background: linear-gradient(135deg, var(--accent), var(--gold));
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem 0 1rem;
-    position: relative;
-  }
-  header h1 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: -.02em;
+    font-size: .85rem;
+    line-height: 1;
   }
   .theme-toggle {
-    position: absolute;
-    right: 0;
-    top: 2rem;
     background: var(--surface);
     border: 1px solid var(--border);
     color: var(--muted);
-    width: 36px;
-    height: 36px;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 1.1rem;
+    font-size: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all .2s;
+    transition: all var(--transition);
     line-height: 1;
   }
-  .theme-toggle:hover { border-color: var(--blue); color: var(--text); }
+  .theme-toggle:hover { border-color: var(--accent); color: var(--text); }
 
+  /* Tabs */
+  .tabs {
+    display: flex;
+    gap: 2px;
+    background: var(--border-subtle);
+    border-radius: var(--radius);
+    padding: 3px;
+    margin-bottom: 1.5rem;
+  }
+  .tab-btn {
+    flex: 1;
+    background: transparent;
+    color: var(--muted);
+    border: none;
+    padding: .6rem 1rem;
+    border-radius: calc(var(--radius) - 2px);
+    font-family: var(--font-body);
+    font-size: .82rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition);
+    position: relative;
+  }
+  .tab-btn:hover { color: var(--text-secondary); }
+  .tab-btn.active {
+    background: var(--surface);
+    color: var(--text);
+    box-shadow: var(--shadow);
+    font-weight: 600;
+  }
+
+  /* Banner */
   .banner {
     text-align: center;
-    padding: 1.2rem;
-    border-radius: 12px;
-    margin: 1.2rem 0;
-    font-size: 1.1rem;
-    font-weight: 700;
+    padding: 1rem 1.25rem;
+    border-radius: var(--radius-lg);
+    margin-bottom: 1.25rem;
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: -.01em;
+    border: 1px solid transparent;
   }
-  .banner.alert { background: linear-gradient(135deg, #00c853, #009624); color: #fff; }
-  .banner.waiting { background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
-  .banner.error { background: #330011; border: 1px solid var(--red); color: var(--red); }
-  html.light .banner.error { background: #ffebee; }
+  .banner.alert {
+    background: linear-gradient(135deg, rgba(52,211,153,.15), rgba(52,211,153,.05));
+    border-color: rgba(52,211,153,.3);
+    color: var(--green);
+  }
+  .banner.waiting {
+    background: var(--surface);
+    border-color: var(--border);
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+  .banner.error {
+    background: var(--red-dim);
+    border-color: rgba(248,113,113,.3);
+    color: var(--red);
+  }
 
+  /* Meta pills */
   .meta {
     display: flex;
     flex-wrap: wrap;
-    gap: .6rem;
+    gap: .5rem;
     justify-content: center;
-    margin: 1rem 0;
-    font-size: .82rem;
-    color: var(--muted);
+    margin-bottom: 1.25rem;
+    font-size: .78rem;
+    color: var(--text-secondary);
   }
   .meta span {
-    background: var(--surface);
-    padding: .35rem .7rem;
-    border-radius: 8px;
-    border: 1px solid var(--border);
+    background: var(--bg-raised);
+    padding: .3rem .7rem;
+    border-radius: 20px;
+    border: 1px solid var(--border-subtle);
   }
 
+  /* Cards */
   .card {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.2rem;
-    margin: 1.2rem 0;
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+    box-shadow: var(--shadow);
+    transition: background var(--transition), border var(--transition);
   }
-  .card h2 { font-size: .95rem; margin-bottom: .8rem; color: var(--gold); }
+  .card h2 {
+    font-family: var(--font-display);
+    font-size: .72rem;
+    font-weight: 600;
+    margin-bottom: .75rem;
+    color: var(--accent);
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
   .card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: .8rem;
+    margin-bottom: .75rem;
     flex-wrap: wrap;
     gap: .5rem;
   }
   .card-header h2 { margin-bottom: 0; }
-  .btn-group { display: flex; gap: .4rem; flex-wrap: wrap; }
 
+  /* Button groups */
+  .btn-group { display: flex; gap: .35rem; flex-wrap: wrap; }
+  .toggle-btn {
+    background: var(--bg-raised);
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+    padding: .3rem .75rem;
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-size: .75rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition);
+  }
+  .toggle-btn:hover { border-color: var(--accent); color: var(--text); }
+  .toggle-btn.active {
+    background: var(--accent-dim);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  /* Tables */
   table {
     width: 100%;
     border-collapse: collapse;
-    font-size: .85rem;
+    font-size: .82rem;
   }
-  th { text-align: left; color: var(--muted); font-weight: 500; padding: .5rem .4rem; border-bottom: 1px solid var(--border); }
-  td { padding: .6rem .4rem; border-bottom: 1px solid var(--border); }
-  tr:last-child td { border-bottom: none; }
+  th {
+    text-align: left;
+    color: var(--muted);
+    font-weight: 500;
+    font-size: .72rem;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    padding: .55rem .5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  td {
+    padding: .65rem .5rem;
+    border-bottom: 1px solid var(--border-subtle);
+    transition: background var(--transition);
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover td { background: var(--surface-hover); }
+
+  /* Tags */
   .tag {
     display: inline-block;
     padding: 2px 8px;
     border-radius: 4px;
-    font-size: .75rem;
+    font-size: .72rem;
     font-weight: 600;
+    letter-spacing: .02em;
   }
-  .tag.single { background: #1b5e20; color: #00c853; }
-  .tag.combo { background: #4a1480; color: #ce93d8; }
-  .tag.available { background: #1b5e20; color: #00c853; }
-  .tag.unavailable { background: #4a0000; color: #ff1744; }
-  html.light .tag.single { background: #e8f5e9; color: #2e7d32; }
-  html.light .tag.combo { background: #f3e5f5; color: #7b1fa2; }
-  html.light .tag.available { background: #e8f5e9; color: #2e7d32; }
-  html.light .tag.unavailable { background: #ffebee; color: #c62828; }
-  a { color: var(--blue); text-decoration: none; }
+  .tag.single { background: var(--green-dim); color: var(--green); }
+  .tag.combo { background: rgba(168,85,247,.1); color: #a855f7; }
+  .tag.available { background: var(--green-dim); color: var(--green); }
+  .tag.unavailable { background: var(--red-dim); color: var(--red); }
+  html.light .tag.combo { background: rgba(147,51,234,.08); color: #7c3aed; }
+
+  a { color: var(--blue); text-decoration: none; font-weight: 500; }
   a:hover { text-decoration: underline; }
 
-  .source-toggle {
-    display: flex;
-    justify-content: center;
-    gap: .5rem;
-    margin: 1rem 0;
-  }
-  .source-btn {
-    background: var(--surface);
-    color: var(--muted);
-    border: 1px solid var(--border);
-    padding: .45rem 1.1rem;
-    border-radius: 8px;
-    font-size: .82rem;
-    cursor: pointer;
-    transition: all .2s;
-  }
-  .source-btn:hover { border-color: var(--blue); color: var(--text); }
-  .source-btn.active { background: var(--blue); color: #fff; border-color: var(--blue); }
-
-  .loading { text-align: center; padding: 3rem; color: var(--muted); }
-  .footer { text-align: center; padding: 2rem 0; font-size: .75rem; color: var(--muted); }
-
-  .toggle-btn {
-    background: var(--border);
-    color: var(--text);
-    border: 1px solid var(--border);
-    padding: .35rem .8rem;
-    border-radius: 6px;
-    font-size: .78rem;
-    cursor: pointer;
-    transition: all .2s;
-  }
-  .toggle-btn:hover { border-color: var(--blue); }
-  .toggle-btn.active { background: #1b5e20; border-color: #00c853; color: #00c853; }
-  html.light .toggle-btn { background: #e0e0e0; border-color: #ccc; color: #333; }
-  html.light .toggle-btn.active { background: #e8f5e9; border-color: #2e7d32; color: #2e7d32; }
-
-  .event-toggle {
-    cursor: pointer;
-    user-select: none;
-  }
-  .event-toggle:hover { background: var(--hover-row); }
+  /* Expandable event rows */
+  .event-toggle { cursor: pointer; user-select: none; }
+  .event-toggle:hover td { background: var(--surface-hover); }
   .event-toggle td:first-child::before {
-    content: '\25B6';
+    content: '\25B8';
     display: inline-block;
     margin-right: .4rem;
-    font-size: .7rem;
-    transition: transform .2s;
+    font-size: .65rem;
+    transition: transform var(--transition);
     color: var(--muted);
   }
-  .event-toggle.open td:first-child::before {
-    transform: rotate(90deg);
-  }
+  .event-toggle.open td:first-child::before { transform: rotate(90deg); }
   .pkg-row { display: none; }
   .pkg-row.visible { display: table-row; }
-  .pkg-row td { padding-left: 1.5rem; font-size: .8rem; color: var(--muted); border-bottom: 1px solid var(--border); opacity: .8; }
-  .pkg-row.unavailable-row { opacity: .4; }
+  .pkg-row td {
+    padding-left: 1.6rem;
+    font-size: .78rem;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .pkg-row.unavailable-row { opacity: .35; }
+
+  /* Flight stat cards */
+  .flight-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .6rem;
+    margin-bottom: 1.25rem;
+  }
+  .flight-stat {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: .85rem .75rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+  }
+  .flight-stat::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--gold));
+    opacity: .5;
+  }
+  .flight-stat .fs-label {
+    font-size: .65rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    font-weight: 500;
+  }
+  .flight-stat .fs-value {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-top: .15rem;
+    letter-spacing: -.02em;
+  }
+
+  /* Flight filter buttons */
+  .flight-filters {
+    display: flex;
+    gap: .35rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.25rem;
+    align-items: center;
+  }
+  .flight-filters .filter-label {
+    font-size: .7rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    font-weight: 500;
+    margin-right: .3rem;
+  }
+  .flight-btn {
+    background: var(--bg-raised);
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+    padding: .35rem .7rem;
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-size: .75rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition);
+    white-space: nowrap;
+  }
+  .flight-btn:hover { border-color: var(--accent); color: var(--text); }
+  .flight-btn.active {
+    background: var(--accent-dim);
+    border-color: var(--accent);
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .flight-btn.meta-btn {
+    font-size: .7rem;
+    padding: .3rem .55rem;
+    color: var(--muted);
+    border-style: dashed;
+  }
+  .flight-btn.meta-btn:hover { color: var(--text-secondary); }
 
   /* Flight badges */
   .badge {
     display: inline-block;
     padding: 2px 8px;
     border-radius: 4px;
-    font-size: .75rem;
+    font-size: .72rem;
     font-weight: 600;
+    letter-spacing: .02em;
   }
-  .badge-green  { background: #1b5e20; color: #00c853; }
-  .badge-yellow { background: #4a3800; color: #ffd600; }
-  .badge-red    { background: #4a0000; color: #ff1744; }
-  .badge-grey   { background: #333; color: #aaa; }
-  .badge-blue   { background: #0d47a1; color: #448aff; }
-  html.light .badge-green  { background: #e8f5e9; color: #2e7d32; }
-  html.light .badge-yellow { background: #fff8e1; color: #f57f17; }
-  html.light .badge-red    { background: #ffebee; color: #c62828; }
-  html.light .badge-grey   { background: #eee; color: #666; }
-  html.light .badge-blue   { background: #e3f2fd; color: #1565c0; }
+  .badge-green  { background: var(--green-dim); color: var(--green); }
+  .badge-yellow { background: var(--gold-dim); color: var(--gold); }
+  .badge-red    { background: var(--red-dim); color: var(--red); }
+  .badge-grey   { background: var(--bg-raised); color: var(--muted); }
+  .badge-blue   { background: var(--blue-dim); color: var(--blue); }
 
   .delay-green  { color: var(--green); font-weight: 700; }
   .delay-yellow { color: var(--gold); font-weight: 700; }
   .delay-red    { color: var(--red); font-weight: 700; }
   .delay-none   { color: var(--muted); }
 
-  .flight-stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: .5rem;
-    margin-bottom: 1rem;
-  }
-  .flight-stat {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: .75rem;
+  /* Loading & footer */
+  .loading {
     text-align: center;
+    padding: 4rem 1rem;
+    color: var(--muted);
+    font-size: .9rem;
   }
-  .flight-stat .fs-label { font-size: .7rem; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; }
-  .flight-stat .fs-value { font-size: 1.4rem; font-weight: 800; margin-top: .2rem; }
+  .footer {
+    text-align: center;
+    padding: 2.5rem 0 1rem;
+    font-size: .72rem;
+    color: var(--muted);
+    border-top: 1px solid var(--border-subtle);
+    margin-top: 1rem;
+  }
+  .footer button {
+    background: none;
+    border: none;
+    color: var(--muted);
+    cursor: pointer;
+    font-size: .72rem;
+    font-family: var(--font-body);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    margin-top: .4rem;
+  }
+  .footer button:hover { color: var(--text-secondary); }
 
-  .flight-filters {
-    display: flex;
-    gap: .75rem;
-    flex-wrap: wrap;
-    margin-bottom: 1rem;
-  }
-  .flight-filters select,
-  .flight-filters input {
-    padding: .45rem .7rem;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    font-size: .82rem;
-    background: var(--surface);
-    color: var(--text);
-  }
-
-  @media (max-width: 600px) {
-    header h1 { font-size: 1.15rem; }
-    .banner { font-size: .95rem; padding: 1rem; }
-    table { font-size: .78rem; }
+  /* Responsive */
+  @media (max-width: 640px) {
+    .topbar-brand h1 { font-size: 1.1rem; }
+    .banner { font-size: .88rem; padding: .85rem 1rem; }
+    table { font-size: .76rem; }
+    th, td { padding: .5rem .35rem; }
     .hide-mobile { display: none; }
-    .theme-toggle { top: 1.8rem; }
+    .flight-stats { grid-template-columns: repeat(2, 1fr); }
+    .flight-stat .fs-value { font-size: 1.25rem; }
+    .tabs { flex-wrap: nowrap; }
+    .tab-btn { padding: .5rem .5rem; font-size: .78rem; }
   }
 </style>
 </head>
 <body>
-<div class="container">
-  <header>
-    <h1>Dashboard</h1>
+<div class="shell">
+  <div class="topbar">
+    <div class="topbar-brand">
+      <div class="topbar-mark">&#9992;</div>
+      <h1>Dashboard</h1>
+    </div>
     <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn" title="Cambia tema">&#9790;</button>
-  </header>
+  </div>
 
-  <div class="source-toggle">
-    <button class="source-btn active" id="btn-ticketmaster" onclick="switchSource('ticketmaster')">Ticketmaster</button>
-    <button class="source-btn" id="btn-stubhub" onclick="switchSource('stubhub')">StubHub</button>
-    <button class="source-btn" id="btn-emirates" onclick="switchSource('emirates')">Emirates</button>
+  <div class="tabs">
+    <button class="tab-btn active" id="btn-ticketmaster" onclick="switchSource('ticketmaster')">Ticketmaster</button>
+    <button class="tab-btn" id="btn-stubhub" onclick="switchSource('stubhub')">StubHub</button>
+    <button class="tab-btn" id="btn-emirates" onclick="switchSource('emirates')">Emirates</button>
   </div>
 
   <div id="app">
@@ -291,7 +497,7 @@
 
   <div class="footer">
     Auto-refresh ogni 5 minuti &bull; Dati aggiornati ogni 15 min via Docker
-    <br><button onclick="toggleScrapingStatus()" style="background:none;border:none;color:var(--muted);cursor:pointer;font-size:.75rem;margin-top:.3rem;text-decoration:underline">Stato scraping</button>
+    <br><button onclick="toggleScrapingStatus()">Stato scraping</button>
   </div>
 </div>
 
@@ -387,7 +593,7 @@ function render(data) {
       }
     }
 
-    const venue = e.venue ? `<br><span style="font-size:.75rem;color:var(--muted)">${e.venue}</span>` : '';
+    const venue = e.venue ? `<br><span style="font-size:.72rem;color:var(--muted)">${e.venue}</span>` : '';
     const openClass = allExpanded && hasPkgs ? ' open' : '';
 
     rows += `<tr class="${toggleClass}${openClass}" ${hasPkgs ? `onclick="togglePackages(${ei})" data-event="${ei}"` : ''}>
@@ -417,7 +623,7 @@ function render(data) {
     }
   }
   if (!data.events || !data.events.length) {
-    rows = '<tr><td colspan="6" style="text-align:center;color:var(--muted)">Nessun evento trovato</td></tr>';
+    rows = '<tr><td colspan="6" style="text-align:center;color:var(--muted);padding:2rem">Nessun evento trovato</td></tr>';
   }
 
   // Errors
@@ -447,7 +653,7 @@ function render(data) {
           <button class="${filterBtnClass}" onclick="toggleFilter()">${filterLabel}</button>
         </div>
       </div>
-      <p style="font-size:.78rem;color:var(--muted);margin-bottom:.8rem">Clicca su un evento per vedere i pacchetti</p>
+      <p style="font-size:.75rem;color:var(--muted);margin-bottom:.75rem">Clicca su un evento per vedere i pacchetti</p>
       <div style="overflow-x:auto">
         <table>
           <thead><tr>
@@ -523,25 +729,51 @@ async function load() {
   }
 }
 
+/* Emirates flights */
 let flightsData = [];
-let flightFilter = '';
+
+const FLIGHT_ROUTES = [
+  { code: 'EK78',  label: 'EK78 NCE\u2192DXB' },
+  { code: 'EK705', label: 'EK705 DXB\u2192SEZ' },
+  { code: 'EK708', label: 'EK708 SEZ\u2192DXB' },
+  { code: 'EK77',  label: 'EK77 DXB\u2192NCE' },
+];
+let flightFilter = new Set(FLIGHT_ROUTES.map(f => f.code));
+
+function toggleFlightFilter(code) {
+  if (flightFilter.has(code)) flightFilter.delete(code);
+  else flightFilter.add(code);
+  renderFlights(flightsData);
+}
+
+function setAllFlights() {
+  flightFilter = new Set(FLIGHT_ROUTES.map(f => f.code));
+  renderFlights(flightsData);
+}
+
+function setNoFlights() {
+  flightFilter.clear();
+  renderFlights(flightsData);
+}
 
 function renderFlights(data) {
   flightsData = data;
   const app = document.getElementById('app');
 
-  const withDelay = data.filter(r => getFlightDelay(r) !== null);
+  // Filter data by selected flights
+  const filtered = data.filter(r => flightFilter.has(r.flight));
+
+  // Stats based on filtered data
+  const withDelay = filtered.filter(r => getFlightDelay(r) !== null);
   const onTime = withDelay.filter(r => getFlightDelay(r) < 15).length;
   const avgDelay = withDelay.length ? Math.round(withDelay.reduce((s, r) => s + getFlightDelay(r), 0) / withDelay.length) : null;
   const onTimePct = withDelay.length ? Math.round((onTime / withDelay.length) * 100) : null;
-  const landed = data.filter(r => r.status && r.status.toLowerCase() === 'landed').length;
+  const landed = filtered.filter(r => r.status && r.status.toLowerCase() === 'landed').length;
 
-  // Filters
-  const flights = [...new Set(data.map(r => r.flight))].sort();
-  const flightOpts = flights.map(f => `<option value="${f}" ${flightFilter === f ? 'selected' : ''}>${f}</option>`).join('');
-
-  // Filtered data
-  const filtered = flightFilter ? data.filter(r => r.flight === flightFilter) : data;
+  // Flight filter buttons
+  const filterBtns = FLIGHT_ROUTES.map(f =>
+    `<button class="flight-btn ${flightFilter.has(f.code) ? 'active' : ''}" onclick="toggleFlightFilter('${f.code}')">${f.label}</button>`
+  ).join('');
 
   // Table rows
   let rows = '';
@@ -572,22 +804,22 @@ function renderFlights(data) {
     </tr>`;
   }
   if (!filtered.length) {
-    rows = '<tr><td colspan="9" style="text-align:center;color:var(--muted)">Nessun dato voli</td></tr>';
+    rows = '<tr><td colspan="9" style="text-align:center;color:var(--muted);padding:2rem">Nessun dato voli</td></tr>';
   }
 
   app.innerHTML = `
     <div class="flight-stats">
-      <div class="flight-stat"><div class="fs-label">Tracciati</div><div class="fs-value">${data.length}</div></div>
+      <div class="flight-stat"><div class="fs-label">Tracciati</div><div class="fs-value">${filtered.length}</div></div>
       <div class="flight-stat"><div class="fs-label">Landed</div><div class="fs-value" style="color:var(--green)">${landed}</div></div>
       <div class="flight-stat"><div class="fs-label">Ritardo medio</div><div class="fs-value">${avgDelay !== null ? avgDelay + 'm' : '\u2014'}</div></div>
       <div class="flight-stat"><div class="fs-label">On-time</div><div class="fs-value" style="color:var(--green)">${onTimePct !== null ? onTimePct + '%' : '\u2014'}</div></div>
     </div>
 
     <div class="flight-filters">
-      <select onchange="flightFilter=this.value;renderFlights(flightsData)">
-        <option value="">Tutti i voli</option>
-        ${flightOpts}
-      </select>
+      <span class="filter-label">Voli</span>
+      ${filterBtns}
+      <button class="flight-btn meta-btn" onclick="setAllFlights()">All</button>
+      <button class="flight-btn meta-btn" onclick="setNoFlights()">None</button>
     </div>
 
     <div class="card" style="padding:0;overflow:hidden">
@@ -601,7 +833,7 @@ function renderFlights(data) {
       </div>
     </div>
 
-    <div style="text-align:center;font-size:.75rem;color:var(--muted);margin-top:1rem">
+    <div style="text-align:center;font-size:.72rem;color:var(--muted);margin-top:.75rem">
       ${data.length ? 'Ultimo dato: ' + data[0].date + ' \u2014 ' + data[0].flight : ''}
     </div>
   `;
@@ -613,6 +845,7 @@ function getFlightDelay(r) {
   return null;
 }
 
+/* Scraping status */
 let scrapingStatusVisible = false;
 
 function toggleScrapingStatus() {
@@ -675,7 +908,7 @@ async function loadScrapingStatus() {
 
   document.getElementById('scraping-status').innerHTML = `
     <div class="card" style="margin-top:0">
-      <h2 style="font-size:.85rem">Stato Scraping</h2>
+      <h2>Stato Scraping</h2>
       <div style="overflow-x:auto">
         <table style="font-size:.78rem">
           <thead><tr>
