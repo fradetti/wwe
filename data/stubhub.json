@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-03-15T23:58:22.818609+00:00",
+  "last_check": "2026-03-16T00:18:55.352554+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -7,10 +7,10 @@
       "id": "stubhub-160574096",
       "name": "WWE Clash in Italy",
       "date": "2026-05-31",
-      "venue": "Pala Alpitour (Inalpi Arena), Turin, Italy",
+      "venue": "",
       "is_single_day": true,
       "price_min": 422.0,
-      "price_max": 1900.0,
+      "price_max": 1110.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-clash-in-italy-turin-tickets-5-31-2026/event/160574096/",
       "packages": [
@@ -58,66 +58,6 @@
           "name": "Section 221",
           "price": 670.0,
           "available": true
-        },
-        {
-          "name": "Section 107",
-          "price": 830.0,
-          "available": true
-        },
-        {
-          "name": "Section 116",
-          "price": 841.0,
-          "available": true
-        },
-        {
-          "name": "Section 104",
-          "price": 1056.0,
-          "available": true
-        },
-        {
-          "name": "Section 117",
-          "price": 1109.0,
-          "available": true
-        },
-        {
-          "name": "Floor",
-          "price": 1149.0,
-          "available": true
-        },
-        {
-          "name": "Section H",
-          "price": 1900.0,
-          "available": true
-        },
-        {
-          "name": "Section H",
-          "price": 1150.0,
-          "available": true
-        },
-        {
-          "name": "Section H",
-          "price": 1900.0,
-          "available": true
-        },
-        {
-          "name": "Section H",
-          "price": 1150.0,
-          "available": true
-        },
-        {
-          "name": "Section K",
-          "price": 1150.0,
-          "available": true
-        },
-        {
-          "name": "Section H",
-          "price": 1154.0,
-          "available": true
-        },
-        {
-          "name": "Section 118",
-          "price": 1342.0,
-          "available": true
         }
       ]
     },
@@ -125,10 +65,10 @@
       "id": "stubhub-160556794",
       "name": "WWE Monday Night RAW",
       "date": "2026-06-01",
-      "venue": "Pala Alpitour (Inalpi Arena), Turin, Italy",
+      "venue": "",
       "is_single_day": true,
       "price_min": 287.0,
-      "price_max": 2468.0,
+      "price_max": 800.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-raw-turin-tickets-6-1-2026/event/160556794/",
       "packages": [
@@ -181,66 +121,6 @@
           "name": "Section 111",
           "price": 453.0,
           "available": true
-        },
-        {
-          "name": "Section 111",
-          "price": 462.0,
-          "available": true
-        },
-        {
-          "name": "Floor",
-          "price": 797.0,
-          "available": true
-        },
-        {
-          "name": "Floor",
-          "price": 561.0,
-          "available": true
-        },
-        {
-          "name": "I Anello Est",
-          "price": 921.0,
-          "available": true
-        },
-        {
-          "name": "I Anello Est",
-          "price": 612.0,
-          "available": true
-        },
-        {
-          "name": "Section 101",
-          "price": 2468.0,
-          "available": true
-        },
-        {
-          "name": "Section 118",
-          "price": 2468.0,
-          "available": true
-        },
-        {
-          "name": "Section 102",
-          "price": 2468.0,
-          "available": true
-        },
-        {
-          "name": "Section 122",
-          "price": 2468.0,
-          "available": true
-        },
-        {
-          "name": "Section 121",
-          "price": 2468.0,
-          "available": true
-        },
-        {
-          "name": "Section 119",
-          "price": 2468.0,
-          "available": true
-        },
-        {
-          "name": "Section 104",
-          "price": 2468.0,
-          "available": true
         }
       ]
     },
@@ -248,10 +128,10 @@
       "id": "stubhub-160574134",
       "name": "WWE Friday Night SmackDown",
       "date": "2026-06-05",
-      "venue": "Futurshow Station - Unipol Arena, Casalecchio di Reno - Bologna, Italy",
+      "venue": "",
       "is_single_day": true,
       "price_min": 337.0,
-      "price_max": 2500.0,
+      "price_max": 600.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-smackdown-casalecchio-di-reno-bologna-tickets-6-5-2026/event/160574134/",
       "packages": [
@@ -303,71 +183,6 @@
         {
           "name": "Section 1 Ovest C",
           "price": 463.0,
-          "available": true
-        },
-        {
-          "name": "Section 1 Est E",
-          "price": 465.0,
-          "available": true
-        },
-        {
-          "name": "Section 1 Est E",
-          "price": 467.0,
-          "available": true
-        },
-        {
-          "name": "Section 1 Est E",
-          "price": 468.0,
-          "available": true
-        },
-        {
-          "name": "Section Primo Settore H1",
-          "price": 999.0,
-          "available": true
-        },
-        {
-          "name": "Section Primo Settore H1",
-          "price": 542.0,
-          "available": true
-        },
-        {
-          "name": "Section Primo Settore H1",
-          "price": 561.0,
-          "available": true
-        },
-        {
-          "name": "Section Primo Settore H1",
-          "price": 561.0,
-          "available": true
-        },
-        {
-          "name": "Section I",
-          "price": 566.0,
-          "available": true
-        },
-        {
-          "name": "Section Secondo Settore H2",
-          "price": 999.0,
-          "available": true
-        },
-        {
-          "name": "Section Secondo Settore H2",
-          "price": 589.0,
-          "available": true
-        },
-        {
-          "name": "Section 2 Ovest E",
-          "price": 2500.0,
-          "available": true
-        },
-        {
-          "name": "Section 2 Ovest E",
-          "price": 1870.0,
-          "available": true
-        },
-        {
-          "name": "Section 2 Ovest E",
-          "price": 2358.0,
           "available": true
         }
       ]
@@ -1633,8 +1448,23 @@
       "timestamp": "2026-03-15T23:58:22.818609+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 337.0
+    },
+    {
+      "timestamp": "2026-03-16T00:18:55.352554+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 422.0
+    },
+    {
+      "timestamp": "2026-03-16T00:18:55.352554+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 287.0
+    },
+    {
+      "timestamp": "2026-03-16T00:18:55.352554+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 337.0
     }
   ],
-  "checks_count": 86,
+  "checks_count": 87,
   "errors": []
 }
