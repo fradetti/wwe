@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-03-16T00:39:04.850650+00:00",
+  "last_check": "2026-03-16T00:59:36.549392+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -7,7 +7,7 @@
       "id": "stubhub-160574096",
       "name": "WWE Clash in Italy",
       "date": "2026-05-31",
-      "venue": "Pala Alpitour (Inalpi Arena), Turin, Italy",
+      "venue": "",
       "is_single_day": true,
       "price_min": 416.0,
       "price_max": 2940.0,
@@ -63,26 +63,6 @@
           "name": "II Anello Est",
           "price": 659.0,
           "available": true
-        },
-        {
-          "name": "Section 221",
-          "price": 659.0,
-          "available": true
-        },
-        {
-          "name": "Section 107",
-          "price": 817.0,
-          "available": true
-        },
-        {
-          "name": "Section 116",
-          "price": 828.0,
-          "available": true
-        },
-        {
-          "name": "Section 104",
-          "price": 1040.0,
-          "available": true
         }
       ]
     },
@@ -90,7 +70,7 @@
       "id": "stubhub-160556794",
       "name": "WWE Monday Night RAW",
       "date": "2026-06-01",
-      "venue": "Pala Alpitour (Inalpi Arena), Turin, Italy",
+      "venue": "",
       "is_single_day": true,
       "price_min": 289.0,
       "price_max": 9148.0,
@@ -146,36 +126,6 @@
           "name": "Section 112",
           "price": 456.0,
           "available": true
-        },
-        {
-          "name": "Section 111",
-          "price": 458.0,
-          "available": true
-        },
-        {
-          "name": "Section 111",
-          "price": 467.0,
-          "available": true
-        },
-        {
-          "name": "Floor",
-          "price": 797.0,
-          "available": true
-        },
-        {
-          "name": "Floor",
-          "price": 567.0,
-          "available": true
-        },
-        {
-          "name": "I Anello Est",
-          "price": 921.0,
-          "available": true
-        },
-        {
-          "name": "I Anello Est",
-          "price": 619.0,
-          "available": true
         }
       ]
     },
@@ -183,7 +133,7 @@
       "id": "stubhub-160574134",
       "name": "WWE Friday Night SmackDown",
       "date": "2026-06-05",
-      "venue": "Futurshow Station - Unipol Arena, Casalecchio di Reno - Bologna, Italy",
+      "venue": "",
       "is_single_day": true,
       "price_min": 340.0,
       "price_max": 7484.0,
@@ -238,31 +188,6 @@
         {
           "name": "Section 2 Ovest C",
           "price": 375.0,
-          "available": true
-        },
-        {
-          "name": "Section 1 Ovest B",
-          "price": 550.0,
-          "available": true
-        },
-        {
-          "name": "Section 1 Ovest B",
-          "price": 406.0,
-          "available": true
-        },
-        {
-          "name": "Section 1 Ovest C",
-          "price": 468.0,
-          "available": true
-        },
-        {
-          "name": "Section 1 Est E",
-          "price": 470.0,
-          "available": true
-        },
-        {
-          "name": "Section 1 Est E",
-          "price": 472.0,
           "available": true
         }
       ]
@@ -1558,8 +1483,23 @@
       "timestamp": "2026-03-16T00:39:04.850650+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 340.0
+    },
+    {
+      "timestamp": "2026-03-16T00:59:36.549392+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 416.0
+    },
+    {
+      "timestamp": "2026-03-16T00:59:36.549392+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 289.0
+    },
+    {
+      "timestamp": "2026-03-16T00:59:36.549392+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 340.0
     }
   ],
-  "checks_count": 88,
+  "checks_count": 89,
   "errors": []
 }
