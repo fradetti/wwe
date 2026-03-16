@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-03-16T22:33:51.373216+00:00",
+  "last_check": "2026-03-16T22:54:38.408223+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -10,7 +10,7 @@
       "venue": "Inalpi Arena, Torino",
       "is_single_day": false,
       "price_min": 218.5,
-      "price_max": 1564.0,
+      "price_max": 1380.0,
       "currency": "EUR",
       "url": "https://www.ticketmaster.it/biglietti/wwe-combo-ticket-wwe-clash-in-italy-wwe-monday-night-raw/event/c8pvxncrsodb",
       "packages": [
@@ -21,7 +21,7 @@
         },
         {
           "name": "3° Settore Num.",
-          "price": 1564.0,
+          "price": 1380.0,
           "available": true
         },
         {
@@ -75,12 +75,12 @@
         {
           "name": "Champion+ Package",
           "price": 10142.5,
-          "available": false
+          "available": true
         },
         {
           "name": "Champion Package",
           "price": 6017.5,
-          "available": true
+          "available": false
         },
         {
           "name": "Champion Package",
@@ -4156,8 +4156,33 @@
       "timestamp": "2026-03-16T22:33:51.373216+00:00",
       "event_id": "ZG9rmIYnyZeeA1",
       "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-03-16T22:54:38.408223+00:00",
+      "event_id": "ZG9rmIYnyZeeFd",
+      "price_min": 218.5
+    },
+    {
+      "timestamp": "2026-03-16T22:54:38.408223+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 1371.25
+    },
+    {
+      "timestamp": "2026-03-16T22:54:38.408223+00:00",
+      "event_id": "ZG9rmIYnyZee66",
+      "price_min": 510.0
+    },
+    {
+      "timestamp": "2026-03-16T22:54:38.408223+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 103.5
+    },
+    {
+      "timestamp": "2026-03-16T22:54:38.408223+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
+      "price_min": 69.0
     }
   ],
-  "checks_count": 176,
+  "checks_count": 177,
   "errors": []
 }
