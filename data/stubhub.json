@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-03-16T18:11:51.947710+00:00",
+  "last_check": "2026-03-16T18:32:25.535879+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -22,11 +22,6 @@
         {
           "name": "Section 302",
           "price": 416.0,
-          "available": true
-        },
-        {
-          "name": "Section J",
-          "price": 830.0,
           "available": true
         },
         {
@@ -80,6 +75,11 @@
           "available": true
         },
         {
+          "name": "Section J",
+          "price": 830.0,
+          "available": true
+        },
+        {
           "name": "Section 116",
           "price": 833.0,
           "available": true
@@ -118,7 +118,7 @@
       "venue": "Pala Alpitour (Inalpi Arena), Turin, Italy",
       "is_single_day": true,
       "price_min": 289.0,
-      "price_max": 11000.0,
+      "price_max": 2495.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-raw-turin-tickets-6-1-2026/event/160556794/",
       "packages": [
@@ -130,16 +130,6 @@
         {
           "name": "Section 202",
           "price": 289.0,
-          "available": true
-        },
-        {
-          "name": "Section B",
-          "price": 11000.0,
-          "available": true
-        },
-        {
-          "name": "Section B",
-          "price": 8233.0,
           "available": true
         },
         {
@@ -236,6 +226,11 @@
           "name": "Section 119",
           "price": 2495.0,
           "available": true
+        },
+        {
+          "name": "Section 104",
+          "price": 2495.0,
+          "available": true
         }
       ]
     },
@@ -246,7 +241,7 @@
       "venue": "Futurshow Station - Unipol Arena, Casalecchio di Reno - Bologna, Italy",
       "is_single_day": true,
       "price_min": 340.0,
-      "price_max": 9978.0,
+      "price_max": 2500.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-smackdown-casalecchio-di-reno-bologna-tickets-6-5-2026/event/160574134/",
       "packages": [
@@ -258,21 +253,6 @@
         {
           "name": "RING",
           "price": 340.0,
-          "available": true
-        },
-        {
-          "name": "Section Secondo Settore H2",
-          "price": 999.0,
-          "available": true
-        },
-        {
-          "name": "Section Secondo Settore H2",
-          "price": 595.0,
-          "available": true
-        },
-        {
-          "name": "Section E",
-          "price": 9978.0,
           "available": true
         },
         {
@@ -356,8 +336,28 @@
           "available": true
         },
         {
+          "name": "Section Secondo Settore H2",
+          "price": 999.0,
+          "available": true
+        },
+        {
+          "name": "Section Secondo Settore H2",
+          "price": 595.0,
+          "available": true
+        },
+        {
           "name": "Section I",
           "price": 646.0,
+          "available": true
+        },
+        {
+          "name": "Section 2 Ovest E",
+          "price": 2500.0,
+          "available": true
+        },
+        {
+          "name": "Section 2 Ovest E",
+          "price": 1890.0,
           "available": true
         }
       ]
@@ -2433,8 +2433,23 @@
       "timestamp": "2026-03-16T18:11:51.947710+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 340.0
+    },
+    {
+      "timestamp": "2026-03-16T18:32:25.535879+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 416.0
+    },
+    {
+      "timestamp": "2026-03-16T18:32:25.535879+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 289.0
+    },
+    {
+      "timestamp": "2026-03-16T18:32:25.535879+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 340.0
     }
   ],
-  "checks_count": 140,
+  "checks_count": 141,
   "errors": []
 }
