@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-03-16T05:49:22.803591+00:00",
+  "last_check": "2026-03-16T06:09:34.010925+00:00",
   "flights": [
     {
       "date": "2026-03-18",
@@ -104,7 +104,7 @@
       "arr_timezone": "+04",
       "departure_delay_min": 0,
       "arrival_delay_min": 0,
-      "status": "Scheduled"
+      "status": "Cancelled"
     },
     {
       "date": "2026-03-16",
