@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-03-17T17:14:36.171788+00:00",
+  "last_check": "2026-03-17T17:34:48.480620+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -75,7 +75,7 @@
         {
           "name": "Champion+ Package",
           "price": 10142.5,
-          "available": true
+          "available": false
         },
         {
           "name": "Champion Package",
@@ -367,31 +367,6 @@
     }
   ],
   "price_history": [
-    {
-      "timestamp": "2026-03-14T14:05:35.087777+00:00",
-      "event_id": "ZG9rmIYnyZeeA6",
-      "price_min": 1371.25
-    },
-    {
-      "timestamp": "2026-03-14T14:05:35.087777+00:00",
-      "event_id": "ZG9rmIYnyZee66",
-      "price_min": 707.0
-    },
-    {
-      "timestamp": "2026-03-14T14:05:35.087777+00:00",
-      "event_id": "ZG9rmIYnyZeeAa",
-      "price_min": 103.5
-    },
-    {
-      "timestamp": "2026-03-14T14:05:35.087777+00:00",
-      "event_id": "ZG9rmIYnyZeeA1",
-      "price_min": 69.0
-    },
-    {
-      "timestamp": "2026-03-14T14:12:39.193140+00:00",
-      "event_id": "ZG9rmIYnyZeeFd",
-      "price_min": 218.5
-    },
     {
       "timestamp": "2026-03-14T14:12:39.193140+00:00",
       "event_id": "ZG9rmIYnyZeeA6",
@@ -5366,8 +5341,33 @@
       "timestamp": "2026-03-17T17:14:36.171788+00:00",
       "event_id": "ZG9rmIYnyZeeA1",
       "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-03-17T17:34:48.480620+00:00",
+      "event_id": "ZG9rmIYnyZeeFd",
+      "price_min": 218.5
+    },
+    {
+      "timestamp": "2026-03-17T17:34:48.480620+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 1371.25
+    },
+    {
+      "timestamp": "2026-03-17T17:34:48.480620+00:00",
+      "event_id": "ZG9rmIYnyZee66",
+      "price_min": 510.0
+    },
+    {
+      "timestamp": "2026-03-17T17:34:48.480620+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 103.5
+    },
+    {
+      "timestamp": "2026-03-17T17:34:48.480620+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
+      "price_min": 69.0
     }
   ],
-  "checks_count": 232,
+  "checks_count": 233,
   "errors": []
 }
