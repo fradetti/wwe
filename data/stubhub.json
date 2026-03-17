@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-03-17T14:11:44.701707+00:00",
+  "last_check": "2026-03-17T14:31:57.554848+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -187,7 +187,7 @@
         },
         {
           "name": "Section 2 Ovest D",
-          "price": 373.0,
+          "price": 388.0,
           "available": true
         }
       ]
@@ -3118,8 +3118,23 @@
       "timestamp": "2026-03-17T14:11:44.701707+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 340.0
+    },
+    {
+      "timestamp": "2026-03-17T14:31:57.554848+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 416.0
+    },
+    {
+      "timestamp": "2026-03-17T14:31:57.554848+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 289.0
+    },
+    {
+      "timestamp": "2026-03-17T14:31:57.554848+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 340.0
     }
   ],
-  "checks_count": 197,
+  "checks_count": 198,
   "errors": []
 }
