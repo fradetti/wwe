@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-03-18T08:12:40.421811+00:00",
+  "last_check": "2026-03-18T08:32:58.815804+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -180,104 +180,64 @@
       "date": "2026-06-05",
       "venue": "",
       "is_single_day": true,
-      "price_min": 340.0,
-      "price_max": 634.0,
+      "price_min": 334.0,
+      "price_max": 334.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-smackdown-casalecchio-di-reno-bologna-tickets-6-5-2026/event/160574134/",
       "packages": [
         {
           "name": "RING",
-          "price": 340.0,
+          "price": 334.0,
           "available": true
         },
         {
-          "name": "RING",
-          "price": 340.0,
+          "name": "Section 2 Ovest E",
+          "price": 334.0,
           "available": true
         },
         {
-          "name": "Section 2 Ovest D",
-          "price": 600.0,
+          "name": "Section 2 Ovest E",
+          "price": 334.0,
           "available": true
         },
         {
-          "name": "Section 2 Ovest D",
-          "price": 349.0,
+          "name": "Section 2 Ovest E",
+          "price": 334.0,
           "available": true
         },
         {
-          "name": "Section 2 Est C",
-          "price": 544.0,
+          "name": "Section 2 Ovest E",
+          "price": 334.0,
           "available": true
         },
         {
-          "name": "Section 2 Est C",
-          "price": 369.0,
+          "name": "Section 2 Ovest E",
+          "price": 334.0,
           "available": true
         },
         {
-          "name": "Section 2 Ovest C",
-          "price": 555.0,
+          "name": "Section 2 Ovest E",
+          "price": 334.0,
           "available": true
         },
         {
-          "name": "Section 2 Ovest C",
-          "price": 375.0,
+          "name": "Section 2 Est E",
+          "price": 334.0,
           "available": true
         },
         {
-          "name": "Section 2 Ovest D",
-          "price": 555.0,
+          "name": "Section 2 Est E",
+          "price": 334.0,
           "available": true
         },
         {
-          "name": "Section 2 Ovest D",
-          "price": 378.0,
+          "name": "Section 2 Est E",
+          "price": 334.0,
           "available": true
         },
         {
-          "name": "Section 1 Ovest B",
-          "price": 550.0,
-          "available": true
-        },
-        {
-          "name": "Section 1 Ovest B",
-          "price": 406.0,
-          "available": true
-        },
-        {
-          "name": "Section 2 Est C",
-          "price": 467.0,
-          "available": true
-        },
-        {
-          "name": "Section 1 Ovest C",
-          "price": 629.0,
-          "available": true
-        },
-        {
-          "name": "Section 1 Ovest C",
-          "price": 468.0,
-          "available": true
-        },
-        {
-          "name": "Section 1 Est E",
-          "price": 631.0,
-          "available": true
-        },
-        {
-          "name": "Section 1 Est E",
-          "price": 470.0,
-          "available": true
-        },
-        {
-          "name": "Section 1 Est E",
-          "price": 634.0,
-          "available": true
-        },
-        {
-          "name": "Section 1 Est E",
-          "price": 472.0,
+          "name": "Section 2 Est E",
+          "price": 334.0,
           "available": true
         }
       ]
@@ -4003,8 +3963,23 @@
       "timestamp": "2026-03-18T08:12:40.421811+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 340.0
+    },
+    {
+      "timestamp": "2026-03-18T08:32:58.815804+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 416.0
+    },
+    {
+      "timestamp": "2026-03-18T08:32:58.815804+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 289.0
+    },
+    {
+      "timestamp": "2026-03-18T08:32:58.815804+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 334.0
     }
   ],
-  "checks_count": 250,
+  "checks_count": 251,
   "errors": []
 }
