@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-03-18T20:30:10.610147+00:00",
+  "last_check": "2026-03-18T20:50:32.916743+00:00",
   "flights": [
     {
       "date": "2026-03-21",
@@ -145,11 +145,11 @@
       "actual_departure": "16:00",
       "dep_timezone": "CET",
       "scheduled_arrival": "00:10",
-      "actual_arrival": "01:19",
+      "actual_arrival": "01:22",
       "arr_timezone": "+04",
       "departure_delay_min": 90,
-      "arrival_delay_min": 69,
-      "status": "En Route"
+      "arrival_delay_min": 72,
+      "status": "Descending"
     },
     {
       "date": "2026-03-18",
