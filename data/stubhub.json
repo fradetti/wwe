@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-03-19T11:04:32.294880+00:00",
+  "last_check": "2026-03-19T11:25:12.027785+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -67,24 +67,24 @@
       "date": "2026-06-01",
       "venue": "",
       "is_single_day": true,
-      "price_min": 286.0,
+      "price_min": 287.0,
       "price_max": 800.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-raw-turin-tickets-6-1-2026/event/160556794/",
       "packages": [
         {
           "name": "MIX",
-          "price": 286.0,
+          "price": 287.0,
           "available": true
         },
         {
           "name": "Section 202",
-          "price": 286.0,
+          "price": 287.0,
           "available": true
         },
         {
           "name": "Section 203",
-          "price": 292.0,
+          "price": 294.0,
           "available": true
         },
         {
@@ -94,7 +94,7 @@
         },
         {
           "name": "Section 302",
-          "price": 363.0,
+          "price": 365.0,
           "available": true
         },
         {
@@ -104,7 +104,12 @@
         },
         {
           "name": "Section 302",
-          "price": 400.0,
+          "price": 402.0,
+          "available": true
+        },
+        {
+          "name": "Section 111",
+          "price": 444.0,
           "available": true
         },
         {
@@ -114,12 +119,7 @@
         },
         {
           "name": "Section 112",
-          "price": 449.0,
-          "available": true
-        },
-        {
-          "name": "Section 111",
-          "price": 456.0,
+          "price": 452.0,
           "available": true
         }
       ]
@@ -130,54 +130,44 @@
       "date": "2026-06-05",
       "venue": "",
       "is_single_day": true,
-      "price_min": 328.0,
-      "price_max": 600.0,
+      "price_min": 330.0,
+      "price_max": 330.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-smackdown-casalecchio-di-reno-bologna-tickets-6-5-2026/event/160574134/",
       "packages": [
         {
           "name": "RING",
-          "price": 328.0,
+          "price": 330.0,
           "available": true
         },
         {
           "name": "Section 2 Ovest E",
-          "price": 328.0,
+          "price": 330.0,
           "available": true
         },
         {
-          "name": "Section 2 Est E",
-          "price": 328.0,
+          "name": "Section 2 Ovest E",
+          "price": 330.0,
           "available": true
         },
         {
-          "name": "Section 2 Est E",
-          "price": 335.0,
+          "name": "Section 2 Ovest E",
+          "price": 330.0,
           "available": true
         },
         {
-          "name": "Section 2 Ovest D",
-          "price": 600.0,
+          "name": "Section 2 Ovest E",
+          "price": 330.0,
           "available": true
         },
         {
-          "name": "Section 2 Ovest D",
-          "price": 343.0,
+          "name": "Section 2 Ovest E",
+          "price": 330.0,
           "available": true
         },
         {
-          "name": "Section 2 Est C",
-          "price": 544.0,
-          "available": true
-        },
-        {
-          "name": "Section 2 Est C",
-          "price": 363.0,
-          "available": true
-        },
-        {
-          "name": "Section 2 Ovest C",
-          "price": 368.0,
+          "name": "Section 2 Ovest E",
+          "price": 330.0,
           "available": true
         }
       ]
@@ -5073,8 +5063,23 @@
       "timestamp": "2026-03-19T11:04:32.294880+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 328.0
+    },
+    {
+      "timestamp": "2026-03-19T11:25:12.027785+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 420.0
+    },
+    {
+      "timestamp": "2026-03-19T11:25:12.027785+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 287.0
+    },
+    {
+      "timestamp": "2026-03-19T11:25:12.027785+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 330.0
     }
   ],
-  "checks_count": 328,
+  "checks_count": 329,
   "errors": []
 }
