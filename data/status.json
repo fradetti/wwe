@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-03-19T18:11:14.124625+00:00",
+  "last_check": "2026-03-19T18:31:40.504900+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -80,7 +80,7 @@
         {
           "name": "Champion Package",
           "price": 6017.5,
-          "available": true
+          "available": false
         },
         {
           "name": "Champion Package",
@@ -363,31 +363,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-03-16T17:31:08.890313+00:00",
-      "event_id": "ZG9rmIYnyZeeA1",
-      "price_min": 69.0
-    },
-    {
-      "timestamp": "2026-03-16T17:51:10.379785+00:00",
-      "event_id": "ZG9rmIYnyZeeA6",
-      "price_min": 1371.25
-    },
-    {
-      "timestamp": "2026-03-16T17:51:10.379785+00:00",
-      "event_id": "ZG9rmIYnyZee66",
-      "price_min": 510.0
-    },
-    {
-      "timestamp": "2026-03-16T17:51:10.379785+00:00",
-      "event_id": "ZG9rmIYnyZeeAa",
-      "price_min": 103.5
-    },
-    {
-      "timestamp": "2026-03-16T17:51:10.379785+00:00",
-      "event_id": "ZG9rmIYnyZeeA1",
-      "price_min": 69.0
-    },
-    {
       "timestamp": "2026-03-16T18:11:14.450024+00:00",
       "event_id": "ZG9rmIYnyZeeFd",
       "price_min": 218.5
@@ -5359,10 +5334,35 @@
     },
     {
       "timestamp": "2026-03-19T18:11:14.124625+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-03-19T18:31:40.504900+00:00",
+      "event_id": "ZG9rmIYnyZeeFd",
+      "price_min": 218.5
+    },
+    {
+      "timestamp": "2026-03-19T18:31:40.504900+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 1371.25
+    },
+    {
+      "timestamp": "2026-03-19T18:31:40.504900+00:00",
+      "event_id": "ZG9rmIYnyZee66",
+      "price_min": 707.0
+    },
+    {
+      "timestamp": "2026-03-19T18:31:40.504900+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 103.5
+    },
+    {
+      "timestamp": "2026-03-19T18:31:40.504900+00:00",
       "event_id": "ZG9rmIYnyZeeA1",
       "price_min": 69.0
     }
   ],
-  "checks_count": 382,
+  "checks_count": 383,
   "errors": []
 }
