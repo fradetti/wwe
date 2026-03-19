@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-03-19T16:29:40.655143+00:00",
+  "last_check": "2026-03-19T16:49:55.076127+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -37,7 +37,7 @@
         {
           "name": "6° Settore Num.",
           "price": 402.5,
-          "available": true
+          "available": false
         },
         {
           "name": "7° Settore Num.",
@@ -363,31 +363,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-03-16T16:10:22.930717+00:00",
-      "event_id": "ZG9rmIYnyZeeFd",
-      "price_min": 218.5
-    },
-    {
-      "timestamp": "2026-03-16T16:10:22.930717+00:00",
-      "event_id": "ZG9rmIYnyZeeA6",
-      "price_min": 1371.25
-    },
-    {
-      "timestamp": "2026-03-16T16:10:22.930717+00:00",
-      "event_id": "ZG9rmIYnyZee66",
-      "price_min": 510.0
-    },
-    {
-      "timestamp": "2026-03-16T16:10:22.930717+00:00",
-      "event_id": "ZG9rmIYnyZeeAa",
-      "price_min": 103.5
-    },
-    {
-      "timestamp": "2026-03-16T16:10:22.930717+00:00",
-      "event_id": "ZG9rmIYnyZeeA1",
-      "price_min": 69.0
-    },
-    {
       "timestamp": "2026-03-16T16:30:27.133418+00:00",
       "event_id": "ZG9rmIYnyZeeFd",
       "price_min": 218.5
@@ -5359,10 +5334,35 @@
     },
     {
       "timestamp": "2026-03-19T16:29:40.655143+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-03-19T16:49:55.076127+00:00",
+      "event_id": "ZG9rmIYnyZeeFd",
+      "price_min": 218.5
+    },
+    {
+      "timestamp": "2026-03-19T16:49:55.076127+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 1371.25
+    },
+    {
+      "timestamp": "2026-03-19T16:49:55.076127+00:00",
+      "event_id": "ZG9rmIYnyZee66",
+      "price_min": 707.0
+    },
+    {
+      "timestamp": "2026-03-19T16:49:55.076127+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 103.5
+    },
+    {
+      "timestamp": "2026-03-19T16:49:55.076127+00:00",
       "event_id": "ZG9rmIYnyZeeA1",
       "price_min": 69.0
     }
   ],
-  "checks_count": 377,
+  "checks_count": 378,
   "errors": []
 }
