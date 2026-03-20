@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-03-20T20:50:57.186677+00:00",
+  "last_check": "2026-03-20T21:10:22.029025+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -387,7 +387,7 @@
       "packages": [
         {
           "name": "RING",
-          "price": 8315.0,
+          "price": 2772.0,
           "available": true
         },
         {
@@ -649,21 +649,6 @@
     }
   ],
   "price_history": [
-    {
-      "timestamp": "2026-03-16T02:21:03.880591+00:00",
-      "event_id": "stubhub-160574134",
-      "price_min": 340.0
-    },
-    {
-      "timestamp": "2026-03-16T02:41:11.987962+00:00",
-      "event_id": "stubhub-160574096",
-      "price_min": 416.0
-    },
-    {
-      "timestamp": "2026-03-16T02:41:11.987962+00:00",
-      "event_id": "stubhub-160556794",
-      "price_min": 289.0
-    },
     {
       "timestamp": "2026-03-16T02:41:11.987962+00:00",
       "event_id": "stubhub-160574134",
@@ -5648,8 +5633,23 @@
       "timestamp": "2026-03-20T20:50:57.186677+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 329.0
+    },
+    {
+      "timestamp": "2026-03-20T21:10:22.029025+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 416.0
+    },
+    {
+      "timestamp": "2026-03-20T21:10:22.029025+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 289.0
+    },
+    {
+      "timestamp": "2026-03-20T21:10:22.029025+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 329.0
     }
   ],
-  "checks_count": 426,
+  "checks_count": 427,
   "errors": []
 }
