@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-03-21T09:30:56.645309+00:00",
+  "last_check": "2026-03-21T09:40:08.372929+00:00",
   "flights": [
     {
       "date": "2026-03-23",
@@ -27,6 +27,21 @@
       "scheduled_arrival": "12:35",
       "actual_arrival": "",
       "arr_timezone": "CET",
+      "departure_delay_min": null,
+      "arrival_delay_min": null,
+      "status": "Future"
+    },
+    {
+      "date": "2026-03-23",
+      "flight": "EK706",
+      "origin": "SEZ",
+      "destination": "DXB",
+      "scheduled_departure": "08:35",
+      "actual_departure": "",
+      "dep_timezone": "+04",
+      "scheduled_arrival": "13:10",
+      "actual_arrival": "",
+      "arr_timezone": "+04",
       "departure_delay_min": null,
       "arrival_delay_min": null,
       "status": "Future"
@@ -72,6 +87,21 @@
       "scheduled_arrival": "12:35",
       "actual_arrival": "12:35",
       "arr_timezone": "CET",
+      "departure_delay_min": 0,
+      "arrival_delay_min": 0,
+      "status": "Future"
+    },
+    {
+      "date": "2026-03-22",
+      "flight": "EK706",
+      "origin": "SEZ",
+      "destination": "DXB",
+      "scheduled_departure": "08:35",
+      "actual_departure": "08:35",
+      "dep_timezone": "+04",
+      "scheduled_arrival": "13:10",
+      "actual_arrival": "13:10",
+      "arr_timezone": "+04",
       "departure_delay_min": 0,
       "arrival_delay_min": 0,
       "status": "Future"
@@ -123,6 +153,21 @@
     },
     {
       "date": "2026-03-21",
+      "flight": "EK706",
+      "origin": "SEZ",
+      "destination": "DXB",
+      "scheduled_departure": "08:35",
+      "actual_departure": "08:35",
+      "dep_timezone": "+04",
+      "scheduled_arrival": "13:10",
+      "actual_arrival": "13:10",
+      "arr_timezone": "+04",
+      "departure_delay_min": 0,
+      "arrival_delay_min": 0,
+      "status": "Cancelled"
+    },
+    {
+      "date": "2026-03-21",
       "flight": "EK705",
       "origin": "DXB",
       "destination": "SEZ",
@@ -164,6 +209,21 @@
       "arr_timezone": "CET",
       "departure_delay_min": 15,
       "arrival_delay_min": -1,
+      "status": "Landed"
+    },
+    {
+      "date": "2026-03-20",
+      "flight": "EK706",
+      "origin": "SEZ",
+      "destination": "DXB",
+      "scheduled_departure": "08:35",
+      "actual_departure": "08:24",
+      "dep_timezone": "+04",
+      "scheduled_arrival": "13:10",
+      "actual_arrival": "12:53",
+      "arr_timezone": "+04",
+      "departure_delay_min": -11,
+      "arrival_delay_min": -17,
       "status": "Landed"
     },
     {
@@ -210,6 +270,21 @@
       "departure_delay_min": 0,
       "arrival_delay_min": 0,
       "status": "Cancelled"
+    },
+    {
+      "date": "2026-03-19",
+      "flight": "EK706",
+      "origin": "SEZ",
+      "destination": "DXB",
+      "scheduled_departure": "08:35",
+      "actual_departure": "08:29",
+      "dep_timezone": "+04",
+      "scheduled_arrival": "13:10",
+      "actual_arrival": "12:54",
+      "arr_timezone": "+04",
+      "departure_delay_min": -6,
+      "arrival_delay_min": -16,
+      "status": "Landed"
     },
     {
       "date": "2026-03-19",
