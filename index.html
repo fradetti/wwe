@@ -737,6 +737,7 @@ let flightsLastCheck = null;
 const FLIGHT_ROUTES = [
   { code: 'EK78',  label: 'EK78 NCE\u2192DXB' },
   { code: 'EK705', label: 'EK705 DXB\u2192SEZ' },
+  { code: 'EK706', label: 'EK706 SEZ\u2192DXB' },
   { code: 'EK708', label: 'EK708 SEZ\u2192DXB' },
   { code: 'EK77',  label: 'EK77 DXB\u2192NCE' },
 ];
@@ -771,13 +772,16 @@ function renderFlights(data, lastCheck) {
     const entries = data.filter(r => r.flight === f.code);
     const count = entries.length;
     const landedCount = entries.filter(r => r.status && r.status.toLowerCase() === 'landed').length;
+    const cancelledCount = entries.filter(r => r.status && r.status.toLowerCase().includes('cancel')).length;
+    const enRouteCount = entries.filter(r => {const s = (r.status||'').toLowerCase(); return s === 'en route' || s.includes('depart');}).length;
+    const scheduledCount = entries.filter(r => {const s = (r.status||'').toLowerCase(); return s === 'scheduled' || s === 'future';}).length;
     const withDelay = entries.filter(r => getFlightDelay(r) !== null);
     const avg = withDelay.length ? Math.round(withDelay.reduce((s, r) => s + getFlightDelay(r), 0) / withDelay.length) : null;
     // Latest status: pick most recent entry by date
     const sorted = [...entries].sort((a, b) => b.date.localeCompare(a.date));
     const latest = sorted[0];
     const latestStatus = latest ? latest.status || 'Unknown' : '\u2014';
-    return { ...f, count, landedCount, avg, latestStatus };
+    return { ...f, count, landedCount, cancelledCount, enRouteCount, scheduledCount, avg, latestStatus };
   });
 
   // Flight filter buttons
@@ -825,7 +829,8 @@ function renderFlights(data, lastCheck) {
         return `<div class="flight-stat">
           <div class="fs-label">${f.code}</div>
           <div style="font-size:.68rem;color:var(--muted);margin-top:.1rem">${f.label.split(' ')[1]}</div>
-          <div style="font-size:.72rem;margin-top:.35rem">${f.count} tracciati &middot; ${f.landedCount} landed</div>
+          <div style="font-size:.72rem;margin-top:.35rem">${f.count} tracciati</div>
+          <div style="font-size:.68rem;color:var(--muted);margin-top:.15rem">${f.landedCount} landed${f.cancelledCount ? ' &middot; ' + f.cancelledCount + ' cancelled' : ''}${f.enRouteCount ? ' &middot; ' + f.enRouteCount + ' in flight' : ''}${f.scheduledCount ? ' &middot; ' + f.scheduledCount + ' scheduled' : ''}</div>
           <div style="font-size:.72rem;${delayColor};font-weight:600;margin-top:.15rem">Delay medio: ${delayStr}</div>
           <div style="font-size:.72rem;margin-top:.15rem">Ultimo: ${f.latestStatus}</div>
         </div>`;

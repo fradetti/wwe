@@ -9,6 +9,7 @@ import requests
 FLIGHTS = [
     ("EK", "78", None),            # NCE→DXB — single leg
     ("EK", "705", None),           # DXB→SEZ — single leg
+    ("EK", "706", None),           # SEZ→DXB — single leg
     ("EK", "708", ("SEZ", "DXB")), # Multi-leg: we want SEZ→DXB
     ("EK", "77", None),            # DXB→NCE — single leg
 ]

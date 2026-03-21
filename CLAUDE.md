@@ -55,5 +55,5 @@ docker-compose -f docker/docker-compose.yml up --build
 - **Date range filter**: Events are filtered to May 30 – June 8, 2026 window.
 - **StubHub city filter**: Events filtered by URL-based Italian city keywords (torino, roma, bologna, etc.).
 - **Price history**: JSON files store up to 1000 historical price entries per event.
-- **Flight tracking**: Tracks 4 Emirates flights (EK78, EK705, EK708, EK77) over a 6-day rolling window (3 past + 3 future). Skips already-landed flights. Data sourced from FlightStats `__NEXT_DATA__` JSON. Output format: `{"last_check": ISO, "flights": [...]}` with backward-compatible loading. Multi-leg flights (EK708) use `otherDays[].flights[]` to find the correct leg via `flightId`.
+- **Flight tracking**: Tracks 5 Emirates flights (EK78, EK705, EK706, EK708, EK77) over a 6-day rolling window (3 past + 3 future). Skips already-landed flights. Data sourced from FlightStats `__NEXT_DATA__` JSON. Output format: `{"last_check": ISO, "flights": [...]}` with backward-compatible loading. Multi-leg flights (EK708) use `otherDays[].flights[]` to find the correct leg via `flightId`.
 - **CI/CD**: `check.yml` runs API-only check every 6 hours. `pages.yml` deploys to GitHub Pages on push. Auto-commits use `[skip ci]` tag and `git pull --rebase`.
