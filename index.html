@@ -328,7 +328,7 @@
   /* Flight stat cards */
   .flight-stats {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: .6rem;
     margin-bottom: 1.25rem;
   }
@@ -830,7 +830,7 @@ function renderFlights(data, lastCheck) {
           <div class="fs-label">${f.code}</div>
           <div style="font-size:.68rem;color:var(--muted);margin-top:.1rem">${f.label.split(' ')[1]}</div>
           <div style="font-size:.72rem;margin-top:.35rem">${f.count} tracciati</div>
-          <div style="font-size:.68rem;color:var(--muted);margin-top:.15rem">${f.landedCount} landed${f.cancelledCount ? ' &middot; ' + f.cancelledCount + ' cancelled' : ''}${f.enRouteCount ? ' &middot; ' + f.enRouteCount + ' in flight' : ''}${f.scheduledCount ? ' &middot; ' + f.scheduledCount + ' scheduled' : ''}</div>
+          <div style="font-size:.65rem;color:var(--muted);margin-top:.15rem;line-height:1.4">${f.landedCount} landed${f.cancelledCount ? '<br>' + f.cancelledCount + ' cancelled' : ''}${f.enRouteCount ? '<br>' + f.enRouteCount + ' in flight' : ''}${f.scheduledCount ? '<br>' + f.scheduledCount + ' scheduled' : ''}</div>
           <div style="font-size:.72rem;${delayColor};font-weight:600;margin-top:.15rem">Delay medio: ${delayStr}</div>
           <div style="font-size:.72rem;margin-top:.15rem">Ultimo: ${f.latestStatus}</div>
         </div>`;
