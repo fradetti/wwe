@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-03-21T05:46:54.261423+00:00",
+  "last_check": "2026-03-21T06:07:21.816036+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -9,14 +9,14 @@
       "date": "2026-05-31",
       "venue": "",
       "is_single_day": true,
-      "price_min": 420.0,
-      "price_max": 1110.0,
+      "price_min": 416.0,
+      "price_max": 7479.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-clash-in-italy-turin-tickets-5-31-2026/event/160574096/",
       "packages": [
         {
           "name": "MIX",
-          "price": 420.0,
+          "price": 416.0,
           "available": true
         },
         {
@@ -26,7 +26,7 @@
         },
         {
           "name": "Section 302",
-          "price": 458.0,
+          "price": 454.0,
           "available": true
         },
         {
@@ -36,47 +36,117 @@
         },
         {
           "name": "I Anello Est",
-          "price": 602.0,
+          "price": 595.0,
           "available": true
         },
         {
           "name": "Section 111",
-          "price": 609.0,
+          "price": 602.0,
           "available": true
         },
         {
           "name": "Section 221",
-          "price": 650.0,
+          "price": 643.0,
           "available": true
         },
         {
           "name": "Section 116",
-          "price": 650.0,
+          "price": 643.0,
           "available": true
         },
         {
           "name": "Section 107",
-          "price": 650.0,
+          "price": 643.0,
           "available": true
         },
         {
           "name": "II Anello Est",
-          "price": 666.0,
+          "price": 659.0,
           "available": true
         },
         {
           "name": "Section 121",
-          "price": 836.0,
+          "price": 827.0,
           "available": true
         },
         {
           "name": "Section 104",
-          "price": 836.0,
+          "price": 827.0,
           "available": true
         },
         {
           "name": "Section 106",
-          "price": 836.0,
+          "price": 827.0,
+          "available": true
+        },
+        {
+          "name": "Section 117",
+          "price": 827.0,
+          "available": true
+        },
+        {
+          "name": "Section J",
+          "price": 830.0,
+          "available": true
+        },
+        {
+          "name": "Floor",
+          "price": 1131.0,
+          "available": true
+        },
+        {
+          "name": "Section K",
+          "price": 1132.0,
+          "available": true
+        },
+        {
+          "name": "Section H",
+          "price": 1185.0,
+          "available": true
+        },
+        {
+          "name": "Section 118",
+          "price": 1320.0,
+          "available": true
+        },
+        {
+          "name": "Section 122",
+          "price": 1350.0,
+          "available": true
+        },
+        {
+          "name": "Section 101",
+          "price": 1415.0,
+          "available": true
+        },
+        {
+          "name": "Section 115",
+          "price": 3398.0,
+          "available": true
+        },
+        {
+          "name": "Section I",
+          "price": 4990.0,
+          "available": true
+        },
+        {
+          "name": "Section 102",
+          "price": 4990.0,
+          "available": true
+        },
+        {
+          "name": "Section 119",
+          "price": 4990.0,
+          "available": true
+        },
+        {
+          "name": "Section 108",
+          "price": 4990.0,
+          "available": true
+        },
+        {
+          "name": "Section J",
+          "price": 7479.0,
           "available": true
         }
       ]
@@ -87,24 +157,24 @@
       "date": "2026-06-01",
       "venue": "",
       "is_single_day": true,
-      "price_min": 286.0,
-      "price_max": 2455.0,
+      "price_min": 289.0,
+      "price_max": 11000.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-raw-turin-tickets-6-1-2026/event/160556794/",
       "packages": [
         {
           "name": "MIX",
-          "price": 286.0,
+          "price": 289.0,
           "available": true
         },
         {
           "name": "Section 202",
-          "price": 286.0,
+          "price": 289.0,
           "available": true
         },
         {
           "name": "Section 203",
-          "price": 292.0,
+          "price": 296.0,
           "available": true
         },
         {
@@ -114,7 +184,7 @@
         },
         {
           "name": "Section 302",
-          "price": 400.0,
+          "price": 406.0,
           "available": true
         },
         {
@@ -124,12 +194,12 @@
         },
         {
           "name": "Section 112",
-          "price": 449.0,
+          "price": 456.0,
           "available": true
         },
         {
           "name": "Section 111",
-          "price": 456.0,
+          "price": 463.0,
           "available": true
         },
         {
@@ -139,7 +209,7 @@
         },
         {
           "name": "Floor",
-          "price": 512.0,
+          "price": 520.0,
           "available": true
         },
         {
@@ -149,22 +219,147 @@
         },
         {
           "name": "I Anello Est",
-          "price": 609.0,
+          "price": 619.0,
           "available": true
         },
         {
           "name": "Section 101",
-          "price": 2455.0,
+          "price": 2495.0,
           "available": true
         },
         {
           "name": "Section 118",
-          "price": 2455.0,
+          "price": 2495.0,
           "available": true
         },
         {
           "name": "Section 102",
-          "price": 2455.0,
+          "price": 2495.0,
+          "available": true
+        },
+        {
+          "name": "Section 122",
+          "price": 2495.0,
+          "available": true
+        },
+        {
+          "name": "Section 121",
+          "price": 2495.0,
+          "available": true
+        },
+        {
+          "name": "Section 119",
+          "price": 2495.0,
+          "available": true
+        },
+        {
+          "name": "Section 104",
+          "price": 2495.0,
+          "available": true
+        },
+        {
+          "name": "Section 106",
+          "price": 2495.0,
+          "available": true
+        },
+        {
+          "name": "Section 116",
+          "price": 2495.0,
+          "available": true
+        },
+        {
+          "name": "Section 117",
+          "price": 2495.0,
+          "available": true
+        },
+        {
+          "name": "Section 107",
+          "price": 2495.0,
+          "available": true
+        },
+        {
+          "name": "Section 111",
+          "price": 2495.0,
+          "available": true
+        },
+        {
+          "name": "Section 115",
+          "price": 3999.0,
+          "available": true
+        },
+        {
+          "name": "Section 115",
+          "price": 2495.0,
+          "available": true
+        },
+        {
+          "name": "Section I",
+          "price": 4989.0,
+          "available": true
+        },
+        {
+          "name": "Section K",
+          "price": 4990.0,
+          "available": true
+        },
+        {
+          "name": "Section H",
+          "price": 4990.0,
+          "available": true
+        },
+        {
+          "name": "Section E",
+          "price": 6652.0,
+          "available": true
+        },
+        {
+          "name": "Section J",
+          "price": 8999.0,
+          "available": true
+        },
+        {
+          "name": "Section J",
+          "price": 6687.0,
+          "available": true
+        },
+        {
+          "name": "Section C",
+          "price": 11000.0,
+          "available": true
+        },
+        {
+          "name": "Section C",
+          "price": 7401.0,
+          "available": true
+        },
+        {
+          "name": "Section N",
+          "price": 11000.0,
+          "available": true
+        },
+        {
+          "name": "Section N",
+          "price": 7401.0,
+          "available": true
+        },
+        {
+          "name": "Section B",
+          "price": 11000.0,
+          "available": true
+        },
+        {
+          "name": "Section B",
+          "price": 8233.0,
+          "available": true
+        },
+        {
+          "name": "Section A",
+          "price": 9148.0,
+          "available": true
+        },
+        {
+          "name": "Section D",
+          "price": 9148.0,
           "available": true
         }
       ]
@@ -175,29 +370,34 @@
       "date": "2026-06-05",
       "venue": "",
       "is_single_day": true,
-      "price_min": 328.0,
-      "price_max": 600.0,
+      "price_min": 334.0,
+      "price_max": 9978.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-smackdown-casalecchio-di-reno-bologna-tickets-6-5-2026/event/160574134/",
       "packages": [
         {
           "name": "RING",
-          "price": 328.0,
+          "price": 8315.0,
+          "available": true
+        },
+        {
+          "name": "RING",
+          "price": 334.0,
           "available": true
         },
         {
           "name": "Section 2 Ovest E",
-          "price": 328.0,
+          "price": 334.0,
           "available": true
         },
         {
           "name": "Section 2 Est E",
-          "price": 328.0,
+          "price": 334.0,
           "available": true
         },
         {
           "name": "Section 2 Est E",
-          "price": 335.0,
+          "price": 340.0,
           "available": true
         },
         {
@@ -207,58 +407,238 @@
         },
         {
           "name": "Section 2 Ovest D",
-          "price": 343.0,
+          "price": 349.0,
           "available": true
         },
         {
           "name": "Section 2 Ovest C",
-          "price": 368.0,
+          "price": 374.0,
           "available": true
         },
         {
           "name": "Section 2 Est D",
-          "price": 368.0,
+          "price": 374.0,
           "available": true
         },
         {
           "name": "Section 2 Ovest D",
-          "price": 368.0,
+          "price": 374.0,
           "available": true
         },
         {
           "name": "Section 2 Est C",
-          "price": 368.0,
+          "price": 374.0,
           "available": true
         },
         {
           "name": "Section 1 Ovest B",
-          "price": 409.0,
+          "price": 416.0,
           "available": true
         },
         {
           "name": "Section 1 Est B",
-          "price": 409.0,
+          "price": 416.0,
+          "available": true
+        },
+        {
+          "name": "Section 1 Est B",
+          "price": 634.0,
+          "available": true
+        },
+        {
+          "name": "Section 1 Est B",
+          "price": 419.0,
+          "available": true
+        },
+        {
+          "name": "Section 1 Ovest C",
+          "price": 629.0,
+          "available": true
+        },
+        {
+          "name": "Section 1 Ovest C",
+          "price": 468.0,
+          "available": true
+        },
+        {
+          "name": "Section 1 Est E",
+          "price": 470.0,
+          "available": true
+        },
+        {
+          "name": "Section 1 Est E",
+          "price": 472.0,
+          "available": true
+        },
+        {
+          "name": "Section 1 Est D",
+          "price": 496.0,
+          "available": true
+        },
+        {
+          "name": "Section 1 Est C",
+          "price": 496.0,
+          "available": true
+        },
+        {
+          "name": "Section 1 Ovest C",
+          "price": 496.0,
+          "available": true
+        },
+        {
+          "name": "Section 1 Ovest E",
+          "price": 496.0,
+          "available": true
+        },
+        {
+          "name": "Section 1 Est E",
+          "price": 496.0,
+          "available": true
+        },
+        {
+          "name": "Section Primo Settore H1",
+          "price": 999.0,
+          "available": true
+        },
+        {
+          "name": "Section Primo Settore H1",
+          "price": 548.0,
+          "available": true
+        },
+        {
+          "name": "Section Primo Settore H1",
+          "price": 567.0,
+          "available": true
+        },
+        {
+          "name": "Section Primo Settore H1",
+          "price": 567.0,
+          "available": true
+        },
+        {
+          "name": "Section I",
+          "price": 769.0,
+          "available": true
+        },
+        {
+          "name": "Section I",
+          "price": 572.0,
+          "available": true
+        },
+        {
+          "name": "Section H",
+          "price": 578.0,
+          "available": true
+        },
+        {
+          "name": "Section Primo Settore H1",
+          "price": 838.0,
+          "available": true
+        },
+        {
+          "name": "Section Primo Settore H1",
+          "price": 584.0,
+          "available": true
+        },
+        {
+          "name": "Section G",
+          "price": 585.0,
+          "available": true
+        },
+        {
+          "name": "Section Secondo Settore H2",
+          "price": 999.0,
+          "available": true
+        },
+        {
+          "name": "Section Secondo Settore H2",
+          "price": 595.0,
+          "available": true
+        },
+        {
+          "name": "Section M",
+          "price": 660.0,
+          "available": true
+        },
+        {
+          "name": "Section C",
+          "price": 660.0,
+          "available": true
+        },
+        {
+          "name": "Section Secondo Settore H2",
+          "price": 917.0,
+          "available": true
+        },
+        {
+          "name": "Section Secondo Settore H2",
+          "price": 667.0,
+          "available": true
+        },
+        {
+          "name": "Section Secondo Settore H2",
+          "price": 2383.0,
+          "available": true
+        },
+        {
+          "name": "Section N",
+          "price": 2772.0,
+          "available": true
+        },
+        {
+          "name": "Section 1 Ovest D",
+          "price": 2772.0,
+          "available": true
+        },
+        {
+          "name": "Section M",
+          "price": 9000.0,
+          "available": true
+        },
+        {
+          "name": "Section M",
+          "price": 6462.0,
+          "available": true
+        },
+        {
+          "name": "Section C",
+          "price": 7484.0,
+          "available": true
+        },
+        {
+          "name": "Section H",
+          "price": 7484.0,
+          "available": true
+        },
+        {
+          "name": "Section D",
+          "price": 8315.0,
+          "available": true
+        },
+        {
+          "name": "Section F",
+          "price": 8315.0,
+          "available": true
+        },
+        {
+          "name": "Section B",
+          "price": 9147.0,
+          "available": true
+        },
+        {
+          "name": "Section A",
+          "price": 9148.0,
+          "available": true
+        },
+        {
+          "name": "Section E",
+          "price": 9978.0,
           "available": true
         }
       ]
     }
   ],
   "price_history": [
-    {
-      "timestamp": "2026-03-16T11:28:30.924679+00:00",
-      "event_id": "stubhub-160574134",
-      "price_min": 340.0
-    },
-    {
-      "timestamp": "2026-03-16T11:48:34.655851+00:00",
-      "event_id": "stubhub-160574096",
-      "price_min": 416.0
-    },
-    {
-      "timestamp": "2026-03-16T11:48:34.655851+00:00",
-      "event_id": "stubhub-160556794",
-      "price_min": 289.0
-    },
     {
       "timestamp": "2026-03-16T11:48:34.655851+00:00",
       "event_id": "stubhub-160574134",
@@ -5243,8 +5623,23 @@
       "timestamp": "2026-03-21T05:46:54.261423+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 328.0
+    },
+    {
+      "timestamp": "2026-03-21T06:07:21.816036+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 416.0
+    },
+    {
+      "timestamp": "2026-03-21T06:07:21.816036+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 289.0
+    },
+    {
+      "timestamp": "2026-03-21T06:07:21.816036+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 334.0
     }
   ],
-  "checks_count": 453,
+  "checks_count": 454,
   "errors": []
 }
