@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-03-21T17:38:29.372244+00:00",
+  "last_check": "2026-03-21T17:57:29.559159+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -133,7 +133,7 @@
         {
           "name": "THE WWE RAMPSIDER PACKAGE",
           "price": 937.0,
-          "available": false
+          "available": true
         },
         {
           "name": "THE WWE RAMPSIDER PACKAGE",
@@ -368,31 +368,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-03-18T18:43:05.231182+00:00",
-      "event_id": "ZG9rmIYnyZeeAa",
-      "price_min": 103.5
-    },
-    {
-      "timestamp": "2026-03-18T18:43:05.231182+00:00",
-      "event_id": "ZG9rmIYnyZeeA1",
-      "price_min": 69.0
-    },
-    {
-      "timestamp": "2026-03-18T19:03:20.378486+00:00",
-      "event_id": "ZG9rmIYnyZeeFd",
-      "price_min": 218.5
-    },
-    {
-      "timestamp": "2026-03-18T19:03:20.378486+00:00",
-      "event_id": "ZG9rmIYnyZeeA6",
-      "price_min": 1371.25
-    },
-    {
-      "timestamp": "2026-03-18T19:03:20.378486+00:00",
-      "event_id": "ZG9rmIYnyZee66",
-      "price_min": 510.0
-    },
-    {
       "timestamp": "2026-03-18T19:03:20.378486+00:00",
       "event_id": "ZG9rmIYnyZeeAa",
       "price_min": 103.5
@@ -5364,10 +5339,35 @@
     },
     {
       "timestamp": "2026-03-21T17:38:29.372244+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-03-21T17:57:29.559159+00:00",
+      "event_id": "ZG9rmIYnyZeeFd",
+      "price_min": 218.5
+    },
+    {
+      "timestamp": "2026-03-21T17:57:29.559159+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 1371.25
+    },
+    {
+      "timestamp": "2026-03-21T17:57:29.559159+00:00",
+      "event_id": "ZG9rmIYnyZee66",
+      "price_min": 510.0
+    },
+    {
+      "timestamp": "2026-03-21T17:57:29.559159+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 103.5
+    },
+    {
+      "timestamp": "2026-03-21T17:57:29.559159+00:00",
       "event_id": "ZG9rmIYnyZeeA1",
       "price_min": 69.0
     }
   ],
-  "checks_count": 530,
+  "checks_count": 531,
   "errors": []
 }
