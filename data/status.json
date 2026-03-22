@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-03-22T07:52:07.197152+00:00",
+  "last_check": "2026-03-22T08:13:17.632636+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -67,42 +67,11 @@
       "date": "2026-05-31",
       "venue": "Inalpi Arena, Torino",
       "is_single_day": true,
-      "price_min": 1371.25,
-      "price_max": 10142.5,
+      "price_min": null,
+      "price_max": null,
       "currency": "EUR",
       "url": "https://www.ticketmaster.it/biglietti/wwe-clash-in-italy-torino-31-05-2026/event/ur737yvj5cba",
-      "packages": [
-        {
-          "name": "Champion+ Package",
-          "price": 10142.5,
-          "available": true
-        },
-        {
-          "name": "Champion Package",
-          "price": 6017.5,
-          "available": true
-        },
-        {
-          "name": "Champion Package",
-          "price": 3410.0,
-          "available": true
-        },
-        {
-          "name": "Gold Package",
-          "price": 1955.0,
-          "available": true
-        },
-        {
-          "name": "Gold Package",
-          "price": 1755.0,
-          "available": true
-        },
-        {
-          "name": "Gold Package",
-          "price": 1371.25,
-          "available": true
-        }
-      ]
+      "packages": []
     },
     {
       "id": "ZG9rmIYnyZee66",
@@ -110,42 +79,11 @@
       "date": "2026-06-01",
       "venue": "Inalpi Arena, Torino",
       "is_single_day": true,
-      "price_min": 510.0,
-      "price_max": 1454.0,
+      "price_min": null,
+      "price_max": null,
       "currency": "EUR",
       "url": "https://www.ticketmaster.it/biglietti/wwe-monday-night-raw-torino-01-06-2026/event/w8facmymqkti",
-      "packages": [
-        {
-          "name": "THE BATTLE ROYAL ULTIMATE EXPERIENCE",
-          "price": 1454.0,
-          "available": true
-        },
-        {
-          "name": "THE 360 WWE SUPERSTAR EXPERIENCE",
-          "price": 1240.0,
-          "available": true
-        },
-        {
-          "name": "THE 360 WWE RINGSIDER PACKAGE",
-          "price": 992.0,
-          "available": true
-        },
-        {
-          "name": "THE WWE RAMPSIDER PACKAGE",
-          "price": 937.0,
-          "available": true
-        },
-        {
-          "name": "THE WWE RAMPSIDER PACKAGE",
-          "price": 707.0,
-          "available": true
-        },
-        {
-          "name": "THE WWE SUPERFAN PACKAGE",
-          "price": 510.0,
-          "available": true
-        }
-      ]
+      "packages": []
     },
     {
       "id": "ZG9rmIYnyZeeAa",
@@ -368,21 +306,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-03-19T09:01:40.771390+00:00",
-      "event_id": "ZG9rmIYnyZee66",
-      "price_min": 510.0
-    },
-    {
-      "timestamp": "2026-03-19T09:01:40.771390+00:00",
-      "event_id": "ZG9rmIYnyZeeAa",
-      "price_min": 103.5
-    },
-    {
-      "timestamp": "2026-03-19T09:01:40.771390+00:00",
-      "event_id": "ZG9rmIYnyZeeA1",
-      "price_min": 69.0
-    },
-    {
       "timestamp": "2026-03-19T09:21:52.787183+00:00",
       "event_id": "ZG9rmIYnyZeeFd",
       "price_min": 218.5
@@ -5364,10 +5287,25 @@
     },
     {
       "timestamp": "2026-03-22T07:52:07.197152+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-03-22T08:13:17.632636+00:00",
+      "event_id": "ZG9rmIYnyZeeFd",
+      "price_min": 218.5
+    },
+    {
+      "timestamp": "2026-03-22T08:13:17.632636+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 103.5
+    },
+    {
+      "timestamp": "2026-03-22T08:13:17.632636+00:00",
       "event_id": "ZG9rmIYnyZeeA1",
       "price_min": 69.0
     }
   ],
-  "checks_count": 574,
+  "checks_count": 575,
   "errors": []
 }
