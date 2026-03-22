@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-03-22T10:32:54.288349+00:00",
+  "last_check": "2026-03-22T10:51:54.761031+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -75,7 +75,7 @@
         {
           "name": "Champion+ Package",
           "price": 10142.5,
-          "available": true
+          "available": false
         },
         {
           "name": "Champion Package",
@@ -368,31 +368,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-03-19T11:24:36.772597+00:00",
-      "event_id": "ZG9rmIYnyZeeA1",
-      "price_min": 69.0
-    },
-    {
-      "timestamp": "2026-03-19T11:44:48.028470+00:00",
-      "event_id": "ZG9rmIYnyZeeFd",
-      "price_min": 218.5
-    },
-    {
-      "timestamp": "2026-03-19T11:44:48.028470+00:00",
-      "event_id": "ZG9rmIYnyZee66",
-      "price_min": 510.0
-    },
-    {
-      "timestamp": "2026-03-19T11:44:48.028470+00:00",
-      "event_id": "ZG9rmIYnyZeeAa",
-      "price_min": 103.5
-    },
-    {
-      "timestamp": "2026-03-19T11:44:48.028470+00:00",
-      "event_id": "ZG9rmIYnyZeeA1",
-      "price_min": 69.0
-    },
-    {
       "timestamp": "2026-03-19T12:04:58.805239+00:00",
       "event_id": "ZG9rmIYnyZeeA6",
       "price_min": 1371.25
@@ -5364,10 +5339,35 @@
     },
     {
       "timestamp": "2026-03-22T10:32:54.288349+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-03-22T10:51:54.761031+00:00",
+      "event_id": "ZG9rmIYnyZeeFd",
+      "price_min": 218.5
+    },
+    {
+      "timestamp": "2026-03-22T10:51:54.761031+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 1371.25
+    },
+    {
+      "timestamp": "2026-03-22T10:51:54.761031+00:00",
+      "event_id": "ZG9rmIYnyZee66",
+      "price_min": 510.0
+    },
+    {
+      "timestamp": "2026-03-22T10:51:54.761031+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 103.5
+    },
+    {
+      "timestamp": "2026-03-22T10:51:54.761031+00:00",
       "event_id": "ZG9rmIYnyZeeA1",
       "price_min": 69.0
     }
   ],
-  "checks_count": 582,
+  "checks_count": 583,
   "errors": []
 }
