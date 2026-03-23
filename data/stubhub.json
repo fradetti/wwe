@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-03-23T01:26:08.768270+00:00",
+  "last_check": "2026-03-23T01:46:26.753888+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -7,7 +7,7 @@
       "id": "stubhub-160574096",
       "name": "WWE Clash in Italy",
       "date": "2026-05-31",
-      "venue": "",
+      "venue": "Pala Alpitour (Inalpi Arena), Turin, Italy",
       "is_single_day": true,
       "price_min": 420.0,
       "price_max": 1110.0,
@@ -65,7 +65,7 @@
       "id": "stubhub-160556794",
       "name": "WWE Monday Night RAW",
       "date": "2026-06-01",
-      "venue": "",
+      "venue": "Pala Alpitour (Inalpi Arena), Turin, Italy",
       "is_single_day": true,
       "price_min": 286.0,
       "price_max": 800.0,
@@ -108,6 +108,11 @@
           "available": true
         },
         {
+          "name": "Section 111",
+          "price": 442.0,
+          "available": true
+        },
+        {
           "name": "Section 112",
           "price": 800.0,
           "available": true
@@ -116,11 +121,6 @@
           "name": "Section 112",
           "price": 449.0,
           "available": true
-        },
-        {
-          "name": "Section 111",
-          "price": 456.0,
-          "available": true
         }
       ]
     },
@@ -128,10 +128,10 @@
       "id": "stubhub-160574134",
       "name": "WWE Friday Night SmackDown",
       "date": "2026-06-05",
-      "venue": "",
+      "venue": "Futurshow Station - Unipol Arena, Casalecchio di Reno - Bologna, Italy",
       "is_single_day": true,
       "price_min": 328.0,
-      "price_max": 600.0,
+      "price_max": 328.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-smackdown-casalecchio-di-reno-bologna-tickets-6-5-2026/event/160574134/",
       "packages": [
@@ -146,59 +146,34 @@
           "available": true
         },
         {
-          "name": "Section 2 Est E",
+          "name": "Section 2 Ovest E",
           "price": 328.0,
           "available": true
         },
         {
-          "name": "Section 2 Est E",
-          "price": 335.0,
+          "name": "Section 2 Ovest E",
+          "price": 328.0,
           "available": true
         },
         {
-          "name": "Section 2 Ovest D",
-          "price": 600.0,
+          "name": "Section 2 Ovest E",
+          "price": 328.0,
           "available": true
         },
         {
-          "name": "Section 2 Ovest D",
-          "price": 343.0,
+          "name": "Section 2 Ovest E",
+          "price": 328.0,
           "available": true
         },
         {
-          "name": "Section 2 Est C",
-          "price": 544.0,
-          "available": true
-        },
-        {
-          "name": "Section 2 Est C",
-          "price": 363.0,
-          "available": true
-        },
-        {
-          "name": "Section 2 Est C",
-          "price": 363.0,
+          "name": "Section 2 Ovest E",
+          "price": 328.0,
           "available": true
         }
       ]
     }
   ],
   "price_history": [
-    {
-      "timestamp": "2026-03-18T06:51:07.944257+00:00",
-      "event_id": "stubhub-160574134",
-      "price_min": 335.0
-    },
-    {
-      "timestamp": "2026-03-18T07:11:26.081730+00:00",
-      "event_id": "stubhub-160574096",
-      "price_min": 416.0
-    },
-    {
-      "timestamp": "2026-03-18T07:11:26.081730+00:00",
-      "event_id": "stubhub-160556794",
-      "price_min": 289.0
-    },
     {
       "timestamp": "2026-03-18T07:11:26.081730+00:00",
       "event_id": "stubhub-160574134",
@@ -5183,8 +5158,23 @@
       "timestamp": "2026-03-23T01:26:08.768270+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 328.0
+    },
+    {
+      "timestamp": "2026-03-23T01:46:26.753888+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 420.0
+    },
+    {
+      "timestamp": "2026-03-23T01:46:26.753888+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 286.0
+    },
+    {
+      "timestamp": "2026-03-23T01:46:26.753888+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 328.0
     }
   ],
-  "checks_count": 579,
+  "checks_count": 580,
   "errors": []
 }
