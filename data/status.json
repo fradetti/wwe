@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-03-24T19:42:27.219948+00:00",
+  "last_check": "2026-03-24T20:02:40.503221+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -118,7 +118,7 @@
         {
           "name": "THE BATTLE ROYAL ULTIMATE EXPERIENCE",
           "price": 1454.0,
-          "available": false
+          "available": true
         },
         {
           "name": "THE 360 WWE SUPERSTAR EXPERIENCE",
@@ -369,31 +369,6 @@
   "price_history": [
     {
       "timestamp": "2026-03-21T20:17:09.301544+00:00",
-      "event_id": "ZG9rmIYnyZeeFd",
-      "price_min": 218.5
-    },
-    {
-      "timestamp": "2026-03-21T20:17:09.301544+00:00",
-      "event_id": "ZG9rmIYnyZeeA6",
-      "price_min": 1371.25
-    },
-    {
-      "timestamp": "2026-03-21T20:17:09.301544+00:00",
-      "event_id": "ZG9rmIYnyZee66",
-      "price_min": 510.0
-    },
-    {
-      "timestamp": "2026-03-21T20:17:09.301544+00:00",
-      "event_id": "ZG9rmIYnyZeeAa",
-      "price_min": 103.5
-    },
-    {
-      "timestamp": "2026-03-21T20:17:09.301544+00:00",
-      "event_id": "ZG9rmIYnyZeeA1",
-      "price_min": 69.0
-    },
-    {
-      "timestamp": "2026-03-21T20:17:09.301544+00:00",
       "event_id": "ZG9rmIYnyZeekv",
       "price_min": 69.0
     },
@@ -5364,10 +5339,35 @@
     },
     {
       "timestamp": "2026-03-24T19:42:27.219948+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-03-24T20:02:40.503221+00:00",
+      "event_id": "ZG9rmIYnyZeeFd",
+      "price_min": 218.5
+    },
+    {
+      "timestamp": "2026-03-24T20:02:40.503221+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 1371.25
+    },
+    {
+      "timestamp": "2026-03-24T20:02:40.503221+00:00",
+      "event_id": "ZG9rmIYnyZee66",
+      "price_min": 510.0
+    },
+    {
+      "timestamp": "2026-03-24T20:02:40.503221+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 103.5
+    },
+    {
+      "timestamp": "2026-03-24T20:02:40.503221+00:00",
       "event_id": "ZG9rmIYnyZeeA1",
       "price_min": 69.0
     }
   ],
-  "checks_count": 758,
+  "checks_count": 759,
   "errors": []
 }
