@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-03-25T11:40:28.818170+00:00",
+  "last_check": "2026-03-25T12:01:21.829835+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -110,11 +110,42 @@
       "date": "2026-06-01",
       "venue": "Inalpi Arena, Torino",
       "is_single_day": true,
-      "price_min": null,
-      "price_max": null,
+      "price_min": 510.0,
+      "price_max": 1454.0,
       "currency": "EUR",
       "url": "https://www.ticketmaster.it/biglietti/wwe-monday-night-raw-torino-01-06-2026/event/w8facmymqkti",
-      "packages": []
+      "packages": [
+        {
+          "name": "THE BATTLE ROYAL ULTIMATE EXPERIENCE",
+          "price": 1454.0,
+          "available": true
+        },
+        {
+          "name": "THE 360 WWE SUPERSTAR EXPERIENCE",
+          "price": 1240.0,
+          "available": true
+        },
+        {
+          "name": "THE 360 WWE RINGSIDER PACKAGE",
+          "price": 992.0,
+          "available": true
+        },
+        {
+          "name": "THE WWE RAMPSIDER PACKAGE",
+          "price": 937.0,
+          "available": true
+        },
+        {
+          "name": "THE WWE RAMPSIDER PACKAGE",
+          "price": 707.0,
+          "available": true
+        },
+        {
+          "name": "THE WWE SUPERFAN PACKAGE",
+          "price": 510.0,
+          "available": true
+        }
+      ]
     },
     {
       "id": "ZG9rmIYnyZeeAa",
@@ -122,107 +153,11 @@
       "date": "2026-06-05",
       "venue": "Unipol Arena, Casalecchio di Reno",
       "is_single_day": true,
-      "price_min": 103.5,
-      "price_max": 1396.5,
+      "price_min": null,
+      "price_max": null,
       "currency": "EUR",
       "url": "https://www.ticketmaster.it/biglietti/wwe-friday-night-smackdown-casalecchio-di-reno-05-06-2026/event/gaw6l9am8v3m",
-      "packages": [
-        {
-          "name": "1° Settore Num.",
-          "price": 632.5,
-          "available": false
-        },
-        {
-          "name": "2° Settore Num.",
-          "price": 517.5,
-          "available": true
-        },
-        {
-          "name": "3° Settore Num.",
-          "price": 552.0,
-          "available": true
-        },
-        {
-          "name": "4° Settore Num.",
-          "price": 483.0,
-          "available": true
-        },
-        {
-          "name": "5° Settore Num.",
-          "price": 483.0,
-          "available": true
-        },
-        {
-          "name": "6° Settore Num.",
-          "price": 287.5,
-          "available": true
-        },
-        {
-          "name": "7° Settore Num.",
-          "price": 258.75,
-          "available": true
-        },
-        {
-          "name": "8° Settore Num.",
-          "price": 230.0,
-          "available": true
-        },
-        {
-          "name": "9° Settore Num.",
-          "price": 172.5,
-          "available": true
-        },
-        {
-          "name": "10° Settore Num.",
-          "price": 132.25,
-          "available": false
-        },
-        {
-          "name": "11° Settore Num.",
-          "price": 103.5,
-          "available": false
-        },
-        {
-          "name": "THE BATTLE ROYAL ULTIMATE EXPERIENCE",
-          "price": 1396.5,
-          "available": true
-        },
-        {
-          "name": "THE 360 WWE SUPERSTAR EXPERIENCE",
-          "price": 1182.5,
-          "available": true
-        },
-        {
-          "name": "THE 360 WWE RINGSIDER PACKAGE",
-          "price": 934.5,
-          "available": true
-        },
-        {
-          "name": "THE 360 WWE RINGSIDER PACKAGE",
-          "price": 819.5,
-          "available": false
-        },
-        {
-          "name": "THE WWE RAMPSIDER PACKAGE",
-          "price": 879.5,
-          "available": true
-        },
-        {
-          "name": "THE WWE RAMPSIDER PACKAGE",
-          "price": 764.5,
-          "available": true
-        },
-        {
-          "name": "THE WWE RAMPSIDER PACKAGE",
-          "price": 707.0,
-          "available": false
-        },
-        {
-          "name": "THE WWE SUPERFAN PACKAGE",
-          "price": 625.0,
-          "available": true
-        }
-      ]
+      "packages": []
     },
     {
       "id": "ZG9rmIYnyZeeA1",
@@ -337,26 +272,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-03-22T12:30:13.604145+00:00",
-      "event_id": "ZG9rmIYnyZee66",
-      "price_min": 510.0
-    },
-    {
-      "timestamp": "2026-03-22T12:30:13.604145+00:00",
-      "event_id": "ZG9rmIYnyZeeAa",
-      "price_min": 103.5
-    },
-    {
-      "timestamp": "2026-03-22T12:30:13.604145+00:00",
-      "event_id": "ZG9rmIYnyZeeA1",
-      "price_min": 69.0
-    },
-    {
-      "timestamp": "2026-03-22T13:09:41.913567+00:00",
-      "event_id": "ZG9rmIYnyZeeFd",
-      "price_min": 218.5
-    },
-    {
       "timestamp": "2026-03-22T13:09:41.913567+00:00",
       "event_id": "ZG9rmIYnyZeeA6",
       "price_min": 1371.25
@@ -5333,10 +5248,30 @@
     },
     {
       "timestamp": "2026-03-25T11:40:28.818170+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-03-25T12:01:21.829835+00:00",
+      "event_id": "ZG9rmIYnyZeeFd",
+      "price_min": 218.5
+    },
+    {
+      "timestamp": "2026-03-25T12:01:21.829835+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 1371.25
+    },
+    {
+      "timestamp": "2026-03-25T12:01:21.829835+00:00",
+      "event_id": "ZG9rmIYnyZee66",
+      "price_min": 510.0
+    },
+    {
+      "timestamp": "2026-03-25T12:01:21.829835+00:00",
       "event_id": "ZG9rmIYnyZeeA1",
       "price_min": 69.0
     }
   ],
-  "checks_count": 807,
+  "checks_count": 808,
   "errors": []
 }
