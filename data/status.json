@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-03-26T15:48:53.223864+00:00",
+  "last_check": "2026-03-26T16:09:04.279619+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -110,42 +110,11 @@
       "date": "2026-06-01",
       "venue": "Inalpi Arena, Torino",
       "is_single_day": true,
-      "price_min": 510.0,
-      "price_max": 1454.0,
+      "price_min": null,
+      "price_max": null,
       "currency": "EUR",
       "url": "https://www.ticketmaster.it/biglietti/wwe-monday-night-raw-torino-01-06-2026/event/w8facmymqkti",
-      "packages": [
-        {
-          "name": "THE BATTLE ROYAL ULTIMATE EXPERIENCE",
-          "price": 1454.0,
-          "available": true
-        },
-        {
-          "name": "THE 360 WWE SUPERSTAR EXPERIENCE",
-          "price": 1240.0,
-          "available": true
-        },
-        {
-          "name": "THE 360 WWE RINGSIDER PACKAGE",
-          "price": 992.0,
-          "available": true
-        },
-        {
-          "name": "THE WWE RAMPSIDER PACKAGE",
-          "price": 937.0,
-          "available": true
-        },
-        {
-          "name": "THE WWE RAMPSIDER PACKAGE",
-          "price": 707.0,
-          "available": true
-        },
-        {
-          "name": "THE WWE SUPERFAN PACKAGE",
-          "price": 510.0,
-          "available": true
-        }
-      ]
+      "packages": []
     },
     {
       "id": "ZG9rmIYnyZeeAa",
@@ -368,26 +337,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-03-23T16:43:12.907489+00:00",
-      "event_id": "ZG9rmIYnyZeeAa",
-      "price_min": 103.5
-    },
-    {
-      "timestamp": "2026-03-23T16:43:12.907489+00:00",
-      "event_id": "ZG9rmIYnyZeeA1",
-      "price_min": 69.0
-    },
-    {
-      "timestamp": "2026-03-23T17:03:29.150523+00:00",
-      "event_id": "ZG9rmIYnyZee66",
-      "price_min": 510.0
-    },
-    {
-      "timestamp": "2026-03-23T17:03:29.150523+00:00",
-      "event_id": "ZG9rmIYnyZeeAa",
-      "price_min": 103.5
-    },
-    {
       "timestamp": "2026-03-23T17:03:29.150523+00:00",
       "event_id": "ZG9rmIYnyZeeA1",
       "price_min": 69.0
@@ -5364,10 +5313,30 @@
     },
     {
       "timestamp": "2026-03-26T15:48:53.223864+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-03-26T16:09:04.279619+00:00",
+      "event_id": "ZG9rmIYnyZeeFd",
+      "price_min": 218.5
+    },
+    {
+      "timestamp": "2026-03-26T16:09:04.279619+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 1371.25
+    },
+    {
+      "timestamp": "2026-03-26T16:09:04.279619+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 103.5
+    },
+    {
+      "timestamp": "2026-03-26T16:09:04.279619+00:00",
       "event_id": "ZG9rmIYnyZeeA1",
       "price_min": 69.0
     }
   ],
-  "checks_count": 893,
+  "checks_count": 894,
   "errors": []
 }
