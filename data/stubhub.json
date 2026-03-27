@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-03-27T18:20:00.572901+00:00",
+  "last_check": "2026-03-27T18:40:16.269321+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -26,7 +26,7 @@
         },
         {
           "name": "Section 107",
-          "price": 1340.0,
+          "price": 1298.0,
           "available": true
         },
         {
@@ -41,7 +41,7 @@
         },
         {
           "name": "Section 116",
-          "price": 1171.0,
+          "price": 1136.0,
           "available": true
         },
         {
@@ -51,12 +51,12 @@
         },
         {
           "name": "Section 121",
-          "price": 1884.0,
+          "price": 1882.0,
           "available": true
         },
         {
           "name": "Section 104",
-          "price": 1884.0,
+          "price": 1882.0,
           "available": true
         },
         {
@@ -66,12 +66,12 @@
         },
         {
           "name": "Section 106",
-          "price": 1884.0,
+          "price": 1882.0,
           "available": true
         },
         {
           "name": "Section 111",
-          "price": 1014.0,
+          "price": 975.0,
           "available": true
         },
         {
@@ -118,11 +118,6 @@
           "available": true
         },
         {
-          "name": "Section 202",
-          "price": 289.0,
-          "available": true
-        },
-        {
           "name": "Section J",
           "price": 1940.0,
           "available": true
@@ -135,6 +130,11 @@
         {
           "name": "Section D",
           "price": 2309.0,
+          "available": true
+        },
+        {
+          "name": "Section 202",
+          "price": 289.0,
           "available": true
         },
         {
@@ -221,7 +221,7 @@
       "venue": "",
       "is_single_day": true,
       "price_min": 328.0,
-      "price_max": 1225.0,
+      "price_max": 660.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-smackdown-casalecchio-di-reno-bologna-tickets-6-5-2026/event/160574134/",
       "packages": [
@@ -233,6 +233,16 @@
         {
           "name": "Section 2 Est E",
           "price": 334.0,
+          "available": true
+        },
+        {
+          "name": "Section M",
+          "price": 660.0,
+          "available": true
+        },
+        {
+          "name": "Section M",
+          "price": 660.0,
           "available": true
         },
         {
@@ -256,13 +266,38 @@
           "available": true
         },
         {
+          "name": "Section 1 Ovest C",
+          "price": 496.0,
+          "available": true
+        },
+        {
           "name": "Section I",
           "price": 578.0,
           "available": true
         },
         {
-          "name": "Section 2 Ovest C",
-          "price": 374.0,
+          "name": "Section I",
+          "price": 578.0,
+          "available": true
+        },
+        {
+          "name": "Section I",
+          "price": 578.0,
+          "available": true
+        },
+        {
+          "name": "Section I",
+          "price": 578.0,
+          "available": true
+        },
+        {
+          "name": "Section I",
+          "price": 578.0,
+          "available": true
+        },
+        {
+          "name": "Section I",
+          "price": 578.0,
           "available": true
         },
         {
@@ -271,53 +306,13 @@
           "available": true
         },
         {
-          "name": "Section 2 Ovest D",
-          "price": 374.0,
-          "available": true
-        },
-        {
           "name": "Section H",
           "price": 578.0,
           "available": true
         },
         {
-          "name": "Section 1 Ovest B",
-          "price": 416.0,
-          "available": true
-        },
-        {
-          "name": "Section G",
+          "name": "Section H",
           "price": 578.0,
-          "available": true
-        },
-        {
-          "name": "Section G",
-          "price": 1225.0,
-          "available": true
-        },
-        {
-          "name": "Section G",
-          "price": 658.0,
-          "available": true
-        },
-        {
-          "name": "Section 1 Ovest E",
-          "price": 496.0,
-          "available": true
-        },
-        {
-          "name": "Section C",
-          "price": 660.0,
-          "available": true
-        },
-        {
-          "name": "Section C",
-          "price": 831.0,
-          "available": true
-        },
-        {
-          "name": "Section Secondo Settore H2",
-          "price": 660.0,
           "available": true
         }
       ]
@@ -325,21 +320,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-03-23T00:03:53.972772+00:00",
-      "event_id": "stubhub-160556794",
-      "price_min": 289.0
-    },
-    {
-      "timestamp": "2026-03-23T00:03:53.972772+00:00",
-      "event_id": "stubhub-160574134",
-      "price_min": 334.0
-    },
-    {
-      "timestamp": "2026-03-23T00:24:13.185997+00:00",
-      "event_id": "stubhub-160574096",
-      "price_min": 420.0
-    },
-    {
       "timestamp": "2026-03-23T00:24:13.185997+00:00",
       "event_id": "stubhub-160556794",
       "price_min": 287.0
@@ -5321,10 +5301,25 @@
     },
     {
       "timestamp": "2026-03-27T18:20:00.572901+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 328.0
+    },
+    {
+      "timestamp": "2026-03-27T18:40:16.269321+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 755.0
+    },
+    {
+      "timestamp": "2026-03-27T18:40:16.269321+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 289.0
+    },
+    {
+      "timestamp": "2026-03-27T18:40:16.269321+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 328.0
     }
   ],
-  "checks_count": 908,
+  "checks_count": 909,
   "errors": []
 }
