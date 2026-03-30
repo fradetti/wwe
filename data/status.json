@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-03-30T01:05:09.681857+00:00",
+  "last_check": "2026-03-30T01:26:05.195821+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -110,42 +110,11 @@
       "date": "2026-06-01",
       "venue": "Inalpi Arena, Torino",
       "is_single_day": true,
-      "price_min": 510.0,
-      "price_max": 1454.0,
+      "price_min": null,
+      "price_max": null,
       "currency": "EUR",
       "url": "https://www.ticketmaster.it/biglietti/wwe-monday-night-raw-torino-01-06-2026/event/w8facmymqkti",
-      "packages": [
-        {
-          "name": "THE BATTLE ROYAL ULTIMATE EXPERIENCE",
-          "price": 1454.0,
-          "available": true
-        },
-        {
-          "name": "THE 360 WWE SUPERSTAR EXPERIENCE",
-          "price": 1240.0,
-          "available": true
-        },
-        {
-          "name": "THE 360 WWE RINGSIDER PACKAGE",
-          "price": 992.0,
-          "available": true
-        },
-        {
-          "name": "THE WWE RAMPSIDER PACKAGE",
-          "price": 937.0,
-          "available": true
-        },
-        {
-          "name": "THE WWE RAMPSIDER PACKAGE",
-          "price": 707.0,
-          "available": true
-        },
-        {
-          "name": "THE WWE SUPERFAN PACKAGE",
-          "price": 510.0,
-          "available": true
-        }
-      ]
+      "packages": []
     },
     {
       "id": "ZG9rmIYnyZeeAa",
@@ -359,101 +328,15 @@
       "date": "2026-06-07",
       "venue": "Mandela Forum, Firenze",
       "is_single_day": true,
-      "price_min": 69.0,
-      "price_max": 1109.0,
+      "price_min": null,
+      "price_max": null,
       "currency": "EUR",
       "url": "https://www.ticketmaster.it/biglietti/wwe-european-summer-tour-firenze-07-06-2026/event/xxlb2e7953yg",
-      "packages": [
-        {
-          "name": "1° Settore Num.",
-          "price": 345.0,
-          "available": false
-        },
-        {
-          "name": "2° Settore Num.",
-          "price": 230.0,
-          "available": false
-        },
-        {
-          "name": "3° Settore Num.",
-          "price": 258.75,
-          "available": true
-        },
-        {
-          "name": "4° Settore Num.",
-          "price": 187.45,
-          "available": true
-        },
-        {
-          "name": "5° Settore Num.",
-          "price": 149.5,
-          "available": true
-        },
-        {
-          "name": "6° Settore Num.",
-          "price": 103.5,
-          "available": true
-        },
-        {
-          "name": "7° Settore Num.",
-          "price": 147.2,
-          "available": true
-        },
-        {
-          "name": "8° Settore Num.",
-          "price": 69.0,
-          "available": true
-        },
-        {
-          "name": "THE BATTLE ROYAL ULTIMATE EXPERIENCE",
-          "price": 1109.0,
-          "available": true
-        },
-        {
-          "name": "THE 360 WWE SUPERSTAR EXPERIENCE",
-          "price": 829.0,
-          "available": true
-        },
-        {
-          "name": "THE WWE RAMP WALK PACKAGE",
-          "price": 592.0,
-          "available": true
-        },
-        {
-          "name": "THE WWE SUPERFAN PACKAGE",
-          "price": 422.0,
-          "available": true
-        },
-        {
-          "name": "THE WWE PREMIUM FAN PACKAGE",
-          "price": 287.5,
-          "available": true
-        }
-      ]
+      "packages": []
     }
   ],
   "price_history": [
     {
-      "timestamp": "2026-03-27T01:40:19.979528+00:00",
-      "event_id": "ZG9rmIYnyZee66",
-      "price_min": 510.0
-    },
-    {
-      "timestamp": "2026-03-27T01:40:19.979528+00:00",
-      "event_id": "ZG9rmIYnyZeeAa",
-      "price_min": 103.5
-    },
-    {
-      "timestamp": "2026-03-27T01:40:19.979528+00:00",
-      "event_id": "ZG9rmIYnyZeeA1",
-      "price_min": 69.0
-    },
-    {
-      "timestamp": "2026-03-27T02:00:34.615524+00:00",
-      "event_id": "ZG9rmIYnyZeeFd",
-      "price_min": 218.5
-    },
-    {
       "timestamp": "2026-03-27T02:00:34.615524+00:00",
       "event_id": "ZG9rmIYnyZeeA6",
       "price_min": 1371.25
@@ -5431,9 +5314,29 @@
     {
       "timestamp": "2026-03-30T01:05:09.681857+00:00",
       "event_id": "ZG9rmIYnyZeekv",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-03-30T01:26:05.195821+00:00",
+      "event_id": "ZG9rmIYnyZeeFd",
+      "price_min": 218.5
+    },
+    {
+      "timestamp": "2026-03-30T01:26:05.195821+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 1371.25
+    },
+    {
+      "timestamp": "2026-03-30T01:26:05.195821+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 103.5
+    },
+    {
+      "timestamp": "2026-03-30T01:26:05.195821+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
       "price_min": 69.0
     }
   ],
-  "checks_count": 1141,
+  "checks_count": 1142,
   "errors": []
 }
