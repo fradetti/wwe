@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-03-31T02:17:09.068417+00:00",
+  "last_check": "2026-03-31T02:37:15.545231+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -312,21 +312,21 @@
         },
         {
           "name": "Section 1 Ovest C",
-          "price": 470.0,
-          "available": true
-        },
-        {
-          "name": "Section 1 Ovest C",
           "price": 658.0,
           "available": true
         },
         {
           "name": "Section 1 Ovest C",
-          "price": 475.0,
+          "price": 469.0,
           "available": true
         },
         {
           "name": "Section 1 Est D",
+          "price": 488.0,
+          "available": true
+        },
+        {
+          "name": "Section 1 Est C",
           "price": 488.0,
           "available": true
         }
@@ -335,21 +335,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-03-26T08:00:44.023897+00:00",
-      "event_id": "stubhub-160556794",
-      "price_min": 289.0
-    },
-    {
-      "timestamp": "2026-03-26T08:00:44.023897+00:00",
-      "event_id": "stubhub-160574134",
-      "price_min": 334.0
-    },
-    {
-      "timestamp": "2026-03-26T08:20:55.452529+00:00",
-      "event_id": "stubhub-160574096",
-      "price_min": 755.0
-    },
-    {
       "timestamp": "2026-03-26T08:20:55.452529+00:00",
       "event_id": "stubhub-160556794",
       "price_min": 289.0
@@ -5331,10 +5316,25 @@
     },
     {
       "timestamp": "2026-03-31T02:17:09.068417+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 323.0
+    },
+    {
+      "timestamp": "2026-03-31T02:37:15.545231+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 498.0
+    },
+    {
+      "timestamp": "2026-03-31T02:37:15.545231+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 283.0
+    },
+    {
+      "timestamp": "2026-03-31T02:37:15.545231+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 323.0
     }
   ],
-  "checks_count": 1141,
+  "checks_count": 1142,
   "errors": []
 }
