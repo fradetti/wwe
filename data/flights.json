@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-04-01T03:55:16.215084+00:00",
+  "last_check": "2026-04-01T04:15:22.101084+00:00",
   "flights": [
     {
       "date": "2026-04-03",
@@ -112,13 +112,13 @@
       "origin": "DXB",
       "destination": "NCE",
       "scheduled_departure": "07:40",
-      "actual_departure": "08:00",
+      "actual_departure": "08:30",
       "dep_timezone": "+04",
       "scheduled_arrival": "13:30",
-      "actual_arrival": "13:33",
+      "actual_arrival": "14:05",
       "arr_timezone": "CEST",
-      "departure_delay_min": 20,
-      "arrival_delay_min": 3,
+      "departure_delay_min": 50,
+      "arrival_delay_min": 35,
       "status": "Scheduled"
     },
     {
