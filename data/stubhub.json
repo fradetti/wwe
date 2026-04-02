@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-04-02T03:03:17.658903+00:00",
+  "last_check": "2026-04-02T03:23:23.775271+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -93,16 +93,6 @@
           "available": true
         },
         {
-          "name": "Section 111",
-          "price": 539.0,
-          "available": true
-        },
-        {
-          "name": "Section 111",
-          "price": 425.0,
-          "available": true
-        },
-        {
           "name": "Section 112",
           "price": 800.0,
           "available": true
@@ -115,6 +105,16 @@
         {
           "name": "Section 111",
           "price": 458.0,
+          "available": true
+        },
+        {
+          "name": "Floor",
+          "price": 797.0,
+          "available": true
+        },
+        {
+          "name": "Floor",
+          "price": 520.0,
           "available": true
         }
       ]
@@ -175,21 +175,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-03-28T09:14:56.375870+00:00",
-      "event_id": "stubhub-160574134",
-      "price_min": 323.0
-    },
-    {
-      "timestamp": "2026-03-28T09:35:04.080281+00:00",
-      "event_id": "stubhub-160574096",
-      "price_min": 755.0
-    },
-    {
-      "timestamp": "2026-03-28T09:35:04.080281+00:00",
-      "event_id": "stubhub-160556794",
-      "price_min": 289.0
-    },
-    {
       "timestamp": "2026-03-28T09:35:04.080281+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 328.0
@@ -5171,10 +5156,25 @@
     },
     {
       "timestamp": "2026-04-02T03:03:17.658903+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 289.0
+    },
+    {
+      "timestamp": "2026-04-02T03:23:23.775271+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 498.0
+    },
+    {
+      "timestamp": "2026-04-02T03:23:23.775271+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 289.0
+    },
+    {
+      "timestamp": "2026-04-02T03:23:23.775271+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 289.0
     }
   ],
-  "checks_count": 1284,
+  "checks_count": 1285,
   "errors": []
 }
