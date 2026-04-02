@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-04-02T22:56:43.237004+00:00",
+  "last_check": "2026-04-02T23:17:18.350230+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -153,11 +153,107 @@
       "date": "2026-06-05",
       "venue": "Unipol Arena, Casalecchio di Reno",
       "is_single_day": true,
-      "price_min": null,
-      "price_max": null,
+      "price_min": 103.5,
+      "price_max": 1396.5,
       "currency": "EUR",
       "url": "https://www.ticketmaster.it/biglietti/wwe-friday-night-smackdown-casalecchio-di-reno-05-06-2026/event/gaw6l9am8v3m",
-      "packages": []
+      "packages": [
+        {
+          "name": "1° Settore Num.",
+          "price": 632.5,
+          "available": false
+        },
+        {
+          "name": "2° Settore Num.",
+          "price": 517.5,
+          "available": true
+        },
+        {
+          "name": "3° Settore Num.",
+          "price": 552.0,
+          "available": true
+        },
+        {
+          "name": "4° Settore Num.",
+          "price": 483.0,
+          "available": true
+        },
+        {
+          "name": "5° Settore Num.",
+          "price": 483.0,
+          "available": true
+        },
+        {
+          "name": "6° Settore Num.",
+          "price": 287.5,
+          "available": true
+        },
+        {
+          "name": "7° Settore Num.",
+          "price": 258.75,
+          "available": true
+        },
+        {
+          "name": "8° Settore Num.",
+          "price": 230.0,
+          "available": true
+        },
+        {
+          "name": "9° Settore Num.",
+          "price": 172.5,
+          "available": true
+        },
+        {
+          "name": "10° Settore Num.",
+          "price": 132.25,
+          "available": false
+        },
+        {
+          "name": "11° Settore Num.",
+          "price": 103.5,
+          "available": false
+        },
+        {
+          "name": "THE BATTLE ROYAL ULTIMATE EXPERIENCE",
+          "price": 1396.5,
+          "available": true
+        },
+        {
+          "name": "THE 360 WWE SUPERSTAR EXPERIENCE",
+          "price": 1182.5,
+          "available": true
+        },
+        {
+          "name": "THE 360 WWE RINGSIDER PACKAGE",
+          "price": 934.5,
+          "available": true
+        },
+        {
+          "name": "THE 360 WWE RINGSIDER PACKAGE",
+          "price": 819.5,
+          "available": false
+        },
+        {
+          "name": "THE WWE RAMPSIDER PACKAGE",
+          "price": 879.5,
+          "available": true
+        },
+        {
+          "name": "THE WWE RAMPSIDER PACKAGE",
+          "price": 764.5,
+          "available": true
+        },
+        {
+          "name": "THE WWE RAMPSIDER PACKAGE",
+          "price": 707.0,
+          "available": false
+        },
+        {
+          "name": "THE WWE SUPERFAN PACKAGE",
+          "price": 625.0,
+          "available": true
+        }
+      ]
     },
     {
       "id": "ZG9rmIYnyZeeA1",
@@ -272,31 +368,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-03-31T01:36:28.551309+00:00",
-      "event_id": "ZG9rmIYnyZeeFd",
-      "price_min": 218.5
-    },
-    {
-      "timestamp": "2026-03-31T01:36:28.551309+00:00",
-      "event_id": "ZG9rmIYnyZeeA6",
-      "price_min": 1371.25
-    },
-    {
-      "timestamp": "2026-03-31T01:36:28.551309+00:00",
-      "event_id": "ZG9rmIYnyZee66",
-      "price_min": 510.0
-    },
-    {
-      "timestamp": "2026-03-31T01:36:28.551309+00:00",
-      "event_id": "ZG9rmIYnyZeeAa",
-      "price_min": 103.5
-    },
-    {
-      "timestamp": "2026-03-31T01:36:28.551309+00:00",
-      "event_id": "ZG9rmIYnyZeeA1",
-      "price_min": 69.0
-    },
-    {
       "timestamp": "2026-03-31T01:56:31.257098+00:00",
       "event_id": "ZG9rmIYnyZeeFd",
       "price_min": 218.5
@@ -5268,10 +5339,35 @@
     },
     {
       "timestamp": "2026-04-02T22:56:43.237004+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-04-02T23:17:18.350230+00:00",
+      "event_id": "ZG9rmIYnyZeeFd",
+      "price_min": 218.5
+    },
+    {
+      "timestamp": "2026-04-02T23:17:18.350230+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 1371.25
+    },
+    {
+      "timestamp": "2026-04-02T23:17:18.350230+00:00",
+      "event_id": "ZG9rmIYnyZee66",
+      "price_min": 510.0
+    },
+    {
+      "timestamp": "2026-04-02T23:17:18.350230+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 103.5
+    },
+    {
+      "timestamp": "2026-04-02T23:17:18.350230+00:00",
       "event_id": "ZG9rmIYnyZeeA1",
       "price_min": 69.0
     }
   ],
-  "checks_count": 1434,
+  "checks_count": 1435,
   "errors": []
 }
