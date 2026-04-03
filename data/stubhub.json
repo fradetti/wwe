@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-04-03T02:01:16.320627+00:00",
+  "last_check": "2026-04-03T02:21:28.708192+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -9,19 +9,19 @@
       "date": "2026-05-31",
       "venue": "",
       "is_single_day": true,
-      "price_min": 498.0,
+      "price_min": 436.0,
       "price_max": 1014.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-clash-in-italy-turin-tickets-5-31-2026/event/160574096/",
       "packages": [
         {
           "name": "MIX",
-          "price": 498.0,
+          "price": 436.0,
           "available": true
         },
         {
           "name": "Section 112",
-          "price": 498.0,
+          "price": 436.0,
           "available": true
         },
         {
@@ -62,19 +62,14 @@
       "date": "2026-06-01",
       "venue": "",
       "is_single_day": true,
-      "price_min": 289.0,
-      "price_max": 800.0,
+      "price_min": 296.0,
+      "price_max": 1133.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-raw-turin-tickets-6-1-2026/event/160556794/",
       "packages": [
         {
           "name": "MIX",
-          "price": 289.0,
-          "available": true
-        },
-        {
-          "name": "Section 202",
-          "price": 289.0,
+          "price": 296.0,
           "available": true
         },
         {
@@ -93,16 +88,6 @@
           "available": true
         },
         {
-          "name": "Section 112",
-          "price": 800.0,
-          "available": true
-        },
-        {
-          "name": "Section 112",
-          "price": 456.0,
-          "available": true
-        },
-        {
           "name": "Section 111",
           "price": 458.0,
           "available": true
@@ -115,6 +100,16 @@
         {
           "name": "Floor",
           "price": 520.0,
+          "available": true
+        },
+        {
+          "name": "Section 111",
+          "price": 764.0,
+          "available": true
+        },
+        {
+          "name": "Section 116",
+          "price": 1133.0,
           "available": true
         }
       ]
@@ -174,21 +169,6 @@
     }
   ],
   "price_history": [
-    {
-      "timestamp": "2026-03-29T08:12:26.275569+00:00",
-      "event_id": "stubhub-160574096",
-      "price_min": 763.0
-    },
-    {
-      "timestamp": "2026-03-29T08:12:26.275569+00:00",
-      "event_id": "stubhub-160556794",
-      "price_min": 286.0
-    },
-    {
-      "timestamp": "2026-03-29T08:12:26.275569+00:00",
-      "event_id": "stubhub-160574134",
-      "price_min": 323.0
-    },
     {
       "timestamp": "2026-03-29T08:32:33.825824+00:00",
       "event_id": "stubhub-160574096",
@@ -5173,8 +5153,23 @@
       "timestamp": "2026-04-03T02:01:16.320627+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 289.0
+    },
+    {
+      "timestamp": "2026-04-03T02:21:28.708192+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 436.0
+    },
+    {
+      "timestamp": "2026-04-03T02:21:28.708192+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 296.0
+    },
+    {
+      "timestamp": "2026-04-03T02:21:28.708192+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 289.0
     }
   ],
-  "checks_count": 1352,
+  "checks_count": 1353,
   "errors": []
 }
