@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-04-04T16:13:44.316747+00:00",
+  "last_check": "2026-04-04T16:33:50.296920+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -58,7 +58,7 @@
       "venue": "",
       "is_single_day": true,
       "price_min": 298.0,
-      "price_max": 1133.0,
+      "price_max": 797.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-raw-turin-tickets-6-1-2026/event/160556794/",
       "packages": [
@@ -79,6 +79,11 @@
         },
         {
           "name": "Section 111",
+          "price": 432.0,
+          "available": true
+        },
+        {
+          "name": "Section 111",
           "price": 457.0,
           "available": true
         },
@@ -95,11 +100,6 @@
         {
           "name": "Section 111",
           "price": 764.0,
-          "available": true
-        },
-        {
-          "name": "Section 116",
-          "price": 1133.0,
           "available": true
         }
       ]
@@ -159,21 +159,6 @@
     }
   ],
   "price_history": [
-    {
-      "timestamp": "2026-03-30T22:55:40.656470+00:00",
-      "event_id": "stubhub-160574096",
-      "price_min": 498.0
-    },
-    {
-      "timestamp": "2026-03-30T22:55:40.656470+00:00",
-      "event_id": "stubhub-160556794",
-      "price_min": 284.0
-    },
-    {
-      "timestamp": "2026-03-30T22:55:40.656470+00:00",
-      "event_id": "stubhub-160574134",
-      "price_min": 324.0
-    },
     {
       "timestamp": "2026-03-30T23:15:52.190659+00:00",
       "event_id": "stubhub-160574096",
@@ -5158,8 +5143,23 @@
       "timestamp": "2026-04-04T16:13:44.316747+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 282.0
+    },
+    {
+      "timestamp": "2026-04-04T16:33:50.296920+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 436.0
+    },
+    {
+      "timestamp": "2026-04-04T16:33:50.296920+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 298.0
+    },
+    {
+      "timestamp": "2026-04-04T16:33:50.296920+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 282.0
     }
   ],
-  "checks_count": 1465,
+  "checks_count": 1466,
   "errors": []
 }
