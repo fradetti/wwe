@@ -1,7 +1,7 @@
 {
-  "last_check": "2026-04-04T09:48:08.838884+00:00",
+  "last_check": "2026-04-04T10:08:15.808152+00:00",
   "threshold_eur": 400,
-  "alert_active": false,
+  "alert_active": true,
   "events": [
     {
       "id": "ZG9rmIYnyZeeFd",
@@ -52,7 +52,7 @@
         {
           "name": "9° Settore Num.",
           "price": 258.75,
-          "available": false
+          "available": true
         },
         {
           "name": "10° Settore Num.",
@@ -368,31 +368,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-04-01T11:33:38.129061+00:00",
-      "event_id": "ZG9rmIYnyZeeA6",
-      "price_min": 1371.25
-    },
-    {
-      "timestamp": "2026-04-01T11:33:38.129061+00:00",
-      "event_id": "ZG9rmIYnyZee66",
-      "price_min": 510.0
-    },
-    {
-      "timestamp": "2026-04-01T11:33:38.129061+00:00",
-      "event_id": "ZG9rmIYnyZeeAa",
-      "price_min": 103.5
-    },
-    {
-      "timestamp": "2026-04-01T11:33:38.129061+00:00",
-      "event_id": "ZG9rmIYnyZeeA1",
-      "price_min": 69.0
-    },
-    {
-      "timestamp": "2026-04-01T11:54:03.563268+00:00",
-      "event_id": "ZG9rmIYnyZeeFd",
-      "price_min": 218.5
-    },
-    {
       "timestamp": "2026-04-01T11:54:03.563268+00:00",
       "event_id": "ZG9rmIYnyZeeA6",
       "price_min": 1371.25
@@ -5364,10 +5339,35 @@
     },
     {
       "timestamp": "2026-04-04T09:48:08.838884+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-04-04T10:08:15.808152+00:00",
+      "event_id": "ZG9rmIYnyZeeFd",
+      "price_min": 218.5
+    },
+    {
+      "timestamp": "2026-04-04T10:08:15.808152+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 1371.25
+    },
+    {
+      "timestamp": "2026-04-04T10:08:15.808152+00:00",
+      "event_id": "ZG9rmIYnyZee66",
+      "price_min": 510.0
+    },
+    {
+      "timestamp": "2026-04-04T10:08:15.808152+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 103.5
+    },
+    {
+      "timestamp": "2026-04-04T10:08:15.808152+00:00",
       "event_id": "ZG9rmIYnyZeeA1",
       "price_min": 69.0
     }
   ],
-  "checks_count": 1543,
+  "checks_count": 1544,
   "errors": []
 }
