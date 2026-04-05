@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-04-05T06:10:54.540449+00:00",
+  "last_check": "2026-04-05T06:31:29.517972+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -269,17 +269,17 @@
         {
           "name": "1° Settore Num.",
           "price": 345.0,
-          "available": false
+          "available": true
         },
         {
           "name": "2° Settore Num.",
           "price": 230.0,
-          "available": false
+          "available": true
         },
         {
           "name": "3° Settore Num.",
           "price": 172.5,
-          "available": false
+          "available": true
         },
         {
           "name": "4° Settore Num.",
@@ -289,7 +289,7 @@
         {
           "name": "5° Settore Num.",
           "price": 126.5,
-          "available": false
+          "available": true
         },
         {
           "name": "6° Settore Num.",
@@ -319,17 +319,17 @@
         {
           "name": "THE BATTLE ROYAL ULTIMATE EXPERIENCE",
           "price": 1109.0,
-          "available": false
+          "available": true
         },
         {
           "name": "THE 360 WWE SUPERSTAR EXPERIENCE",
           "price": 829.0,
-          "available": false
+          "available": true
         },
         {
           "name": "THE WWE RAMP WALK PACKAGE",
           "price": 592.0,
-          "available": false
+          "available": true
         },
         {
           "name": "THE WWE RAMP WALK PACKAGE",
@@ -344,7 +344,7 @@
         {
           "name": "THE WWE SUPERFAN PACKAGE",
           "price": 422.0,
-          "available": false
+          "available": true
         },
         {
           "name": "THE WWE PREMIUM FAN PACKAGE",
@@ -368,31 +368,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-04-02T07:45:37.691601+00:00",
-      "event_id": "ZG9rmIYnyZeeAa",
-      "price_min": 103.5
-    },
-    {
-      "timestamp": "2026-04-02T07:45:37.691601+00:00",
-      "event_id": "ZG9rmIYnyZeeA1",
-      "price_min": 69.0
-    },
-    {
-      "timestamp": "2026-04-02T08:05:44.495270+00:00",
-      "event_id": "ZG9rmIYnyZeeFd",
-      "price_min": 218.5
-    },
-    {
-      "timestamp": "2026-04-02T08:05:44.495270+00:00",
-      "event_id": "ZG9rmIYnyZeeA6",
-      "price_min": 1371.25
-    },
-    {
-      "timestamp": "2026-04-02T08:05:44.495270+00:00",
-      "event_id": "ZG9rmIYnyZee66",
-      "price_min": 510.0
-    },
-    {
       "timestamp": "2026-04-02T08:05:44.495270+00:00",
       "event_id": "ZG9rmIYnyZeeAa",
       "price_min": 103.5
@@ -5364,10 +5339,35 @@
     },
     {
       "timestamp": "2026-04-05T06:10:54.540449+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-04-05T06:31:29.517972+00:00",
+      "event_id": "ZG9rmIYnyZeeFd",
+      "price_min": 218.5
+    },
+    {
+      "timestamp": "2026-04-05T06:31:29.517972+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 1371.25
+    },
+    {
+      "timestamp": "2026-04-05T06:31:29.517972+00:00",
+      "event_id": "ZG9rmIYnyZee66",
+      "price_min": 510.0
+    },
+    {
+      "timestamp": "2026-04-05T06:31:29.517972+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 103.5
+    },
+    {
+      "timestamp": "2026-04-05T06:31:29.517972+00:00",
       "event_id": "ZG9rmIYnyZeeA1",
       "price_min": 69.0
     }
   ],
-  "checks_count": 1606,
+  "checks_count": 1607,
   "errors": []
 }
