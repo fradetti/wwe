@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-04-07T07:32:00.925196+00:00",
+  "last_check": "2026-04-07T07:52:01.666808+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -116,7 +116,7 @@
       "venue": "",
       "is_single_day": true,
       "price_min": 282.0,
-      "price_max": 600.0,
+      "price_max": 374.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-smackdown-casalecchio-di-reno-bologna-tickets-6-5-2026/event/160574134/",
       "packages": [
@@ -136,21 +136,6 @@
           "available": true
         },
         {
-          "name": "Section 2 Est E",
-          "price": 340.0,
-          "available": true
-        },
-        {
-          "name": "Section 2 Est C",
-          "price": 600.0,
-          "available": true
-        },
-        {
-          "name": "Section 2 Est C",
-          "price": 341.0,
-          "available": true
-        },
-        {
           "name": "Section 2 Ovest C",
           "price": 374.0,
           "available": true
@@ -159,26 +144,21 @@
           "name": "Section 2 Est D",
           "price": 374.0,
           "available": true
+        },
+        {
+          "name": "Section 2 Ovest D",
+          "price": 374.0,
+          "available": true
+        },
+        {
+          "name": "Section 2 Est C",
+          "price": 374.0,
+          "available": true
         }
       ]
     }
   ],
   "price_history": [
-    {
-      "timestamp": "2026-04-02T13:30:01.351550+00:00",
-      "event_id": "stubhub-160574096",
-      "price_min": 495.0
-    },
-    {
-      "timestamp": "2026-04-02T13:30:01.351550+00:00",
-      "event_id": "stubhub-160556794",
-      "price_min": 283.0
-    },
-    {
-      "timestamp": "2026-04-02T13:30:01.351550+00:00",
-      "event_id": "stubhub-160574134",
-      "price_min": 286.0
-    },
     {
       "timestamp": "2026-04-02T13:50:05.959971+00:00",
       "event_id": "stubhub-160574096",
@@ -5163,8 +5143,23 @@
       "timestamp": "2026-04-07T07:32:00.925196+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 282.0
+    },
+    {
+      "timestamp": "2026-04-07T07:52:01.666808+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 436.0
+    },
+    {
+      "timestamp": "2026-04-07T07:52:01.666808+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 298.0
+    },
+    {
+      "timestamp": "2026-04-07T07:52:01.666808+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 282.0
     }
   ],
-  "checks_count": 1649,
+  "checks_count": 1650,
   "errors": []
 }
