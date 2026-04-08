@@ -1,65 +1,19 @@
 {
-  "last_check": "2026-04-08T21:38:26.515536+00:00",
+  "last_check": "2026-04-08T21:58:36.650607+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
     {
       "id": "stubhub-160574096",
-      "name": "WWE Clash in Italy",
+      "name": "May 31",
       "date": "2026-05-31",
       "venue": "",
       "is_single_day": true,
-      "price_min": 436.0,
-      "price_max": 1225.0,
+      "price_min": null,
+      "price_max": null,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-clash-in-italy-turin-tickets-5-31-2026/event/160574096/",
-      "packages": [
-        {
-          "name": "MIX",
-          "price": 436.0,
-          "available": true
-        },
-        {
-          "name": "Section 112",
-          "price": 436.0,
-          "available": true
-        },
-        {
-          "name": "Section 302",
-          "price": 600.0,
-          "available": true
-        },
-        {
-          "name": "Section 302",
-          "price": 436.0,
-          "available": true
-        },
-        {
-          "name": "Section K",
-          "price": 597.0,
-          "available": true
-        },
-        {
-          "name": "Section 111",
-          "price": 1225.0,
-          "available": true
-        },
-        {
-          "name": "Section 111",
-          "price": 726.0,
-          "available": true
-        },
-        {
-          "name": "Section J",
-          "price": 830.0,
-          "available": true
-        },
-        {
-          "name": "Section 221",
-          "price": 1014.0,
-          "available": true
-        }
-      ]
+      "packages": []
     },
     {
       "id": "stubhub-160556794",
@@ -67,29 +21,34 @@
       "date": "2026-06-01",
       "venue": "",
       "is_single_day": true,
-      "price_min": 299.0,
+      "price_min": 297.0,
       "price_max": 1133.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-raw-turin-tickets-6-1-2026/event/160556794/",
       "packages": [
         {
           "name": "MIX",
-          "price": 299.0,
+          "price": 297.0,
           "available": true
         },
         {
           "name": "Section 203",
-          "price": 299.0,
+          "price": 297.0,
           "available": true
         },
         {
           "name": "Section 302",
-          "price": 377.0,
+          "price": 453.0,
+          "available": true
+        },
+        {
+          "name": "Section 302",
+          "price": 358.0,
           "available": true
         },
         {
           "name": "Section 111",
-          "price": 457.0,
+          "price": 444.0,
           "available": true
         },
         {
@@ -165,16 +124,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-04-04T02:40:48.804032+00:00",
-      "event_id": "stubhub-160574134",
-      "price_min": 282.0
-    },
-    {
-      "timestamp": "2026-04-04T03:01:27.969922+00:00",
-      "event_id": "stubhub-160574096",
-      "price_min": 436.0
-    },
-    {
       "timestamp": "2026-04-04T03:01:27.969922+00:00",
       "event_id": "stubhub-160556794",
       "price_min": 296.0
@@ -5161,10 +5110,20 @@
     },
     {
       "timestamp": "2026-04-08T21:38:26.515536+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 225.0
+    },
+    {
+      "timestamp": "2026-04-08T21:58:36.650607+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 297.0
+    },
+    {
+      "timestamp": "2026-04-08T21:58:36.650607+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 225.0
     }
   ],
-  "checks_count": 1758,
+  "checks_count": 1759,
   "errors": []
 }
