@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-04-07T20:43:43.275700+00:00",
+  "last_check": "2026-04-08T06:34:35.709988+00:00",
   "flights": [
     {
       "date": "2026-04-10",
@@ -67,13 +67,13 @@
       "origin": "SEZ",
       "destination": "DXB",
       "scheduled_departure": "08:25",
-      "actual_departure": "",
+      "actual_departure": "08:25",
       "dep_timezone": "+04",
       "scheduled_arrival": "12:55",
-      "actual_arrival": "",
+      "actual_arrival": "12:55",
       "arr_timezone": "+04",
-      "departure_delay_min": null,
-      "arrival_delay_min": null,
+      "departure_delay_min": 0,
+      "arrival_delay_min": 0,
       "status": "Future"
     },
     {
@@ -82,13 +82,13 @@
       "origin": "DXB",
       "destination": "SEZ",
       "scheduled_departure": "02:15",
-      "actual_departure": "",
+      "actual_departure": "02:15",
       "dep_timezone": "+04",
       "scheduled_arrival": "06:50",
-      "actual_arrival": "",
+      "actual_arrival": "06:50",
       "arr_timezone": "+04",
-      "departure_delay_min": null,
-      "arrival_delay_min": null,
+      "departure_delay_min": 0,
+      "arrival_delay_min": 0,
       "status": "Scheduled"
     },
     {
@@ -104,7 +104,7 @@
       "arr_timezone": "+04",
       "departure_delay_min": 0,
       "arrival_delay_min": 0,
-      "status": "Future"
+      "status": "Scheduled"
     },
     {
       "date": "2026-04-08",
@@ -112,14 +112,14 @@
       "origin": "DXB",
       "destination": "NCE",
       "scheduled_departure": "07:40",
-      "actual_departure": "07:40",
+      "actual_departure": "09:04",
       "dep_timezone": "+04",
       "scheduled_arrival": "13:30",
-      "actual_arrival": "13:30",
+      "actual_arrival": "14:41",
       "arr_timezone": "CEST",
-      "departure_delay_min": 0,
-      "arrival_delay_min": 0,
-      "status": "Scheduled"
+      "departure_delay_min": 84,
+      "arrival_delay_min": 71,
+      "status": "En Route"
     },
     {
       "date": "2026-04-08",
@@ -127,14 +127,14 @@
       "origin": "SEZ",
       "destination": "DXB",
       "scheduled_departure": "08:25",
-      "actual_departure": "08:25",
+      "actual_departure": "08:15",
       "dep_timezone": "+04",
       "scheduled_arrival": "12:55",
-      "actual_arrival": "12:50",
+      "actual_arrival": "12:40",
       "arr_timezone": "+04",
-      "departure_delay_min": 0,
-      "arrival_delay_min": -5,
-      "status": "Scheduled"
+      "departure_delay_min": -10,
+      "arrival_delay_min": -15,
+      "status": "En Route"
     },
     {
       "date": "2026-04-08",
@@ -145,11 +145,11 @@
       "actual_departure": "02:15",
       "dep_timezone": "+04",
       "scheduled_arrival": "06:50",
-      "actual_arrival": "06:49",
+      "actual_arrival": "06:42",
       "arr_timezone": "+04",
       "departure_delay_min": 0,
-      "arrival_delay_min": -1,
-      "status": "Historical"
+      "arrival_delay_min": -8,
+      "status": "Landed"
     },
     {
       "date": "2026-04-07",
