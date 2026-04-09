@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-04-09T21:39:50.288599+00:00",
+  "last_check": "2026-04-09T22:00:57.888734+00:00",
   "flights": [
     {
       "date": "2026-04-12",
@@ -134,7 +134,7 @@
       "arr_timezone": "+04",
       "departure_delay_min": 0,
       "arrival_delay_min": 0,
-      "status": "Future"
+      "status": "Scheduled"
     },
     {
       "date": "2026-04-10",
