@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-04-09T19:12:12.788290+00:00",
+  "last_check": "2026-04-09T19:32:25.623187+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -22,6 +22,11 @@
         {
           "name": "3° Settore Num.",
           "price": 920.0,
+          "available": true
+        },
+        {
+          "name": "4° Settore Num.",
+          "price": 1121.25,
           "available": true
         },
         {
@@ -62,15 +67,20 @@
       "date": "2026-05-31",
       "venue": "Inalpi Arena, Torino",
       "is_single_day": true,
-      "price_min": 1371.25,
+      "price_min": 103.5,
       "price_max": 10142.5,
       "currency": "EUR",
       "url": "https://www.ticketmaster.it/biglietti/wwe-clash-in-italy-torino-31-05-2026/event/ur737yvj5cba",
       "packages": [
         {
+          "name": "11° Settore Num.",
+          "price": 103.5,
+          "available": true
+        },
+        {
           "name": "Champion+ Package",
           "price": 10142.5,
-          "available": false
+          "available": true
         },
         {
           "name": "Champion Package",
@@ -363,31 +373,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-04-06T18:41:20.108628+00:00",
-      "event_id": "ZG9rmIYnyZee66",
-      "price_min": 510.0
-    },
-    {
-      "timestamp": "2026-04-06T18:41:20.108628+00:00",
-      "event_id": "ZG9rmIYnyZeeAa",
-      "price_min": 103.5
-    },
-    {
-      "timestamp": "2026-04-06T18:41:20.108628+00:00",
-      "event_id": "ZG9rmIYnyZeeA1",
-      "price_min": 69.0
-    },
-    {
-      "timestamp": "2026-04-06T19:21:50.504949+00:00",
-      "event_id": "ZG9rmIYnyZeeFd",
-      "price_min": 218.5
-    },
-    {
-      "timestamp": "2026-04-06T19:21:50.504949+00:00",
-      "event_id": "ZG9rmIYnyZeeA6",
-      "price_min": 1371.25
-    },
-    {
       "timestamp": "2026-04-06T19:21:50.504949+00:00",
       "event_id": "ZG9rmIYnyZee66",
       "price_min": 510.0
@@ -5359,10 +5344,35 @@
     },
     {
       "timestamp": "2026-04-09T19:12:12.788290+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-04-09T19:32:25.623187+00:00",
+      "event_id": "ZG9rmIYnyZeeFd",
+      "price_min": 218.5
+    },
+    {
+      "timestamp": "2026-04-09T19:32:25.623187+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 103.5
+    },
+    {
+      "timestamp": "2026-04-09T19:32:25.623187+00:00",
+      "event_id": "ZG9rmIYnyZee66",
+      "price_min": 510.0
+    },
+    {
+      "timestamp": "2026-04-09T19:32:25.623187+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 103.5
+    },
+    {
+      "timestamp": "2026-04-09T19:32:25.623187+00:00",
       "event_id": "ZG9rmIYnyZeeA1",
       "price_min": 69.0
     }
   ],
-  "checks_count": 1940,
+  "checks_count": 1941,
   "errors": []
 }
