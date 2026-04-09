@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-04-09T22:36:12.121359+00:00",
+  "last_check": "2026-04-09T22:56:23.731443+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -110,7 +110,7 @@
       "date": "2026-06-01",
       "venue": "Inalpi Arena, Torino",
       "is_single_day": true,
-      "price_min": 707.0,
+      "price_min": 510.0,
       "price_max": 1454.0,
       "currency": "EUR",
       "url": "https://www.ticketmaster.it/biglietti/wwe-monday-night-raw-torino-01-06-2026/event/w8facmymqkti",
@@ -138,6 +138,11 @@
         {
           "name": "THE WWE RAMPSIDER PACKAGE",
           "price": 707.0,
+          "available": true
+        },
+        {
+          "name": "THE WWE SUPERFAN PACKAGE",
+          "price": 510.0,
           "available": true
         }
       ]
@@ -363,31 +368,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-04-06T22:44:02.059233+00:00",
-      "event_id": "ZG9rmIYnyZeeAa",
-      "price_min": 103.5
-    },
-    {
-      "timestamp": "2026-04-06T22:44:02.059233+00:00",
-      "event_id": "ZG9rmIYnyZeeA1",
-      "price_min": 69.0
-    },
-    {
-      "timestamp": "2026-04-06T23:04:05.259328+00:00",
-      "event_id": "ZG9rmIYnyZeeFd",
-      "price_min": 218.5
-    },
-    {
-      "timestamp": "2026-04-06T23:04:05.259328+00:00",
-      "event_id": "ZG9rmIYnyZeeA6",
-      "price_min": 1371.25
-    },
-    {
-      "timestamp": "2026-04-06T23:04:05.259328+00:00",
-      "event_id": "ZG9rmIYnyZee66",
-      "price_min": 510.0
-    },
-    {
       "timestamp": "2026-04-06T23:04:05.259328+00:00",
       "event_id": "ZG9rmIYnyZeeAa",
       "price_min": 103.5
@@ -5359,10 +5339,35 @@
     },
     {
       "timestamp": "2026-04-09T22:36:12.121359+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-04-09T22:56:23.731443+00:00",
+      "event_id": "ZG9rmIYnyZeeFd",
+      "price_min": 218.5
+    },
+    {
+      "timestamp": "2026-04-09T22:56:23.731443+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 1371.25
+    },
+    {
+      "timestamp": "2026-04-09T22:56:23.731443+00:00",
+      "event_id": "ZG9rmIYnyZee66",
+      "price_min": 510.0
+    },
+    {
+      "timestamp": "2026-04-09T22:56:23.731443+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 103.5
+    },
+    {
+      "timestamp": "2026-04-09T22:56:23.731443+00:00",
       "event_id": "ZG9rmIYnyZeeA1",
       "price_min": 69.0
     }
   ],
-  "checks_count": 1950,
+  "checks_count": 1951,
   "errors": []
 }
