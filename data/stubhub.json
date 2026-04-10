@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-04-10T09:07:14.670469+00:00",
+  "last_check": "2026-04-10T09:27:21.489435+00:00",
   "threshold_eur": 400,
   "alert_active": true,
   "events": [
@@ -9,14 +9,14 @@
       "date": "2026-05-31",
       "venue": "",
       "is_single_day": true,
-      "price_min": 173.0,
+      "price_min": 210.0,
       "price_max": 1225.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-clash-in-italy-turin-tickets-5-31-2026/event/160574096/",
       "packages": [
         {
           "name": "MIX",
-          "price": 173.0,
+          "price": 210.0,
           "available": true
         },
         {
@@ -26,7 +26,7 @@
         },
         {
           "name": "Section 212",
-          "price": 173.0,
+          "price": 210.0,
           "available": true
         },
         {
@@ -165,21 +165,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-04-05T14:16:31.789014+00:00",
-      "event_id": "stubhub-160556794",
-      "price_min": 298.0
-    },
-    {
-      "timestamp": "2026-04-05T14:16:31.789014+00:00",
-      "event_id": "stubhub-160574134",
-      "price_min": 282.0
-    },
-    {
-      "timestamp": "2026-04-05T14:37:00.934734+00:00",
-      "event_id": "stubhub-160574096",
-      "price_min": 436.0
-    },
-    {
       "timestamp": "2026-04-05T14:37:00.934734+00:00",
       "event_id": "stubhub-160556794",
       "price_min": 298.0
@@ -5161,10 +5146,25 @@
     },
     {
       "timestamp": "2026-04-10T09:07:14.670469+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 225.0
+    },
+    {
+      "timestamp": "2026-04-10T09:27:21.489435+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 210.0
+    },
+    {
+      "timestamp": "2026-04-10T09:27:21.489435+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 297.0
+    },
+    {
+      "timestamp": "2026-04-10T09:27:21.489435+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 225.0
     }
   ],
-  "checks_count": 1862,
+  "checks_count": 1863,
   "errors": []
 }
