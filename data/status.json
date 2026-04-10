@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-04-10T21:33:24.214939+00:00",
+  "last_check": "2026-04-10T21:53:35.923275+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -125,7 +125,7 @@
         {
           "name": "11° Settore Num.",
           "price": 103.5,
-          "available": false
+          "available": true
         },
         {
           "name": "12° Settore Num.",
@@ -488,31 +488,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-04-07T21:42:00.843886+00:00",
-      "event_id": "ZG9rmIYnyZeeA6",
-      "price_min": 1371.25
-    },
-    {
-      "timestamp": "2026-04-07T21:42:00.843886+00:00",
-      "event_id": "ZG9rmIYnyZee66",
-      "price_min": 510.0
-    },
-    {
-      "timestamp": "2026-04-07T21:42:00.843886+00:00",
-      "event_id": "ZG9rmIYnyZeeAa",
-      "price_min": 103.5
-    },
-    {
-      "timestamp": "2026-04-07T21:42:00.843886+00:00",
-      "event_id": "ZG9rmIYnyZeeA1",
-      "price_min": 69.0
-    },
-    {
-      "timestamp": "2026-04-07T22:01:46.374862+00:00",
-      "event_id": "ZG9rmIYnyZeeFd",
-      "price_min": 218.5
-    },
-    {
       "timestamp": "2026-04-07T22:01:46.374862+00:00",
       "event_id": "ZG9rmIYnyZeeA6",
       "price_min": 1371.25
@@ -5484,10 +5459,35 @@
     },
     {
       "timestamp": "2026-04-10T21:33:24.214939+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-04-10T21:53:35.923275+00:00",
+      "event_id": "ZG9rmIYnyZeeFd",
+      "price_min": 218.5
+    },
+    {
+      "timestamp": "2026-04-10T21:53:35.923275+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 92.0
+    },
+    {
+      "timestamp": "2026-04-10T21:53:35.923275+00:00",
+      "event_id": "ZG9rmIYnyZee66",
+      "price_min": 80.5
+    },
+    {
+      "timestamp": "2026-04-10T21:53:35.923275+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 103.5
+    },
+    {
+      "timestamp": "2026-04-10T21:53:35.923275+00:00",
       "event_id": "ZG9rmIYnyZeeA1",
       "price_min": 69.0
     }
   ],
-  "checks_count": 2020,
+  "checks_count": 2021,
   "errors": []
 }
