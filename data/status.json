@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-04-11T08:44:53.432946+00:00",
+  "last_check": "2026-04-11T09:05:05.202339+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -259,11 +259,6 @@
           "name": "THE WWE RAMPSIDER PACKAGE",
           "price": 707.0,
           "available": true
-        },
-        {
-          "name": "THE WWE SUPERFAN PACKAGE",
-          "price": 510.0,
-          "available": true
         }
       ]
     },
@@ -488,31 +483,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-04-08T09:31:39.983988+00:00",
-      "event_id": "ZG9rmIYnyZeeFd",
-      "price_min": 218.5
-    },
-    {
-      "timestamp": "2026-04-08T09:31:39.983988+00:00",
-      "event_id": "ZG9rmIYnyZeeA6",
-      "price_min": 1371.25
-    },
-    {
-      "timestamp": "2026-04-08T09:31:39.983988+00:00",
-      "event_id": "ZG9rmIYnyZee66",
-      "price_min": 510.0
-    },
-    {
-      "timestamp": "2026-04-08T09:31:39.983988+00:00",
-      "event_id": "ZG9rmIYnyZeeAa",
-      "price_min": 103.5
-    },
-    {
-      "timestamp": "2026-04-08T09:31:39.983988+00:00",
-      "event_id": "ZG9rmIYnyZeeA1",
-      "price_min": 69.0
-    },
-    {
       "timestamp": "2026-04-08T09:51:44.975124+00:00",
       "event_id": "ZG9rmIYnyZeeFd",
       "price_min": 218.5
@@ -5484,10 +5454,35 @@
     },
     {
       "timestamp": "2026-04-11T08:44:53.432946+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-04-11T09:05:05.202339+00:00",
+      "event_id": "ZG9rmIYnyZeeFd",
+      "price_min": 218.5
+    },
+    {
+      "timestamp": "2026-04-11T09:05:05.202339+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 92.0
+    },
+    {
+      "timestamp": "2026-04-11T09:05:05.202339+00:00",
+      "event_id": "ZG9rmIYnyZee66",
+      "price_min": 80.5
+    },
+    {
+      "timestamp": "2026-04-11T09:05:05.202339+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 103.5
+    },
+    {
+      "timestamp": "2026-04-11T09:05:05.202339+00:00",
       "event_id": "ZG9rmIYnyZeeA1",
       "price_min": 69.0
     }
   ],
-  "checks_count": 2054,
+  "checks_count": 2055,
   "errors": []
 }
