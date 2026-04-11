@@ -1,6 +1,36 @@
 {
-  "last_check": "2026-04-11T18:59:47.946192+00:00",
+  "last_check": "2026-04-11T19:19:59.920030+00:00",
   "flights": [
+    {
+      "date": "2026-04-14",
+      "flight": "EK706",
+      "origin": "SEZ",
+      "destination": "DXB",
+      "scheduled_departure": "08:25",
+      "actual_departure": "",
+      "dep_timezone": "+04",
+      "scheduled_arrival": "12:55",
+      "actual_arrival": "",
+      "arr_timezone": "+04",
+      "departure_delay_min": null,
+      "arrival_delay_min": null,
+      "status": "Future"
+    },
+    {
+      "date": "2026-04-14",
+      "flight": "EK705",
+      "origin": "DXB",
+      "destination": "SEZ",
+      "scheduled_departure": "02:15",
+      "actual_departure": "",
+      "dep_timezone": "+04",
+      "scheduled_arrival": "06:50",
+      "actual_arrival": "",
+      "arr_timezone": "+04",
+      "departure_delay_min": null,
+      "arrival_delay_min": null,
+      "status": "Future"
+    },
     {
       "date": "2026-04-13",
       "flight": "EK78",
