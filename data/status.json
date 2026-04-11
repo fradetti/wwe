@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-04-11T21:56:22.914765+00:00",
+  "last_check": "2026-04-11T22:17:01.059693+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -170,11 +170,97 @@
       "date": "2026-06-01",
       "venue": "Inalpi Arena, Torino",
       "is_single_day": true,
-      "price_min": null,
-      "price_max": null,
+      "price_min": 80.5,
+      "price_max": 1454.0,
       "currency": "EUR",
       "url": "https://www.ticketmaster.it/biglietti/wwe-monday-night-raw-torino-01-06-2026/event/w8facmymqkti",
-      "packages": []
+      "packages": [
+        {
+          "name": "1° Settore Num.",
+          "price": 690.0,
+          "available": false
+        },
+        {
+          "name": "2° Settore Num.",
+          "price": 460.0,
+          "available": true
+        },
+        {
+          "name": "3° Settore Num.",
+          "price": 586.5,
+          "available": true
+        },
+        {
+          "name": "4° Settore Num.",
+          "price": 287.5,
+          "available": true
+        },
+        {
+          "name": "5° Settore Num.",
+          "price": 391.0,
+          "available": true
+        },
+        {
+          "name": "6° Settore Num.",
+          "price": 172.5,
+          "available": true
+        },
+        {
+          "name": "7° Settore Num.",
+          "price": 143.75,
+          "available": false
+        },
+        {
+          "name": "8° Settore Num.",
+          "price": 126.5,
+          "available": false
+        },
+        {
+          "name": "9° Settore Num.",
+          "price": 115.0,
+          "available": true
+        },
+        {
+          "name": "10° Settore Num.",
+          "price": 103.5,
+          "available": true
+        },
+        {
+          "name": "11° Settore Num.",
+          "price": 92.0,
+          "available": true
+        },
+        {
+          "name": "12° Settore Num.",
+          "price": 80.5,
+          "available": false
+        },
+        {
+          "name": "THE BATTLE ROYAL ULTIMATE EXPERIENCE",
+          "price": 1454.0,
+          "available": true
+        },
+        {
+          "name": "THE 360 WWE SUPERSTAR EXPERIENCE",
+          "price": 1240.0,
+          "available": true
+        },
+        {
+          "name": "THE 360 WWE RINGSIDER PACKAGE",
+          "price": 992.0,
+          "available": true
+        },
+        {
+          "name": "THE WWE RAMPSIDER PACKAGE",
+          "price": 937.0,
+          "available": true
+        },
+        {
+          "name": "THE WWE RAMPSIDER PACKAGE",
+          "price": 707.0,
+          "available": true
+        }
+      ]
     },
     {
       "id": "ZG9rmIYnyZeeAa",
@@ -397,31 +483,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-04-08T22:17:37.148809+00:00",
-      "event_id": "ZG9rmIYnyZeeA6",
-      "price_min": 1371.25
-    },
-    {
-      "timestamp": "2026-04-08T22:17:37.148809+00:00",
-      "event_id": "ZG9rmIYnyZee66",
-      "price_min": 510.0
-    },
-    {
-      "timestamp": "2026-04-08T22:17:37.148809+00:00",
-      "event_id": "ZG9rmIYnyZeeAa",
-      "price_min": 103.5
-    },
-    {
-      "timestamp": "2026-04-08T22:17:37.148809+00:00",
-      "event_id": "ZG9rmIYnyZeeA1",
-      "price_min": 69.0
-    },
-    {
-      "timestamp": "2026-04-08T22:37:43.650639+00:00",
-      "event_id": "ZG9rmIYnyZeeFd",
-      "price_min": 218.5
-    },
-    {
       "timestamp": "2026-04-08T22:37:43.650639+00:00",
       "event_id": "ZG9rmIYnyZeeA6",
       "price_min": 1371.25
@@ -5393,10 +5454,35 @@
     },
     {
       "timestamp": "2026-04-11T21:56:22.914765+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-04-11T22:17:01.059693+00:00",
+      "event_id": "ZG9rmIYnyZeeFd",
+      "price_min": 218.5
+    },
+    {
+      "timestamp": "2026-04-11T22:17:01.059693+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 92.0
+    },
+    {
+      "timestamp": "2026-04-11T22:17:01.059693+00:00",
+      "event_id": "ZG9rmIYnyZee66",
+      "price_min": 80.5
+    },
+    {
+      "timestamp": "2026-04-11T22:17:01.059693+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 103.5
+    },
+    {
+      "timestamp": "2026-04-11T22:17:01.059693+00:00",
       "event_id": "ZG9rmIYnyZeeA1",
       "price_min": 69.0
     }
   ],
-  "checks_count": 2095,
+  "checks_count": 2096,
   "errors": []
 }
