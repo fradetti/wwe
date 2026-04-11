@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-04-11T10:25:44.379081+00:00",
+  "last_check": "2026-04-11T10:45:52.404935+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -483,31 +483,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-04-08T11:12:08.979018+00:00",
-      "event_id": "ZG9rmIYnyZeeFd",
-      "price_min": 218.5
-    },
-    {
-      "timestamp": "2026-04-08T11:12:08.979018+00:00",
-      "event_id": "ZG9rmIYnyZeeA6",
-      "price_min": 1371.25
-    },
-    {
-      "timestamp": "2026-04-08T11:12:08.979018+00:00",
-      "event_id": "ZG9rmIYnyZee66",
-      "price_min": 510.0
-    },
-    {
-      "timestamp": "2026-04-08T11:12:08.979018+00:00",
-      "event_id": "ZG9rmIYnyZeeAa",
-      "price_min": 103.5
-    },
-    {
-      "timestamp": "2026-04-08T11:12:08.979018+00:00",
-      "event_id": "ZG9rmIYnyZeeA1",
-      "price_min": 69.0
-    },
-    {
       "timestamp": "2026-04-08T11:32:12.537896+00:00",
       "event_id": "ZG9rmIYnyZeeFd",
       "price_min": 218.5
@@ -5479,10 +5454,35 @@
     },
     {
       "timestamp": "2026-04-11T10:25:44.379081+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-04-11T10:45:52.404935+00:00",
+      "event_id": "ZG9rmIYnyZeeFd",
+      "price_min": 218.5
+    },
+    {
+      "timestamp": "2026-04-11T10:45:52.404935+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 92.0
+    },
+    {
+      "timestamp": "2026-04-11T10:45:52.404935+00:00",
+      "event_id": "ZG9rmIYnyZee66",
+      "price_min": 80.5
+    },
+    {
+      "timestamp": "2026-04-11T10:45:52.404935+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 103.5
+    },
+    {
+      "timestamp": "2026-04-11T10:45:52.404935+00:00",
       "event_id": "ZG9rmIYnyZeeA1",
       "price_min": 69.0
     }
   ],
-  "checks_count": 2059,
+  "checks_count": 2060,
   "errors": []
 }
