@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-04-12T07:33:13.841674+00:00",
+  "last_check": "2026-04-12T07:53:25.227810+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -419,7 +419,7 @@
         {
           "name": "8° Settore Num.",
           "price": 92.0,
-          "available": true
+          "available": false
         },
         {
           "name": "9° Settore Num.",
@@ -483,31 +483,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-04-09T06:43:55.727019+00:00",
-      "event_id": "ZG9rmIYnyZee66",
-      "price_min": 510.0
-    },
-    {
-      "timestamp": "2026-04-09T06:43:55.727019+00:00",
-      "event_id": "ZG9rmIYnyZeeAa",
-      "price_min": 103.5
-    },
-    {
-      "timestamp": "2026-04-09T06:43:55.727019+00:00",
-      "event_id": "ZG9rmIYnyZeeA1",
-      "price_min": 69.0
-    },
-    {
-      "timestamp": "2026-04-09T07:04:02.750216+00:00",
-      "event_id": "ZG9rmIYnyZeeFd",
-      "price_min": 218.5
-    },
-    {
-      "timestamp": "2026-04-09T07:04:02.750216+00:00",
-      "event_id": "ZG9rmIYnyZeeA6",
-      "price_min": 1371.25
-    },
-    {
       "timestamp": "2026-04-09T07:04:02.750216+00:00",
       "event_id": "ZG9rmIYnyZee66",
       "price_min": 510.0
@@ -5479,10 +5454,35 @@
     },
     {
       "timestamp": "2026-04-12T07:33:13.841674+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-04-12T07:53:25.227810+00:00",
+      "event_id": "ZG9rmIYnyZeeFd",
+      "price_min": 218.5
+    },
+    {
+      "timestamp": "2026-04-12T07:53:25.227810+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 92.0
+    },
+    {
+      "timestamp": "2026-04-12T07:53:25.227810+00:00",
+      "event_id": "ZG9rmIYnyZee66",
+      "price_min": 80.5
+    },
+    {
+      "timestamp": "2026-04-12T07:53:25.227810+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 103.5
+    },
+    {
+      "timestamp": "2026-04-12T07:53:25.227810+00:00",
       "event_id": "ZG9rmIYnyZeeA1",
       "price_min": 69.0
     }
   ],
-  "checks_count": 2124,
+  "checks_count": 2125,
   "errors": []
 }
