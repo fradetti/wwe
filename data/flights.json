@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-04-13T04:13:38.067796+00:00",
+  "last_check": "2026-04-13T04:34:07.570967+00:00",
   "flights": [
     {
       "date": "2026-04-15",
@@ -67,13 +67,13 @@
       "origin": "SEZ",
       "destination": "DXB",
       "scheduled_departure": "08:25",
-      "actual_departure": "",
+      "actual_departure": "08:25",
       "dep_timezone": "+04",
       "scheduled_arrival": "12:55",
-      "actual_arrival": "",
+      "actual_arrival": "12:55",
       "arr_timezone": "+04",
-      "departure_delay_min": null,
-      "arrival_delay_min": null,
+      "departure_delay_min": 0,
+      "arrival_delay_min": 0,
       "status": "Future"
     },
     {
@@ -127,14 +127,14 @@
       "origin": "SEZ",
       "destination": "DXB",
       "scheduled_departure": "08:25",
-      "actual_departure": "08:25",
+      "actual_departure": "08:22",
       "dep_timezone": "+04",
       "scheduled_arrival": "12:55",
       "actual_arrival": "12:51",
       "arr_timezone": "+04",
-      "departure_delay_min": 0,
+      "departure_delay_min": -3,
       "arrival_delay_min": -4,
-      "status": "Scheduled"
+      "status": "En Route"
     },
     {
       "date": "2026-04-13",
