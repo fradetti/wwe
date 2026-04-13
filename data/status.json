@@ -1,7 +1,7 @@
 {
-  "last_check": "2026-04-13T17:39:30.670838+00:00",
+  "last_check": "2026-04-13T17:59:48.823278+00:00",
   "threshold_eur": 400,
-  "alert_active": true,
+  "alert_active": false,
   "events": [
     {
       "id": "ZG9rmIYnyZeeFd",
@@ -9,57 +9,11 @@
       "date": "2026-05-31",
       "venue": "Inalpi Arena, Torino",
       "is_single_day": false,
-      "price_min": 218.5,
-      "price_max": 1207.5,
+      "price_min": null,
+      "price_max": null,
       "currency": "EUR",
       "url": "https://www.ticketmaster.it/biglietti/wwe-combo-ticket-wwe-clash-in-italy-wwe-monday-night-raw/event/c8pvxncrsodb",
-      "packages": [
-        {
-          "name": "2° Settore Num.",
-          "price": 1207.5,
-          "available": false
-        },
-        {
-          "name": "3° Settore Num.",
-          "price": 1196.0,
-          "available": true
-        },
-        {
-          "name": "4° Settore Num.",
-          "price": 1121.25,
-          "available": true
-        },
-        {
-          "name": "5° Settore Num.",
-          "price": 575.0,
-          "available": true
-        },
-        {
-          "name": "6° Settore Num.",
-          "price": 402.5,
-          "available": true
-        },
-        {
-          "name": "7° Settore Num.",
-          "price": 345.0,
-          "available": true
-        },
-        {
-          "name": "8° Settore Num.",
-          "price": 299.0,
-          "available": false
-        },
-        {
-          "name": "9° Settore Num.",
-          "price": 258.75,
-          "available": false
-        },
-        {
-          "name": "10° Settore Num.",
-          "price": 218.5,
-          "available": false
-        }
-      ]
+      "packages": []
     },
     {
       "id": "ZG9rmIYnyZeeA6",
@@ -474,101 +428,15 @@
       "date": "2026-06-07",
       "venue": "Mandela Forum, Firenze",
       "is_single_day": true,
-      "price_min": 69.0,
-      "price_max": 1109.0,
+      "price_min": null,
+      "price_max": null,
       "currency": "EUR",
       "url": "https://www.ticketmaster.it/biglietti/wwe-european-summer-tour-firenze-07-06-2026/event/xxlb2e7953yg",
-      "packages": [
-        {
-          "name": "1° Settore Num.",
-          "price": 345.0,
-          "available": true
-        },
-        {
-          "name": "2° Settore Num.",
-          "price": 230.0,
-          "available": true
-        },
-        {
-          "name": "3° Settore Num.",
-          "price": 258.75,
-          "available": true
-        },
-        {
-          "name": "4° Settore Num.",
-          "price": 187.45,
-          "available": true
-        },
-        {
-          "name": "5° Settore Num.",
-          "price": 149.5,
-          "available": true
-        },
-        {
-          "name": "6° Settore Num.",
-          "price": 103.5,
-          "available": true
-        },
-        {
-          "name": "7° Settore Num.",
-          "price": 147.2,
-          "available": true
-        },
-        {
-          "name": "8° Settore Num.",
-          "price": 69.0,
-          "available": true
-        },
-        {
-          "name": "THE BATTLE ROYAL ULTIMATE EXPERIENCE",
-          "price": 1109.0,
-          "available": true
-        },
-        {
-          "name": "THE 360 WWE SUPERSTAR EXPERIENCE",
-          "price": 829.0,
-          "available": true
-        },
-        {
-          "name": "THE WWE RAMP WALK PACKAGE",
-          "price": 592.0,
-          "available": true
-        },
-        {
-          "name": "THE WWE SUPERFAN PACKAGE",
-          "price": 422.0,
-          "available": true
-        },
-        {
-          "name": "THE WWE PREMIUM FAN PACKAGE",
-          "price": 287.5,
-          "available": true
-        }
-      ]
+      "packages": []
     }
   ],
   "price_history": [
     {
-      "timestamp": "2026-04-10T17:12:39.732654+00:00",
-      "event_id": "ZG9rmIYnyZeeA1",
-      "price_min": 69.0
-    },
-    {
-      "timestamp": "2026-04-10T17:33:11.116877+00:00",
-      "event_id": "ZG9rmIYnyZeeFd",
-      "price_min": 218.5
-    },
-    {
-      "timestamp": "2026-04-10T17:33:11.116877+00:00",
-      "event_id": "ZG9rmIYnyZeeA6",
-      "price_min": 92.0
-    },
-    {
-      "timestamp": "2026-04-10T17:33:11.116877+00:00",
-      "event_id": "ZG9rmIYnyZee66",
-      "price_min": 80.5
-    },
-    {
       "timestamp": "2026-04-10T17:33:11.116877+00:00",
       "event_id": "ZG9rmIYnyZeeAa",
       "price_min": 103.5
@@ -5546,9 +5414,29 @@
     {
       "timestamp": "2026-04-13T17:39:30.670838+00:00",
       "event_id": "ZG9rmIYnyZeekv",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-04-13T17:59:48.823278+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 92.0
+    },
+    {
+      "timestamp": "2026-04-13T17:59:48.823278+00:00",
+      "event_id": "ZG9rmIYnyZee66",
+      "price_min": 80.5
+    },
+    {
+      "timestamp": "2026-04-13T17:59:48.823278+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 103.5
+    },
+    {
+      "timestamp": "2026-04-13T17:59:48.823278+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
       "price_min": 69.0
     }
   ],
-  "checks_count": 2230,
+  "checks_count": 2231,
   "errors": []
 }
