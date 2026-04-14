@@ -1,7 +1,7 @@
 {
-  "last_check": "2026-04-14T08:08:32.188843+00:00",
+  "last_check": "2026-04-14T08:28:39.877358+00:00",
   "threshold_eur": 400,
-  "alert_active": false,
+  "alert_active": true,
   "events": [
     {
       "id": "ZG9rmIYnyZeeFd",
@@ -9,11 +9,57 @@
       "date": "2026-05-31",
       "venue": "Inalpi Arena, Torino",
       "is_single_day": false,
-      "price_min": null,
-      "price_max": null,
+      "price_min": 218.5,
+      "price_max": 1207.5,
       "currency": "EUR",
       "url": "https://www.ticketmaster.it/biglietti/wwe-combo-ticket-wwe-clash-in-italy-wwe-monday-night-raw/event/c8pvxncrsodb",
-      "packages": []
+      "packages": [
+        {
+          "name": "2° Settore Num.",
+          "price": 1207.5,
+          "available": false
+        },
+        {
+          "name": "3° Settore Num.",
+          "price": 1196.0,
+          "available": true
+        },
+        {
+          "name": "4° Settore Num.",
+          "price": 1121.25,
+          "available": true
+        },
+        {
+          "name": "5° Settore Num.",
+          "price": 575.0,
+          "available": true
+        },
+        {
+          "name": "6° Settore Num.",
+          "price": 402.5,
+          "available": true
+        },
+        {
+          "name": "7° Settore Num.",
+          "price": 345.0,
+          "available": true
+        },
+        {
+          "name": "8° Settore Num.",
+          "price": 299.0,
+          "available": false
+        },
+        {
+          "name": "9° Settore Num.",
+          "price": 258.75,
+          "available": false
+        },
+        {
+          "name": "10° Settore Num.",
+          "price": 218.5,
+          "available": false
+        }
+      ]
     },
     {
       "id": "ZG9rmIYnyZeeA6",
@@ -79,7 +125,7 @@
         {
           "name": "11° Settore Num.",
           "price": 103.5,
-          "available": true
+          "available": false
         },
         {
           "name": "12° Settore Num.",
@@ -437,31 +483,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-04-11T08:24:27.215510+00:00",
-      "event_id": "ZG9rmIYnyZeeA1",
-      "price_min": 69.0
-    },
-    {
-      "timestamp": "2026-04-11T08:44:53.432946+00:00",
-      "event_id": "ZG9rmIYnyZeeFd",
-      "price_min": 218.5
-    },
-    {
-      "timestamp": "2026-04-11T08:44:53.432946+00:00",
-      "event_id": "ZG9rmIYnyZeeA6",
-      "price_min": 92.0
-    },
-    {
-      "timestamp": "2026-04-11T08:44:53.432946+00:00",
-      "event_id": "ZG9rmIYnyZee66",
-      "price_min": 80.5
-    },
-    {
-      "timestamp": "2026-04-11T08:44:53.432946+00:00",
-      "event_id": "ZG9rmIYnyZeeAa",
-      "price_min": 103.5
-    },
-    {
       "timestamp": "2026-04-11T08:44:53.432946+00:00",
       "event_id": "ZG9rmIYnyZeeA1",
       "price_min": 69.0
@@ -5433,10 +5454,35 @@
     },
     {
       "timestamp": "2026-04-14T08:08:32.188843+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-04-14T08:28:39.877358+00:00",
+      "event_id": "ZG9rmIYnyZeeFd",
+      "price_min": 218.5
+    },
+    {
+      "timestamp": "2026-04-14T08:28:39.877358+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 92.0
+    },
+    {
+      "timestamp": "2026-04-14T08:28:39.877358+00:00",
+      "event_id": "ZG9rmIYnyZee66",
+      "price_min": 80.5
+    },
+    {
+      "timestamp": "2026-04-14T08:28:39.877358+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 103.5
+    },
+    {
+      "timestamp": "2026-04-14T08:28:39.877358+00:00",
       "event_id": "ZG9rmIYnyZeeA1",
       "price_min": 69.0
     }
   ],
-  "checks_count": 2276,
+  "checks_count": 2277,
   "errors": []
 }
