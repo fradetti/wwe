@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-04-14T21:37:10.064872+00:00",
+  "last_check": "2026-04-14T21:57:16.439507+00:00",
   "threshold_eur": 400,
   "alert_active": true,
   "events": [
@@ -20,8 +20,23 @@
           "available": true
         },
         {
-          "name": "Section 212",
-          "price": 121.0,
+          "name": "Section 122",
+          "price": 591.0,
+          "available": true
+        },
+        {
+          "name": "Section 121",
+          "price": 589.0,
+          "available": true
+        },
+        {
+          "name": "Section 104",
+          "price": 586.0,
+          "available": true
+        },
+        {
+          "name": "Section 116",
+          "price": 444.0,
           "available": true
         },
         {
@@ -35,23 +50,8 @@
           "available": true
         },
         {
-          "name": "Section 116",
-          "price": 444.0,
-          "available": true
-        },
-        {
-          "name": "Section 104",
-          "price": 586.0,
-          "available": true
-        },
-        {
-          "name": "Section 121",
-          "price": 589.0,
-          "available": true
-        },
-        {
-          "name": "Section 122",
-          "price": 591.0,
+          "name": "Section 212",
+          "price": 121.0,
           "available": true
         }
       ]
@@ -73,8 +73,8 @@
           "available": true
         },
         {
-          "name": "Section 203",
-          "price": 296.0,
+          "name": "Section 116",
+          "price": 1134.0,
           "available": true
         },
         {
@@ -83,23 +83,23 @@
           "available": true
         },
         {
+          "name": "Section 107",
+          "price": 1134.0,
+          "available": true
+        },
+        {
           "name": "Section 111",
           "price": 443.0,
           "available": true
         },
         {
+          "name": "Section 203",
+          "price": 296.0,
+          "available": true
+        },
+        {
           "name": "Section 111",
           "price": 681.0,
-          "available": true
-        },
-        {
-          "name": "Section 116",
-          "price": 1134.0,
-          "available": true
-        },
-        {
-          "name": "Section 107",
-          "price": 1134.0,
           "available": true
         }
       ]
@@ -154,21 +154,6 @@
     }
   ],
   "price_history": [
-    {
-      "timestamp": "2026-04-10T03:21:52.376974+00:00",
-      "event_id": "stubhub-160574134",
-      "price_min": 225.0
-    },
-    {
-      "timestamp": "2026-04-10T03:42:02.598595+00:00",
-      "event_id": "stubhub-160574096",
-      "price_min": 173.0
-    },
-    {
-      "timestamp": "2026-04-10T03:42:02.598595+00:00",
-      "event_id": "stubhub-160556794",
-      "price_min": 297.0
-    },
     {
       "timestamp": "2026-04-10T03:42:02.598595+00:00",
       "event_id": "stubhub-160574134",
@@ -5153,8 +5138,23 @@
       "timestamp": "2026-04-14T21:37:10.064872+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 225.0
+    },
+    {
+      "timestamp": "2026-04-14T21:57:16.439507+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 121.0
+    },
+    {
+      "timestamp": "2026-04-14T21:57:16.439507+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 296.0
+    },
+    {
+      "timestamp": "2026-04-14T21:57:16.439507+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 225.0
     }
   ],
-  "checks_count": 2178,
+  "checks_count": 2179,
   "errors": []
 }
