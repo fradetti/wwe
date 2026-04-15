@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-04-15T09:50:06.877247+00:00",
+  "last_check": "2026-04-15T10:10:04.097682+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [],
@@ -5005,7 +5005,7 @@
       "price_min": 69.0
     }
   ],
-  "checks_count": 2354,
+  "checks_count": 2355,
   "errors": [
     "Request error: [Errno -2] Name or service not known"
   ]
