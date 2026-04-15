@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-04-15T01:21:16.059265+00:00",
+  "last_check": "2026-04-15T01:41:33.766870+00:00",
   "threshold_eur": 400,
   "alert_active": true,
   "events": [
@@ -25,13 +25,8 @@
           "available": true
         },
         {
-          "name": "Section 107",
-          "price": 567.0,
-          "available": true
-        },
-        {
-          "name": "Section 107",
-          "price": 424.0,
+          "name": "Section 104",
+          "price": 570.0,
           "available": true
         },
         {
@@ -40,8 +35,13 @@
           "available": true
         },
         {
-          "name": "Section 104",
-          "price": 570.0,
+          "name": "Section 107",
+          "price": 567.0,
+          "available": true
+        },
+        {
+          "name": "Section 107",
+          "price": 424.0,
           "available": true
         },
         {
@@ -73,6 +73,16 @@
           "available": true
         },
         {
+          "name": "Section 121",
+          "price": 1471.0,
+          "available": true
+        },
+        {
+          "name": "Section 111",
+          "price": 663.0,
+          "available": true
+        },
+        {
           "name": "Section 203",
           "price": 289.0,
           "available": true
@@ -88,23 +98,13 @@
           "available": true
         },
         {
-          "name": "Section 111",
-          "price": 663.0,
-          "available": true
-        },
-        {
-          "name": "Section 107",
-          "price": 1104.0,
-          "available": true
-        },
-        {
           "name": "Section 116",
           "price": 1106.0,
           "available": true
         },
         {
-          "name": "Section 121",
-          "price": 1471.0,
+          "name": "Section 107",
+          "price": 1104.0,
           "available": true
         }
       ]
@@ -126,13 +126,8 @@
           "available": true
         },
         {
-          "name": "Section 2 Ovest E",
-          "price": 325.0,
-          "available": true
-        },
-        {
-          "name": "Section 2 Est E",
-          "price": 325.0,
+          "name": "Section 2 Ovest D",
+          "price": 364.0,
           "available": true
         },
         {
@@ -141,12 +136,12 @@
           "available": true
         },
         {
-          "name": "Section 2 Est D",
-          "price": 364.0,
+          "name": "Section 2 Est E",
+          "price": 325.0,
           "available": true
         },
         {
-          "name": "Section 2 Ovest D",
+          "name": "Section 2 Est D",
           "price": 364.0,
           "available": true
         },
@@ -154,26 +149,16 @@
           "name": "Section 2 Est C",
           "price": 364.0,
           "available": true
+        },
+        {
+          "name": "Section 2 Ovest E",
+          "price": 325.0,
+          "available": true
         }
       ]
     }
   ],
   "price_history": [
-    {
-      "timestamp": "2026-04-10T07:06:12.492182+00:00",
-      "event_id": "stubhub-160574134",
-      "price_min": 225.0
-    },
-    {
-      "timestamp": "2026-04-10T07:26:22.674914+00:00",
-      "event_id": "stubhub-160574096",
-      "price_min": 173.0
-    },
-    {
-      "timestamp": "2026-04-10T07:26:22.674914+00:00",
-      "event_id": "stubhub-160556794",
-      "price_min": 290.0
-    },
     {
       "timestamp": "2026-04-10T07:26:22.674914+00:00",
       "event_id": "stubhub-160574134",
@@ -5158,8 +5143,23 @@
       "timestamp": "2026-04-15T01:21:16.059265+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 222.0
+    },
+    {
+      "timestamp": "2026-04-15T01:41:33.766870+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 123.0
+    },
+    {
+      "timestamp": "2026-04-15T01:41:33.766870+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 289.0
+    },
+    {
+      "timestamp": "2026-04-15T01:41:33.766870+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 222.0
     }
   ],
-  "checks_count": 2189,
+  "checks_count": 2190,
   "errors": []
 }
