@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-04-16T09:51:33.300915+00:00",
+  "last_check": "2026-04-16T10:11:40.640242+00:00",
   "threshold_eur": 400,
   "alert_active": true,
   "events": [
@@ -10,7 +10,7 @@
       "venue": "",
       "is_single_day": true,
       "price_min": 123.0,
-      "price_max": 575.0,
+      "price_max": 612.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-clash-in-italy-turin-tickets-5-31-2026/event/160574096/",
       "packages": [
@@ -25,6 +25,11 @@
           "available": true
         },
         {
+          "name": "Section J",
+          "price": 612.0,
+          "available": true
+        },
+        {
           "name": "Section 107",
           "price": 567.0,
           "available": true
@@ -35,18 +40,13 @@
           "available": true
         },
         {
-          "name": "Section 116",
-          "price": 432.0,
+          "name": "Section K",
+          "price": 582.0,
           "available": true
         },
         {
-          "name": "Section 104",
-          "price": 570.0,
-          "available": true
-        },
-        {
-          "name": "Section 121",
-          "price": 573.0,
+          "name": "Section 101",
+          "price": 577.0,
           "available": true
         },
         {
@@ -63,7 +63,7 @@
       "venue": "",
       "is_single_day": true,
       "price_min": 289.0,
-      "price_max": 552.0,
+      "price_max": 736.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-raw-turin-tickets-6-1-2026/event/160556794/",
       "packages": [
@@ -78,16 +78,6 @@
           "available": true
         },
         {
-          "name": "Section 111",
-          "price": 550.0,
-          "available": true
-        },
-        {
-          "name": "Section 111",
-          "price": 431.0,
-          "available": true
-        },
-        {
           "name": "Section 122",
           "price": 552.0,
           "available": true
@@ -98,13 +88,18 @@
           "available": true
         },
         {
-          "name": "Section 116",
-          "price": 552.0,
+          "name": "Section 104",
+          "price": 644.0,
           "available": true
         },
         {
-          "name": "Section 107",
-          "price": 552.0,
+          "name": "Section K",
+          "price": 736.0,
+          "available": true
+        },
+        {
+          "name": "Section H",
+          "price": 736.0,
           "available": true
         }
       ]
@@ -116,7 +111,7 @@
       "venue": "",
       "is_single_day": true,
       "price_min": 186.0,
-      "price_max": 364.0,
+      "price_max": 629.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-smackdown-casalecchio-di-reno-bologna-tickets-6-5-2026/event/160574134/",
       "packages": [
@@ -131,17 +126,7 @@
           "available": true
         },
         {
-          "name": "Section 2 Est E",
-          "price": 325.0,
-          "available": true
-        },
-        {
           "name": "Section 2 Ovest C",
-          "price": 364.0,
-          "available": true
-        },
-        {
-          "name": "Section 2 Est D",
           "price": 364.0,
           "available": true
         },
@@ -151,8 +136,23 @@
           "available": true
         },
         {
-          "name": "Section 2 Est C",
-          "price": 364.0,
+          "name": "Section 1 Ovest C",
+          "price": 629.0,
+          "available": true
+        },
+        {
+          "name": "Section 1 Ovest C",
+          "price": 455.0,
+          "available": true
+        },
+        {
+          "name": "Section 1 Ovest B",
+          "price": 405.0,
+          "available": true
+        },
+        {
+          "name": "Section 1 Est B",
+          "price": 405.0,
           "available": true
         }
       ]
@@ -160,21 +160,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-04-11T15:31:27.664067+00:00",
-      "event_id": "stubhub-160574134",
-      "price_min": 225.0
-    },
-    {
-      "timestamp": "2026-04-11T15:51:35.105662+00:00",
-      "event_id": "stubhub-160574096",
-      "price_min": 125.0
-    },
-    {
-      "timestamp": "2026-04-11T15:51:35.105662+00:00",
-      "event_id": "stubhub-160556794",
-      "price_min": 290.0
-    },
-    {
       "timestamp": "2026-04-11T15:51:35.105662+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 222.0
@@ -5156,10 +5141,25 @@
     },
     {
       "timestamp": "2026-04-16T09:51:33.300915+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 186.0
+    },
+    {
+      "timestamp": "2026-04-16T10:11:40.640242+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 123.0
+    },
+    {
+      "timestamp": "2026-04-16T10:11:40.640242+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 289.0
+    },
+    {
+      "timestamp": "2026-04-16T10:11:40.640242+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 186.0
     }
   ],
-  "checks_count": 2282,
+  "checks_count": 2283,
   "errors": []
 }
