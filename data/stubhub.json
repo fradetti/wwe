@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-04-18T17:34:52.630562+00:00",
+  "last_check": "2026-04-18T17:55:00.417237+00:00",
   "threshold_eur": 400,
   "alert_active": true,
   "events": [
@@ -98,13 +98,13 @@
           "available": true
         },
         {
-          "name": "Section 203",
-          "price": 289.0,
+          "name": "Section E",
+          "price": 1471.0,
           "available": true
         },
         {
-          "name": "Section E",
-          "price": 1471.0,
+          "name": "Section 203",
+          "price": 289.0,
           "available": true
         },
         {
@@ -161,7 +161,7 @@
       "venue": "",
       "is_single_day": true,
       "price_min": 182.0,
-      "price_max": 874.0,
+      "price_max": 364.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-smackdown-casalecchio-di-reno-bologna-tickets-6-5-2026/event/160574134/",
       "packages": [
@@ -171,8 +171,28 @@
           "available": true
         },
         {
-          "name": "Section 2 Ovest E",
-          "price": 325.0,
+          "name": "Section 2 Ovest C",
+          "price": 364.0,
+          "available": true
+        },
+        {
+          "name": "Section 2 Ovest C",
+          "price": 364.0,
+          "available": true
+        },
+        {
+          "name": "Section 2 Ovest C",
+          "price": 364.0,
+          "available": true
+        },
+        {
+          "name": "Section 2 Ovest C",
+          "price": 364.0,
+          "available": true
+        },
+        {
+          "name": "Section 2 Ovest C",
+          "price": 364.0,
           "available": true
         },
         {
@@ -186,53 +206,18 @@
           "available": true
         },
         {
-          "name": "Section I",
-          "price": 874.0,
+          "name": "Section 2 Ovest D",
+          "price": 364.0,
           "available": true
         },
         {
-          "name": "Section I",
-          "price": 563.0,
+          "name": "Section 2 Ovest D",
+          "price": 364.0,
           "available": true
         },
         {
-          "name": "Section 1 Ovest C",
-          "price": 629.0,
-          "available": true
-        },
-        {
-          "name": "Section 1 Ovest C",
-          "price": 455.0,
-          "available": true
-        },
-        {
-          "name": "Section 1 Ovest B",
-          "price": 405.0,
-          "available": true
-        },
-        {
-          "name": "Section 1 Ovest C",
-          "price": 483.0,
-          "available": true
-        },
-        {
-          "name": "Section G",
-          "price": 874.0,
-          "available": true
-        },
-        {
-          "name": "Section G",
-          "price": 536.0,
-          "available": true
-        },
-        {
-          "name": "Section 1 Ovest E",
-          "price": 483.0,
-          "available": true
-        },
-        {
-          "name": "Section 1 Est B",
-          "price": 405.0,
+          "name": "Section 2 Ovest D",
+          "price": 364.0,
           "available": true
         }
       ]
@@ -240,21 +225,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-04-13T23:04:19.577336+00:00",
-      "event_id": "stubhub-160556794",
-      "price_min": 289.0
-    },
-    {
-      "timestamp": "2026-04-13T23:04:19.577336+00:00",
-      "event_id": "stubhub-160574134",
-      "price_min": 222.0
-    },
-    {
-      "timestamp": "2026-04-13T23:24:20.966004+00:00",
-      "event_id": "stubhub-160574096",
-      "price_min": 133.0
-    },
-    {
       "timestamp": "2026-04-13T23:24:20.966004+00:00",
       "event_id": "stubhub-160556794",
       "price_min": 296.0
@@ -5236,10 +5206,25 @@
     },
     {
       "timestamp": "2026-04-18T17:34:52.630562+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 182.0
+    },
+    {
+      "timestamp": "2026-04-18T17:55:00.417237+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 124.0
+    },
+    {
+      "timestamp": "2026-04-18T17:55:00.417237+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 289.0
+    },
+    {
+      "timestamp": "2026-04-18T17:55:00.417237+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 182.0
     }
   ],
-  "checks_count": 2445,
+  "checks_count": 2446,
   "errors": []
 }
