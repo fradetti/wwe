@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-04-20T17:15:09.886595+00:00",
+  "last_check": "2026-04-20T17:35:13.500975+00:00",
   "threshold_eur": 400,
   "alert_active": true,
   "events": [
@@ -376,11 +376,92 @@
       "date": "2026-06-06",
       "venue": "Palazzo dello Sport, Roma",
       "is_single_day": true,
-      "price_min": null,
-      "price_max": null,
+      "price_min": 69.0,
+      "price_max": 1109.0,
       "currency": "EUR",
       "url": "https://www.ticketmaster.it/biglietti/wwe-european-summer-tour-roma-06-06-2026/event/bi1t6rrbxn4q",
-      "packages": []
+      "packages": [
+        {
+          "name": "1° Settore Num.",
+          "price": 345.0,
+          "available": true
+        },
+        {
+          "name": "2° Settore Num.",
+          "price": 230.0,
+          "available": true
+        },
+        {
+          "name": "3° Settore Num.",
+          "price": 258.75,
+          "available": true
+        },
+        {
+          "name": "4° Settore Num.",
+          "price": 216.2,
+          "available": true
+        },
+        {
+          "name": "5° Settore Num.",
+          "price": 189.75,
+          "available": true
+        },
+        {
+          "name": "6° Settore Num.",
+          "price": 195.5,
+          "available": true
+        },
+        {
+          "name": "7° Settore Num.",
+          "price": 103.5,
+          "available": false
+        },
+        {
+          "name": "8° Settore Num.",
+          "price": 92.0,
+          "available": false
+        },
+        {
+          "name": "10° Settore Num.",
+          "price": 69.0,
+          "available": false
+        },
+        {
+          "name": "THE BATTLE ROYAL ULTIMATE EXPERIENCE",
+          "price": 1109.0,
+          "available": true
+        },
+        {
+          "name": "THE 360 WWE SUPERSTAR EXPERIENCE",
+          "price": 829.0,
+          "available": true
+        },
+        {
+          "name": "THE WWE RAMP WALK PACKAGE",
+          "price": 592.0,
+          "available": true
+        },
+        {
+          "name": "THE WWE RAMP WALK PACKAGE",
+          "price": 477.0,
+          "available": false
+        },
+        {
+          "name": "THE WWE RAMP WALK PACKAGE",
+          "price": 419.5,
+          "available": false
+        },
+        {
+          "name": "THE WWE SUPERFAN PACKAGE",
+          "price": 422.0,
+          "available": true
+        },
+        {
+          "name": "THE WWE PREMIUM FAN PACKAGE",
+          "price": 287.5,
+          "available": true
+        }
+      ]
     },
     {
       "id": "ZG9rmIYnyZeekv",
@@ -463,36 +544,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-04-18T05:23:46.587487+00:00",
-      "event_id": "ZG9rmIYnyZeeA6",
-      "price_min": 92.0
-    },
-    {
-      "timestamp": "2026-04-18T05:23:46.587487+00:00",
-      "event_id": "ZG9rmIYnyZee66",
-      "price_min": 80.5
-    },
-    {
-      "timestamp": "2026-04-18T05:23:46.587487+00:00",
-      "event_id": "ZG9rmIYnyZeeAa",
-      "price_min": 103.5
-    },
-    {
-      "timestamp": "2026-04-18T05:23:46.587487+00:00",
-      "event_id": "ZG9rmIYnyZeeA1",
-      "price_min": 69.0
-    },
-    {
-      "timestamp": "2026-04-18T05:23:46.587487+00:00",
-      "event_id": "ZG9rmIYnyZeekv",
-      "price_min": 69.0
-    },
-    {
-      "timestamp": "2026-04-18T05:44:00.576032+00:00",
-      "event_id": "ZG9rmIYnyZeeFd",
-      "price_min": 218.5
-    },
-    {
       "timestamp": "2026-04-18T05:44:00.576032+00:00",
       "event_id": "ZG9rmIYnyZeeA6",
       "price_min": 92.0
@@ -5459,10 +5510,40 @@
     },
     {
       "timestamp": "2026-04-20T17:15:09.886595+00:00",
+      "event_id": "ZG9rmIYnyZeekv",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-04-20T17:35:13.500975+00:00",
+      "event_id": "ZG9rmIYnyZeeFd",
+      "price_min": 218.5
+    },
+    {
+      "timestamp": "2026-04-20T17:35:13.500975+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 92.0
+    },
+    {
+      "timestamp": "2026-04-20T17:35:13.500975+00:00",
+      "event_id": "ZG9rmIYnyZee66",
+      "price_min": 80.5
+    },
+    {
+      "timestamp": "2026-04-20T17:35:13.500975+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 103.5
+    },
+    {
+      "timestamp": "2026-04-20T17:35:13.500975+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-04-20T17:35:13.500975+00:00",
       "event_id": "ZG9rmIYnyZeekv",
       "price_min": 69.0
     }
   ],
-  "checks_count": 2745,
+  "checks_count": 2746,
   "errors": []
 }
