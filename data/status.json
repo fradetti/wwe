@@ -1,7 +1,7 @@
 {
-  "last_check": "2026-04-21T21:57:19.801621+00:00",
+  "last_check": "2026-04-21T22:17:31.698471+00:00",
   "threshold_eur": 400,
-  "alert_active": true,
+  "alert_active": false,
   "events": [
     {
       "id": "ZG9rmIYnyZeeFd",
@@ -9,57 +9,11 @@
       "date": "2026-05-31",
       "venue": "Inalpi Arena, Torino",
       "is_single_day": false,
-      "price_min": 218.5,
-      "price_max": 1207.5,
+      "price_min": null,
+      "price_max": null,
       "currency": "EUR",
       "url": "https://www.ticketmaster.it/biglietti/wwe-combo-ticket-wwe-clash-in-italy-wwe-monday-night-raw/event/c8pvxncrsodb",
-      "packages": [
-        {
-          "name": "2° Settore Num.",
-          "price": 1207.5,
-          "available": false
-        },
-        {
-          "name": "3° Settore Num.",
-          "price": 920.0,
-          "available": true
-        },
-        {
-          "name": "4° Settore Num.",
-          "price": 1121.25,
-          "available": true
-        },
-        {
-          "name": "5° Settore Num.",
-          "price": 575.0,
-          "available": true
-        },
-        {
-          "name": "6° Settore Num.",
-          "price": 402.5,
-          "available": true
-        },
-        {
-          "name": "7° Settore Num.",
-          "price": 345.0,
-          "available": true
-        },
-        {
-          "name": "8° Settore Num.",
-          "price": 299.0,
-          "available": true
-        },
-        {
-          "name": "9° Settore Num.",
-          "price": 258.75,
-          "available": true
-        },
-        {
-          "name": "10° Settore Num.",
-          "price": 218.5,
-          "available": false
-        }
-      ]
+      "packages": []
     },
     {
       "id": "ZG9rmIYnyZeeA6",
@@ -67,11 +21,102 @@
       "date": "2026-05-31",
       "venue": "Inalpi Arena, Torino",
       "is_single_day": true,
-      "price_min": null,
-      "price_max": null,
+      "price_min": 92.0,
+      "price_max": 10142.5,
       "currency": "EUR",
       "url": "https://www.ticketmaster.it/biglietti/wwe-clash-in-italy-torino-31-05-2026/event/ur737yvj5cba",
-      "packages": []
+      "packages": [
+        {
+          "name": "1° Settore Num.",
+          "price": 977.5,
+          "available": true
+        },
+        {
+          "name": "2° Settore Num.",
+          "price": 747.5,
+          "available": true
+        },
+        {
+          "name": "3° Settore Num.",
+          "price": 977.5,
+          "available": true
+        },
+        {
+          "name": "4° Settore Num.",
+          "price": 460.0,
+          "available": true
+        },
+        {
+          "name": "5° Settore Num.",
+          "price": 586.5,
+          "available": true
+        },
+        {
+          "name": "6° Settore Num.",
+          "price": 230.0,
+          "available": true
+        },
+        {
+          "name": "7° Settore Num.",
+          "price": 201.25,
+          "available": false
+        },
+        {
+          "name": "8° Settore Num.",
+          "price": 172.5,
+          "available": false
+        },
+        {
+          "name": "9° Settore Num.",
+          "price": 143.75,
+          "available": true
+        },
+        {
+          "name": "10° Settore Num.",
+          "price": 115.0,
+          "available": false
+        },
+        {
+          "name": "11° Settore Num.",
+          "price": 103.5,
+          "available": false
+        },
+        {
+          "name": "12° Settore Num.",
+          "price": 92.0,
+          "available": false
+        },
+        {
+          "name": "Champion+ Package",
+          "price": 10142.5,
+          "available": true
+        },
+        {
+          "name": "Champion Package",
+          "price": 6017.5,
+          "available": true
+        },
+        {
+          "name": "Champion Package",
+          "price": 3410.0,
+          "available": true
+        },
+        {
+          "name": "Gold Package",
+          "price": 1955.0,
+          "available": true
+        },
+        {
+          "name": "Gold Package",
+          "price": 1755.0,
+          "available": true
+        },
+        {
+          "name": "Gold Package",
+          "price": 1371.25,
+          "available": true
+        }
+      ]
     },
     {
       "id": "ZG9rmIYnyZee66",
@@ -453,31 +498,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-04-19T09:53:13.539690+00:00",
-      "event_id": "ZG9rmIYnyZeekv",
-      "price_min": 69.0
-    },
-    {
-      "timestamp": "2026-04-19T10:14:12.726746+00:00",
-      "event_id": "ZG9rmIYnyZeeFd",
-      "price_min": 218.5
-    },
-    {
-      "timestamp": "2026-04-19T10:14:12.726746+00:00",
-      "event_id": "ZG9rmIYnyZeeA6",
-      "price_min": 92.0
-    },
-    {
-      "timestamp": "2026-04-19T10:14:12.726746+00:00",
-      "event_id": "ZG9rmIYnyZee66",
-      "price_min": 80.5
-    },
-    {
-      "timestamp": "2026-04-19T10:14:12.726746+00:00",
-      "event_id": "ZG9rmIYnyZeeAa",
-      "price_min": 103.5
-    },
-    {
       "timestamp": "2026-04-19T10:14:12.726746+00:00",
       "event_id": "ZG9rmIYnyZeeA1",
       "price_min": 69.0
@@ -5449,10 +5469,35 @@
     },
     {
       "timestamp": "2026-04-21T21:57:19.801621+00:00",
+      "event_id": "ZG9rmIYnyZeekv",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-04-21T22:17:31.698471+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 92.0
+    },
+    {
+      "timestamp": "2026-04-21T22:17:31.698471+00:00",
+      "event_id": "ZG9rmIYnyZee66",
+      "price_min": 80.5
+    },
+    {
+      "timestamp": "2026-04-21T22:17:31.698471+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 103.5
+    },
+    {
+      "timestamp": "2026-04-21T22:17:31.698471+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-04-21T22:17:31.698471+00:00",
       "event_id": "ZG9rmIYnyZeekv",
       "price_min": 69.0
     }
   ],
-  "checks_count": 2834,
+  "checks_count": 2835,
   "errors": []
 }
