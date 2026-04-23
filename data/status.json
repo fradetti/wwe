@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-04-23T18:13:35.436628+00:00",
+  "last_check": "2026-04-23T18:33:42.849217+00:00",
   "threshold_eur": 400,
   "alert_active": true,
   "events": [
@@ -135,7 +135,7 @@
         {
           "name": "Champion+ Package",
           "price": 10142.5,
-          "available": true
+          "available": false
         },
         {
           "name": "Champion Package",
@@ -544,36 +544,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-04-21T07:04:42.614658+00:00",
-      "event_id": "ZG9rmIYnyZeekv",
-      "price_min": 69.0
-    },
-    {
-      "timestamp": "2026-04-21T07:24:48.349139+00:00",
-      "event_id": "ZG9rmIYnyZeeFd",
-      "price_min": 218.5
-    },
-    {
-      "timestamp": "2026-04-21T07:24:48.349139+00:00",
-      "event_id": "ZG9rmIYnyZeeA6",
-      "price_min": 92.0
-    },
-    {
-      "timestamp": "2026-04-21T07:24:48.349139+00:00",
-      "event_id": "ZG9rmIYnyZee66",
-      "price_min": 80.5
-    },
-    {
-      "timestamp": "2026-04-21T07:24:48.349139+00:00",
-      "event_id": "ZG9rmIYnyZeeAa",
-      "price_min": 103.5
-    },
-    {
-      "timestamp": "2026-04-21T07:24:48.349139+00:00",
-      "event_id": "ZG9rmIYnyZeeA1",
-      "price_min": 69.0
-    },
-    {
       "timestamp": "2026-04-21T07:24:48.349139+00:00",
       "event_id": "ZG9rmIYnyZeekv",
       "price_min": 69.0
@@ -5540,10 +5510,40 @@
     },
     {
       "timestamp": "2026-04-23T18:13:35.436628+00:00",
+      "event_id": "ZG9rmIYnyZeekv",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-04-23T18:33:42.849217+00:00",
+      "event_id": "ZG9rmIYnyZeeFd",
+      "price_min": 218.5
+    },
+    {
+      "timestamp": "2026-04-23T18:33:42.849217+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 92.0
+    },
+    {
+      "timestamp": "2026-04-23T18:33:42.849217+00:00",
+      "event_id": "ZG9rmIYnyZee66",
+      "price_min": 80.5
+    },
+    {
+      "timestamp": "2026-04-23T18:33:42.849217+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 103.5
+    },
+    {
+      "timestamp": "2026-04-23T18:33:42.849217+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-04-23T18:33:42.849217+00:00",
       "event_id": "ZG9rmIYnyZeekv",
       "price_min": 69.0
     }
   ],
-  "checks_count": 2969,
+  "checks_count": 2970,
   "errors": []
 }
