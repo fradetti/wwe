@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-04-23T03:47:50.791214+00:00",
+  "last_check": "2026-04-23T04:08:39.711541+00:00",
   "flights": [
     {
       "date": "2026-04-25",
@@ -82,13 +82,13 @@
       "origin": "DXB",
       "destination": "NCE",
       "scheduled_departure": "07:40",
-      "actual_departure": "",
+      "actual_departure": "07:40",
       "dep_timezone": "+04",
       "scheduled_arrival": "13:30",
-      "actual_arrival": "",
+      "actual_arrival": "13:30",
       "arr_timezone": "CEST",
-      "departure_delay_min": null,
-      "arrival_delay_min": null,
+      "departure_delay_min": 0,
+      "arrival_delay_min": 0,
       "status": "Future"
     },
     {
@@ -142,14 +142,14 @@
       "origin": "DXB",
       "destination": "NCE",
       "scheduled_departure": "07:40",
-      "actual_departure": "07:45",
+      "actual_departure": "07:57",
       "dep_timezone": "+04",
       "scheduled_arrival": "13:30",
-      "actual_arrival": "13:28",
+      "actual_arrival": "13:40",
       "arr_timezone": "CEST",
-      "departure_delay_min": 5,
-      "arrival_delay_min": -2,
-      "status": "Scheduled"
+      "departure_delay_min": 17,
+      "arrival_delay_min": 10,
+      "status": "Climbing"
     },
     {
       "date": "2026-04-23",
