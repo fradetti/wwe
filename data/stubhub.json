@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-04-24T10:00:44.174818+00:00",
+  "last_check": "2026-04-24T10:20:49.595670+00:00",
   "threshold_eur": 400,
   "alert_active": true,
   "events": [
@@ -60,16 +60,6 @@
           "available": true
         },
         {
-          "name": "Section H",
-          "price": 952.0,
-          "available": true
-        },
-        {
-          "name": "Section H",
-          "price": 630.0,
-          "available": true
-        },
-        {
           "name": "Section J",
           "price": 628.0,
           "available": true
@@ -77,6 +67,16 @@
         {
           "name": "Section 121",
           "price": 589.0,
+          "available": true
+        },
+        {
+          "name": "Section 107",
+          "price": 567.0,
+          "available": true
+        },
+        {
+          "name": "Section 107",
+          "price": 436.0,
           "available": true
         }
       ]
@@ -229,21 +229,6 @@
     }
   ],
   "price_history": [
-    {
-      "timestamp": "2026-04-19T13:16:34.684560+00:00",
-      "event_id": "stubhub-160574096",
-      "price_min": 124.0
-    },
-    {
-      "timestamp": "2026-04-19T13:16:34.684560+00:00",
-      "event_id": "stubhub-160556794",
-      "price_min": 285.0
-    },
-    {
-      "timestamp": "2026-04-19T13:16:34.684560+00:00",
-      "event_id": "stubhub-160574134",
-      "price_min": 182.0
-    },
     {
       "timestamp": "2026-04-19T13:36:59.778471+00:00",
       "event_id": "stubhub-160574096",
@@ -5228,8 +5213,23 @@
       "timestamp": "2026-04-24T10:00:44.174818+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 148.0
+    },
+    {
+      "timestamp": "2026-04-24T10:20:49.595670+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 333.0
+    },
+    {
+      "timestamp": "2026-04-24T10:20:49.595670+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 281.0
+    },
+    {
+      "timestamp": "2026-04-24T10:20:49.595670+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 148.0
     }
   ],
-  "checks_count": 2840,
+  "checks_count": 2841,
   "errors": []
 }
