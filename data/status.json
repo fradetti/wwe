@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-04-26T02:40:26.754154+00:00",
+  "last_check": "2026-04-26T02:48:17.829512+00:00",
   "threshold_eur": 400,
   "alert_active": true,
   "events": [
@@ -12,54 +12,7 @@
       "price_min": 218.5,
       "price_max": 1207.5,
       "currency": "EUR",
-      "url": "https://www.ticketmaster.it/biglietti/wwe-combo-ticket-wwe-clash-in-italy-wwe-monday-night-raw/event/c8pvxncrsodb",
-      "packages": [
-        {
-          "name": "2° Settore Num.",
-          "price": 1207.5,
-          "available": false
-        },
-        {
-          "name": "3° Settore Num.",
-          "price": 920.0,
-          "available": true
-        },
-        {
-          "name": "4° Settore Num.",
-          "price": 1121.25,
-          "available": true
-        },
-        {
-          "name": "5° Settore Num.",
-          "price": 575.0,
-          "available": true
-        },
-        {
-          "name": "6° Settore Num.",
-          "price": 402.5,
-          "available": true
-        },
-        {
-          "name": "7° Settore Num.",
-          "price": 345.0,
-          "available": true
-        },
-        {
-          "name": "8° Settore Num.",
-          "price": 299.0,
-          "available": true
-        },
-        {
-          "name": "9° Settore Num.",
-          "price": 258.75,
-          "available": false
-        },
-        {
-          "name": "10° Settore Num.",
-          "price": 218.5,
-          "available": false
-        }
-      ]
+      "url": "https://www.ticketmaster.it/biglietti/wwe-combo-ticket-wwe-clash-in-italy-wwe-monday-night-raw/event/c8pvxncrsodb"
     },
     {
       "id": "ZG9rmIYnyZeeA6",
@@ -70,99 +23,7 @@
       "price_min": 92.0,
       "price_max": 10142.5,
       "currency": "EUR",
-      "url": "https://www.ticketmaster.it/biglietti/wwe-clash-in-italy-torino-31-05-2026/event/ur737yvj5cba",
-      "packages": [
-        {
-          "name": "1° Settore Num.",
-          "price": 977.5,
-          "available": true
-        },
-        {
-          "name": "2° Settore Num.",
-          "price": 747.5,
-          "available": true
-        },
-        {
-          "name": "3° Settore Num.",
-          "price": 977.5,
-          "available": true
-        },
-        {
-          "name": "4° Settore Num.",
-          "price": 460.0,
-          "available": true
-        },
-        {
-          "name": "5° Settore Num.",
-          "price": 586.5,
-          "available": true
-        },
-        {
-          "name": "6° Settore Num.",
-          "price": 230.0,
-          "available": true
-        },
-        {
-          "name": "7° Settore Num.",
-          "price": 201.25,
-          "available": false
-        },
-        {
-          "name": "8° Settore Num.",
-          "price": 172.5,
-          "available": false
-        },
-        {
-          "name": "9° Settore Num.",
-          "price": 143.75,
-          "available": false
-        },
-        {
-          "name": "10° Settore Num.",
-          "price": 115.0,
-          "available": false
-        },
-        {
-          "name": "11° Settore Num.",
-          "price": 103.5,
-          "available": false
-        },
-        {
-          "name": "12° Settore Num.",
-          "price": 92.0,
-          "available": false
-        },
-        {
-          "name": "Champion+ Package",
-          "price": 10142.5,
-          "available": false
-        },
-        {
-          "name": "Champion Package",
-          "price": 6017.5,
-          "available": true
-        },
-        {
-          "name": "Champion Package",
-          "price": 3410.0,
-          "available": true
-        },
-        {
-          "name": "Gold Package",
-          "price": 1955.0,
-          "available": true
-        },
-        {
-          "name": "Gold Package",
-          "price": 1755.0,
-          "available": true
-        },
-        {
-          "name": "Gold Package",
-          "price": 1371.25,
-          "available": true
-        }
-      ]
+      "url": "https://www.ticketmaster.it/biglietti/wwe-clash-in-italy-torino-31-05-2026/event/ur737yvj5cba"
     },
     {
       "id": "ZG9rmIYnyZee66",
@@ -173,94 +34,7 @@
       "price_min": 80.5,
       "price_max": 1454.0,
       "currency": "EUR",
-      "url": "https://www.ticketmaster.it/biglietti/wwe-monday-night-raw-torino-01-06-2026/event/w8facmymqkti",
-      "packages": [
-        {
-          "name": "1° Settore Num.",
-          "price": 690.0,
-          "available": true
-        },
-        {
-          "name": "2° Settore Num.",
-          "price": 460.0,
-          "available": true
-        },
-        {
-          "name": "3° Settore Num.",
-          "price": 586.5,
-          "available": true
-        },
-        {
-          "name": "4° Settore Num.",
-          "price": 287.5,
-          "available": true
-        },
-        {
-          "name": "5° Settore Num.",
-          "price": 391.0,
-          "available": true
-        },
-        {
-          "name": "6° Settore Num.",
-          "price": 172.5,
-          "available": true
-        },
-        {
-          "name": "7° Settore Num.",
-          "price": 143.75,
-          "available": false
-        },
-        {
-          "name": "8° Settore Num.",
-          "price": 126.5,
-          "available": false
-        },
-        {
-          "name": "9° Settore Num.",
-          "price": 115.0,
-          "available": true
-        },
-        {
-          "name": "10° Settore Num.",
-          "price": 103.5,
-          "available": true
-        },
-        {
-          "name": "11° Settore Num.",
-          "price": 92.0,
-          "available": true
-        },
-        {
-          "name": "12° Settore Num.",
-          "price": 80.5,
-          "available": false
-        },
-        {
-          "name": "THE BATTLE ROYAL ULTIMATE EXPERIENCE",
-          "price": 1454.0,
-          "available": true
-        },
-        {
-          "name": "THE 360 WWE SUPERSTAR EXPERIENCE",
-          "price": 1240.0,
-          "available": true
-        },
-        {
-          "name": "THE 360 WWE RINGSIDER PACKAGE",
-          "price": 992.0,
-          "available": true
-        },
-        {
-          "name": "THE WWE RAMPSIDER PACKAGE",
-          "price": 937.0,
-          "available": true
-        },
-        {
-          "name": "THE WWE RAMPSIDER PACKAGE",
-          "price": 707.0,
-          "available": true
-        }
-      ]
+      "url": "https://www.ticketmaster.it/biglietti/wwe-monday-night-raw-torino-01-06-2026/event/w8facmymqkti"
     },
     {
       "id": "ZG9rmIYnyZeeAa",
@@ -271,104 +45,7 @@
       "price_min": 103.5,
       "price_max": 1396.5,
       "currency": "EUR",
-      "url": "https://www.ticketmaster.it/biglietti/wwe-friday-night-smackdown-casalecchio-di-reno-05-06-2026/event/gaw6l9am8v3m",
-      "packages": [
-        {
-          "name": "1° Settore Num.",
-          "price": 632.5,
-          "available": true
-        },
-        {
-          "name": "2° Settore Num.",
-          "price": 517.5,
-          "available": true
-        },
-        {
-          "name": "3° Settore Num.",
-          "price": 460.0,
-          "available": true
-        },
-        {
-          "name": "4° Settore Num.",
-          "price": 402.5,
-          "available": true
-        },
-        {
-          "name": "5° Settore Num.",
-          "price": 345.0,
-          "available": true
-        },
-        {
-          "name": "6° Settore Num.",
-          "price": 287.5,
-          "available": true
-        },
-        {
-          "name": "7° Settore Num.",
-          "price": 258.75,
-          "available": true
-        },
-        {
-          "name": "8° Settore Num.",
-          "price": 230.0,
-          "available": true
-        },
-        {
-          "name": "9° Settore Num.",
-          "price": 172.5,
-          "available": true
-        },
-        {
-          "name": "10° Settore Num.",
-          "price": 132.25,
-          "available": false
-        },
-        {
-          "name": "11° Settore Num.",
-          "price": 103.5,
-          "available": true
-        },
-        {
-          "name": "THE BATTLE ROYAL ULTIMATE EXPERIENCE",
-          "price": 1396.5,
-          "available": true
-        },
-        {
-          "name": "THE 360 WWE SUPERSTAR EXPERIENCE",
-          "price": 1182.5,
-          "available": true
-        },
-        {
-          "name": "THE 360 WWE RINGSIDER PACKAGE",
-          "price": 934.5,
-          "available": true
-        },
-        {
-          "name": "THE 360 WWE RINGSIDER PACKAGE",
-          "price": 819.5,
-          "available": false
-        },
-        {
-          "name": "THE WWE RAMPSIDER PACKAGE",
-          "price": 879.5,
-          "available": true
-        },
-        {
-          "name": "THE WWE RAMPSIDER PACKAGE",
-          "price": 764.5,
-          "available": true
-        },
-        {
-          "name": "THE WWE RAMPSIDER PACKAGE",
-          "price": 707.0,
-          "available": false
-        },
-        {
-          "name": "THE WWE SUPERFAN PACKAGE",
-          "price": 625.0,
-          "available": true
-        }
-      ]
+      "url": "https://www.ticketmaster.it/biglietti/wwe-friday-night-smackdown-casalecchio-di-reno-05-06-2026/event/gaw6l9am8v3m"
     },
     {
       "id": "ZG9rmIYnyZeeA1",
@@ -379,89 +56,7 @@
       "price_min": 69.0,
       "price_max": 1109.0,
       "currency": "EUR",
-      "url": "https://www.ticketmaster.it/biglietti/wwe-european-summer-tour-roma-06-06-2026/event/bi1t6rrbxn4q",
-      "packages": [
-        {
-          "name": "1° Settore Num.",
-          "price": 345.0,
-          "available": true
-        },
-        {
-          "name": "2° Settore Num.",
-          "price": 230.0,
-          "available": true
-        },
-        {
-          "name": "3° Settore Num.",
-          "price": 258.75,
-          "available": true
-        },
-        {
-          "name": "4° Settore Num.",
-          "price": 216.2,
-          "available": true
-        },
-        {
-          "name": "5° Settore Num.",
-          "price": 126.5,
-          "available": true
-        },
-        {
-          "name": "6° Settore Num.",
-          "price": 115.0,
-          "available": true
-        },
-        {
-          "name": "7° Settore Num.",
-          "price": 103.5,
-          "available": false
-        },
-        {
-          "name": "8° Settore Num.",
-          "price": 92.0,
-          "available": false
-        },
-        {
-          "name": "10° Settore Num.",
-          "price": 69.0,
-          "available": false
-        },
-        {
-          "name": "THE BATTLE ROYAL ULTIMATE EXPERIENCE",
-          "price": 1109.0,
-          "available": true
-        },
-        {
-          "name": "THE 360 WWE SUPERSTAR EXPERIENCE",
-          "price": 829.0,
-          "available": true
-        },
-        {
-          "name": "THE WWE RAMP WALK PACKAGE",
-          "price": 592.0,
-          "available": true
-        },
-        {
-          "name": "THE WWE RAMP WALK PACKAGE",
-          "price": 477.0,
-          "available": false
-        },
-        {
-          "name": "THE WWE RAMP WALK PACKAGE",
-          "price": 419.5,
-          "available": false
-        },
-        {
-          "name": "THE WWE SUPERFAN PACKAGE",
-          "price": 422.0,
-          "available": true
-        },
-        {
-          "name": "THE WWE PREMIUM FAN PACKAGE",
-          "price": 287.5,
-          "available": true
-        }
-      ]
+      "url": "https://www.ticketmaster.it/biglietti/wwe-european-summer-tour-roma-06-06-2026/event/bi1t6rrbxn4q"
     },
     {
       "id": "ZG9rmIYnyZeekv",
@@ -472,74 +67,7 @@
       "price_min": 69.0,
       "price_max": 1109.0,
       "currency": "EUR",
-      "url": "https://www.ticketmaster.it/biglietti/wwe-european-summer-tour-firenze-07-06-2026/event/xxlb2e7953yg",
-      "packages": [
-        {
-          "name": "1° Settore Num.",
-          "price": 345.0,
-          "available": true
-        },
-        {
-          "name": "2° Settore Num.",
-          "price": 230.0,
-          "available": true
-        },
-        {
-          "name": "3° Settore Num.",
-          "price": 224.25,
-          "available": true
-        },
-        {
-          "name": "4° Settore Num.",
-          "price": 187.45,
-          "available": true
-        },
-        {
-          "name": "5° Settore Num.",
-          "price": 149.5,
-          "available": true
-        },
-        {
-          "name": "6° Settore Num.",
-          "price": 103.5,
-          "available": true
-        },
-        {
-          "name": "7° Settore Num.",
-          "price": 86.25,
-          "available": true
-        },
-        {
-          "name": "8° Settore Num.",
-          "price": 69.0,
-          "available": true
-        },
-        {
-          "name": "THE BATTLE ROYAL ULTIMATE EXPERIENCE",
-          "price": 1109.0,
-          "available": true
-        },
-        {
-          "name": "THE 360 WWE SUPERSTAR EXPERIENCE",
-          "price": 829.0,
-          "available": true
-        },
-        {
-          "name": "THE WWE RAMP WALK PACKAGE",
-          "price": 592.0,
-          "available": true
-        },
-        {
-          "name": "THE WWE SUPERFAN PACKAGE",
-          "price": 422.0,
-          "available": true
-        },
-        {
-          "name": "THE WWE PREMIUM FAN PACKAGE",
-          "price": 287.5,
-          "available": true
-        }
-      ]
+      "url": "https://www.ticketmaster.it/biglietti/wwe-european-summer-tour-firenze-07-06-2026/event/xxlb2e7953yg"
     }
   ],
   "price_history": [
@@ -5544,6 +5072,6 @@
       "price_min": 69.0
     }
   ],
-  "checks_count": 3142,
+  "checks_count": 3143,
   "errors": []
 }
