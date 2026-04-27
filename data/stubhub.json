@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-04-27T20:01:54.790007+00:00",
+  "last_check": "2026-04-27T20:22:08.484598+00:00",
   "threshold_eur": 400,
   "alert_active": true,
   "events": [
@@ -20,16 +20,6 @@
           "available": true
         },
         {
-          "name": "Section 107",
-          "price": 567.0,
-          "available": true
-        },
-        {
-          "name": "Section 107",
-          "price": 436.0,
-          "available": true
-        },
-        {
           "name": "Section J",
           "price": 1200.0,
           "available": true
@@ -37,6 +27,16 @@
         {
           "name": "Section J",
           "price": 628.0,
+          "available": true
+        },
+        {
+          "name": "Section 107",
+          "price": 567.0,
+          "available": true
+        },
+        {
+          "name": "Section 107",
+          "price": 436.0,
           "available": true
         },
         {
@@ -108,6 +108,11 @@
           "available": true
         },
         {
+          "name": "Section 122",
+          "price": 566.0,
+          "available": true
+        },
+        {
           "name": "Section 203",
           "price": 360.0,
           "available": true
@@ -115,11 +120,6 @@
         {
           "name": "Section 203",
           "price": 281.0,
-          "available": true
-        },
-        {
-          "name": "Section 122",
-          "price": 566.0,
           "available": true
         },
         {
@@ -181,11 +181,6 @@
           "available": true
         },
         {
-          "name": "Section 2 Ovest E",
-          "price": 334.0,
-          "available": true
-        },
-        {
           "name": "Section 2 Ovest C",
           "price": 374.0,
           "available": true
@@ -212,6 +207,11 @@
         },
         {
           "name": "Section 2 Ovest C",
+          "price": 374.0,
+          "available": true
+        },
+        {
+          "name": "Section 2 Ovest D",
           "price": 374.0,
           "available": true
         },
@@ -234,21 +234,6 @@
     }
   ],
   "price_history": [
-    {
-      "timestamp": "2026-04-22T23:59:13.567594+00:00",
-      "event_id": "stubhub-160574134",
-      "price_min": 174.0
-    },
-    {
-      "timestamp": "2026-04-23T00:19:36.990998+00:00",
-      "event_id": "stubhub-160574096",
-      "price_min": 122.0
-    },
-    {
-      "timestamp": "2026-04-23T00:19:36.990998+00:00",
-      "event_id": "stubhub-160556794",
-      "price_min": 282.0
-    },
     {
       "timestamp": "2026-04-23T00:19:36.990998+00:00",
       "event_id": "stubhub-160574134",
@@ -5233,8 +5218,23 @@
       "timestamp": "2026-04-27T20:01:54.790007+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 119.0
+    },
+    {
+      "timestamp": "2026-04-27T20:22:08.484598+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 257.0
+    },
+    {
+      "timestamp": "2026-04-27T20:22:08.484598+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 234.0
+    },
+    {
+      "timestamp": "2026-04-27T20:22:08.484598+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 119.0
     }
   ],
-  "checks_count": 3080,
+  "checks_count": 3081,
   "errors": []
 }
