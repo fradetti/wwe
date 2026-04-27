@@ -1,6 +1,66 @@
 {
-  "last_check": "2026-04-27T19:05:45.053120+00:00",
+  "last_check": "2026-04-27T19:46:17.276298+00:00",
   "flights": [
+    {
+      "date": "2026-04-30",
+      "flight": "EK78",
+      "origin": "NCE",
+      "destination": "DXB",
+      "scheduled_departure": "15:50",
+      "actual_departure": "",
+      "dep_timezone": "CEST",
+      "scheduled_arrival": "00:35",
+      "actual_arrival": "",
+      "arr_timezone": "+04",
+      "departure_delay_min": null,
+      "arrival_delay_min": null,
+      "status": "Future"
+    },
+    {
+      "date": "2026-04-30",
+      "flight": "EK77",
+      "origin": "DXB",
+      "destination": "NCE",
+      "scheduled_departure": "07:40",
+      "actual_departure": "",
+      "dep_timezone": "+04",
+      "scheduled_arrival": "13:30",
+      "actual_arrival": "",
+      "arr_timezone": "CEST",
+      "departure_delay_min": null,
+      "arrival_delay_min": null,
+      "status": "Future"
+    },
+    {
+      "date": "2026-04-30",
+      "flight": "EK706",
+      "origin": "SEZ",
+      "destination": "DXB",
+      "scheduled_departure": "08:25",
+      "actual_departure": "",
+      "dep_timezone": "+04",
+      "scheduled_arrival": "12:55",
+      "actual_arrival": "",
+      "arr_timezone": "+04",
+      "departure_delay_min": null,
+      "arrival_delay_min": null,
+      "status": "Future"
+    },
+    {
+      "date": "2026-04-30",
+      "flight": "EK705",
+      "origin": "DXB",
+      "destination": "SEZ",
+      "scheduled_departure": "02:15",
+      "actual_departure": "",
+      "dep_timezone": "+04",
+      "scheduled_arrival": "06:50",
+      "actual_arrival": "",
+      "arr_timezone": "+04",
+      "departure_delay_min": null,
+      "arrival_delay_min": null,
+      "status": "Future"
+    },
     {
       "date": "2026-04-29",
       "flight": "EK78",
@@ -130,11 +190,11 @@
       "actual_departure": "15:36",
       "dep_timezone": "CEST",
       "scheduled_arrival": "00:35",
-      "actual_arrival": "00:03",
+      "actual_arrival": "00:04",
       "arr_timezone": "+04",
       "departure_delay_min": -14,
-      "arrival_delay_min": -32,
-      "status": "En Route"
+      "arrival_delay_min": -31,
+      "status": "Descending"
     },
     {
       "date": "2026-04-27",
