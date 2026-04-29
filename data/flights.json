@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-04-29T01:03:06.564867+00:00",
+  "last_check": "2026-04-29T01:23:21.740234+00:00",
   "flights": [
     {
       "date": "2026-05-01",
@@ -27,6 +27,21 @@
       "scheduled_arrival": "13:30",
       "actual_arrival": "",
       "arr_timezone": "CEST",
+      "departure_delay_min": null,
+      "arrival_delay_min": null,
+      "status": "Future"
+    },
+    {
+      "date": "2026-05-01",
+      "flight": "EK708",
+      "origin": "SEZ",
+      "destination": "DXB",
+      "scheduled_departure": "23:55",
+      "actual_departure": "",
+      "dep_timezone": "+04",
+      "scheduled_arrival": "04:20",
+      "actual_arrival": "",
+      "arr_timezone": "+04",
       "departure_delay_min": null,
       "arrival_delay_min": null,
       "status": "Future"
