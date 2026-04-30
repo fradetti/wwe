@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-04-30T16:44:37.519380+00:00",
+  "last_check": "2026-04-30T17:04:46.738872+00:00",
   "threshold_eur": 400,
   "alert_active": true,
   "events": [
@@ -17,6 +17,11 @@
         {
           "name": "MIX",
           "price": 129.0,
+          "available": true
+        },
+        {
+          "name": "Section 208",
+          "price": 234.0,
           "available": true
         },
         {
@@ -77,11 +82,6 @@
         {
           "name": "Section H",
           "price": 588.0,
-          "available": true
-        },
-        {
-          "name": "Section 104",
-          "price": 505.0,
           "available": true
         }
       ]
@@ -225,21 +225,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-04-25T23:19:13.305617+00:00",
-      "event_id": "stubhub-160574096",
-      "price_min": 333.0
-    },
-    {
-      "timestamp": "2026-04-25T23:19:13.305617+00:00",
-      "event_id": "stubhub-160556794",
-      "price_min": 281.0
-    },
-    {
-      "timestamp": "2026-04-25T23:19:13.305617+00:00",
-      "event_id": "stubhub-160574134",
-      "price_min": 149.0
-    },
-    {
       "timestamp": "2026-04-25T23:39:23.403501+00:00",
       "event_id": "stubhub-160574096",
       "price_min": 333.0
@@ -5221,10 +5206,25 @@
     },
     {
       "timestamp": "2026-04-30T16:44:37.519380+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 117.0
+    },
+    {
+      "timestamp": "2026-04-30T17:04:46.738872+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 129.0
+    },
+    {
+      "timestamp": "2026-04-30T17:04:46.738872+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 125.0
+    },
+    {
+      "timestamp": "2026-04-30T17:04:46.738872+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 117.0
     }
   ],
-  "checks_count": 3282,
+  "checks_count": 3283,
   "errors": []
 }
