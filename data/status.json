@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-01T04:14:20.769390+00:00",
+  "last_check": "2026-05-01T04:34:37.300991+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [
@@ -21,11 +21,102 @@
       "date": "2026-05-31",
       "venue": "Inalpi Arena, Torino",
       "is_single_day": true,
-      "price_min": null,
-      "price_max": null,
+      "price_min": 92.0,
+      "price_max": 10142.5,
       "currency": "EUR",
       "url": "https://www.ticketmaster.it/biglietti/wwe-clash-in-italy-torino-31-05-2026/event/ur737yvj5cba",
-      "packages": []
+      "packages": [
+        {
+          "name": "1° Settore Num.",
+          "price": 977.5,
+          "available": true
+        },
+        {
+          "name": "2° Settore Num.",
+          "price": 747.5,
+          "available": true
+        },
+        {
+          "name": "3° Settore Num.",
+          "price": 977.5,
+          "available": true
+        },
+        {
+          "name": "4° Settore Num.",
+          "price": 460.0,
+          "available": true
+        },
+        {
+          "name": "5° Settore Num.",
+          "price": 586.5,
+          "available": true
+        },
+        {
+          "name": "6° Settore Num.",
+          "price": 230.0,
+          "available": true
+        },
+        {
+          "name": "7° Settore Num.",
+          "price": 201.25,
+          "available": false
+        },
+        {
+          "name": "8° Settore Num.",
+          "price": 172.5,
+          "available": true
+        },
+        {
+          "name": "9° Settore Num.",
+          "price": 143.75,
+          "available": true
+        },
+        {
+          "name": "10° Settore Num.",
+          "price": 115.0,
+          "available": false
+        },
+        {
+          "name": "11° Settore Num.",
+          "price": 103.5,
+          "available": true
+        },
+        {
+          "name": "12° Settore Num.",
+          "price": 92.0,
+          "available": false
+        },
+        {
+          "name": "Champion+ Package",
+          "price": 10142.5,
+          "available": true
+        },
+        {
+          "name": "Champion Package",
+          "price": 6017.5,
+          "available": true
+        },
+        {
+          "name": "Champion Package",
+          "price": 3410.0,
+          "available": true
+        },
+        {
+          "name": "Gold Package",
+          "price": 1955.0,
+          "available": true
+        },
+        {
+          "name": "Gold Package",
+          "price": 1755.0,
+          "available": true
+        },
+        {
+          "name": "Gold Package",
+          "price": 1371.25,
+          "available": true
+        }
+      ]
     },
     {
       "id": "ZG9rmIYnyZee66",
@@ -33,11 +124,97 @@
       "date": "2026-06-01",
       "venue": "Inalpi Arena, Torino",
       "is_single_day": true,
-      "price_min": null,
-      "price_max": null,
+      "price_min": 80.5,
+      "price_max": 1454.0,
       "currency": "EUR",
       "url": "https://www.ticketmaster.it/biglietti/wwe-monday-night-raw-torino-01-06-2026/event/w8facmymqkti",
-      "packages": []
+      "packages": [
+        {
+          "name": "1° Settore Num.",
+          "price": 690.0,
+          "available": true
+        },
+        {
+          "name": "2° Settore Num.",
+          "price": 460.0,
+          "available": true
+        },
+        {
+          "name": "3° Settore Num.",
+          "price": 586.5,
+          "available": true
+        },
+        {
+          "name": "4° Settore Num.",
+          "price": 287.5,
+          "available": true
+        },
+        {
+          "name": "5° Settore Num.",
+          "price": 391.0,
+          "available": true
+        },
+        {
+          "name": "6° Settore Num.",
+          "price": 172.5,
+          "available": true
+        },
+        {
+          "name": "7° Settore Num.",
+          "price": 143.75,
+          "available": false
+        },
+        {
+          "name": "8° Settore Num.",
+          "price": 126.5,
+          "available": false
+        },
+        {
+          "name": "9° Settore Num.",
+          "price": 115.0,
+          "available": true
+        },
+        {
+          "name": "10° Settore Num.",
+          "price": 103.5,
+          "available": true
+        },
+        {
+          "name": "11° Settore Num.",
+          "price": 92.0,
+          "available": true
+        },
+        {
+          "name": "12° Settore Num.",
+          "price": 80.5,
+          "available": false
+        },
+        {
+          "name": "THE BATTLE ROYAL ULTIMATE EXPERIENCE",
+          "price": 1454.0,
+          "available": true
+        },
+        {
+          "name": "THE 360 WWE SUPERSTAR EXPERIENCE",
+          "price": 1240.0,
+          "available": true
+        },
+        {
+          "name": "THE 360 WWE RINGSIDER PACKAGE",
+          "price": 992.0,
+          "available": true
+        },
+        {
+          "name": "THE WWE RAMPSIDER PACKAGE",
+          "price": 937.0,
+          "available": true
+        },
+        {
+          "name": "THE WWE RAMPSIDER PACKAGE",
+          "price": 707.0,
+          "available": true
+        }
+      ]
     },
     {
       "id": "ZG9rmIYnyZeeAa",
@@ -246,39 +423,80 @@
       "date": "2026-06-07",
       "venue": "Mandela Forum, Firenze",
       "is_single_day": true,
-      "price_min": null,
-      "price_max": null,
+      "price_min": 69.0,
+      "price_max": 1109.0,
       "currency": "EUR",
       "url": "https://www.ticketmaster.it/biglietti/wwe-european-summer-tour-firenze-07-06-2026/event/xxlb2e7953yg",
-      "packages": []
+      "packages": [
+        {
+          "name": "1° Settore Num.",
+          "price": 345.0,
+          "available": true
+        },
+        {
+          "name": "2° Settore Num.",
+          "price": 230.0,
+          "available": true
+        },
+        {
+          "name": "3° Settore Num.",
+          "price": 172.5,
+          "available": true
+        },
+        {
+          "name": "4° Settore Num.",
+          "price": 143.75,
+          "available": true
+        },
+        {
+          "name": "5° Settore Num.",
+          "price": 149.5,
+          "available": true
+        },
+        {
+          "name": "6° Settore Num.",
+          "price": 103.5,
+          "available": true
+        },
+        {
+          "name": "7° Settore Num.",
+          "price": 86.25,
+          "available": true
+        },
+        {
+          "name": "8° Settore Num.",
+          "price": 69.0,
+          "available": true
+        },
+        {
+          "name": "THE BATTLE ROYAL ULTIMATE EXPERIENCE",
+          "price": 1109.0,
+          "available": true
+        },
+        {
+          "name": "THE 360 WWE SUPERSTAR EXPERIENCE",
+          "price": 829.0,
+          "available": true
+        },
+        {
+          "name": "THE WWE RAMP WALK PACKAGE",
+          "price": 592.0,
+          "available": true
+        },
+        {
+          "name": "THE WWE SUPERFAN PACKAGE",
+          "price": 422.0,
+          "available": true
+        },
+        {
+          "name": "THE WWE PREMIUM FAN PACKAGE",
+          "price": 287.5,
+          "available": true
+        }
+      ]
     }
   ],
   "price_history": [
-    {
-      "timestamp": "2026-04-28T15:53:12.110437+00:00",
-      "event_id": "ZG9rmIYnyZee66",
-      "price_min": 80.5
-    },
-    {
-      "timestamp": "2026-04-28T15:53:12.110437+00:00",
-      "event_id": "ZG9rmIYnyZeeAa",
-      "price_min": 103.5
-    },
-    {
-      "timestamp": "2026-04-28T15:53:12.110437+00:00",
-      "event_id": "ZG9rmIYnyZeeA1",
-      "price_min": 69.0
-    },
-    {
-      "timestamp": "2026-04-28T15:53:12.110437+00:00",
-      "event_id": "ZG9rmIYnyZeekv",
-      "price_min": 69.0
-    },
-    {
-      "timestamp": "2026-04-28T16:13:18.012248+00:00",
-      "event_id": "ZG9rmIYnyZeeFd",
-      "price_min": 218.5
-    },
     {
       "timestamp": "2026-04-28T16:13:18.012248+00:00",
       "event_id": "ZG9rmIYnyZeeA6",
@@ -5253,8 +5471,33 @@
       "timestamp": "2026-05-01T04:14:20.769390+00:00",
       "event_id": "ZG9rmIYnyZeeA1",
       "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-05-01T04:34:37.300991+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 92.0
+    },
+    {
+      "timestamp": "2026-05-01T04:34:37.300991+00:00",
+      "event_id": "ZG9rmIYnyZee66",
+      "price_min": 80.5
+    },
+    {
+      "timestamp": "2026-05-01T04:34:37.300991+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 103.5
+    },
+    {
+      "timestamp": "2026-05-01T04:34:37.300991+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-05-01T04:34:37.300991+00:00",
+      "event_id": "ZG9rmIYnyZeekv",
+      "price_min": 69.0
     }
   ],
-  "checks_count": 3519,
+  "checks_count": 3520,
   "errors": []
 }
