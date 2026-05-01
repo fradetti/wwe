@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-01T15:22:17.199633+00:00",
+  "last_check": "2026-05-01T15:42:28.523900+00:00",
   "threshold_eur": 400,
   "alert_active": true,
   "events": [
@@ -78,7 +78,7 @@
       "venue": "",
       "is_single_day": true,
       "price_min": 125.0,
-      "price_max": 150.0,
+      "price_max": 242.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-raw-turin-tickets-6-1-2026/event/160556794/",
       "packages": [
@@ -98,23 +98,8 @@
           "available": true
         },
         {
-          "name": "Section 210",
-          "price": 150.0,
-          "available": true
-        },
-        {
-          "name": "Section 210",
-          "price": 150.0,
-          "available": true
-        },
-        {
-          "name": "Section 210",
-          "price": 150.0,
-          "available": true
-        },
-        {
-          "name": "Section 210",
-          "price": 150.0,
+          "name": "Section 107",
+          "price": 242.0,
           "available": true
         },
         {
@@ -134,6 +119,21 @@
         },
         {
           "name": "Section 213",
+          "price": 150.0,
+          "available": true
+        },
+        {
+          "name": "Section 210",
+          "price": 150.0,
+          "available": true
+        },
+        {
+          "name": "Section 210",
+          "price": 150.0,
+          "available": true
+        },
+        {
+          "name": "Section 210",
           "price": 150.0,
           "available": true
         }
@@ -220,21 +220,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-04-26T22:10:07.908081+00:00",
-      "event_id": "stubhub-160556794",
-      "price_min": 275.0
-    },
-    {
-      "timestamp": "2026-04-26T22:10:07.908081+00:00",
-      "event_id": "stubhub-160574134",
-      "price_min": 149.0
-    },
-    {
-      "timestamp": "2026-04-26T22:30:18.528237+00:00",
-      "event_id": "stubhub-160574096",
-      "price_min": 282.0
-    },
-    {
       "timestamp": "2026-04-26T22:30:18.528237+00:00",
       "event_id": "stubhub-160556794",
       "price_min": 275.0
@@ -5216,10 +5201,25 @@
     },
     {
       "timestamp": "2026-05-01T15:22:17.199633+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 117.0
+    },
+    {
+      "timestamp": "2026-05-01T15:42:28.523900+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 129.0
+    },
+    {
+      "timestamp": "2026-05-01T15:42:28.523900+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 125.0
+    },
+    {
+      "timestamp": "2026-05-01T15:42:28.523900+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 117.0
     }
   ],
-  "checks_count": 3349,
+  "checks_count": 3350,
   "errors": []
 }
