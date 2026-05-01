@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-01T13:45:51.770313+00:00",
+  "last_check": "2026-05-01T14:06:01.806104+00:00",
   "flights": [
     {
       "date": "2026-05-03",
@@ -9,7 +9,7 @@
       "scheduled_departure": "15:50",
       "actual_departure": "",
       "dep_timezone": "CEST",
-      "scheduled_arrival": "23:59",
+      "scheduled_arrival": "00:35",
       "actual_arrival": "",
       "arr_timezone": "+04",
       "departure_delay_min": null,
@@ -21,7 +21,7 @@
       "flight": "EK77",
       "origin": "DXB",
       "destination": "NCE",
-      "scheduled_departure": "08:40",
+      "scheduled_departure": "07:40",
       "actual_departure": "",
       "dep_timezone": "+04",
       "scheduled_arrival": "13:30",
@@ -84,7 +84,7 @@
       "scheduled_departure": "15:50",
       "actual_departure": "",
       "dep_timezone": "CEST",
-      "scheduled_arrival": "23:59",
+      "scheduled_arrival": "00:35",
       "actual_arrival": "",
       "arr_timezone": "+04",
       "departure_delay_min": null,
@@ -96,7 +96,7 @@
       "flight": "EK77",
       "origin": "DXB",
       "destination": "NCE",
-      "scheduled_departure": "08:40",
+      "scheduled_departure": "07:40",
       "actual_departure": "",
       "dep_timezone": "+04",
       "scheduled_arrival": "13:30",
@@ -142,14 +142,14 @@
       "origin": "NCE",
       "destination": "DXB",
       "scheduled_departure": "15:50",
-      "actual_departure": "15:50",
+      "actual_departure": "15:48",
       "dep_timezone": "CEST",
-      "scheduled_arrival": "23:59",
+      "scheduled_arrival": "00:35",
       "actual_arrival": "00:07",
       "arr_timezone": "+04",
-      "departure_delay_min": 0,
-      "arrival_delay_min": 8,
-      "status": "Scheduled"
+      "departure_delay_min": -2,
+      "arrival_delay_min": -28,
+      "status": "Climbing"
     },
     {
       "date": "2026-05-01",
