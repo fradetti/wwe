@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-02T15:42:56.951699+00:00",
+  "last_check": "2026-05-02T16:03:05.308525+00:00",
   "flights": [
     {
       "date": "2026-05-04",
@@ -97,13 +97,13 @@
       "origin": "TNR",
       "destination": "SEZ",
       "scheduled_departure": "18:35",
-      "actual_departure": "",
+      "actual_departure": "18:35",
       "dep_timezone": "EAT",
       "scheduled_arrival": "22:20",
-      "actual_arrival": "",
+      "actual_arrival": "22:20",
       "arr_timezone": "+04",
-      "departure_delay_min": null,
-      "arrival_delay_min": null,
+      "departure_delay_min": 0,
+      "arrival_delay_min": 0,
       "status": "Future"
     },
     {
