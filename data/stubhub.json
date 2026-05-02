@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-02T08:14:57.858022+00:00",
+  "last_check": "2026-05-02T08:35:09.096780+00:00",
   "threshold_eur": 400,
   "alert_active": true,
   "events": [
@@ -78,7 +78,7 @@
       "venue": "",
       "is_single_day": true,
       "price_min": 125.0,
-      "price_max": 242.0,
+      "price_max": 150.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-raw-turin-tickets-6-1-2026/event/160556794/",
       "packages": [
@@ -88,37 +88,12 @@
           "available": true
         },
         {
-          "name": "Section 203",
-          "price": 150.0,
-          "available": true
-        },
-        {
-          "name": "Section 107",
-          "price": 242.0,
-          "available": true
-        },
-        {
           "name": "Section 213",
           "price": 125.0,
           "available": true
         },
         {
-          "name": "Section 213",
-          "price": 150.0,
-          "available": true
-        },
-        {
-          "name": "Section 213",
-          "price": 150.0,
-          "available": true
-        },
-        {
-          "name": "Section 213",
-          "price": 150.0,
-          "available": true
-        },
-        {
-          "name": "Section 213",
+          "name": "Section 203",
           "price": 150.0,
           "available": true
         },
@@ -134,6 +109,31 @@
         },
         {
           "name": "Section 210",
+          "price": 150.0,
+          "available": true
+        },
+        {
+          "name": "Section 210",
+          "price": 150.0,
+          "available": true
+        },
+        {
+          "name": "Section 213",
+          "price": 150.0,
+          "available": true
+        },
+        {
+          "name": "Section 213",
+          "price": 150.0,
+          "available": true
+        },
+        {
+          "name": "Section 213",
+          "price": 150.0,
+          "available": true
+        },
+        {
+          "name": "Section 213",
           "price": 150.0,
           "available": true
         }
@@ -220,21 +220,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-04-27T14:59:39.976559+00:00",
-      "event_id": "stubhub-160574096",
-      "price_min": 257.0
-    },
-    {
-      "timestamp": "2026-04-27T14:59:39.976559+00:00",
-      "event_id": "stubhub-160556794",
-      "price_min": 234.0
-    },
-    {
-      "timestamp": "2026-04-27T14:59:39.976559+00:00",
-      "event_id": "stubhub-160574134",
-      "price_min": 119.0
-    },
-    {
       "timestamp": "2026-04-27T15:19:45.556361+00:00",
       "event_id": "stubhub-160574096",
       "price_min": 253.0
@@ -5216,10 +5201,25 @@
     },
     {
       "timestamp": "2026-05-02T08:14:57.858022+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 117.0
+    },
+    {
+      "timestamp": "2026-05-02T08:35:09.096780+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 129.0
+    },
+    {
+      "timestamp": "2026-05-02T08:35:09.096780+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 125.0
+    },
+    {
+      "timestamp": "2026-05-02T08:35:09.096780+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 117.0
     }
   ],
-  "checks_count": 3399,
+  "checks_count": 3400,
   "errors": []
 }
