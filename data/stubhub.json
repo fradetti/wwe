@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-03T12:58:10.181295+00:00",
+  "last_check": "2026-05-03T13:18:17.783386+00:00",
   "threshold_eur": 400,
   "alert_active": true,
   "events": [
@@ -220,21 +220,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-04-28T19:35:13.804407+00:00",
-      "event_id": "stubhub-160574096",
-      "price_min": 234.0
-    },
-    {
-      "timestamp": "2026-04-28T19:35:13.804407+00:00",
-      "event_id": "stubhub-160556794",
-      "price_min": 150.0
-    },
-    {
-      "timestamp": "2026-04-28T19:35:13.804407+00:00",
-      "event_id": "stubhub-160574134",
-      "price_min": 117.0
-    },
-    {
       "timestamp": "2026-04-28T19:55:27.769345+00:00",
       "event_id": "stubhub-160574096",
       "price_min": 238.0
@@ -5216,10 +5201,25 @@
     },
     {
       "timestamp": "2026-05-03T12:58:10.181295+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 117.0
+    },
+    {
+      "timestamp": "2026-05-03T13:18:17.783386+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 125.0
+    },
+    {
+      "timestamp": "2026-05-03T13:18:17.783386+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 125.0
+    },
+    {
+      "timestamp": "2026-05-03T13:18:17.783386+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 117.0
     }
   ],
-  "checks_count": 3483,
+  "checks_count": 3484,
   "errors": []
 }
