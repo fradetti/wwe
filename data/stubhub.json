@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-05T20:30:55.238911+00:00",
+  "last_check": "2026-05-05T20:51:13.925304+00:00",
   "threshold_eur": 400,
   "alert_active": true,
   "events": [
@@ -65,18 +65,13 @@
           "available": true
         },
         {
-          "name": "Section K",
-          "price": 394.0,
-          "available": true
-        },
-        {
           "name": "Section H",
           "price": 757.0,
           "available": true
         },
         {
           "name": "Section H",
-          "price": 432.0,
+          "price": 434.0,
           "available": true
         },
         {
@@ -102,6 +97,11 @@
         {
           "name": "Section 107",
           "price": 452.0,
+          "available": true
+        },
+        {
+          "name": "Section K",
+          "price": 460.0,
           "available": true
         }
       ]
@@ -300,21 +300,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-05-01T02:13:09.724945+00:00",
-      "event_id": "stubhub-160574096",
-      "price_min": 129.0
-    },
-    {
-      "timestamp": "2026-05-01T02:13:09.724945+00:00",
-      "event_id": "stubhub-160556794",
-      "price_min": 125.0
-    },
-    {
-      "timestamp": "2026-05-01T02:13:09.724945+00:00",
-      "event_id": "stubhub-160574134",
-      "price_min": 117.0
-    },
-    {
       "timestamp": "2026-05-01T02:33:28.123534+00:00",
       "event_id": "stubhub-160574096",
       "price_min": 129.0
@@ -5296,10 +5281,25 @@
     },
     {
       "timestamp": "2026-05-05T20:30:55.238911+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 110.0
+    },
+    {
+      "timestamp": "2026-05-05T20:51:13.925304+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 115.0
+    },
+    {
+      "timestamp": "2026-05-05T20:51:13.925304+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 115.0
+    },
+    {
+      "timestamp": "2026-05-05T20:51:13.925304+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 110.0
     }
   ],
-  "checks_count": 3645,
+  "checks_count": 3646,
   "errors": []
 }
