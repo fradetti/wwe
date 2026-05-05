@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-05T21:52:20.845809+00:00",
+  "last_check": "2026-05-05T22:12:37.519506+00:00",
   "threshold_eur": 400,
   "alert_active": true,
   "events": [
@@ -41,7 +41,7 @@
         },
         {
           "name": "Section 206",
-          "price": 174.0,
+          "price": 173.0,
           "available": true
         },
         {
@@ -51,7 +51,7 @@
         },
         {
           "name": "Floor",
-          "price": 310.0,
+          "price": 308.0,
           "available": true
         },
         {
@@ -61,7 +61,7 @@
         },
         {
           "name": "Section 122",
-          "price": 357.0,
+          "price": 355.0,
           "available": true
         },
         {
@@ -71,7 +71,7 @@
         },
         {
           "name": "Section H",
-          "price": 434.0,
+          "price": 432.0,
           "available": true
         },
         {
@@ -81,7 +81,7 @@
         },
         {
           "name": "Section 116",
-          "price": 438.0,
+          "price": 436.0,
           "available": true
         },
         {
@@ -91,17 +91,17 @@
         },
         {
           "name": "Section 107",
-          "price": 438.0,
+          "price": 436.0,
           "available": true
         },
         {
           "name": "Section 107",
-          "price": 452.0,
+          "price": 450.0,
           "available": true
         },
         {
           "name": "Section K",
-          "price": 460.0,
+          "price": 457.0,
           "available": true
         }
       ]
@@ -144,7 +144,7 @@
         },
         {
           "name": "Section 210",
-          "price": 140.0,
+          "price": 139.0,
           "available": true
         },
         {
@@ -154,7 +154,7 @@
         },
         {
           "name": "Section 210",
-          "price": 140.0,
+          "price": 139.0,
           "available": true
         },
         {
@@ -164,7 +164,7 @@
         },
         {
           "name": "Section 210",
-          "price": 140.0,
+          "price": 139.0,
           "available": true
         },
         {
@@ -174,7 +174,7 @@
         },
         {
           "name": "Section 210",
-          "price": 140.0,
+          "price": 139.0,
           "available": true
         },
         {
@@ -184,7 +184,7 @@
         },
         {
           "name": "Section 213",
-          "price": 140.0,
+          "price": 139.0,
           "available": true
         },
         {
@@ -194,7 +194,7 @@
         },
         {
           "name": "Section 213",
-          "price": 140.0,
+          "price": 139.0,
           "available": true
         },
         {
@@ -204,7 +204,7 @@
         },
         {
           "name": "Section 213",
-          "price": 140.0,
+          "price": 139.0,
           "available": true
         },
         {
@@ -214,7 +214,7 @@
         },
         {
           "name": "Section 213",
-          "price": 140.0,
+          "price": 139.0,
           "available": true
         }
       ]
@@ -300,21 +300,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-05-01T03:34:24.525050+00:00",
-      "event_id": "stubhub-160574096",
-      "price_min": 129.0
-    },
-    {
-      "timestamp": "2026-05-01T03:34:24.525050+00:00",
-      "event_id": "stubhub-160556794",
-      "price_min": 125.0
-    },
-    {
-      "timestamp": "2026-05-01T03:34:24.525050+00:00",
-      "event_id": "stubhub-160574134",
-      "price_min": 117.0
-    },
-    {
       "timestamp": "2026-05-01T03:54:40.699974+00:00",
       "event_id": "stubhub-160574096",
       "price_min": 129.0
@@ -5296,10 +5281,25 @@
     },
     {
       "timestamp": "2026-05-05T21:52:20.845809+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 110.0
+    },
+    {
+      "timestamp": "2026-05-05T22:12:37.519506+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 115.0
+    },
+    {
+      "timestamp": "2026-05-05T22:12:37.519506+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 115.0
+    },
+    {
+      "timestamp": "2026-05-05T22:12:37.519506+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 110.0
     }
   ],
-  "checks_count": 3649,
+  "checks_count": 3650,
   "errors": []
 }
