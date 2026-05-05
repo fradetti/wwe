@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-05T17:29:01.082605+00:00",
+  "last_check": "2026-05-05T17:49:09.821501+00:00",
   "threshold_eur": 400,
   "alert_active": true,
   "events": [
@@ -10,7 +10,7 @@
       "venue": "",
       "is_single_day": true,
       "price_min": 125.0,
-      "price_max": 1200.0,
+      "price_max": 757.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-clash-in-italy-turin-tickets-5-31-2026/event/160574096/",
       "packages": [
@@ -35,23 +35,13 @@
           "available": true
         },
         {
-          "name": "Section J",
-          "price": 610.0,
-          "available": true
-        },
-        {
           "name": "Floor",
           "price": 322.0,
           "available": true
         },
         {
-          "name": "Section J",
-          "price": 1200.0,
-          "available": true
-        },
-        {
-          "name": "Section J",
-          "price": 651.0,
+          "name": "Section 122",
+          "price": 371.0,
           "available": true
         },
         {
@@ -70,13 +60,18 @@
           "available": true
         },
         {
-          "name": "Section 122",
-          "price": 371.0,
+          "name": "Section 116",
+          "price": 455.0,
           "available": true
         },
         {
-          "name": "Section 101",
-          "price": 538.0,
+          "name": "Section 107",
+          "price": 455.0,
+          "available": true
+        },
+        {
+          "name": "Section 107",
+          "price": 470.0,
           "available": true
         }
       ]
@@ -155,19 +150,24 @@
       "date": "2026-06-05",
       "venue": "",
       "is_single_day": true,
-      "price_min": 117.0,
+      "price_min": 113.0,
       "price_max": 504.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-smackdown-casalecchio-di-reno-bologna-tickets-6-5-2026/event/160574134/",
       "packages": [
         {
           "name": "RING",
-          "price": 117.0,
+          "price": 113.0,
           "available": true
         },
         {
           "name": "Section 2 Ovest B",
-          "price": 117.0,
+          "price": 145.0,
+          "available": true
+        },
+        {
+          "name": "Section 2 Ovest B",
+          "price": 113.0,
           "available": true
         },
         {
@@ -225,21 +225,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-04-30T23:10:31.789860+00:00",
-      "event_id": "stubhub-160556794",
-      "price_min": 125.0
-    },
-    {
-      "timestamp": "2026-04-30T23:10:31.789860+00:00",
-      "event_id": "stubhub-160574134",
-      "price_min": 117.0
-    },
-    {
-      "timestamp": "2026-04-30T23:30:47.715917+00:00",
-      "event_id": "stubhub-160574096",
-      "price_min": 129.0
-    },
-    {
       "timestamp": "2026-04-30T23:30:47.715917+00:00",
       "event_id": "stubhub-160556794",
       "price_min": 125.0
@@ -5223,8 +5208,23 @@
       "timestamp": "2026-05-05T17:29:01.082605+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 117.0
+    },
+    {
+      "timestamp": "2026-05-05T17:49:09.821501+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 125.0
+    },
+    {
+      "timestamp": "2026-05-05T17:49:09.821501+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 125.0
+    },
+    {
+      "timestamp": "2026-05-05T17:49:09.821501+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 113.0
     }
   ],
-  "checks_count": 3636,
+  "checks_count": 3637,
   "errors": []
 }
