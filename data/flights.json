@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-06T15:32:20.152995+00:00",
+  "last_check": "2026-05-06T15:52:30.852661+00:00",
   "flights": [
     {
       "date": "2026-05-08",
@@ -149,7 +149,7 @@
       "arr_timezone": "+04",
       "departure_delay_min": 37,
       "arrival_delay_min": 32,
-      "status": "En Route"
+      "status": "Climbing"
     },
     {
       "date": "2026-05-06",
@@ -169,17 +169,17 @@
     {
       "date": "2026-05-06",
       "flight": "EK708",
-      "origin": "SEZ",
-      "destination": "DXB",
-      "scheduled_departure": "23:55",
-      "actual_departure": "23:55",
-      "dep_timezone": "+04",
-      "scheduled_arrival": "04:20",
-      "actual_arrival": "04:23",
+      "origin": "TNR",
+      "destination": "SEZ",
+      "scheduled_departure": "18:35",
+      "actual_departure": "18:22",
+      "dep_timezone": "EAT",
+      "scheduled_arrival": "22:20",
+      "actual_arrival": "22:07",
       "arr_timezone": "+04",
-      "departure_delay_min": 0,
-      "arrival_delay_min": 3,
-      "status": "Scheduled"
+      "departure_delay_min": -13,
+      "arrival_delay_min": -13,
+      "status": "Climbing"
     },
     {
       "date": "2026-05-06",
