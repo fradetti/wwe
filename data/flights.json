@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-07T21:15:05.328483+00:00",
+  "last_check": "2026-05-07T21:34:39.575231+00:00",
   "flights": [
     {
       "date": "2026-05-10",
@@ -205,10 +205,10 @@
       "actual_departure": "02:15",
       "dep_timezone": "+04",
       "scheduled_arrival": "06:50",
-      "actual_arrival": "06:58",
+      "actual_arrival": "06:56",
       "arr_timezone": "+04",
       "departure_delay_min": 0,
-      "arrival_delay_min": 8,
+      "arrival_delay_min": 6,
       "status": "Historical"
     },
     {
