@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-07T13:49:31.126822+00:00",
+  "last_check": "2026-05-07T14:09:41.623142+00:00",
   "flights": [
     {
       "date": "2026-05-09",
@@ -9,7 +9,7 @@
       "scheduled_departure": "15:50",
       "actual_departure": "",
       "dep_timezone": "CEST",
-      "scheduled_arrival": "23:59",
+      "scheduled_arrival": "00:35",
       "actual_arrival": "",
       "arr_timezone": "+04",
       "departure_delay_min": null,
@@ -21,7 +21,7 @@
       "flight": "EK77",
       "origin": "DXB",
       "destination": "NCE",
-      "scheduled_departure": "08:40",
+      "scheduled_departure": "07:40",
       "actual_departure": "",
       "dep_timezone": "+04",
       "scheduled_arrival": "13:30",
@@ -69,7 +69,7 @@
       "scheduled_departure": "15:50",
       "actual_departure": "",
       "dep_timezone": "CEST",
-      "scheduled_arrival": "23:59",
+      "scheduled_arrival": "00:35",
       "actual_arrival": "",
       "arr_timezone": "+04",
       "departure_delay_min": null,
@@ -81,7 +81,7 @@
       "flight": "EK77",
       "origin": "DXB",
       "destination": "NCE",
-      "scheduled_departure": "08:40",
+      "scheduled_departure": "07:40",
       "actual_departure": "",
       "dep_timezone": "+04",
       "scheduled_arrival": "13:30",
