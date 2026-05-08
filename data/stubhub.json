@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-07T23:52:15.019368+00:00",
+  "last_check": "2026-05-08T00:12:33.068473+00:00",
   "threshold_eur": 400,
   "alert_active": true,
   "events": [
@@ -10,7 +10,7 @@
       "venue": "",
       "is_single_day": true,
       "price_min": 106.0,
-      "price_max": 757.0,
+      "price_max": 822.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-clash-in-italy-turin-tickets-5-31-2026/event/160574096/",
       "packages": [
@@ -26,7 +26,7 @@
         },
         {
           "name": "Section 204",
-          "price": 172.0,
+          "price": 173.0,
           "available": true
         },
         {
@@ -36,7 +36,7 @@
         },
         {
           "name": "Section 206",
-          "price": 173.0,
+          "price": 174.0,
           "available": true
         },
         {
@@ -46,7 +46,7 @@
         },
         {
           "name": "Section 107",
-          "price": 240.0,
+          "price": 241.0,
           "available": true
         },
         {
@@ -56,7 +56,7 @@
         },
         {
           "name": "Floor",
-          "price": 308.0,
+          "price": 310.0,
           "available": true
         },
         {
@@ -66,7 +66,7 @@
         },
         {
           "name": "Section 122",
-          "price": 355.0,
+          "price": 357.0,
           "available": true
         },
         {
@@ -76,12 +76,7 @@
         },
         {
           "name": "Section H",
-          "price": 419.0,
-          "available": true
-        },
-        {
-          "name": "Section 107",
-          "price": 435.0,
+          "price": 422.0,
           "available": true
         },
         {
@@ -91,12 +86,22 @@
         },
         {
           "name": "Section 116",
-          "price": 436.0,
+          "price": 438.0,
           "available": true
         },
         {
           "name": "Section 122",
-          "price": 441.0,
+          "price": 444.0,
+          "available": true
+        },
+        {
+          "name": "Section K",
+          "price": 822.0,
+          "available": true
+        },
+        {
+          "name": "Section K",
+          "price": 449.0,
           "available": true
         }
       ]
@@ -139,7 +144,7 @@
         },
         {
           "name": "Section 211",
-          "price": 118.0,
+          "price": 119.0,
           "available": true
         },
         {
@@ -149,7 +154,7 @@
         },
         {
           "name": "Section 212",
-          "price": 118.0,
+          "price": 119.0,
           "available": true
         },
         {
@@ -159,7 +164,7 @@
         },
         {
           "name": "Section 210",
-          "price": 139.0,
+          "price": 140.0,
           "available": true
         },
         {
@@ -169,7 +174,7 @@
         },
         {
           "name": "Section 210",
-          "price": 139.0,
+          "price": 140.0,
           "available": true
         },
         {
@@ -179,7 +184,7 @@
         },
         {
           "name": "Section 210",
-          "price": 139.0,
+          "price": 140.0,
           "available": true
         },
         {
@@ -189,7 +194,7 @@
         },
         {
           "name": "Section 210",
-          "price": 139.0,
+          "price": 140.0,
           "available": true
         },
         {
@@ -199,7 +204,7 @@
         },
         {
           "name": "Section 213",
-          "price": 139.0,
+          "price": 140.0,
           "available": true
         },
         {
@@ -209,7 +214,7 @@
         },
         {
           "name": "Section 213",
-          "price": 139.0,
+          "price": 140.0,
           "available": true
         }
       ]
@@ -247,7 +252,7 @@
         },
         {
           "name": "Section 2 Est A",
-          "price": 134.0,
+          "price": 135.0,
           "available": true
         },
         {
@@ -257,63 +262,48 @@
         },
         {
           "name": "Section 2 Est E",
-          "price": 305.0,
+          "price": 307.0,
           "available": true
         },
         {
           "name": "Section 2 Ovest E",
-          "price": 311.0,
+          "price": 312.0,
           "available": true
         },
         {
           "name": "Section 2 Ovest E",
-          "price": 311.0,
+          "price": 312.0,
           "available": true
         },
         {
           "name": "Section 2 Ovest E",
-          "price": 311.0,
+          "price": 312.0,
           "available": true
         },
         {
           "name": "Section 2 Ovest E",
-          "price": 311.0,
+          "price": 312.0,
           "available": true
         },
         {
           "name": "Section 2 Ovest E",
-          "price": 311.0,
+          "price": 312.0,
           "available": true
         },
         {
           "name": "Section 2 Ovest E",
-          "price": 311.0,
+          "price": 312.0,
           "available": true
         },
         {
           "name": "Section 2 Est E",
-          "price": 311.0,
+          "price": 312.0,
           "available": true
         }
       ]
     }
   ],
   "price_history": [
-    {
-      "timestamp": "2026-05-03T05:51:35.953319+00:00",
-      "event_id": "stubhub-160556794",
-      "price_min": 125.0
-    },
-    {
-      "timestamp": "2026-05-03T05:51:35.953319+00:00",
-      "event_id": "stubhub-160574134",
-      "price_min": 117.0
-    },
-    {
-      "timestamp": "2026-05-03T06:12:19.272518+00:00",
-      "event_id": "stubhub-160574096",
-      "price_min": 115.0
-    },
     {
       "timestamp": "2026-05-03T06:12:19.272518+00:00",
       "event_id": "stubhub-160556794",
@@ -5298,8 +5288,23 @@
       "timestamp": "2026-05-07T23:52:15.019368+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 103.0
+    },
+    {
+      "timestamp": "2026-05-08T00:12:33.068473+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 106.0
+    },
+    {
+      "timestamp": "2026-05-08T00:12:33.068473+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 106.0
+    },
+    {
+      "timestamp": "2026-05-08T00:12:33.068473+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 103.0
     }
   ],
-  "checks_count": 3797,
+  "checks_count": 3798,
   "errors": []
 }
