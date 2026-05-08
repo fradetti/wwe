@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-08T20:13:38.985246+00:00",
+  "last_check": "2026-05-08T20:33:54.523049+00:00",
   "flights": [
     {
       "date": "2026-05-11",
@@ -232,13 +232,13 @@
       "origin": "SEZ",
       "destination": "DXB",
       "scheduled_departure": "23:55",
-      "actual_departure": "23:45",
+      "actual_departure": "23:46",
       "dep_timezone": "+04",
       "scheduled_arrival": "04:20",
-      "actual_arrival": "04:20",
+      "actual_arrival": "04:09",
       "arr_timezone": "+04",
-      "departure_delay_min": -10,
-      "arrival_delay_min": 0,
+      "departure_delay_min": -9,
+      "arrival_delay_min": -11,
       "status": "Climbing"
     },
     {
