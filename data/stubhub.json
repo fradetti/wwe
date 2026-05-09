@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-09T12:07:28.850404+00:00",
+  "last_check": "2026-05-09T12:27:35.847061+00:00",
   "threshold_eur": 400,
   "alert_active": true,
   "events": [
@@ -10,7 +10,7 @@
       "venue": "",
       "is_single_day": true,
       "price_min": 106.0,
-      "price_max": 636.0,
+      "price_max": 757.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-clash-in-italy-turin-tickets-5-31-2026/event/160574096/",
       "packages": [
@@ -71,7 +71,7 @@
         },
         {
           "name": "Section 107",
-          "price": 434.0,
+          "price": 435.0,
           "available": true
         },
         {
@@ -82,6 +82,11 @@
         {
           "name": "Section 116",
           "price": 436.0,
+          "available": true
+        },
+        {
+          "name": "Section H",
+          "price": 757.0,
           "available": true
         },
         {
@@ -299,21 +304,6 @@
     }
   ],
   "price_history": [
-    {
-      "timestamp": "2026-05-04T17:57:42.557881+00:00",
-      "event_id": "stubhub-160556794",
-      "price_min": 115.0
-    },
-    {
-      "timestamp": "2026-05-04T17:57:42.557881+00:00",
-      "event_id": "stubhub-160574134",
-      "price_min": 114.0
-    },
-    {
-      "timestamp": "2026-05-04T18:17:51.960114+00:00",
-      "event_id": "stubhub-160574096",
-      "price_min": 115.0
-    },
     {
       "timestamp": "2026-05-04T18:17:51.960114+00:00",
       "event_id": "stubhub-160556794",
@@ -5298,8 +5288,23 @@
       "timestamp": "2026-05-09T12:07:28.850404+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 103.0
+    },
+    {
+      "timestamp": "2026-05-09T12:27:35.847061+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 106.0
+    },
+    {
+      "timestamp": "2026-05-09T12:27:35.847061+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 106.0
+    },
+    {
+      "timestamp": "2026-05-09T12:27:35.847061+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 103.0
     }
   ],
-  "checks_count": 3903,
+  "checks_count": 3904,
   "errors": []
 }
