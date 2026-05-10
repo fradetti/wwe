@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-10T12:57:44.492123+00:00",
+  "last_check": "2026-05-10T13:38:09.554438+00:00",
   "threshold_eur": 400,
   "alert_active": true,
   "events": [
@@ -91,7 +91,7 @@
         },
         {
           "name": "Section 107",
-          "price": 435.0,
+          "price": 434.0,
           "available": true
         },
         {
@@ -108,116 +108,15 @@
     },
     {
       "id": "stubhub-160556794",
-      "name": "WWE Monday Night RAW",
+      "name": "Jun 1",
       "date": "2026-06-01",
       "venue": "",
       "is_single_day": true,
-      "price_min": 106.0,
-      "price_max": 185.0,
+      "price_min": null,
+      "price_max": null,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-raw-turin-tickets-6-1-2026/event/160556794/",
-      "packages": [
-        {
-          "name": "MIX",
-          "price": 106.0,
-          "available": true
-        },
-        {
-          "name": "Section 203",
-          "price": 114.0,
-          "available": true
-        },
-        {
-          "name": "Section 213",
-          "price": 155.0,
-          "available": true
-        },
-        {
-          "name": "Section 213",
-          "price": 115.0,
-          "available": true
-        },
-        {
-          "name": "Section 211",
-          "price": 159.0,
-          "available": true
-        },
-        {
-          "name": "Section 211",
-          "price": 118.0,
-          "available": true
-        },
-        {
-          "name": "Section 212",
-          "price": 159.0,
-          "available": true
-        },
-        {
-          "name": "Section 212",
-          "price": 118.0,
-          "available": true
-        },
-        {
-          "name": "Section 210",
-          "price": 185.0,
-          "available": true
-        },
-        {
-          "name": "Section 210",
-          "price": 139.0,
-          "available": true
-        },
-        {
-          "name": "Section 210",
-          "price": 185.0,
-          "available": true
-        },
-        {
-          "name": "Section 210",
-          "price": 139.0,
-          "available": true
-        },
-        {
-          "name": "Section 210",
-          "price": 185.0,
-          "available": true
-        },
-        {
-          "name": "Section 210",
-          "price": 139.0,
-          "available": true
-        },
-        {
-          "name": "Section 210",
-          "price": 185.0,
-          "available": true
-        },
-        {
-          "name": "Section 210",
-          "price": 139.0,
-          "available": true
-        },
-        {
-          "name": "Section 213",
-          "price": 185.0,
-          "available": true
-        },
-        {
-          "name": "Section 213",
-          "price": 139.0,
-          "available": true
-        },
-        {
-          "name": "Section 213",
-          "price": 185.0,
-          "available": true
-        },
-        {
-          "name": "Section 213",
-          "price": 139.0,
-          "available": true
-        }
-      ]
+      "packages": []
     },
     {
       "id": "stubhub-160574134",
@@ -304,16 +203,6 @@
     }
   ],
   "price_history": [
-    {
-      "timestamp": "2026-05-05T20:10:37.626888+00:00",
-      "event_id": "stubhub-160556794",
-      "price_min": 115.0
-    },
-    {
-      "timestamp": "2026-05-05T20:10:37.626888+00:00",
-      "event_id": "stubhub-160574134",
-      "price_min": 110.0
-    },
     {
       "timestamp": "2026-05-05T20:30:55.238911+00:00",
       "event_id": "stubhub-160574096",
@@ -5303,8 +5192,18 @@
       "timestamp": "2026-05-10T12:57:44.492123+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 103.0
+    },
+    {
+      "timestamp": "2026-05-10T13:38:09.554438+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 81.0
+    },
+    {
+      "timestamp": "2026-05-10T13:38:09.554438+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 103.0
     }
   ],
-  "checks_count": 3977,
+  "checks_count": 3978,
   "errors": []
 }
