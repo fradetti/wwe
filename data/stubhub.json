@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-10T21:42:39.375400+00:00",
+  "last_check": "2026-05-10T22:02:56.816894+00:00",
   "threshold_eur": 400,
   "alert_active": true,
   "events": [
@@ -10,7 +10,7 @@
       "venue": "",
       "is_single_day": true,
       "price_min": 81.0,
-      "price_max": 636.0,
+      "price_max": 757.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-clash-in-italy-turin-tickets-5-31-2026/event/160574096/",
       "packages": [
@@ -71,12 +71,12 @@
         },
         {
           "name": "Section H",
-          "price": 590.0,
+          "price": 757.0,
           "available": true
         },
         {
           "name": "Section H",
-          "price": 421.0,
+          "price": 428.0,
           "available": true
         },
         {
@@ -304,21 +304,6 @@
     }
   ],
   "price_history": [
-    {
-      "timestamp": "2026-05-06T04:38:58.468616+00:00",
-      "event_id": "stubhub-160574096",
-      "price_min": 125.0
-    },
-    {
-      "timestamp": "2026-05-06T04:38:58.468616+00:00",
-      "event_id": "stubhub-160556794",
-      "price_min": 125.0
-    },
-    {
-      "timestamp": "2026-05-06T04:38:58.468616+00:00",
-      "event_id": "stubhub-160574134",
-      "price_min": 113.0
-    },
     {
       "timestamp": "2026-05-06T04:59:13.702783+00:00",
       "event_id": "stubhub-160574096",
@@ -5303,8 +5288,23 @@
       "timestamp": "2026-05-10T21:42:39.375400+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 103.0
+    },
+    {
+      "timestamp": "2026-05-10T22:02:56.816894+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 81.0
+    },
+    {
+      "timestamp": "2026-05-10T22:02:56.816894+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 106.0
+    },
+    {
+      "timestamp": "2026-05-10T22:02:56.816894+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 103.0
     }
   ],
-  "checks_count": 4002,
+  "checks_count": 4003,
   "errors": []
 }
