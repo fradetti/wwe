@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-13T22:11:12.236656+00:00",
+  "last_check": "2026-05-13T22:31:02.448077+00:00",
   "threshold_eur": 400,
   "alert_active": true,
   "events": [
@@ -10,7 +10,7 @@
       "venue": "",
       "is_single_day": true,
       "price_min": 81.0,
-      "price_max": 703.0,
+      "price_max": 757.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-clash-in-italy-turin-tickets-5-31-2026/event/160574096/",
       "packages": [
@@ -31,7 +31,7 @@
         },
         {
           "name": "Section 204",
-          "price": 166.0,
+          "price": 167.0,
           "available": true
         },
         {
@@ -41,7 +41,7 @@
         },
         {
           "name": "Section 206",
-          "price": 173.0,
+          "price": 174.0,
           "available": true
         },
         {
@@ -51,7 +51,7 @@
         },
         {
           "name": "Section 107",
-          "price": 240.0,
+          "price": 241.0,
           "available": true
         },
         {
@@ -61,7 +61,7 @@
         },
         {
           "name": "Section 108",
-          "price": 296.0,
+          "price": 298.0,
           "available": true
         },
         {
@@ -71,7 +71,7 @@
         },
         {
           "name": "Floor",
-          "price": 308.0,
+          "price": 310.0,
           "available": true
         },
         {
@@ -81,17 +81,17 @@
         },
         {
           "name": "Section 122",
-          "price": 355.0,
+          "price": 357.0,
           "available": true
         },
         {
           "name": "Section H",
-          "price": 703.0,
+          "price": 757.0,
           "available": true
         },
         {
           "name": "Section H",
-          "price": 449.0,
+          "price": 451.0,
           "available": true
         },
         {
@@ -101,27 +101,128 @@
         },
         {
           "name": "Section 119",
-          "price": 456.0,
+          "price": 458.0,
           "available": true
         },
         {
           "name": "Section K",
-          "price": 463.0,
+          "price": 465.0,
           "available": true
         }
       ]
     },
     {
       "id": "stubhub-160556794",
-      "name": "Jun 1",
+      "name": "WWE Monday Night RAW",
       "date": "2026-06-01",
       "venue": "",
       "is_single_day": true,
-      "price_min": null,
-      "price_max": null,
+      "price_min": 87.0,
+      "price_max": 185.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-raw-turin-tickets-6-1-2026/event/160556794/",
-      "packages": []
+      "packages": [
+        {
+          "name": "MIX",
+          "price": 87.0,
+          "available": true
+        },
+        {
+          "name": "Section 203",
+          "price": 115.0,
+          "available": true
+        },
+        {
+          "name": "Section 213",
+          "price": 155.0,
+          "available": true
+        },
+        {
+          "name": "Section 213",
+          "price": 115.0,
+          "available": true
+        },
+        {
+          "name": "Section 211",
+          "price": 159.0,
+          "available": true
+        },
+        {
+          "name": "Section 211",
+          "price": 119.0,
+          "available": true
+        },
+        {
+          "name": "Section 212",
+          "price": 159.0,
+          "available": true
+        },
+        {
+          "name": "Section 212",
+          "price": 119.0,
+          "available": true
+        },
+        {
+          "name": "Section 210",
+          "price": 185.0,
+          "available": true
+        },
+        {
+          "name": "Section 210",
+          "price": 140.0,
+          "available": true
+        },
+        {
+          "name": "Section 210",
+          "price": 185.0,
+          "available": true
+        },
+        {
+          "name": "Section 210",
+          "price": 140.0,
+          "available": true
+        },
+        {
+          "name": "Section 210",
+          "price": 185.0,
+          "available": true
+        },
+        {
+          "name": "Section 210",
+          "price": 140.0,
+          "available": true
+        },
+        {
+          "name": "Section 210",
+          "price": 185.0,
+          "available": true
+        },
+        {
+          "name": "Section 210",
+          "price": 140.0,
+          "available": true
+        },
+        {
+          "name": "Section 213",
+          "price": 185.0,
+          "available": true
+        },
+        {
+          "name": "Section 213",
+          "price": 140.0,
+          "available": true
+        },
+        {
+          "name": "Section 213",
+          "price": 185.0,
+          "available": true
+        },
+        {
+          "name": "Section 213",
+          "price": 140.0,
+          "available": true
+        }
+      ]
     },
     {
       "id": "stubhub-160574134",
@@ -156,7 +257,7 @@
         },
         {
           "name": "Section 2 Est A",
-          "price": 134.0,
+          "price": 135.0,
           "available": true
         },
         {
@@ -166,17 +267,17 @@
         },
         {
           "name": "Section 2 Est E",
-          "price": 243.0,
+          "price": 244.0,
           "available": true
         },
         {
           "name": "Section 2 Est C",
-          "price": 252.0,
+          "price": 253.0,
           "available": true
         },
         {
           "name": "Section 2 Est E",
-          "price": 311.0,
+          "price": 312.0,
           "available": true
         },
         {
@@ -186,27 +287,27 @@
         },
         {
           "name": "Section 2 Est C",
-          "price": 336.0,
+          "price": 338.0,
           "available": true
         },
         {
           "name": "Section 2 Ovest C",
-          "price": 348.0,
+          "price": 350.0,
           "available": true
         },
         {
           "name": "Section 2 Ovest C",
-          "price": 348.0,
+          "price": 350.0,
           "available": true
         },
         {
           "name": "Section 2 Ovest C",
-          "price": 348.0,
+          "price": 350.0,
           "available": true
         },
         {
           "name": "Section 2 Ovest C",
-          "price": 348.0,
+          "price": 350.0,
           "available": true
         }
       ]
@@ -214,21 +315,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-05-09T04:36:46.062876+00:00",
-      "event_id": "stubhub-160574096",
-      "price_min": 106.0
-    },
-    {
-      "timestamp": "2026-05-09T04:36:46.062876+00:00",
-      "event_id": "stubhub-160556794",
-      "price_min": 106.0
-    },
-    {
-      "timestamp": "2026-05-09T04:36:46.062876+00:00",
-      "event_id": "stubhub-160574134",
-      "price_min": 103.0
-    },
-    {
       "timestamp": "2026-05-09T04:56:58.637388+00:00",
       "event_id": "stubhub-160574096",
       "price_min": 106.0
@@ -5210,10 +5296,25 @@
     },
     {
       "timestamp": "2026-05-13T22:11:12.236656+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 103.0
+    },
+    {
+      "timestamp": "2026-05-13T22:31:02.448077+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 81.0
+    },
+    {
+      "timestamp": "2026-05-13T22:31:02.448077+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 87.0
+    },
+    {
+      "timestamp": "2026-05-13T22:31:02.448077+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 103.0
     }
   ],
-  "checks_count": 4213,
+  "checks_count": 4214,
   "errors": []
 }
