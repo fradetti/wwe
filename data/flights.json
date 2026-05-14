@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-14T19:28:39.596007+00:00",
+  "last_check": "2026-05-14T20:09:22.582827+00:00",
   "flights": [
     {
       "date": "2026-05-17",
@@ -134,7 +134,7 @@
       "arr_timezone": "+04",
       "departure_delay_min": null,
       "arrival_delay_min": null,
-      "status": "Future"
+      "status": "Scheduled"
     },
     {
       "date": "2026-05-15",
@@ -164,7 +164,7 @@
       "arr_timezone": "CEST",
       "departure_delay_min": 0,
       "arrival_delay_min": 0,
-      "status": "Future"
+      "status": "Scheduled"
     },
     {
       "date": "2026-05-15",
@@ -194,7 +194,7 @@
       "arr_timezone": "+04",
       "departure_delay_min": 0,
       "arrival_delay_min": 0,
-      "status": "Future"
+      "status": "Scheduled"
     },
     {
       "date": "2026-05-15",
@@ -209,7 +209,7 @@
       "arr_timezone": "+04",
       "departure_delay_min": 0,
       "arrival_delay_min": 4,
-      "status": "Scheduled"
+      "status": "Historical"
     },
     {
       "date": "2026-05-14",
@@ -220,10 +220,10 @@
       "actual_departure": "16:23",
       "dep_timezone": "CEST",
       "scheduled_arrival": "00:35",
-      "actual_arrival": "01:05",
+      "actual_arrival": "00:53",
       "arr_timezone": "+04",
       "departure_delay_min": 33,
-      "arrival_delay_min": 30,
+      "arrival_delay_min": 18,
       "status": "En Route"
     },
     {
