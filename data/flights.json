@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-15T15:32:27.835639+00:00",
+  "last_check": "2026-05-15T15:52:49.577844+00:00",
   "flights": [
     {
       "date": "2026-05-17",
@@ -169,16 +169,16 @@
     {
       "date": "2026-05-15",
       "flight": "EK708",
-      "origin": "TNR",
-      "destination": "SEZ",
-      "scheduled_departure": "18:35",
-      "actual_departure": "18:35",
-      "dep_timezone": "EAT",
-      "scheduled_arrival": "22:20",
-      "actual_arrival": "22:18",
+      "origin": "SEZ",
+      "destination": "DXB",
+      "scheduled_departure": "23:55",
+      "actual_departure": "23:55",
+      "dep_timezone": "+04",
+      "scheduled_arrival": "04:20",
+      "actual_arrival": "04:21",
       "arr_timezone": "+04",
       "departure_delay_min": 0,
-      "arrival_delay_min": -2,
+      "arrival_delay_min": 1,
       "status": "Scheduled"
     },
     {
