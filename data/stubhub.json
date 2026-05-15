@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-15T07:41:55.333981+00:00",
+  "last_check": "2026-05-15T07:59:48.378536+00:00",
   "threshold_eur": 400,
   "alert_active": false,
   "events": [],
@@ -5005,7 +5005,7 @@
       "price_min": 87.0
     }
   ],
-  "checks_count": 4312,
+  "checks_count": 4313,
   "errors": [
     "No Italian WWE events found on StubHub search"
   ]
