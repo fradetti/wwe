@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-16T13:49:24.265956+00:00",
+  "last_check": "2026-05-16T14:10:46.505087+00:00",
   "flights": [
     {
       "date": "2026-05-18",
@@ -9,7 +9,7 @@
       "scheduled_departure": "15:50",
       "actual_departure": "",
       "dep_timezone": "CEST",
-      "scheduled_arrival": "23:59",
+      "scheduled_arrival": "00:40",
       "actual_arrival": "",
       "arr_timezone": "+04",
       "departure_delay_min": null,
@@ -69,7 +69,7 @@
       "scheduled_departure": "15:50",
       "actual_departure": "",
       "dep_timezone": "CEST",
-      "scheduled_arrival": "23:59",
+      "scheduled_arrival": "00:40",
       "actual_arrival": "",
       "arr_timezone": "+04",
       "departure_delay_min": null,
@@ -144,11 +144,11 @@
       "scheduled_departure": "15:50",
       "actual_departure": "16:18",
       "dep_timezone": "CEST",
-      "scheduled_arrival": "23:59",
+      "scheduled_arrival": "00:40",
       "actual_arrival": "00:34",
       "arr_timezone": "+04",
       "departure_delay_min": 28,
-      "arrival_delay_min": 35,
+      "arrival_delay_min": -6,
       "status": "Scheduled"
     },
     {
