@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-16T23:35:21.322179+00:00",
+  "last_check": "2026-05-16T23:55:35.179658+00:00",
   "threshold_eur": 400,
   "alert_active": true,
   "events": [
@@ -9,14 +9,14 @@
       "date": "2026-05-31",
       "venue": "",
       "is_single_day": true,
-      "price_min": 81.0,
+      "price_min": 80.0,
       "price_max": 705.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-clash-in-italy-turin-tickets-5-31-2026/event/160574096/",
       "packages": [
         {
           "name": "MIX",
-          "price": 81.0,
+          "price": 80.0,
           "available": true
         },
         {
@@ -36,7 +36,7 @@
         },
         {
           "name": "Section 204",
-          "price": 167.0,
+          "price": 166.0,
           "available": true
         },
         {
@@ -46,7 +46,7 @@
         },
         {
           "name": "Section 107",
-          "price": 241.0,
+          "price": 240.0,
           "available": true
         },
         {
@@ -56,7 +56,7 @@
         },
         {
           "name": "Section 108",
-          "price": 301.0,
+          "price": 299.0,
           "available": true
         },
         {
@@ -66,7 +66,7 @@
         },
         {
           "name": "Floor",
-          "price": 310.0,
+          "price": 308.0,
           "available": true
         },
         {
@@ -76,7 +76,7 @@
         },
         {
           "name": "Section 122",
-          "price": 357.0,
+          "price": 355.0,
           "available": true
         },
         {
@@ -86,12 +86,12 @@
         },
         {
           "name": "Section K",
-          "price": 384.0,
+          "price": 382.0,
           "available": true
         },
         {
           "name": "Section 122",
-          "price": 408.0,
+          "price": 406.0,
           "available": true
         },
         {
@@ -101,7 +101,7 @@
         },
         {
           "name": "Section 107",
-          "price": 417.0,
+          "price": 414.0,
           "available": true
         },
         {
@@ -111,7 +111,7 @@
         },
         {
           "name": "Section 119",
-          "price": 455.0,
+          "price": 453.0,
           "available": true
         }
       ]
@@ -134,7 +134,7 @@
         },
         {
           "name": "Section 203",
-          "price": 114.0,
+          "price": 113.0,
           "available": true
         },
         {
@@ -174,7 +174,7 @@
         },
         {
           "name": "Section 210",
-          "price": 140.0,
+          "price": 139.0,
           "available": true
         },
         {
@@ -184,7 +184,7 @@
         },
         {
           "name": "Section 210",
-          "price": 140.0,
+          "price": 139.0,
           "available": true
         },
         {
@@ -194,7 +194,7 @@
         },
         {
           "name": "Section 210",
-          "price": 140.0,
+          "price": 139.0,
           "available": true
         },
         {
@@ -204,7 +204,7 @@
         },
         {
           "name": "Section 210",
-          "price": 140.0,
+          "price": 139.0,
           "available": true
         },
         {
@@ -214,7 +214,7 @@
         },
         {
           "name": "Section 213",
-          "price": 140.0,
+          "price": 139.0,
           "available": true
         },
         {
@@ -224,7 +224,7 @@
         },
         {
           "name": "Section 213",
-          "price": 140.0,
+          "price": 139.0,
           "available": true
         }
       ]
@@ -262,12 +262,12 @@
         },
         {
           "name": "Section 2 Est A",
-          "price": 135.0,
+          "price": 134.0,
           "available": true
         },
         {
           "name": "Section 2 Est E",
-          "price": 265.0,
+          "price": 264.0,
           "available": true
         },
         {
@@ -277,12 +277,12 @@
         },
         {
           "name": "Section 2 Est E",
-          "price": 266.0,
+          "price": 264.0,
           "available": true
         },
         {
           "name": "Section 2 Est C",
-          "price": 286.0,
+          "price": 285.0,
           "available": true
         },
         {
@@ -292,27 +292,27 @@
         },
         {
           "name": "Section 2 Est C",
-          "price": 287.0,
+          "price": 285.0,
           "available": true
         },
         {
           "name": "Section 2 Est E",
-          "price": 312.0,
+          "price": 311.0,
           "available": true
         },
         {
           "name": "Section 2 Ovest C",
-          "price": 350.0,
+          "price": 348.0,
           "available": true
         },
         {
           "name": "Section 2 Ovest C",
-          "price": 350.0,
+          "price": 348.0,
           "available": true
         },
         {
           "name": "Section 2 Ovest C",
-          "price": 350.0,
+          "price": 348.0,
           "available": true
         }
       ]
@@ -320,21 +320,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-05-11T19:36:45.450339+00:00",
-      "event_id": "stubhub-160574134",
-      "price_min": 103.0
-    },
-    {
-      "timestamp": "2026-05-11T19:57:16.310306+00:00",
-      "event_id": "stubhub-160574096",
-      "price_min": 81.0
-    },
-    {
-      "timestamp": "2026-05-11T19:57:16.310306+00:00",
-      "event_id": "stubhub-160556794",
-      "price_min": 106.0
-    },
-    {
       "timestamp": "2026-05-11T19:57:16.310306+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 103.0
@@ -5316,10 +5301,25 @@
     },
     {
       "timestamp": "2026-05-16T23:35:21.322179+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 103.0
+    },
+    {
+      "timestamp": "2026-05-16T23:55:35.179658+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 80.0
+    },
+    {
+      "timestamp": "2026-05-16T23:55:35.179658+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 87.0
+    },
+    {
+      "timestamp": "2026-05-16T23:55:35.179658+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 103.0
     }
   ],
-  "checks_count": 4429,
+  "checks_count": 4430,
   "errors": []
 }
