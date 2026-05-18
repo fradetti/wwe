@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-18T02:10:30.543665+00:00",
+  "last_check": "2026-05-18T02:30:45.744053+00:00",
   "threshold_eur": 400,
   "alert_active": true,
   "events": [
@@ -36,7 +36,7 @@
         },
         {
           "name": "Section 204",
-          "price": 166.0,
+          "price": 167.0,
           "available": true
         },
         {
@@ -46,7 +46,7 @@
         },
         {
           "name": "Section 107",
-          "price": 240.0,
+          "price": 241.0,
           "available": true
         },
         {
@@ -56,7 +56,7 @@
         },
         {
           "name": "Section 108",
-          "price": 299.0,
+          "price": 301.0,
           "available": true
         },
         {
@@ -66,12 +66,12 @@
         },
         {
           "name": "Floor",
-          "price": 308.0,
+          "price": 310.0,
           "available": true
         },
         {
           "name": "Section K",
-          "price": 339.0,
+          "price": 341.0,
           "available": true
         },
         {
@@ -81,17 +81,12 @@
         },
         {
           "name": "Section 122",
-          "price": 355.0,
+          "price": 357.0,
           "available": true
         },
         {
           "name": "Section 121",
-          "price": 455.0,
-          "available": true
-        },
-        {
-          "name": "Section 121",
-          "price": 360.0,
+          "price": 362.0,
           "available": true
         },
         {
@@ -101,12 +96,12 @@
         },
         {
           "name": "Section 107",
-          "price": 399.0,
+          "price": 401.0,
           "available": true
         },
         {
           "name": "Section H",
-          "price": 419.0,
+          "price": 422.0,
           "available": true
         }
       ]
@@ -129,7 +124,7 @@
         },
         {
           "name": "Section 203",
-          "price": 113.0,
+          "price": 114.0,
           "available": true
         },
         {
@@ -169,7 +164,7 @@
         },
         {
           "name": "Section 210",
-          "price": 139.0,
+          "price": 140.0,
           "available": true
         },
         {
@@ -179,7 +174,7 @@
         },
         {
           "name": "Section 210",
-          "price": 139.0,
+          "price": 140.0,
           "available": true
         },
         {
@@ -189,7 +184,7 @@
         },
         {
           "name": "Section 210",
-          "price": 139.0,
+          "price": 140.0,
           "available": true
         },
         {
@@ -199,7 +194,7 @@
         },
         {
           "name": "Section 210",
-          "price": 139.0,
+          "price": 140.0,
           "available": true
         },
         {
@@ -209,7 +204,7 @@
         },
         {
           "name": "Section 213",
-          "price": 139.0,
+          "price": 140.0,
           "available": true
         },
         {
@@ -219,7 +214,7 @@
         },
         {
           "name": "Section 213",
-          "price": 139.0,
+          "price": 140.0,
           "available": true
         }
       ]
@@ -257,12 +252,12 @@
         },
         {
           "name": "Section 2 Est A",
-          "price": 134.0,
+          "price": 135.0,
           "available": true
         },
         {
           "name": "Section 2 Est E",
-          "price": 233.0,
+          "price": 234.0,
           "available": true
         },
         {
@@ -272,7 +267,7 @@
         },
         {
           "name": "Section 2 Est C",
-          "price": 298.0,
+          "price": 300.0,
           "available": true
         },
         {
@@ -282,32 +277,32 @@
         },
         {
           "name": "Section 2 Est E",
-          "price": 299.0,
+          "price": 301.0,
           "available": true
         },
         {
           "name": "Section 2 Est E",
-          "price": 311.0,
+          "price": 312.0,
           "available": true
         },
         {
           "name": "Section 2 Ovest C",
-          "price": 348.0,
+          "price": 350.0,
           "available": true
         },
         {
           "name": "Section 2 Ovest C",
-          "price": 348.0,
+          "price": 350.0,
           "available": true
         },
         {
           "name": "Section 2 Ovest C",
-          "price": 348.0,
+          "price": 350.0,
           "available": true
         },
         {
           "name": "Section 2 Ovest C",
-          "price": 348.0,
+          "price": 350.0,
           "available": true
         }
       ]
@@ -315,21 +310,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-05-12T22:13:48.776373+00:00",
-      "event_id": "stubhub-160574134",
-      "price_min": 103.0
-    },
-    {
-      "timestamp": "2026-05-12T22:34:03.710722+00:00",
-      "event_id": "stubhub-160574096",
-      "price_min": 81.0
-    },
-    {
-      "timestamp": "2026-05-12T22:34:03.710722+00:00",
-      "event_id": "stubhub-160556794",
-      "price_min": 87.0
-    },
-    {
       "timestamp": "2026-05-12T22:34:03.710722+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 103.0
@@ -5311,10 +5291,25 @@
     },
     {
       "timestamp": "2026-05-18T02:10:30.543665+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 103.0
+    },
+    {
+      "timestamp": "2026-05-18T02:30:45.744053+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 87.0
+    },
+    {
+      "timestamp": "2026-05-18T02:30:45.744053+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 87.0
+    },
+    {
+      "timestamp": "2026-05-18T02:30:45.744053+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 103.0
     }
   ],
-  "checks_count": 4506,
+  "checks_count": 4507,
   "errors": []
 }
