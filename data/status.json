@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-19T10:33:06.920620+00:00",
+  "last_check": "2026-05-19T10:53:18.859275+00:00",
   "threshold_eur": 400,
   "alert_active": true,
   "events": [
@@ -208,7 +208,7 @@
         {
           "name": "1° Settore Num.",
           "price": 977.5,
-          "available": true
+          "available": false
         },
         {
           "name": "2° Settore Num.",
@@ -238,7 +238,7 @@
         {
           "name": "7° Settore Num.",
           "price": 201.25,
-          "available": true
+          "available": false
         },
         {
           "name": "8° Settore Num.",
@@ -253,7 +253,7 @@
         {
           "name": "10° Settore Num.",
           "price": 115.0,
-          "available": false
+          "available": true
         },
         {
           "name": "11° Settore Num.",
@@ -459,7 +459,7 @@
         {
           "name": "9° Settore Num.",
           "price": 258.75,
-          "available": false
+          "available": true
         },
         {
           "name": "10° Settore Num.",
@@ -549,36 +549,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-05-17T01:36:28.380188+00:00",
-      "event_id": "ZG9rmIYnyZeeFd",
-      "price_min": 218.5
-    },
-    {
-      "timestamp": "2026-05-17T01:36:28.380188+00:00",
-      "event_id": "ZG9rmIYnyZeeA6",
-      "price_min": 92.0
-    },
-    {
-      "timestamp": "2026-05-17T01:36:28.380188+00:00",
-      "event_id": "ZG9rmIYnyZee66",
-      "price_min": 80.5
-    },
-    {
-      "timestamp": "2026-05-17T01:36:28.380188+00:00",
-      "event_id": "ZG9rmIYnyZeeAa",
-      "price_min": 80.5
-    },
-    {
-      "timestamp": "2026-05-17T01:36:28.380188+00:00",
-      "event_id": "ZG9rmIYnyZeeA1",
-      "price_min": 69.0
-    },
-    {
-      "timestamp": "2026-05-17T01:36:28.380188+00:00",
-      "event_id": "ZG9rmIYnyZeekv",
-      "price_min": 69.0
-    },
-    {
       "timestamp": "2026-05-17T01:56:43.377736+00:00",
       "event_id": "ZG9rmIYnyZeeFd",
       "price_min": 218.5
@@ -5545,10 +5515,40 @@
     },
     {
       "timestamp": "2026-05-19T10:33:06.920620+00:00",
+      "event_id": "ZG9rmIYnyZeekv",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-05-19T10:53:18.859275+00:00",
+      "event_id": "ZG9rmIYnyZee66",
+      "price_min": 80.5
+    },
+    {
+      "timestamp": "2026-05-19T10:53:18.859275+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-05-19T10:53:18.859275+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 92.0
+    },
+    {
+      "timestamp": "2026-05-19T10:53:18.859275+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 80.5
+    },
+    {
+      "timestamp": "2026-05-19T10:53:18.859275+00:00",
+      "event_id": "ZG9rmIYnyZeeFd",
+      "price_min": 218.5
+    },
+    {
+      "timestamp": "2026-05-19T10:53:18.859275+00:00",
       "event_id": "ZG9rmIYnyZeekv",
       "price_min": 69.0
     }
   ],
-  "checks_count": 4877,
+  "checks_count": 4878,
   "errors": []
 }
