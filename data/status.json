@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-19T15:35:53.287137+00:00",
+  "last_check": "2026-05-19T15:56:02.903563+00:00",
   "threshold_eur": 400,
   "alert_active": true,
   "events": [
@@ -75,7 +75,7 @@
         {
           "name": "1° Settore Num.",
           "price": 977.5,
-          "available": true
+          "available": false
         },
         {
           "name": "2° Settore Num.",
@@ -105,7 +105,7 @@
         {
           "name": "7° Settore Num.",
           "price": 201.25,
-          "available": true
+          "available": false
         },
         {
           "name": "8° Settore Num.",
@@ -554,36 +554,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-05-17T06:35:29.248559+00:00",
-      "event_id": "ZG9rmIYnyZeeFd",
-      "price_min": 218.5
-    },
-    {
-      "timestamp": "2026-05-17T06:35:29.248559+00:00",
-      "event_id": "ZG9rmIYnyZeeA6",
-      "price_min": 92.0
-    },
-    {
-      "timestamp": "2026-05-17T06:35:29.248559+00:00",
-      "event_id": "ZG9rmIYnyZee66",
-      "price_min": 80.5
-    },
-    {
-      "timestamp": "2026-05-17T06:35:29.248559+00:00",
-      "event_id": "ZG9rmIYnyZeeAa",
-      "price_min": 80.5
-    },
-    {
-      "timestamp": "2026-05-17T06:35:29.248559+00:00",
-      "event_id": "ZG9rmIYnyZeeA1",
-      "price_min": 69.0
-    },
-    {
-      "timestamp": "2026-05-17T06:35:29.248559+00:00",
-      "event_id": "ZG9rmIYnyZeekv",
-      "price_min": 69.0
-    },
-    {
       "timestamp": "2026-05-17T06:55:42.184983+00:00",
       "event_id": "ZG9rmIYnyZeeFd",
       "price_min": 218.5
@@ -5550,10 +5520,40 @@
     },
     {
       "timestamp": "2026-05-19T15:35:53.287137+00:00",
+      "event_id": "ZG9rmIYnyZeekv",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-05-19T15:56:02.903563+00:00",
+      "event_id": "ZG9rmIYnyZeeFd",
+      "price_min": 218.5
+    },
+    {
+      "timestamp": "2026-05-19T15:56:02.903563+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 92.0
+    },
+    {
+      "timestamp": "2026-05-19T15:56:02.903563+00:00",
+      "event_id": "ZG9rmIYnyZee66",
+      "price_min": 80.5
+    },
+    {
+      "timestamp": "2026-05-19T15:56:02.903563+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-05-19T15:56:02.903563+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-05-19T15:56:02.903563+00:00",
       "event_id": "ZG9rmIYnyZeekv",
       "price_min": 69.0
     }
   ],
-  "checks_count": 4893,
+  "checks_count": 4894,
   "errors": []
 }
