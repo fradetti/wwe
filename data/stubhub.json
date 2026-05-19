@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-19T02:48:05.798125+00:00",
+  "last_check": "2026-05-19T03:08:23.318697+00:00",
   "threshold_eur": 400,
   "alert_active": true,
   "events": [
@@ -10,7 +10,7 @@
       "venue": "",
       "is_single_day": true,
       "price_min": 83.0,
-      "price_max": 648.0,
+      "price_max": 459.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-clash-in-italy-turin-tickets-5-31-2026/event/160574096/",
       "packages": [
@@ -91,17 +91,12 @@
         },
         {
           "name": "Section 107",
-          "price": 648.0,
-          "available": true
-        },
-        {
-          "name": "Section 107",
-          "price": 401.0,
+          "price": 416.0,
           "available": true
         },
         {
           "name": "Section 122",
-          "price": 414.0,
+          "price": 430.0,
           "available": true
         }
       ]
@@ -340,21 +335,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-05-13T23:11:35.124121+00:00",
-      "event_id": "stubhub-160574096",
-      "price_min": 81.0
-    },
-    {
-      "timestamp": "2026-05-13T23:11:35.124121+00:00",
-      "event_id": "stubhub-160556794",
-      "price_min": 87.0
-    },
-    {
-      "timestamp": "2026-05-13T23:11:35.124121+00:00",
-      "event_id": "stubhub-160574134",
-      "price_min": 103.0
-    },
-    {
       "timestamp": "2026-05-13T23:31:51.035789+00:00",
       "event_id": "stubhub-160574096",
       "price_min": 81.0
@@ -5336,10 +5316,25 @@
     },
     {
       "timestamp": "2026-05-19T02:48:05.798125+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 65.0
+    },
+    {
+      "timestamp": "2026-05-19T03:08:23.318697+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 83.0
+    },
+    {
+      "timestamp": "2026-05-19T03:08:23.318697+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 83.0
+    },
+    {
+      "timestamp": "2026-05-19T03:08:23.318697+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 65.0
     }
   ],
-  "checks_count": 4578,
+  "checks_count": 4579,
   "errors": []
 }
