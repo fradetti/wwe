@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-19T12:54:28.642298+00:00",
+  "last_check": "2026-05-19T13:14:44.124993+00:00",
   "threshold_eur": 400,
   "alert_active": true,
   "events": [
@@ -25,11 +25,6 @@
           "available": true
         },
         {
-          "name": "4° Settore Num.",
-          "price": 747.5,
-          "available": true
-        },
-        {
           "name": "5° Settore Num.",
           "price": 575.0,
           "available": true
@@ -52,7 +47,7 @@
         {
           "name": "9° Settore Num.",
           "price": 258.75,
-          "available": true
+          "available": false
         },
         {
           "name": "10° Settore Num.",
@@ -75,7 +70,7 @@
         {
           "name": "1° Settore Num.",
           "price": 977.5,
-          "available": true
+          "available": false
         },
         {
           "name": "2° Settore Num.",
@@ -268,7 +263,7 @@
       "date": "2026-06-05",
       "venue": "Unipol Arena, Casalecchio di Reno",
       "is_single_day": true,
-      "price_min": 80.5,
+      "price_min": 69.0,
       "price_max": 1396.5,
       "currency": "EUR",
       "url": "https://www.ticketmaster.it/biglietti/wwe-friday-night-smackdown-casalecchio-di-reno-05-06-2026/event/gaw6l9am8v3m",
@@ -332,6 +327,11 @@
           "name": "12° Settore Num.",
           "price": 80.5,
           "available": true
+        },
+        {
+          "name": "13° Settore Num.",
+          "price": 69.0,
+          "available": false
         },
         {
           "name": "THE BATTLE ROYAL ULTIMATE EXPERIENCE",
@@ -549,36 +549,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-05-17T03:53:39.578824+00:00",
-      "event_id": "ZG9rmIYnyZeeFd",
-      "price_min": 218.5
-    },
-    {
-      "timestamp": "2026-05-17T03:53:39.578824+00:00",
-      "event_id": "ZG9rmIYnyZeeA6",
-      "price_min": 92.0
-    },
-    {
-      "timestamp": "2026-05-17T03:53:39.578824+00:00",
-      "event_id": "ZG9rmIYnyZee66",
-      "price_min": 80.5
-    },
-    {
-      "timestamp": "2026-05-17T03:53:39.578824+00:00",
-      "event_id": "ZG9rmIYnyZeeAa",
-      "price_min": 80.5
-    },
-    {
-      "timestamp": "2026-05-17T03:53:39.578824+00:00",
-      "event_id": "ZG9rmIYnyZeeA1",
-      "price_min": 69.0
-    },
-    {
-      "timestamp": "2026-05-17T03:53:39.578824+00:00",
-      "event_id": "ZG9rmIYnyZeekv",
-      "price_min": 69.0
-    },
-    {
       "timestamp": "2026-05-17T04:13:51.906209+00:00",
       "event_id": "ZG9rmIYnyZeeFd",
       "price_min": 218.5
@@ -5545,10 +5515,40 @@
     },
     {
       "timestamp": "2026-05-19T12:54:28.642298+00:00",
+      "event_id": "ZG9rmIYnyZeekv",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-05-19T13:14:44.124993+00:00",
+      "event_id": "ZG9rmIYnyZeeFd",
+      "price_min": 218.5
+    },
+    {
+      "timestamp": "2026-05-19T13:14:44.124993+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 92.0
+    },
+    {
+      "timestamp": "2026-05-19T13:14:44.124993+00:00",
+      "event_id": "ZG9rmIYnyZee66",
+      "price_min": 80.5
+    },
+    {
+      "timestamp": "2026-05-19T13:14:44.124993+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-05-19T13:14:44.124993+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-05-19T13:14:44.124993+00:00",
       "event_id": "ZG9rmIYnyZeekv",
       "price_min": 69.0
     }
   ],
-  "checks_count": 4884,
+  "checks_count": 4885,
   "errors": []
 }
