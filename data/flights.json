@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-20T05:53:24.726084+00:00",
+  "last_check": "2026-05-20T06:13:42.124944+00:00",
   "flights": [
     {
       "date": "2026-05-22",
@@ -160,11 +160,11 @@
       "actual_departure": "09:25",
       "dep_timezone": "+04",
       "scheduled_arrival": "13:30",
-      "actual_arrival": "14:43",
+      "actual_arrival": "14:48",
       "arr_timezone": "CEST",
       "departure_delay_min": 45,
-      "arrival_delay_min": 73,
-      "status": "En Route"
+      "arrival_delay_min": 78,
+      "status": "Climbing"
     },
     {
       "date": "2026-05-20",
