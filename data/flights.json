@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-21T19:44:17.550182+00:00",
+  "last_check": "2026-05-21T20:04:41.592458+00:00",
   "flights": [
     {
       "date": "2026-05-24",
@@ -134,7 +134,7 @@
       "arr_timezone": "+04",
       "departure_delay_min": null,
       "arrival_delay_min": null,
-      "status": "Future"
+      "status": "Scheduled"
     },
     {
       "date": "2026-05-22",
@@ -164,7 +164,7 @@
       "arr_timezone": "CEST",
       "departure_delay_min": 0,
       "arrival_delay_min": 0,
-      "status": "Future"
+      "status": "Scheduled"
     },
     {
       "date": "2026-05-22",
@@ -194,7 +194,7 @@
       "arr_timezone": "+04",
       "departure_delay_min": 0,
       "arrival_delay_min": 0,
-      "status": "Future"
+      "status": "Scheduled"
     },
     {
       "date": "2026-05-22",
@@ -209,7 +209,7 @@
       "arr_timezone": "+04",
       "departure_delay_min": 0,
       "arrival_delay_min": 4,
-      "status": "Scheduled"
+      "status": "Historical"
     },
     {
       "date": "2026-05-21",
@@ -224,7 +224,7 @@
       "arr_timezone": "+04",
       "departure_delay_min": 65,
       "arrival_delay_min": 51,
-      "status": "Climbing"
+      "status": "En Route"
     },
     {
       "date": "2026-05-21",
