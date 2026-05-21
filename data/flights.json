@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-21T08:17:34.826373+00:00",
+  "last_check": "2026-05-21T08:37:47.339714+00:00",
   "flights": [
     {
       "date": "2026-05-23",
@@ -194,7 +194,7 @@
       "arr_timezone": "+04",
       "departure_delay_min": -8,
       "arrival_delay_min": -4,
-      "status": "En Route"
+      "status": "Descending"
     },
     {
       "date": "2026-05-21",
