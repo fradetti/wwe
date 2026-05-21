@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-21T12:35:55.430706+00:00",
+  "last_check": "2026-05-21T12:56:08.891973+00:00",
   "threshold_eur": 400,
   "alert_active": true,
   "events": [
@@ -10,7 +10,7 @@
       "venue": "",
       "is_single_day": true,
       "price_min": 198.0,
-      "price_max": 398.0,
+      "price_max": 426.0,
       "currency": "EUR",
       "url": "https://www.stubhub.com/wwe-clash-in-italy-turin-tickets-5-31-2026/event/160574096/",
       "packages": [
@@ -60,11 +60,6 @@
           "available": true
         },
         {
-          "name": "Section 104",
-          "price": 267.0,
-          "available": true
-        },
-        {
           "name": "Section 108",
           "price": 387.0,
           "available": true
@@ -102,6 +97,16 @@
         {
           "name": "Section 122",
           "price": 312.0,
+          "available": true
+        },
+        {
+          "name": "Section 101",
+          "price": 426.0,
+          "available": true
+        },
+        {
+          "name": "Section 101",
+          "price": 336.0,
           "available": true
         }
       ]
@@ -334,21 +339,6 @@
     }
   ],
   "price_history": [
-    {
-      "timestamp": "2026-05-16T18:51:34.536500+00:00",
-      "event_id": "stubhub-160574096",
-      "price_min": 80.0
-    },
-    {
-      "timestamp": "2026-05-16T18:51:34.536500+00:00",
-      "event_id": "stubhub-160556794",
-      "price_min": 87.0
-    },
-    {
-      "timestamp": "2026-05-16T18:51:34.536500+00:00",
-      "event_id": "stubhub-160574134",
-      "price_min": 103.0
-    },
     {
       "timestamp": "2026-05-16T19:11:41.838174+00:00",
       "event_id": "stubhub-160574096",
@@ -5333,8 +5323,23 @@
       "timestamp": "2026-05-21T12:35:55.430706+00:00",
       "event_id": "stubhub-160574134",
       "price_min": 65.0
+    },
+    {
+      "timestamp": "2026-05-21T12:56:08.891973+00:00",
+      "event_id": "stubhub-160574096",
+      "price_min": 198.0
+    },
+    {
+      "timestamp": "2026-05-21T12:56:08.891973+00:00",
+      "event_id": "stubhub-160556794",
+      "price_min": 83.0
+    },
+    {
+      "timestamp": "2026-05-21T12:56:08.891973+00:00",
+      "event_id": "stubhub-160574134",
+      "price_min": 65.0
     }
   ],
-  "checks_count": 4748,
+  "checks_count": 4749,
   "errors": []
 }
