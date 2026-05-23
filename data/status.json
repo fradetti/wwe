@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-23T05:49:22.459096+00:00",
+  "last_check": "2026-05-23T06:09:35.975676+00:00",
   "threshold_eur": 400,
   "alert_active": true,
   "events": [
@@ -554,36 +554,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-05-20T21:23:27.425993+00:00",
-      "event_id": "ZG9rmIYnyZee66",
-      "price_min": 80.5
-    },
-    {
-      "timestamp": "2026-05-20T21:23:27.425993+00:00",
-      "event_id": "ZG9rmIYnyZeeAa",
-      "price_min": 69.0
-    },
-    {
-      "timestamp": "2026-05-20T21:23:27.425993+00:00",
-      "event_id": "ZG9rmIYnyZeeA1",
-      "price_min": 69.0
-    },
-    {
-      "timestamp": "2026-05-20T21:23:27.425993+00:00",
-      "event_id": "ZG9rmIYnyZeekv",
-      "price_min": 69.0
-    },
-    {
-      "timestamp": "2026-05-20T21:43:46.549823+00:00",
-      "event_id": "ZG9rmIYnyZeeFd",
-      "price_min": 218.5
-    },
-    {
-      "timestamp": "2026-05-20T21:43:46.549823+00:00",
-      "event_id": "ZG9rmIYnyZeeA6",
-      "price_min": 92.0
-    },
-    {
       "timestamp": "2026-05-20T21:43:46.549823+00:00",
       "event_id": "ZG9rmIYnyZee66",
       "price_min": 80.5
@@ -5550,10 +5520,40 @@
     },
     {
       "timestamp": "2026-05-23T05:49:22.459096+00:00",
+      "event_id": "ZG9rmIYnyZeekv",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-05-23T06:09:35.975676+00:00",
+      "event_id": "ZG9rmIYnyZeeFd",
+      "price_min": 218.5
+    },
+    {
+      "timestamp": "2026-05-23T06:09:35.975676+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 92.0
+    },
+    {
+      "timestamp": "2026-05-23T06:09:35.975676+00:00",
+      "event_id": "ZG9rmIYnyZee66",
+      "price_min": 80.5
+    },
+    {
+      "timestamp": "2026-05-23T06:09:35.975676+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-05-23T06:09:35.975676+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-05-23T06:09:35.975676+00:00",
       "event_id": "ZG9rmIYnyZeekv",
       "price_min": 69.0
     }
   ],
-  "checks_count": 5159,
+  "checks_count": 5160,
   "errors": []
 }
