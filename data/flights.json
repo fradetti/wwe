@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-24T15:35:56.994698+00:00",
+  "last_check": "2026-05-24T15:55:37.172343+00:00",
   "flights": [
     {
       "date": "2026-05-26",
@@ -157,14 +157,14 @@
       "origin": "TNR",
       "destination": "SEZ",
       "scheduled_departure": "18:35",
-      "actual_departure": "18:23",
+      "actual_departure": "18:24",
       "dep_timezone": "EAT",
       "scheduled_arrival": "22:20",
-      "actual_arrival": "22:20",
+      "actual_arrival": "22:08",
       "arr_timezone": "+04",
-      "departure_delay_min": -12,
-      "arrival_delay_min": 0,
-      "status": "En Route"
+      "departure_delay_min": -11,
+      "arrival_delay_min": -12,
+      "status": "Climbing"
     },
     {
       "date": "2026-05-24",
