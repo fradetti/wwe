@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-23T19:11:04.730357+00:00",
+  "last_check": "2026-05-24T03:39:51.098434+00:00",
   "threshold_eur": 400,
   "alert_active": true,
   "events": [
@@ -5072,6 +5072,6 @@
       "price_min": 69.0
     }
   ],
-  "checks_count": 5186,
+  "checks_count": 5187,
   "errors": []
 }
