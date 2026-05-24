@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-05-24T16:50:44.436723+00:00",
+  "last_check": "2026-05-24T17:10:27.264126+00:00",
   "threshold_eur": 400,
   "alert_active": true,
   "events": [
@@ -17,7 +17,7 @@
         {
           "name": "2° Settore Num.",
           "price": 1207.5,
-          "available": false
+          "available": true
         },
         {
           "name": "3° Settore Num.",
@@ -532,7 +532,7 @@
         {
           "name": "THE 360 WWE SUPERSTAR EXPERIENCE",
           "price": 829.0,
-          "available": true
+          "available": false
         },
         {
           "name": "THE WWE RAMP WALK PACKAGE",
@@ -554,36 +554,6 @@
   ],
   "price_history": [
     {
-      "timestamp": "2026-05-21T07:11:44.283257+00:00",
-      "event_id": "ZG9rmIYnyZee66",
-      "price_min": 80.5
-    },
-    {
-      "timestamp": "2026-05-21T07:11:44.283257+00:00",
-      "event_id": "ZG9rmIYnyZeeAa",
-      "price_min": 69.0
-    },
-    {
-      "timestamp": "2026-05-21T07:11:44.283257+00:00",
-      "event_id": "ZG9rmIYnyZeeA1",
-      "price_min": 69.0
-    },
-    {
-      "timestamp": "2026-05-21T07:11:44.283257+00:00",
-      "event_id": "ZG9rmIYnyZeekv",
-      "price_min": 69.0
-    },
-    {
-      "timestamp": "2026-05-21T07:31:57.724518+00:00",
-      "event_id": "ZG9rmIYnyZeeFd",
-      "price_min": 218.5
-    },
-    {
-      "timestamp": "2026-05-21T07:31:57.724518+00:00",
-      "event_id": "ZG9rmIYnyZeeA6",
-      "price_min": 92.0
-    },
-    {
       "timestamp": "2026-05-21T07:31:57.724518+00:00",
       "event_id": "ZG9rmIYnyZee66",
       "price_min": 80.5
@@ -5550,10 +5520,40 @@
     },
     {
       "timestamp": "2026-05-24T16:50:44.436723+00:00",
+      "event_id": "ZG9rmIYnyZeekv",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-05-24T17:10:27.264126+00:00",
+      "event_id": "ZG9rmIYnyZeeFd",
+      "price_min": 218.5
+    },
+    {
+      "timestamp": "2026-05-24T17:10:27.264126+00:00",
+      "event_id": "ZG9rmIYnyZeeA6",
+      "price_min": 92.0
+    },
+    {
+      "timestamp": "2026-05-24T17:10:27.264126+00:00",
+      "event_id": "ZG9rmIYnyZee66",
+      "price_min": 80.5
+    },
+    {
+      "timestamp": "2026-05-24T17:10:27.264126+00:00",
+      "event_id": "ZG9rmIYnyZeeAa",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-05-24T17:10:27.264126+00:00",
+      "event_id": "ZG9rmIYnyZeeA1",
+      "price_min": 69.0
+    },
+    {
+      "timestamp": "2026-05-24T17:10:27.264126+00:00",
       "event_id": "ZG9rmIYnyZeekv",
       "price_min": 69.0
     }
   ],
-  "checks_count": 5194,
+  "checks_count": 5195,
   "errors": []
 }
